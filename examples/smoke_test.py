@@ -8,29 +8,32 @@ just_fix_windows_console()
 
 from tinkerforge.ip_connection import IPConnection
 from tinkerforge.brick_master import BrickMaster
-from tinkerforge.bricklet_rgb_led import BrickletRGBLED
+from tinkerforge.bricklet_rgb_led_v2 import BrickletRGBLEDV2
 from tinkerforge.bricklet_rotary_encoder_v2 import BrickletRotaryEncoderV2
 from tinkerforge.bricklet_color_v2 import BrickletColorV2
-from tinkerforge.bricklet_oled_128x64 import BrickletOLED128x64
+from tinkerforge.bricklet_oled_128x64_v2 import BrickletOLED128x64V2
 
 ipcon = IPConnection() # Create IP connection
 ipcon.connect(constants.HOST, constants.PORT) # Connect to brickd
 
 # Create device instances
-led = BrickletRGBLED(constants.UID_RGB_LED, ipcon)
+led = BrickletRGBLEDV2(constants.UID_RGB_LED, ipcon)
 rotary = BrickletRotaryEncoderV2(constants.UID_ROTARY_ENCODER, ipcon)
-oled = BrickletOLED128x64(constants.UID_OLED_DISPLAY, ipcon)
+oled = BrickletOLED128x64V2(constants.UID_OLED_DISPLAY, ipcon)
 color = BrickletColorV2(constants.UID_COLOR_SENSOR, ipcon)
 
 def update_oled_with_rgb_color(r, g, b):
     # Write current RGB LED's color to the OLED display
     oled.write_line(0, 0, "RGD LED Color:".ljust(26))
-    oled.write_line(1, 0, f"R = {r}, G = {g}, B = {b}".ljust(26))
+    oled.write_line(1, 0, f"R={r}, G={g}, B={b}".ljust(26))
 
 def update_oled_with_color_measurement(measured_r, measured_g, measured_b):
     oled.write_line(3, 0, "Color Sensor:".ljust(26))
     max_color_intensity = 65535
-    oled.write_line(4, 0, f"R = {measured_r / max_color_intensity * 255:.0f}, G = {measured_g / max_color_intensity * 255:.0f}, B = {measured_b / max_color_intensity * 255:.0f}".ljust(26))
+    oled.write_line(4, 0, f"R={measured_r / max_color_intensity * 255:.0f}, G={measured_g / max_color_intensity * 255:.0f}, B={measured_b / max_color_intensity * 255:.0f}".ljust(26))
+
+# Turn off the RGB LED's status light
+led.set_status_led_config(0)
 
 # Get the current color value of the RGB LED Bricklet
 current_rgb_colors = led.get_rgb_value()
