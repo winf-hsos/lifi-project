@@ -1,10 +1,5 @@
 import constants
-import sys
 from time import time, sleep
-
-from colorama import just_fix_windows_console
-from colorama import Fore, Back, Style
-just_fix_windows_console()
 
 from tinkerforge.ip_connection import IPConnection
 from tinkerforge.brick_master import BrickMaster
