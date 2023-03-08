@@ -8,4 +8,4 @@ Students are recommended to checkout the repository as follows:
 git clone https://github.com/winf-hsos/LiFi-code.git
 ```
 
-All examples from the LiFi-project are the `examples` folder. Make sure you replace the empty strings in the `examples/constants.py` with the UIDs of your personal LiFi hardware prototype.
+All examples from the LiFi-project live in the `examples` folder. Make sure you replace the empty strings in the `examples/constants.py` with the UIDs of your personal LiFi hardware prototype.
