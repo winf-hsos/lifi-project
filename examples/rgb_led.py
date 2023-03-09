@@ -17,7 +17,7 @@ led.set_rgb_value(0, 255, 0)
 current_rgb = led.get_rgb_value()
 print(f"The current RGB values are: R = {current_rgb.r}, G = {current_rgb.g}, B = {current_rgb.b}")
 
-input("Please hit enter to turn off the LED and exit the program")
+input("Please hit ENTER to turn off the LED and exit the program")
 
 # Turn off the LED by setting it to black
 led.set_rgb_value(0, 0, 0)
