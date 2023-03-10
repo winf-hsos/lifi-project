@@ -5,6 +5,7 @@ number = input("A number, please: ")
 number = int(number)
 
 if number < 0:
+    print("Cannot extract roots from negative numbers.")
     sys.exit()
 
 a = number / 2
