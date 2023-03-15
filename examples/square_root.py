@@ -11,7 +11,7 @@ if number < 0:
 a = number / 2
 b = number / a
 
-while(abs(a - b) > 0.00001):
+while abs(a - b) > 0.00001:
     a = (a + b) / 2
     b = number / a
 
