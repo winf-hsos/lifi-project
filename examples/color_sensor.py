@@ -13,6 +13,18 @@ ipcon.connect(constants.HOST, constants.PORT)
 # Get a reference to the Rotary Encoder
 color_sensor = BrickletColorV2(constants.UID_COLOR_SENSOR, ipcon)
 
+# Read the current measurements (pull principle)
+current_color = color_sensor.get_color()
+print(f"Current color: R: { current_color.r }, G: { current_color.g } / B: { current_color.b }")
+
+current_illuminance = color_sensor.get_illuminance()
+print(current_illuminance)
+
+current_color_temperature = color_sensor.get_color_temperature()
+print(current_color_temperature)
+
+input("Press ENTER to start working with callback functions.\n")
+
 # Define a callback function for new color values
 def new_color_value(r, g, b, c):
     print(f"R: { r }, G: { g }, B: { b }, C: { c }")
@@ -46,7 +58,7 @@ color_sensor.set_illuminance_callback_configuration(1000, False, "x", 0, 0)
 # Switch on the LED of the sensor
 color_sensor.set_light(True)
 
-input("Press ENTER to turn of the sensor's LED.")
+input("Press ENTER to turn of the sensor's LED.\n")
 
 # Switch of the LED of the sensor
 color_sensor.set_light(False)
