@@ -1,14 +1,21 @@
-import constants
-
+import yaml
 from tinkerforge.ip_connection import IPConnection
 from tinkerforge.bricklet_oled_128x64_v2 import BrickletOLED128x64V2
 
+# Load the configuration file
+with open('./config.yaml', 'r') as f:
+    config = yaml.safe_load(f)
+
+UID_OLED_DISPLAY = config.get("uid_oled_display")
+HOST = config.get("host")
+PORT = config.get("port")
+
 # Create IP-connection
 ipcon = IPConnection()
-ipcon.connect(constants.HOST, constants.PORT)
+ipcon.connect(HOST, PORT)
 
 # Create OLED object
-oled = BrickletOLED128x64V2(constants.UID_OLED_DISPLAY, ipcon)
+oled = BrickletOLED128x64V2(UID_OLED_DISPLAY, ipcon)
 
 # Clear the display initially
 oled.clear_display()
@@ -98,4 +105,3 @@ lifi_logo_pixels = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
 oled.write_pixels(0, 0, 127, 63, lifi_logo_pixels)
-

@@ -1,14 +1,21 @@
-import constants
-
+import yaml
 from tinkerforge.ip_connection import IPConnection
 from tinkerforge.bricklet_rgb_led_v2 import BrickletRGBLEDV2
 
+# Load the configuration file
+with open('./config.yaml', 'r') as f:
+    config = yaml.safe_load(f)
+
+UID_RGB_LED = config.get("uid_rgb_led")
+HOST = config.get("host")
+PORT = config.get("port")
+
 # Create IP-connection
 ipcon = IPConnection()
-ipcon.connect(constants.HOST, constants.PORT)
+ipcon.connect(HOST, PORT)
 
 # Create LED object
-led = BrickletRGBLEDV2(constants.UID_RGB_LED, ipcon)
+led = BrickletRGBLEDV2(UID_RGB_LED, ipcon)
 
 # Set to full green color
 led.set_rgb_value(0, 255, 0)

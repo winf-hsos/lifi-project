@@ -1,17 +1,22 @@
 # See: https://lifi.datalit.de/lifi-project/the-rotary-encoder
-
-import constants
-
-import constants
+import yaml
 from tinkerforge.ip_connection import IPConnection
 from tinkerforge.bricklet_rotary_encoder_v2 import BrickletRotaryEncoderV2
 
+# Load the configuration file
+with open('./config.yaml', 'r') as f:
+    config = yaml.safe_load(f)
+
+UID_ROTARY_ENCODER = config.get("uid_rotary_encoder")
+HOST = config.get("host")
+PORT = config.get("port")
+
 # Create an IP connection to the Brick Daemon
 ipcon = IPConnection()
-ipcon.connect(constants.HOST, constants.PORT)
+ipcon.connect(HOST, PORT)
 
 # Get a reference to the Rotary Encoder
-rotary = BrickletRotaryEncoderV2(constants.UID_ROTARY_ENCODER, ipcon)
+rotary = BrickletRotaryEncoderV2(UID_ROTARY_ENCODER, ipcon)
 
 # Manually read the current count value
 count = rotary.get_count(True)

@@ -1,0 +1,7 @@
+uid_rgb_led: "VRX"
+uid_rotary_encoder: "XCh"
+uid_oled_display: "25yE"
+uid_color_sensor: "Whu"
+uid_master: "6apah5"
+port: 4223
+host: "localhost"

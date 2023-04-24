@@ -1,4 +1,4 @@
-import constants
+import yaml
 from time import time, sleep
 
 from tinkerforge.ip_connection import IPConnection
@@ -8,14 +8,25 @@ from tinkerforge.bricklet_rotary_encoder_v2 import BrickletRotaryEncoderV2
 from tinkerforge.bricklet_color_v2 import BrickletColorV2
 from tinkerforge.bricklet_oled_128x64_v2 import BrickletOLED128x64V2
 
+# Load the configuration file
+with open('./config.yaml', 'r') as f:
+    config = yaml.safe_load(f)
+
+UID_RGB_LED = config.get("uid_rgb_led")
+UID_ROTARY_ENCODER = config.get("uid_rotary_encoder")
+UID_OLED_DISPLAY = config.get("uid_oled_display")
+UID_COLOR_SENSOR = config.get("uid_color_sensor")
+HOST = config.get("host")
+PORT = config.get("port")
+
 ipcon = IPConnection() # Create IP connection
-ipcon.connect(constants.HOST, constants.PORT) # Connect to brickd
+ipcon.connect(HOST, PORT) # Connect to brickd
 
 # Create device instances
-led = BrickletRGBLEDV2(constants.UID_RGB_LED, ipcon)
-rotary = BrickletRotaryEncoderV2(constants.UID_ROTARY_ENCODER, ipcon)
-oled = BrickletOLED128x64V2(constants.UID_OLED_DISPLAY, ipcon)
-color = BrickletColorV2(constants.UID_COLOR_SENSOR, ipcon)
+led = BrickletRGBLEDV2(UID_RGB_LED, ipcon)
+rotary = BrickletRotaryEncoderV2(UID_ROTARY_ENCODER, ipcon)
+oled = BrickletOLED128x64V2(UID_OLED_DISPLAY, ipcon)
+color = BrickletColorV2(UID_COLOR_SENSOR, ipcon)
 
 def update_oled_with_rgb_color(r, g, b):
     # Write current RGB LED's color to the OLED display
@@ -29,6 +40,9 @@ def update_oled_with_color_measurement(measured_r, measured_g, measured_b):
 
 # Turn off the RGB LED's status light
 led.set_status_led_config(0)
+
+# Clear the display
+oled.clear_display()
 
 # Get the current color value of the RGB LED Bricklet
 current_rgb_colors = led.get_rgb_value()

@@ -1,27 +1,35 @@
 # See: https://lifi.datalit.de/lifi-project/sensing-light
-
-import constants
-
-import constants
+import yaml
 from tinkerforge.ip_connection import IPConnection
 from tinkerforge.bricklet_color_v2 import BrickletColorV2
 
+# Load the configuration file
+with open('./config.yaml', 'r') as f:
+    config = yaml.safe_load(f)
+
+UID_COLOR_SENSOR = config.get("uid_color_sensor")
+HOST = config.get("host")
+PORT = config.get("port")
+
 # Create an IP connection to the Brick Daemon
 ipcon = IPConnection()
-ipcon.connect(constants.HOST, constants.PORT)
+ipcon.connect(HOST, PORT)
 
-# Get a reference to the Rotary Encoder
-color_sensor = BrickletColorV2(constants.UID_COLOR_SENSOR, ipcon)
+# Get a reference to the color sensor
+color_sensor = BrickletColorV2(UID_COLOR_SENSOR, ipcon)
 
 # Read the current measurements (pull principle)
 current_color = color_sensor.get_color()
 print(f"Current color: R: { current_color.r }, G: { current_color.g } / B: { current_color.b }")
+# Output (example): Current color: R: 22651, G: 24595 / B: 19106
 
 current_illuminance = color_sensor.get_illuminance()
-print(current_illuminance)
+print(f"Current illuminance: { current_illuminance }")
+# Output (example): Current illuminance: 17482
 
 current_color_temperature = color_sensor.get_color_temperature()
-print(current_color_temperature)
+print(f"Current color temperature: { current_color_temperature }")
+# Output (example): Current color temperature: 5097
 
 input("Press ENTER to start working with callback functions.\n")
 
