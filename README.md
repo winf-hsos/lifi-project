@@ -8,4 +8,14 @@ Students are recommended to checkout the repository as follows:
 git clone https://github.com/winf-hsos/LiFi-code.git
 ```
 
-All examples from the LiFi-project live in the `examples` folder. Make sure you replace the empty strings in the `examples/constants.py` with the UIDs of your personal LiFi hardware prototype.
+Working examples for all devices from the LiFi-project live in the `devices` folder. Make sure you replace the empty strings in the `config.yaml` with the UIDs of your personal LiFi hardware prototype.
+
+```yaml
+uid_rgb_led: "VRX"
+uid_rotary_encoder: "XCh"
+uid_oled_display: "25yE"
+uid_color_sensor: "Whu"
+uid_master: "6apah5"
+port: 4223
+host: "localhost"
+```
