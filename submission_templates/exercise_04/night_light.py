@@ -1,0 +1,1 @@
+# See: https://github.com/winf-hsos/lifi-exercises/raw/main/exercises/04_exercise_digitizing_the_physical_world.pdf

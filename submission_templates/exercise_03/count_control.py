@@ -1,6 +1,6 @@
 # See: https://github.com/winf-hsos/lifi-exercises/raw/main/exercises/03_exercise_on_and_off.pdf
 
-#### BOILERPLATE CODE TO CONNECT TO DEVICE ####
+#region Boilerplate code to connect to device
 import yaml
 from tinkerforge.ip_connection import IPConnection
 from tinkerforge.bricklet_rotary_encoder_v2 import BrickletRotaryEncoderV2
@@ -20,6 +20,6 @@ ipcon.connect(HOST, PORT)
 # Get a reference to the Rotary Encoder
 rotary = BrickletRotaryEncoderV2(UID_ROTARY_ENCODER, ipcon)
 
-#### END OF BOILERPLATE CODE TO CONNECT TO DEVICE ####
+#endregion
 
 # Your code follows here...
