@@ -4,35 +4,49 @@ from tinkerforge.bricklet_color_v2 import BrickletColorV2
 import time
 
 class LiFiDevice:
+    # Constants for callback types
+    SEND_LOG = "send_log"
+    RECEIVE_LOG = "receive_log"
+
     def __init__(self, master_brick_uid):
         self.master_brick_uid = master_brick_uid
-        self.ipcon = IPConnection()
-        self.ipcon.connect("localhost", 4223)
+        
         self.led = None
         self.color_sensor = None
         self.current_color = "off"
         self.received_bits = ""
-        self.cb_log_fn = None
+        self.callback_send_log = None
+        self.callback_receive_log = None
  
-    def on_log(self, cb_log_fn):
-        self.cb_log_fn = cb_log_fn
+    def register_callback(self, callback, callback_type=SEND_LOG):
+        if callback_type == self.SEND_LOG:
+            self.callback_send_log = callback
+        elif callback_type == self.RECEIVE_LOG:
+            self.callback_receive_log = callback
+
+    def start(self):
+        self.setup_devices()
 
     def setup_devices(self):
+        self.ipcon = IPConnection()
+        self.ipcon.connect("localhost", 4223)
+
         if self.led and self.color_sensor:
             return
+        
         def device_found(uid, connected_uid, position, hw_version, fw_version,
                          device_id, enum_type):
             if self.led and self.color_sensor:
                 return
             if connected_uid == self.master_brick_uid:
                 if device_id == 2128:
-                    self.cb_log_fn(f"Color Sensor found: UID {uid}", "green")
+                    self.callback_send_log(f"Color Sensor found: UID {uid}", "green")
                     self.color_sensor = BrickletColorV2(uid, self.ipcon)
                     self.color_sensor.set_status_led_config(0)
                     self.color_sensor.set_color_callback_configuration(100, False)
                     self.color_sensor.register_callback(self.color_sensor.CALLBACK_COLOR, self.new_color_value)
                 elif device_id == 2127:
-                    self.cb_log_fn(f"RGB LED found: UID {uid}", "green")
+                    self.callback_send_log(f"RGB LED found: UID {uid}", "green")
                     self.led = BrickletRGBLEDV2(uid, self.ipcon)
                     self.led.set_rgb_value(0, 0, 0)
                     self.led.set_status_led_config(0)
@@ -51,13 +65,13 @@ class LiFiDevice:
         if detected_color != self.current_color:
 
             if self.current_color == "off":
-                self.cb_log_fn(f"Detected incoming message.", "yellow", send_or_receive_log="receiving")
+                self.callback_receive_log(f"Detected incoming message.", "yellow")
 
             # When the LED turns off, reset received message and do nothing
             if detected_color == "off":
 
                 received_message = self.decode_received_bits()
-                self.cb_log_fn(f"Received message: {received_message}", "yellow", send_or_receive_log="receiving")
+                self.callback_receive_log(f"Received message: {received_message}", "yellow")
                 self.received_bits = ""
                 self.current_color = "off"
                 return
@@ -72,7 +86,7 @@ class LiFiDevice:
                 if len(self.received_bits) % 8 == 0:
                     last_byte = self.received_bits[-8:]
                     character = chr(int(last_byte, 2))
-                    self.cb_log_fn(f" → Received character: {character} → {last_byte}", "yellow", send_or_receive_log="receiving")
+                    self.callback_receive_log(f" → Received character: {character} → {last_byte}", "yellow")
 
         # Remember the detected color for next comparison
         self.current_color = detected_color
@@ -106,16 +120,16 @@ class LiFiDevice:
         return message
 
     def send_text(self, text):
-        self.cb_log_fn(f"Sending: \"{text}\"", "yellow")
+        self.callback_send_log(f"Sending: \"{text}\"", "yellow")
         for char in text:
             ascii_value = ord(char)
             binary = bin(ascii_value)[2:].zfill(8)
-            self.cb_log_fn(f"{char}: {binary}: ", "yellow", end="")
+            self.callback_send_log(f"{char}: {binary}: ", "yellow", end="")
             for bit in binary:
                 self.send_bit(bit)
                 time.sleep(0.2)
-            self.cb_log_fn("")
-        self.cb_log_fn("Sending complete", "yellow")
+            self.callback_send_log("")
+        self.callback_send_log("Sending complete", "yellow")
         self.led.set_rgb_value(0, 0, 0)
 
     def send_bit(self, bit):
@@ -135,4 +149,7 @@ class LiFiDevice:
         return mapping.get(rgb, "unknown")
 
     def print_dot(self, color, send_or_receive_log="sending"):
-        self.cb_log_fn( "●", color, end="", send_or_receive_log=send_or_receive_log)
+        if send_or_receive_log == "sending":
+            self.callback_send_log("●", color, end="")
+        else:
+            self.callback_receive_log("●", color, end="")
