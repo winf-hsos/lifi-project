@@ -1,14 +1,9 @@
-import yaml
 from tinkerforge.ip_connection import IPConnection
 from tinkerforge.bricklet_oled_128x64_v2 import BrickletOLED128x64V2
 
-# Load the configuration file
-with open('./config.yaml', 'r') as f:
-    config = yaml.safe_load(f)
-
-UID_OLED_DISPLAY = config.get("uid_oled_display")
-HOST = config.get("host")
-PORT = config.get("port")
+UID_OLED_DISPLAY = "<REPLACE_UID>" # Change to your UID
+HOST = "localhost" # Change to your host
+PORT = 4223 # Change to your port
 
 # Create IP-connection
 ipcon = IPConnection()

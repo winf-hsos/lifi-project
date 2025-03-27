@@ -1,15 +1,9 @@
-# See: https://lifi.datalit.de/lifi-project/sensing-light
-import yaml
 from tinkerforge.ip_connection import IPConnection
 from tinkerforge.bricklet_color_v2 import BrickletColorV2
 
-# Load the configuration file
-with open('./config.yaml', 'r') as f:
-    config = yaml.safe_load(f)
-
-UID_COLOR_SENSOR = config.get("uid_color_sensor")
-HOST = config.get("host")
-PORT = config.get("port")
+UID_COLOR_SENSOR = "<REPLACE_UID>" # Change to your UID
+HOST = "localhost" # Change to your host
+PORT = 4223 # Change to your port
 
 # Create an IP connection to the Brick Daemon
 ipcon = IPConnection()
