@@ -6,10 +6,10 @@ Six programs have to be on your laptop before your first line of code. All of th
 
 | Program | What you need it for | Where to get it |
 |---|---|---|
-| **Python** | the language you program in | [python.org](https://www.python.org/downloads/) |
-| **Git** | fetches the course material and the `lifi_hardware` module | [git-scm.com](https://git-scm.com/downloads) |
 | **Visual Studio Code** | the editor you write in | [code.visualstudio.com](https://code.visualstudio.com/) |
+| **Git** | fetches the course folder and the `lifi_hardware` module | [git-scm.com](https://git-scm.com/downloads) |
 | **OpenCode** | your AI assistant | [opencode.ai](https://opencode.ai/) |
+| **Python** | the language you program in | [python.org](https://www.python.org/downloads/) |
 | **Brick Daemon** | connects your hardware to the laptop | [Tinkerforge downloads](https://www.tinkerforge.com/en/doc/Downloads.html) |
 | **Brick Viewer** | shows whether the hardware is recognised, and helps you find faults | [Tinkerforge downloads](https://www.tinkerforge.com/en/doc/Downloads.html) |
 
@@ -31,13 +31,116 @@ On top of these comes the module `lifi_hardware`, which is how your programs tal
 
 ## Installation step by step
 
-Keep to the order, some steps build on earlier ones. Allow an afternoon. Installations rarely go through at the first attempt, and that is not your fault.
+The installation has two parts. In the first part you install three programs by hand and fetch the course folder. That is the minimum your assistant needs to run. In the second part your assistant takes over: it walks you through the rest one step at a time and checks each step itself, on your laptop.
 
-As soon as your assistant is running at the end of step 5, you can ask it for help with everything that follows. Paste an error message, or take a screenshot of the window you are stuck at and hand it over: the assistant can read screenshots. It will walk you through the remaining steps, make sense of error messages and check whether something is missing. More on what it can do for you under [Working with your AI assistant](../ai/index.md).
+Installations rarely go through at the first attempt, and that is not your fault. If you get stuck in the first part, keep the error message word for word. Somebody who can help will want to see exactly that.
 
-If you still get stuck, keep the error message word for word. Somebody who can help will want to see exactly that.
+## Part 1: until your assistant runs
 
-### 1. Python
+### 1. Visual Studio Code
+
+Download the editor from [code.visualstudio.com](https://code.visualstudio.com/) and install it. Later, when you open your first Python file, it offers to install the Python extension. Accept.
+
+Two things to try right away:
+
+- **Open a folder** via *File > Open Folder*. VS Code always works with a folder, not with single files.
+- **Open a terminal** via *Terminal > New Terminal*. This window at the bottom of the editor is the command line where you start your programs, and where you continue in a moment. From now on, every command on this page goes into this terminal.
+
+### 2. Git
+
+#### Windows
+
+Download Git from [git-scm.com/downloads](https://git-scm.com/downloads) and install it. You can accept the installer's defaults throughout.
+
+This also installs **Git Bash**, a terminal you need for OpenCode in the next step.
+
+To check, close VS Code completely and open it again (a program you just installed only becomes visible to VS Code after a restart), then open a terminal and type:
+
+```powershell
+git --version
+```
+
+#### macOS
+
+In the Terminal, simply type
+
+```bash
+git --version
+```
+
+If Git is missing, macOS offers to install the Command Line Tools by itself. Accept and wait until it is done. Alternatively via [Homebrew](https://brew.sh): `brew install git`.
+
+### 3. OpenCode
+
+OpenCode runs in the terminal. Use the terminal inside VS Code for it.
+
+#### Windows
+
+First make **Git Bash** the standard terminal of VS Code, once: press Ctrl+Shift+P, type `Terminal: Select Default Profile`, press Enter and choose **Git Bash**. OpenCode only works in this terminal, and this way every new terminal is a Git Bash. Then open a new terminal (*Terminal > New Terminal*) and type:
+
+```bash
+curl -fsSL https://opencode.ai/install | bash
+```
+
+#### macOS
+
+In the terminal in VS Code:
+
+```bash
+curl -fsSL https://opencode.ai/install | bash
+```
+
+Alternatively via [Homebrew](https://brew.sh): `brew install sst/tap/opencode`.
+
+To check, open a new terminal and type `opencode --version`. A version number should appear.
+
+Do not start it yet. OpenCode needs a language model to talk to, and the course folder in the next step sets that up for you.
+
+### 4. The course folder and your assistant
+
+The course folder holds everything your assistant needs to know about this module, and it is the folder you work in for the rest of the semester.
+
+In the terminal in VS Code, type
+
+```bash
+git clone https://github.com/winf-hsos/lifi-project.git
+```
+
+Git creates a folder `lifi-project` in the folder the terminal was in, usually your user folder. Open exactly that folder via *File > Open Folder*. From now on, always open this folder when you work on the project. Inside it you will see:
+
+- `my-code`: **your folder.** Everything you write goes here, and your copy of each challenge lands here.
+- `course`: the course material. Your assistant reads it; you do not change it.
+- a few more files for OpenCode, which you can ignore.
+
+Now give your assistant its key. At the start of the course you get a personal key for the language model, a long line of characters beginning with `sk-`. In VS Code choose *File > New File*, name the file exactly `openai.key`, paste the key into it, and save. The file belongs directly into `lifi-project`, next to `README.md`. Nothing else goes into it.
+
+The key is yours and it costs money every time the assistant answers, so treat it like a password: do not send it to anyone, do not paste it into a chat, not even the one with your assistant. The file stays on your laptop. Git has been told to ignore it, so it cannot end up anywhere by accident.
+
+If you are working through this course on your own, without a key from us, put a key of your own from [platform.openai.com](https://platform.openai.com/api-keys) into the file. It works the same way.
+
+Then open a new terminal in VS Code and type
+
+```bash
+opencode
+```
+
+The assistant starts with the course model already selected. If it reports that `openai.key` does not exist, the file has a different name or sits in a different folder. If it reports that the key is incorrect, open the file and check that it contains the key and nothing else.
+
+## Part 2: your assistant takes over
+
+In OpenCode, type
+
+```
+/onboarding
+```
+
+In the first session everyone does this together. Your assistant asks you three short questions, then installs the rest with you and checks every step: Python, the Brick Daemon and Brick Viewer, and the module `lifi_hardware`. At the end it tests your device: your LED lights up green, and the sensor reports its first readings.
+
+You do not need the instructions below for that. They are here so you can look something up, and for everyone working on their own.
+
+When something is added to the course during the semester, type `/update-semester` in OpenCode. The assistant fetches the new version for you. You do not need to know Git for it, and your folder `my-code` is never touched.
+
+### Python
 
 #### Windows
 
@@ -67,104 +170,7 @@ A version number should appear, something like `Python 3.13.1`.
 
 Remember: on a Mac the command is `python3`, not `python`.
 
-### 2. Git
-
-#### Windows
-
-Download Git from [git-scm.com/downloads](https://git-scm.com/downloads) and install it. You can accept the installer's defaults throughout.
-
-This also installs **Git Bash**, a terminal you will need for OpenCode in step 4.
-
-To check, in the Command Prompt:
-
-```powershell
-git --version
-```
-
-#### macOS
-
-In the Terminal, simply type
-
-```bash
-git --version
-```
-
-If Git is missing, macOS offers to install the Command Line Tools by itself. Accept and wait until it is done. Alternatively via [Homebrew](https://brew.sh): `brew install git`.
-
-### 3. Visual Studio Code
-
-Download the editor from [code.visualstudio.com](https://code.visualstudio.com/) and install it. At the first start it offers to install the Python extension. Accept.
-
-Two things to try right away:
-
-- **Open a folder** via *File > Open Folder*. VS Code always works with a folder, not with single files.
-- **Open a terminal** via *Terminal > New Terminal*. This window at the bottom of the editor is the command line where you start your programs, and where you continue in a moment.
-
-### 4. OpenCode
-
-OpenCode runs in the terminal. Use the terminal inside VS Code for it.
-
-#### Windows
-
-Open a terminal in VS Code and choose **Git Bash** at the top right of the terminal window. There:
-
-```bash
-curl -fsSL https://opencode.ai/install | bash
-```
-
-#### macOS
-
-In the Terminal:
-
-```bash
-curl -fsSL https://opencode.ai/install | bash
-```
-
-Alternatively via [Homebrew](https://brew.sh): `brew install sst/tap/opencode`.
-
-To check: `opencode --version`.
-
-Do not start it yet. OpenCode needs a language model to talk to, and the course repository in the next step sets that up for you.
-
-### 5. The course repository and your assistant
-
-The course repository is a folder with everything your assistant needs to know about this module: the instructions it follows, the course material as plain text, and later the templates for each challenge. It is also the folder you work in for the rest of the semester.
-
-Open a terminal in VS Code (*Terminal > New Terminal*) and type
-
-```bash
-git clone https://github.com/winf-hsos/lifi-project.git
-```
-
-Git creates a folder `lifi-project` in the folder the terminal was in, usually your user folder. Open exactly that folder via *File > Open Folder*. From now on, always open this folder when you work on the project.
-
-Now give your assistant its key. At the start of the course you get a personal key for the language model, a long line of characters beginning with `sk-`. In VS Code choose *File > New File*, name the file exactly `openai.key`, paste the key into it, and save. Nothing else goes into this file.
-
-The key is yours and it costs money every time the assistant answers, so treat it like a password: do not send it to anyone, do not paste it into a chat, not even the one with your assistant. The file stays on your laptop. Git has been told to ignore it, so it cannot end up anywhere by accident.
-
-Then open a terminal in VS Code and type
-
-```bash
-opencode
-```
-
-The assistant starts with the course model already selected and knows about this course. In the first session you then type
-
-```
-/onboarding
-```
-
-together with everyone else. The assistant asks you a few questions, installs the module `lifi_hardware` for you (step 7), and checks that your laptop and your device are ready. Whatever it finds missing, it walks you through, including the Brick Daemon in the next step.
-
-If OpenCode reports that `openai.key` does not exist, the file has a different name or sits in a different folder. It has to be directly in `lifi-project`, next to the file `AGENTS.md`. If it reports that the key is incorrect, open the file and check that it contains the key and nothing else.
-
-If you are working through this course on your own, without a key from us, put a key of your own from [platform.openai.com](https://platform.openai.com/api-keys) into the file. It works the same way.
-
-Your own programs go into the folder `my-code` inside `lifi-project`. That is where your copy of each challenge template lands.
-
-When something is added to the course during the semester, type `/update-semester` in OpenCode. The assistant fetches the new version for you; you do not need to know Git for it, and your folder `my-code` is never touched.
-
-### 6. Brick Daemon and Brick Viewer
+### Brick Daemon and Brick Viewer
 
 You get both from the [Tinkerforge download page](https://www.tinkerforge.com/en/doc/Downloads.html). Download the version for your operating system and install it.
 
@@ -172,9 +178,9 @@ On **Windows** these are two `.exe` installers, on **macOS** two `.dmg` packages
 
 The Brick Daemon starts by itself afterwards and keeps running as a background service. You do not see it, and that is normal.
 
-### 7. The module `lifi_hardware`
+### The module `lifi_hardware`
 
-This is how your Python programs talk to the hardware. If you ran `/onboarding` in step 5, the assistant has already installed it, and you can skip this step. By hand, in the terminal:
+This is how your Python programs talk to the hardware. `/onboarding` installs it for you, and `/update-semester` updates it when a new version appears. By hand, in the terminal:
 
 ```bash
 pip install git+https://github.com/winf-hsos/lifi-hardware.git
@@ -184,16 +190,16 @@ On a Mac, `pip3` instead of `pip` if needed.
 
 The package brings the Tinkerforge library along as a dependency, so you do not install that separately. And because the address starts with `git+`, `pip` fetches the package through Git. That is why Git from step 2 had to come first.
 
-When a new version of the module appears during the course, `/update-semester` installs it for you.
-
-### 8. Check that everything works together
+### Check that everything works together
 
 Connect a device over USB and start the Brick Viewer. If your Master Brick shows up there with the LED and the colour sensor, the installation is complete. Click around and switch the LED on by hand. That is not programming yet, but it is proof that everything is talking to everything else.
 
 ### When something does not work
 
-The three questions that help most often:
+The questions that help most often:
 
 1. Is the Brick Daemon running? Without it no program finds the hardware.
-2. Does the Brick Viewer show your device? If not, the fault is before your code.
+2. Does the Brick Viewer show your device? If not, the fault is before your code. Unplug the USB cable and plug it in again: that cures a surprising number of cases.
 3. Are you using `python` or `python3`, `pip` or `pip3`? On a Mac it is almost always the one with the 3.
+
+Or ask your assistant to check your setup. It runs the same test as in `/onboarding` and tells you what is missing.
