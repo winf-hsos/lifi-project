@@ -48,7 +48,7 @@ BRANCH = "main"
 # of the course are removed. .opencode/ is not in this list because OpenCode
 # keeps its own files in it.
 COURSE_ONLY = ["course"]
-COURSE_ONLY_OPENCODE = [".opencode/commands", ".opencode/scripts"]
+COURSE_ONLY_OPENCODE = [".opencode/commands", ".opencode/procedures", ".opencode/scripts"]
 
 
 def say(text=""):

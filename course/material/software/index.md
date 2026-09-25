@@ -68,21 +68,23 @@ Inside the folder you will see:
 
 ### 3. Open the folder and enter your key
 
-Start OpenCode and open your course folder in it (the folder itself, `lifi-project-main` or `lifi-project`, not a folder inside it).
+Start OpenCode. On its start page you see a list **Projects** on the left.
 
-At the start of the course you receive a personal key for the language model by e-mail, a long line of characters beginning with `sk-`. OpenCode asks you to connect a provider, or you find this under its settings for providers. Choose **OpenAI**, then the option with an **API key** (not the login with a ChatGPT account), and paste your key. The course model is already selected.
+1. **Add your course folder.** Click the small folder icon with the plus next to *Projects* (its tooltip says *Add project*). A window opens: select your course folder, `lifi-project-main` or `lifi-project`, and click *Select Folder*. It now appears in the list of projects.
+2. **Enter your key.** At the start of the course you receive a personal key for the language model by e-mail, a long line of characters beginning with `sk-`. Click **Settings** below the list of projects, then **Providers** on the left. At **OpenAI** click **+ Connect** (if OpenAI is not in the list, click *Show more providers* first). Choose **API key**, not the two *ChatGPT Pro/Plus* options. Paste your key into the field *OpenAI API key* and click **Continue**.
+3. **Start a session.** Close the settings and click **New session**. Below the input field you should see the model *GPT-6 Luna (course model)*: your course folder has selected it for you.
 
 The key is yours and it costs money every time the assistant answers, so treat it like a password: do not send it to anyone and do not paste it into a chat, not even the one with your assistant. If you are working through this course on your own, without a key from us, create a key of your own at [platform.openai.com](https://platform.openai.com/api-keys). It works the same way.
 
 ## Part 2: your assistant takes over
 
-In OpenCode, type
+In the new session, type
 
 ```
 /onboarding
 ```
 
-In the first session everyone does this together. Your assistant asks you three short questions and then installs the rest with you, one step at a time: Python, Visual Studio Code, the Brick Daemon and Brick Viewer, and the module `lifi_hardware`. Before it installs anything, it tells you what it is about to do and waits for your OK. At the end it tests your device: your LED lights up green, and the sensor reports its first readings.
+and press Enter. In the first session everyone does this together. Your assistant asks you three short questions and then installs the rest with you, one step at a time: Python, Visual Studio Code, the Brick Daemon and Brick Viewer, and the module `lifi_hardware`. Before it installs anything, it tells you what it is about to do and waits for your OK. At the end it tests your device: your LED lights up green, and the sensor reports its first readings.
 
 You do not need the instructions below for that. They describe the same steps by hand.
 
