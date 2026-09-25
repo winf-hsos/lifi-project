@@ -56,7 +56,9 @@ You start your receiver. Somebody else decides when the sender starts, and you d
 
 Live change: "Now transmit two messages one after the other, without restarting the receiver."
 
-## What you hand in
+## What to keep
+
+Documentation is optional and only for your team, with one exception: your protocol specification, because another team builds a receiver from it in the interop test. Nobody grades any of it.
 
 - **Your protocol specification.** Complete enough that another team can build a receiver from it. It is also what you pass on in the interop test.
 - A short report on the interop test: what was missing in the other protocol, what was missing in yours?

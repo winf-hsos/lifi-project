@@ -35,9 +35,9 @@ It is, however, the **prerequisite** for everything that follows. Without a runn
 
 Run your program and show it: the LED shines, readings appear. Then make one small change while someone watches, for example "now make the LED blue". This is not a test. It is the start of a habit that stays with you until the end: you should be able to change your own code, on the spot, and know what will happen.
 
-## What you hand in
+## What to keep
 
-Only the running program. No documentation yet.
+Nothing to hand in: your running program is all that counts.
 
 ## Concepts you need
 

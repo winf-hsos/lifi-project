@@ -51,7 +51,9 @@ At the test table, with your own setup, which you carry there.
 
 Twenty random transmissions run. Then one live change, for example: "Add one more state. Does the hit rate hold?"
 
-## What you hand in
+## What to keep
+
+Documentation is optional and only for your team: nobody grades it, and the bonus depends only on passing the challenges. Keeping it pays off anyway, because every later challenge builds on it:
 
 - The measurement log of the control measurement without aids
 - The measurement log with your setup

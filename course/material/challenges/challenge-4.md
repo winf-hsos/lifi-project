@@ -80,8 +80,6 @@ You do not have to use the way back. But whoever transmits one-way has to send m
 
 **The robustness round.** The same run under harder conditions, see below.
 
-**Documentation.** Protocol specification, measurement data, log of mistakes.
-
 ## The robustness round
 
 A well-built light channel makes the test "ceiling light on" boring, and that is the right lesson: solving a problem in the hardware instead of the software is a legitimate engineering decision. So the test runs along the axes a tube does not solve.
@@ -98,7 +96,9 @@ At the test table, in front of the other teams. You set up, you get the file, an
 
 When it is through, two things happen: the hash is compared, and your receiver opens the file. Everyone then sees on your screen what has just come through the air.
 
-## What you hand in
+## What to keep
+
+Documentation is optional and only for your team: nobody grades it, and the bonus depends only on passing the challenges. Keeping it pays off anyway, because it is the story of how you solved the problem:
 
 - The complete protocol specification, as it stands at the final
 - All measurement data from the project, in particular on the choice of your symbol rate and alphabet size

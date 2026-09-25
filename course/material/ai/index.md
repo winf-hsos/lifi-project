@@ -38,7 +38,7 @@ Writing code is the obvious use, and it is far from the only one. Some concrete 
 
 **Practising for the exam.** Ask it to quiz you on a concept from the [overview](../concepts/index.md), then explain your answers back to it. It will tell you where your explanation is thin.
 
-## Two conditions
+## One condition, one habit
 
 ### You must be able to explain your code
 
@@ -48,7 +48,7 @@ This is not a trick. It is the test that matters: not whether you can produce a 
 
 ### The log of mistakes
 
-For every challenge you document two or three places where the assistant suggested something and a measurement proved it wrong, and what actually turned out to be true.
+For every challenge, write down two or three places where the assistant suggested something and a measurement proved it wrong, and what actually turned out to be true. Nobody grades this log and you do not hand it in; it is for your team.
 
 This is the most useful document you will write, and it is not a confession. It marks exactly where the assistant's knowledge ends and yours begins. A team with a good log of mistakes has learned to tell a plausible answer from a true one, and that is a skill you will need in every subject from now on.
 

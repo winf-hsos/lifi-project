@@ -32,7 +32,9 @@ At the test table you get a word you have not seen before, and you transmit it l
 
 Then the live change: "Double your symbol rate. What happens?" This question is meant seriously, and it leads straight into Challenge 3.
 
-## What you hand in
+## What to keep
+
+Documentation is optional and only for your team: nobody grades it, and the bonus depends only on passing the challenges. Keeping it pays off anyway, because every later challenge builds on it:
 
 - Your coding table, meaning which sequence of symbols stands for which letter
 - A measurement log: at which symbol rates did it work, from which one on did it not?

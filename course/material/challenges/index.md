@@ -40,11 +40,11 @@ The project is cut into five challenges. Each one adds exactly one new difficult
 
 Challenge 0 is not a competition. It ends when your LED lights up because you told it to and the sensor across the table notices. From Challenge 1 on, every team competes under the same conditions, and each challenge builds on the result of the one before. The alphabet you measure in Challenge 1 is what you send words with in Challenge 2. The timing that works in Challenge 2 is what the listener in Challenge 3 has to recover without help. Challenge 4 puts all of it together and adds the way back, so the receiver can finally talk to the sender.
 
-Every challenge page has the same shape: the task, what is new about it, what is measured, what you hand in, the concepts you need for it, the traps we know about, and something extra for teams that finish early.
+Every challenge page has the same shape: the task, what is new about it, what is measured, what is worth keeping, the concepts you need for it, the traps we know about, and something extra for teams that finish early.
 
 ## What every challenge produces
 
-Three kinds of things come out of every challenge, and they are worth keeping from the first day.
+Three kinds of things come out of every challenge. None of them is handed in or graded: they are for your team, and they are worth keeping from the first day.
 
 **Measurement logs.** What did you change, what did you keep the same, and what came out? A good log is one your partner can read a week later and still understand.
 
