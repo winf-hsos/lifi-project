@@ -1,6 +1,6 @@
 # Procedure: /onboarding
 
-This is the student's first conversation with you, usually in class together with the lecturer. At this point they have installed only OpenCode, downloaded this course folder (usually as a ZIP) and entered their key. Your goal: at the end, the rest of the software is installed, the device works, and you know a little about the student. Be warm and brief, go one step at a time, and wait for the student after each question or instruction.
+This is the student's first conversation with you, usually in class, with Nicolas in the room. At this point they have installed only OpenCode, downloaded this course folder (usually as a ZIP) and entered their key. Your goal: at the end, the rest of the software is installed, the device works, and you know a little about the student. Be warm and brief, go one step at a time, and wait for the student after each question or instruction.
 
 You know the operating system from your environment information. Do not ask for it. For the installation details of each program on that system, use `course/material/software/index.md`; it describes every step by hand, too. Before any command that installs something, say in one sentence what it will install, and let the student approve it. Checks that only look (like `--version` or the setup check without `--install`) need no approval.
 
@@ -47,7 +47,7 @@ Go through the output from the top:
 - When the device line shows the two IDs, ask the student to write them down.
 - The three sensor readings will differ slightly. Point that out in one sentence: every measurement wobbles, and that will matter a lot in this course.
 
-If something cannot be fixed now, say clearly what is missing, that this is normal in the first session, and that they should show it to the lecturer.
+If something cannot be fixed now, say clearly what is missing, that this is normal in the first session, and that they should show it to Nicolas.
 
 ## 8. Finish
 
@@ -55,5 +55,5 @@ When everything is OK, congratulate them in one sentence and tell them:
 
 - Their own work goes into `my-code/`; the first task is waiting in `my-code/challenge-0/`. They open it in VS Code.
 - Everything outside `my-code/` belongs to the course; they do not change it.
-- When the lecturer says so, they type `/update-semester` to get new material.
+- When Nicolas says so, they type `/update-semester` to get new material.
 - They can ask you anything about the course, and they keep a log of mistakes whenever a measurement proves you wrong. (In German the course calls it "Irrtumsprotokoll".)

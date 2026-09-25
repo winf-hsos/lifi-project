@@ -293,5 +293,5 @@ if __name__ == "__main__":
         main()
     except RuntimeError as error:
         say(f"PROBLEM: {error}")
-        say("WHAT TO DO: Show this message to your assistant or your lecturer.")
+        say("WHAT TO DO: Show this message to your assistant or to Nicolas.")
         sys.exit(1)
