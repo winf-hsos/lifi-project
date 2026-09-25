@@ -8,7 +8,9 @@
     "openai": {
       "models": {
         "gpt-6-luna": {
-          "name": "GPT-6 Luna (course model)"
+          "name": "GPT-6 Luna (course model)",
+          "attachment": true,
+          "modalities": { "input": ["text", "image"], "output": ["text"] }
         }
       }
     }
