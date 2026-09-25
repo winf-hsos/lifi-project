@@ -100,7 +100,7 @@ The practical side of the project, the device, your partner, the tools and the d
 
 ## What the exam is about
 
-The concepts. Your project is the material on which you explain them, but it does not replace understanding them. Whoever has passed every challenge and still cannot say why digital transmission tolerates noise does not pass the exam. The ranking in the competition does not count towards your grade; passing every challenge is what admits you to the exam, and the exam is about the concepts, one person at a time. You will have to prepare for it, but you will not start from zero: by then you will have met every one of these concepts at your own device.
+The concepts. Your project is the material on which you explain them, but it does not replace understanding them. Whoever has passed every challenge and still cannot say why digital transmission tolerates noise does not pass the exam. The ranking in the competition does not count towards your grade. The exam is a one-hour multiple-choice exam on the concepts, and completed challenges earn you a bonus of up to 5 % on it. You will have to prepare for it, but you will not start from zero: by then you will have met every one of these concepts at your own device.
 
 ## Slides
 

@@ -34,7 +34,7 @@ These notes explain the deck giving an overview of the module and the project, f
 
 **What every challenge produces (Frame 25).** Three things, worth keeping from the first day on. Measurement logs: what did you change, what did you keep the same, what came out? Your partner still understands a good log a week later. A description of your solution, detailed enough that another team could rebuild it; from Challenge 3 on it becomes a complete specification of your protocol. And the log of mistakes: two or three places where the assistant suggested something and a measurement proved it wrong. That is not a confession. It is the most useful document you write, because it shows where the assistant's knowledge ends and yours begins.
 
-**What counts (Frame 26).** The ranking in the competition does not count towards your grade. Passing all challenges is what admits you to the exam. The exam is about the concepts, one person at a time, in conversation.
+**What counts (Frame 26).** The ranking in the competition does not count towards your grade. Completed challenges earn you a bonus of up to 5 % on the exam. The exam itself is about the concepts: one hour, multiple choice, and everyone writes their own.
 
 ## Part 4: how we work (Frames 27 to 30)
 
