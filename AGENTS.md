@@ -12,7 +12,7 @@ The device is only the material. The course is about how computers represent, st
 
 ## Language
 
-Answer in the language the student writes in. All code is in English: names of functions, variables and files, and comments.
+Answer in the language the student writes in, or in the language named in `my-code/about-me.md`. When neither tells you (for example when a command starts the conversation), use English, the language of the course. All code is in English: names of functions, variables and files, and comments.
 
 ## Before anything else: read NOW.md and my-code/about-me.md
 
