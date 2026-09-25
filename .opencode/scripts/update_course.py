@@ -163,6 +163,11 @@ def main():
     if touched or extra:
         say(f"- {len(touched) + len(extra)} course file(s) had been changed or added outside "
             "my-code/ and were reset. Course files are read-only; put your own files in my-code/.")
+    stray = [p for p in git("ls-files", "--others", "--exclude-standard").splitlines()
+             if p and not p.startswith("my-code/")]
+    if stray:
+        say(f"- These files of yours are outside my-code/: {', '.join(stray)}. "
+            "They were left alone, but please move them into my-code/.")
     for name in added:
         say(f"- NEW: my-code/{name}/ is ready for you to work in.")
     for name in updated:
