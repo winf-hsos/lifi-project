@@ -14,8 +14,9 @@ This is your working folder for the LiFi Project in the module Digitization and 
 ## Getting started
 
 1. Open this folder in Visual Studio Code: *File > Open Folder*.
-2. Open a terminal: *Terminal > New Terminal*.
-3. Type `opencode` and press Enter. Your assistant starts and knows about this course.
+2. Create your key file: *File > New File*, name it exactly `openai.key`, paste the personal key you got from your lecturer, save. Nothing else goes into this file. It stays on your laptop: Git ignores it, and you never share it.
+3. Open a terminal: *Terminal > New Terminal*.
+4. Type `opencode` and press Enter. Your assistant starts with the course model already selected and knows about this course.
 
 Ask it anything, for example: "Help me with the next installation step" or "Explain what a loop is, with an example".
 

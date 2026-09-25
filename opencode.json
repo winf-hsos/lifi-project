@@ -1,5 +1,20 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "model": "openai/gpt-6-luna",
+  "small_model": "openai/gpt-6-luna",
+  "enabled_providers": ["openai", "opencode"],
+  "provider": {
+    "openai": {
+      "options": {
+        "apiKey": "{file:openai.key}"
+      },
+      "models": {
+        "gpt-6-luna": {
+          "name": "GPT-6 Luna (course model)"
+        }
+      }
+    }
+  },
   "share": "disabled",
   "permission": {
     "edit": "ask",
