@@ -148,19 +148,21 @@ Then open a terminal in VS Code and type
 opencode
 ```
 
-The assistant starts with the course model already selected and knows about this course. Try it: ask it "Which installation step comes next?"
+The assistant starts with the course model already selected and knows about this course. In the first session you then type
+
+```
+/onboarding
+```
+
+together with everyone else. The assistant asks you a few questions, installs the module `lifi_hardware` for you (step 7), and checks that your laptop and your device are ready. Whatever it finds missing, it walks you through, including the Brick Daemon in the next step.
 
 If OpenCode reports that `openai.key` does not exist, the file has a different name or sits in a different folder. It has to be directly in `lifi-project`, next to the file `AGENTS.md`. If it reports that the key is incorrect, open the file and check that it contains the key and nothing else.
 
 If you are working through this course on your own, without a key from us, put a key of your own from [platform.openai.com](https://platform.openai.com/api-keys) into the file. It works the same way.
 
-When something is added to the repository during the course, you get it with
+Your own programs go into the folder `my-code` inside `lifi-project`. That is where your copy of each challenge template lands.
 
-```bash
-git pull
-```
-
-in a terminal in the `lifi-project` folder.
+When something is added to the course during the semester, type `/update-semester` in OpenCode. The assistant fetches the new version for you; you do not need to know Git for it, and your folder `my-code` is never touched.
 
 ### 6. Brick Daemon and Brick Viewer
 
@@ -172,7 +174,7 @@ The Brick Daemon starts by itself afterwards and keeps running as a background s
 
 ### 7. The module `lifi_hardware`
 
-This is how your Python programs talk to the hardware. In the terminal:
+This is how your Python programs talk to the hardware. If you ran `/onboarding` in step 5, the assistant has already installed it, and you can skip this step. By hand, in the terminal:
 
 ```bash
 pip install git+https://github.com/winf-hsos/lifi-hardware.git
@@ -182,11 +184,7 @@ On a Mac, `pip3` instead of `pip` if needed.
 
 The package brings the Tinkerforge library along as a dependency, so you do not install that separately. And because the address starts with `git+`, `pip` fetches the package through Git. That is why Git from step 2 had to come first.
 
-When a new version of the module appears during the course, you get it with
-
-```bash
-pip install --upgrade --force-reinstall git+https://github.com/winf-hsos/lifi-hardware.git
-```
+When a new version of the module appears during the course, `/update-semester` installs it for you.
 
 ### 8. Check that everything works together
 

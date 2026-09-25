@@ -158,7 +158,7 @@ def main():
 
     before = git("rev-parse", "HEAD")
     after = git("rev-parse", f"origin/{BRANCH}")
-    stamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M")
+    stamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
     saved = save_changed_course_files(stamp)
 
@@ -177,10 +177,10 @@ def main():
 
     say()
     say("RESULT")
-    if before == after and not saved:
-        say("- Your course folder was already up to date.")
+    if before == after:
+        say("- There was no new course material; your course folder is up to date.")
     else:
-        say(f"- Course folder updated ({len(changed_paths)} course files changed).")
+        say(f"- New course material: {len(changed_paths)} course file(s) added or changed.")
     if saved:
         say(f"- You had changed {len(saved)} course file(s). Your versions are saved in "
             f"my-code/_saved/{stamp}/ :")
