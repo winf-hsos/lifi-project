@@ -6,11 +6,19 @@ You may use the AI assistant in this project without any restriction. I want you
 
 Here is the picture to keep in mind. The assistant has read more about programming, sensors and protocols than any of us ever will. It has never seen your device. It does not know how bright your room is, how far apart your boxes stand, or what your sensor reports when the LED is red. Everything it says about those things is a guess, sometimes a good one. Everything you measure about them is a fact. Working well with the assistant means knowing, at every moment, which of the two you are holding.
 
+## Your course assistant
+
+The assistant you start in your course folder is not a general chatbot. It has read this website, the notes to every slide deck and the code of `lifi_hardware`, and it knows where the semester stands. It talks to you in the language you write in, and it knows two commands: `/onboarding` for your first session and `/update-semester` to fetch new material when Nicolas says so.
+
+A few things it will not do, on purpose. It writes code with you in small steps and explains each one, but it will not hand you a whole challenge in one go: at every acceptance test you have to change your own program on the spot. It will not give you a number that depends on your setup, such as how many colours you can tell apart; it suggests the experiment instead. And before the class has agreed on its standard, it will not hand you a ready-made design for how a message starts or how sender and receiver stay in step. Finding that out is part of Challenge 3.
+
+Your key has a limited budget. Short questions cost a fraction of a cent, long sessions more, so do not waste it on chatting. If it runs out, you can switch to one of the free models in the model selection below the input field. They are free for a limited time only, and some of them use conversations to improve the model: do not paste anything personal there.
+
 ## What you can use it for
 
 Writing code is the obvious use, and it is far from the only one. Some concrete suggestions, roughly in the order you will need them.
 
-**Installing the software.** The [Required Software](../software/index.md) page has eight steps, and something usually goes wrong in one of them. As soon as OpenCode itself is running, it can take over: paste the error message, or take a screenshot of the window you are stuck at and give it that. The assistant can read screenshots. It will tell you what the message means and what to do next, on your operating system, in your language.
+**Installing the software.** You install OpenCode by hand; after that, the command `/onboarding` has the assistant install everything else with you, as described on the [Required Software](../software/index.md) page. When something goes wrong, paste the error message, or take a screenshot of the window you are stuck at and give it that (drag the picture into the input field). The assistant can read screenshots. It will tell you what the message means and what to do next, on your operating system, in your language.
 
 **Understanding what was said in class.** If something stayed unclear, have it explained again, in other words, with an example, until it sits. An assistant is patient and thinks no question is too simple. For many students this is the most valuable use of all.
 

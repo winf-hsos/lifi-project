@@ -53,19 +53,15 @@ It does not hide everything, and that is deliberate. The two settings of the sen
 
 ## Installing and updating
 
-The module lives in a GitHub repository and is installed from there:
+You do not have to do anything yourself: `/onboarding` installs the module in your first session, and `/update-semester` installs a new version whenever the course needs one, for instance when a function is added or a bug is fixed.
+
+By hand, it is one command in a terminal (on a Mac `pip3` if `pip` is not found):
 
 ```bash
-pip install git+https://github.com/winf-hsos/lifi-hardware.git
+pip install https://github.com/winf-hsos/lifi-hardware/archive/refs/heads/main.zip
 ```
 
-The Tinkerforge library comes along automatically as a dependency.
-
-During the course there may be new versions, for instance when a function is added or a bug is fixed. You get the new version like this:
-
-```bash
-pip install --upgrade --force-reinstall git+https://github.com/winf-hsos/lifi-hardware.git
-```
+The Tinkerforge library comes along automatically as a dependency. The code itself lives in a public GitHub repository: [github.com/winf-hsos/lifi-hardware](https://github.com/winf-hsos/lifi-hardware).
 
 ## The interface
 
@@ -145,7 +141,7 @@ Full transparency applies. What is uploaded is exactly what is in your local fil
 
 ## Look inside
 
-The module is not a magic trick. It is a manageable amount of Python code that you can open and read, and from Challenge 2 at the latest you should do that once. The source lies open in the same GitHub repository you installed the package from. In it you will find exactly the lines that stand in the first example above.
+The module is not a magic trick. It is a manageable amount of Python code that you can open and read, and from Challenge 2 at the latest you should do that once. The source lies open in its [GitHub repository](https://github.com/winf-hsos/lifi-hardware), and your assistant has a copy of it too. In it you will find the same Tinkerforge calls as in the first example above, plus a few lines that look up your device's identifiers by themselves, so that you never have to type a UID.
 
 This is a pattern you will meet constantly in your studies: under every convenient interface lies a less convenient one, and under that another. The Tinkerforge interface in turn hides how the data actually travels over the USB cable. And below that it goes on, down to single voltage levels on a wire.
 
