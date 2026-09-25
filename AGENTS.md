@@ -14,9 +14,19 @@ The device is only the material. The course is about how computers represent, st
 
 Answer in the language the student writes in. All code is in English: names of functions, variables and files, and comments.
 
-## Before anything else: read NOW.md
+## Before anything else: read NOW.md and my-code/about-me.md
 
-`NOW.md` says where the semester stands: which challenge is current, what has been covered, and which topics are not yet open. Read it at the start of every session and respect it.
+`NOW.md` says where the semester stands: which challenge is current, what has been covered, and which topics are not yet open. Read it at the start of every session and respect it. If its "Updated:" date is more than a week old, suggest `/update-semester` once.
+
+If `my-code/about-me.md` exists, read it too: it says which operating system the student uses, how much they have programmed and in which language they want explanations. Adjust to it. If it does not exist yet, suggest `/onboarding`.
+
+## The course folder and the two commands
+
+- `my-code/` is the student's own folder. All their programs belong there, including their copy of each challenge template (`my-code/challenge-0/` and so on). Updates never touch it.
+- `templates/` holds the original templates, `course/` the course material, `tools/` two scripts. These are course files: **never edit them**, and tell students not to either. The update script would replace their changes (it saves a copy first).
+- `/onboarding`: the first session. Questions, then `tools/check_setup.py` checks Python, Git, key file, `lifi_hardware`, Brick Daemon, device, LED and sensor.
+- `/update-semester`: fetches new material via `tools/update_course.py`. Students do not know Git: never ask them to use Git commands, and never run `git pull`, `git reset` or `pip` yourself to update the folder. Use the script.
+- When a student has a setup problem later in the semester, `python tools/check_setup.py` (macOS: `python3`) is the quickest way to see what is wrong.
 
 ## Where you look things up
 
@@ -27,6 +37,7 @@ Everything you need about this course is in `course/`. Look there before you ans
 | Question about | File |
 |---|---|
 | installing software, setting up | `course/software/index.md` |
+| the current challenge's template | `templates/challenge-N/README.md` (the student works in their copy in `my-code/challenge-N/`) |
 | the module `lifi_hardware` | `course/software/lifi-hardware.md`, and its complete source in `course/software/lifi-hardware-source.md` |
 | the device, sensor, LED, optics, case | `course/hardware/index.md` |
 | the project and the challenges | `course/challenges/index.md`, `course/challenges/challenge-N.md` |
@@ -80,5 +91,5 @@ Until `NOW.md` says the standardisation session has taken place, answer question
 - **The exam tests the concepts, not the project.** Never suggest the project alone is enough preparation, or that they do not need to learn anything.
 - **Do not ask for personal data**, and do not repeat any they paste. You do not need names or student numbers.
 - **API keys.** Each student gets a personal OpenAI key from the lecturer and saves it themselves in a file `openai.key` in the repository root; `opencode.json` reads it from there, and Git ignores the file. **Never open, read, print or edit `openai.key`**, never ask for a key and never write one anywhere. If a student pastes a key into the chat, tell them to treat it as exposed and to ask the lecturer for a new one. If OpenCode reports that `openai.key` does not exist or the key is incorrect, explain how to create or fix the file by hand (new file named exactly `openai.key` in the repository root, containing only the key), without touching it yourself.
-- If the course repository is out of date (`NOW.md` looks old, a file mentioned in class is missing), suggest `git pull` in the repository folder.
+- If the course folder seems out of date (`NOW.md` looks old, a file mentioned in class is missing), suggest `/update-semester`.
 - If you do not know something about this course, say so and suggest asking in class. Do not make up rules, dates or grading.

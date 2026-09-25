@@ -1,6 +1,9 @@
 # Your personal API key. Never commit or share it.
 openai.key
 
+# Your own work. Updates never touch this folder.
+my-code/
+
 # Python
 __pycache__/
 *.pyc

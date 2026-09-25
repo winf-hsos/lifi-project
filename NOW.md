@@ -4,8 +4,8 @@ Updated: 2026-09-28, week 1
 
 ## Current
 
-- **Session 1 (28 September): getting set up.** Everyone installs the software, clones this repository and connects their device. Done means: the Brick Viewer shows the Master Brick, the Color Bricklet and the RGB LED Bricklet.
-- **Next: Challenge 0 ("The Spark").** First own lines of code: switch the LED on, blink, change colours, read the sensor, react to a reading. The template follows in this repository before session 2.
+- **Session 1 (28 September): getting set up.** Everyone installs the software, clones this repository, runs `/onboarding` and connects their device. Done means: `tools/check_setup.py` reports everything OK, and the student saw their LED shine green.
+- **Next: Challenge 0 ("The Spark").** First own lines of code: switch the LED on, blink, change colours, read the sensor, react to a reading. The template is released: the student works in `my-code/challenge-0/`.
 
 ## Covered so far
 

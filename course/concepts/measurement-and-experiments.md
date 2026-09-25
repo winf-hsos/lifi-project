@@ -60,9 +60,9 @@ A **measurement series** is several readings under equal, recorded conditions, i
 
 [Figure: What makes a measurement series: write the conditions and the expectation before, change one variable and repeat during, keep every value and compare with the expectation after.]
 
-Repetitions are not decoration, they are your protection against a lucky hit. With two colours, pure guessing gets every second one right; five in a row succeed by chance about once in 32 attempts. Fifty out of fifty essentially never happens by luck. That is exactly why the hand-overs in the challenges are cut to long series.
+Repetitions are not decoration, they are your protection against a lucky hit. With two colours, pure guessing gets every second one right; five in a row succeed by chance about once in 32 attempts. Fifty out of fifty essentially never happens by luck. That is exactly why the acceptance tests in the challenges are cut to long series.
 
-And when a clean measurement series contradicts a suggestion from the assistant, the series wins. Check briefly whether it really was clean, one variable, enough repetitions, a control reading, and then the case belongs in your error log: suggestion, measurement, outcome. Put shortly: what you did not measure, you do not know.
+And when a clean measurement series contradicts a suggestion from the assistant, the series wins. Check briefly whether it really was clean, one variable, enough repetitions, a control reading, and then the case belongs in your log of mistakes: suggestion, measurement, outcome. Put shortly: what you did not measure, you do not know.
 
 ## Slides
 

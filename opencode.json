@@ -18,6 +18,16 @@
   "share": "disabled",
   "permission": {
     "edit": "ask",
-    "bash": "ask"
+    "bash": {
+      "*": "ask",
+      "python tools/update_course.py*": "allow",
+      "python3 tools/update_course.py*": "allow",
+      "python tools/check_setup.py*": "allow",
+      "python3 tools/check_setup.py*": "allow"
+    },
+    "read": {
+      "*": "allow",
+      "*openai.key": "deny"
+    }
   }
 }

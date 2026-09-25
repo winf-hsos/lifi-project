@@ -51,7 +51,7 @@ The addition table for two bits has four rows: 0 + 0 = 0, 0 + 1 = 1, 1 + 0 = 1, 
 
 [Figure: The half adder: XOR gives the sum, AND gives the carry. The truth table on the right is the addition table for two bits.]
 
-A full adder takes the carry from the right as a third input and needs a few gates more, about five. Put eight full adders in a row and they add two bytes, exactly the way you add on paper: digit by digit, from right to left, carrying over. The figure shows 178 + 40. Keep that sum in mind, it comes back further down.
+A full adder takes the carry from the right as a third input and is built from two half adders plus one OR gate that joins their carries: five gates in all. Put eight full adders in a row and they add two bytes, exactly the way you add on paper: digit by digit, from right to left, carrying over. The figure shows 178 + 40. Keep that sum in mind, it comes back further down.
 
 [Figure: Eight full adders add two bytes. Each block passes its carry to the left neighbour. The example is 178 + 40 = 218, in binary 1011 0010 + 0010 1000 = 1101 1010.]
 

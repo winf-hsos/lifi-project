@@ -44,7 +44,7 @@ There are tried and tested ways to cut, and you will use three of them all the t
 
 Cutting alone is not enough, because not every cut is equally good. Compare two sentences: "I need to learn maths" and "I can pass the 2023 exam in 90 minutes". Both sound like exam preparation. With the first one you never know whether you are done. The second one you can try out tonight, and you get a yes or a no. A good piece is one with a test built into it.
 
-In the project that reads: "the LED works" is a feeling. "Red or blue, recognised correctly 50 times in a row" is a measurement. Every challenge is written that way, and every hand-over runs that way. From this follows the workshop rule of this module: **done means the test passes**, not "it looks good".
+In the project that reads: "the LED works" is a feeling. "Red or blue, recognised correctly 50 times in a row" is a measurement. Every challenge is written that way, and every acceptance test runs that way. From this follows the workshop rule of this module: **done means the test passes**, not "it looks good".
 
 ### Cuts are agreements
 
