@@ -1,34 +1,34 @@
 <!-- Lecture notes for the slides on `symbols-and-information`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/symbols-and-information.html -->
 
-# Skript: what light means
+# Lecture notes: what light means (Symbols and Information)
 
-Dieser Text erläutert den Input zum Konzept „Symbole und Information" zum Nachlesen. Er folgt der Reihenfolge der Folien, die Verweise zählen Frames (jeder Aufbauschritt ist ein eigener Frame), lässt sich aber auch ohne die Folien lesen.
+This text explains the input on the concept "Symbols and Information" for you to read afterwards. It follows the order of the slides, and the references count frames (every build-up step is a frame of its own), but you can also read it without the slides.
 
-Der Satz ist der zweite von zwei Inputs derselben Sitzung; der erste, [drawing the line](../05-analog-and-digital/skript.md), klärt, was digital überhaupt heißt und wo die Grenzen zwischen den Zuständen liegen.
+The deck is the second of two inputs in the same session; the first, [drawing the line](../analog-and-digital/skript.md), clarifies what digital means in the first place and where the boundaries between the states lie.
 
-## Was macht Licht bedeutsam? (Frame 4)
+## What makes light mean something? (Frame 4)
 
-Nordatlantik, 1942. Funkstille, weil Funksprüche den Gegner anziehen. Zwei Schiffe sprechen trotzdem miteinander: eine Lampe, eine Klappe davor, kurz kurz kurz lang.
+North Atlantic, 1942. Radio silence, because radio traffic draws the enemy. Two ships talk to each other anyway: a lamp, a shutter in front of it, short short short long.
 
-Das Licht selbst weiß nichts. Es bedeutet nur deshalb etwas, weil beide Seiten dieselbe Tabelle im Kopf haben.
+The light itself knows nothing. It means something only because both sides carry the same table in their heads.
 
-## Ein Symbol ist ein vereinbarter, unterscheidbarer Zustand (Frames 5 bis 7)
+## A symbol is an agreed, distinguishable state (Frames 5 to 7)
 
-Beide Wörter tragen.
+Both words carry weight.
 
-**Unterscheidbar** ist eine Frage an die Physik und an euren Sensor: Kann der Empfänger diesen Zustand von allen anderen trennen? Darum ging es im ersten Input dieser Sitzung.
+**Distinguishable** is a question for physics and for your sensor: can the receiver tell this state apart from all the others? That was the subject of the first input in this session.
 
-**Vereinbart** ist eine Frage an euch beide: Haben Sender und Empfänger demselben Zustand dieselbe Bedeutung gegeben, und zwar vorher? Diese Frage kann keine Messung beantworten.
+**Agreed** is a question for the two of you: did sender and receiver give the same state the same meaning, and did they do it beforehand? No measurement can answer this question.
 
-## Perfekter Empfang, perfekter Unsinn (Frames 8 und 9)
+## Perfect reception, perfect nonsense (Frames 8 and 9)
 
-Zwei Freiwillige bekommen heimlich abweichende Zuordnungstabellen. Der Sender schickt vier Farben, alle vier kommen fehlerfrei an, und der Empfänger liest ein völlig anderes Wort.
+Two volunteers secretly get different mapping tables. The sender sends four colours, all four arrive without error, and the receiver reads a completely different word.
 
-Kein Übertragungsfehler, keine Störung, keine schlechte Messung. Trotzdem ist die Nachricht wertlos, weil die Vereinbarung fehlte. Genau deshalb steht in der Definition „vereinbart" gleichberechtigt neben „unterscheidbar".
+No transmission error, no interference, no bad measurement. The message is worthless all the same, because the agreement was missing. That is exactly why "agreed" stands in the definition on equal footing with "distinguishable".
 
-## Die Vereinbarung, aufgeschrieben (Frame 10)
+## The agreement, written down (Frame 10)
 
-Als Code ist die Vereinbarung ein Wörterbuch:
+In code, the agreement is a dictionary:
 
 ```python
 ALPHABET = {
@@ -39,92 +39,92 @@ ALPHABET = {
 }
 ```
 
-Diese Tabelle wird nie übertragen. Sie muss vorher bei beiden liegen, und sie ist damit keine Daten, sondern ein Versprechen. Wer sie ändert, ohne es dem Partner zu sagen, baut die Unsinn-Folie nach.
+This table is never transmitted. It has to sit on both sides beforehand, which makes it not data but a promise. Whoever changes it without telling the partner rebuilds the nonsense slide.
 
-## Das Kartenraten, gemessen (Frames 12 bis 14)
+## The guessing game, measured (Frames 12 to 14)
 
-Eine von 32 Karten ist gezogen, erlaubt sind nur Ja/Nein-Fragen. Wer immer halbiert, ist nach fünf Fragen fertig: 32, 16, 8, 4, 2, 1.
+One of 32 cards has been drawn, and only yes/no questions are allowed. Whoever always halves is done after five questions: 32, 16, 8, 4, 2, 1.
 
-Fünf, und zwar in jedem Fall, nicht im Glücksfall. Diese Zahl der nötigen Halbierungen ist das Maß, um das es in diesem Teil geht.
+Five, and in every case, not just when you are lucky. This number of necessary halvings is the measure this part is about.
 
-## Nicht jede Antwort ist ein Bit wert (Frame 15)
+## Not every answer is worth one bit (Frame 15)
 
-Die Gegenprobe. „Ist es das Pik-Ass?" kann alles auf einmal auflösen, tut das aber nur in einem von 32 Fällen. In den anderen 31 bleibt fast alles übrig.
+The counter-check. "Is it the ace of spades?" can settle everything at once, but it does so in only one of 32 cases. In the other 31, almost everything is still left.
 
-Die halbierende Frage dagegen liefert immer dasselbe Ergebnis: genau eine Halbierung, egal wie die Antwort ausfällt. **Ihr könnt euch nicht aussuchen, welche Antwort ihr bekommt**, und deshalb zählt nicht der beste Fall, sondern der Durchschnitt.
+The halving question, on the other hand, always delivers the same result: exactly one halving, whatever the answer. **You cannot choose which answer you get**, and that is why what counts is not the best case but the average.
 
-## Was eine Frage im Schnitt wert ist (Frame 16)
+## What a question is worth on average (Frame 16)
 
-| Frage | Antwort | Chance | ihr lernt | im Schnitt |
+| question | answer | chance | you learn | on average |
 | --- | --- | --- | --- | --- |
-| „ist sie rot?" | ja | 1/2 | 1 Bit | 1 Bit |
-| | nein | 1/2 | 1 Bit | |
-| „ist es das Pik-Ass?" | ja | 1/32 | 5 Bit | 0,2 Bit |
-| | nein | 31/32 | 0,05 Bit | |
+| "is it red?" | yes | 1/2 | 1 bit | 1 bit |
+| | no | 1/2 | 1 bit | |
+| "is it the ace of spades?" | yes | 1/32 | 5 bit | 0.2 bit |
+| | no | 31/32 | 0.05 bit | |
 
-Eine seltene Antwort trägt viel, eine erwartbare wenig. Weil die seltene Antwort aber selten ist, gewinnt im Durchschnitt die Frage, deren Ausgang offen ist. Die schiefe Frage lohnt sich erst ganz am Ende, wenn nur noch zwei Möglichkeiten übrig sind.
+A rare answer carries a lot, an expected one little. But because the rare answer is rare, on average the question whose outcome is open wins. The lopsided question only pays off right at the end, when just two possibilities are left.
 
-## Und allgemein (Frames 17 und 18)
+## And in general (Frames 17 and 18)
 
-Dieselbe Rechnung, nur ohne die konkreten Zahlen. Jede mögliche Antwort steuert zwei Dinge bei: wie wahrscheinlich sie ist, und was sie wert wäre. Beides multipliziert und über alle Antworten addiert ergibt den **Erwartungswert** einer Frage:
+The same calculation, only without the concrete numbers. Every possible answer contributes two things: how likely it is, and what it would be worth. Multiply the two and add them up over all answers, and you get the **expected value** of a question:
 
 `E = Σ pᵢ · log₂(1/pᵢ)`
 
-Dabei ist `pᵢ` die Wahrscheinlichkeit einer Antwort und `log₂(1/pᵢ)` das, was diese Antwort wert wäre: Je unwahrscheinlicher sie ist, desto mehr trägt sie. Für eine Ja/Nein-Frage sind das genau zwei Summanden, für eine Frage mit mehr Ausgängen entsprechend mehr.
+Here `pᵢ` is the probability of an answer and `log₂(1/pᵢ)` is what that answer would be worth: the less likely it is, the more it carries. For a yes/no question that is exactly two terms, for a question with more outcomes correspondingly more.
 
-Eingesetzt ergeben sich die beiden Zeilen von vorhin: `0,5 · 1 + 0,5 · 1 = 1` Bit für die halbierende Frage, `0,03 · 5 + 0,97 · 0,05 = 0,2` Bit für die schiefe. **Ein ganzes Bit bekommt nur, wer wirklich halbiert**, und das gilt unabhängig davon, wie das Spiel diesmal ausgeht.
+Put the numbers in and you get the two rows from before: `0.5 · 1 + 0.5 · 1 = 1` bit for the halving question, `0.03 · 5 + 0.97 · 0.05 = 0.2` bits for the lopsided one. **A whole bit goes only to whoever really halves**, and that holds regardless of how the game turns out this time.
 
-## Ein Bit, und zwei Formeln (Frames 19 und 20)
+## One bit, and two formulas (Frames 19 and 20)
 
-Ein **Bit** ist die Informationsmenge einer Entscheidung zwischen zwei gleich wahrscheinlichen Möglichkeiten. Ein Lichtschalter trägt eines, und kein Computer ist dafür nötig.
+A **bit** is the amount of information in a decision between two equally likely possibilities. A light switch holds one, and no computer is required for it.
 
-Damit lassen sich beide Größen aufschreiben, in dieser Reihenfolge:
+With that, both quantities can be written down, in this order:
 
-**Unsicherheit:** `H = log₂(N)` bei N gleich wahrscheinlichen Möglichkeiten. Sie misst, wie viele Halbierungen noch fehlen.
+**Uncertainty:** `H = log₂(N)` for N equally likely possibilities. It measures how many halvings are still missing.
 
-**Information:** `I = H₁ − H₂`, Unsicherheit vorher minus Unsicherheit nachher. Sie misst, was eine Antwort tatsächlich beseitigt hat.
+**Information:** `I = H₁ − H₂`, uncertainty before minus uncertainty after. It measures what an answer has actually removed.
 
-Die 32 Karten sind **nicht** die Unsicherheit, sie sind der Raum der Möglichkeiten. Die Unsicherheit sind die 5 Bit. Eine halbierende Frage senkt H um genau 1, ihre Antwort ist also 1 Bit wert.
+The 32 cards are **not** the uncertainty, they are the space of possibilities. The uncertainty is the 5 bits. A halving question lowers H by exactly 1, so its answer is worth 1 bit.
 
-## Selbst ausprobieren (Frame 21)
+## Try it yourself (Frame 21)
 
-Im [Question Game](https://winf-hsos.github.io/lifi-concept-demos/question-game/) ist eines von sechzehn Gesichtern gesucht. Nach jeder Frage rechnet die Demo vor, was sie wert war, und zeigt vorher an, was sie im Erwartungswert bringt.
+In [The Question Game](https://winf-hsos.github.io/lifi-concept-demos/question-game/) you are looking for one of sixteen faces. After every question the demo works out what it was worth, and beforehand it shows what the question brings in expected value.
 
-Zwei Runden lohnen sich: einmal absichtlich raten, einmal halbieren. Der Unterschied steht danach in Bit auf dem Schirm.
+Two rounds are worth playing: once guessing on purpose, once halving. Afterwards the difference is on the screen in bits.
 
-## Was ein größeres Alphabet einbringt (Frames 22 bis 24)
+## What a bigger alphabet buys (Frames 22 to 24)
 
-Dasselbe Werkzeug, jetzt auf euer Alphabet angewendet. Ein Symbol aus N gleich wahrscheinlichen Möglichkeiten trägt `log₂(N)` Bit: zwei Farben ein Bit, vier Farben zwei, acht Farben drei, sechzehn Farben vier.
+The same tool, now applied to your alphabet. A symbol from N equally likely possibilities carries `log₂(N)` bits: two colours one bit, four colours two, eight colours three, sixteen colours four.
 
-Weil dieselbe Datei damit weniger Symbole braucht, ist sie schneller durch. Bei gleicher Symbolrate braucht sie mit acht Farben nur noch ein Drittel der Zeit, die sie mit zwei Farben brauchte.
+Because the same file then needs fewer symbols, it gets through sooner. At the same symbol rate, with eight colours it needs only a third of the time it needed with two colours.
 
-## Zwei Symbole genügen für alles (Frame 25)
+## Two symbols are enough for anything (Frame 25)
 
-Was ein großes Alphabet je Symbol leistet, leisten zwei Symbole in der Gruppe. Fünf Blitze mit je zwei Möglichkeiten ergeben `2⁵ = 32` Kombinationen, genug für ein ganzes Alphabet.
+What a large alphabet does per symbol, two symbols do in a group. Five flashes with two possibilities each make `2⁵ = 32` combinations, enough for a whole alphabet.
 
-Genau deshalb kommt jeder Computer mit null und eins aus, und genau deshalb ist ein kleines Alphabet keine Sackgasse, sondern nur langsamer.
+That is exactly why every computer gets by with nought and one, and exactly why a small alphabet is not a dead end but merely slower.
 
-## Wenn Symbole nicht gleich wahrscheinlich sind (Frame 26)
+## When symbols are not equally likely (Frame 26)
 
-Bisher galten alle Symbole als gleich wahrscheinlich. In echtem Text sind sie das nicht, und Morse nutzt das aus: Das häufigste Zeichen, das „e", bekommt den kürzesten Code, einen einzelnen Punkt. Seltene Zeichen wie das „q" sind lang.
+So far all symbols counted as equally likely. In real text they are not, and Morse code exploits that: the most common letter, the "e", gets the shortest code, a single dot. Rare letters like the "q" are long.
 
-Das lohnt sich, weil die durchschnittliche Nachricht dadurch kürzer wird. Auf dieser Beobachtung beruht jede Kompression, und darauf kommen wir zurück.
+That pays off because it makes the average message shorter. Every compression scheme rests on this observation, and we will come back to it.
 
-## Der Haken (Frame 28)
+## The catch (Frame 28)
 
-Links der Gewinn: mehr Bit je Symbol, dieselbe Datei mit weniger Symbolen, früher fertig. Rechts der Preis: Die Farben rücken enger zusammen, das Rauschen reicht über den Abstand, und Symbole werden falsch gelesen.
+On the left, the gain: more bits per symbol, the same file with fewer symbols, done sooner. On the right, the price: the colours move closer together, the noise reaches across the gap, and symbols are misread.
 
-Wo die Grenze liegt, verrät keine Formel. Die Größe eures Alphabets ist keine Geschmacksfrage, sie ist eine Messung. Die andere Hälfte davon steht bei [Signal und Rauschen](../../../website/concepts/signal-and-noise.qmd).
+No formula tells you where the limit is. The size of your alphabet is not a matter of taste, it is a measurement. The other half of this is on [Signal and Noise](../../website/concepts/signal-and-noise.qmd).
 
-## In der Werkstatt (Frame 29)
+## In the workshop (Frame 29)
 
-Vier Schritte, und der erste ist der, den alle überspringen wollen:
+Four steps, and the first is the one everyone wants to skip:
 
-1. das Alphabet vereinbaren **und aufschreiben**
-2. für jedes Symbol einen Steckbrief messen
-3. `send_symbol()` und `receive_symbol()` füllen
-4. ein ganzes Wort durchlaufen lassen und die Fehler zählen
+1. agree on your alphabet **and write it down**
+2. measure a profile for every symbol
+3. fill `send_symbol()` and `receive_symbol()`
+4. run a whole word and count the errors
 
-## Zum Schluss (Frames 30 und 31)
+## To close (Frames 30 and 31)
 
-Licht bedeutet nichts, bis ihr vereinbart, was es bedeutet. Und wie viel es bedeutet, könnt ihr zählen.
+Light means nothing until you agree what it means. And how much it means, you can count.

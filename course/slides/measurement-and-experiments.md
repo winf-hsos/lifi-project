@@ -1,129 +1,129 @@
 <!-- Lecture notes for the slides on `measurement-and-experiments`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/measurement-and-experiments.html -->
 
-# Skript: Messen und Experimentieren
+# Lecture notes: measuring and experimenting (Measuring and Experimenting)
 
-Dieses Skript begleitet den Stagekit-Foliensatz „Measuring and Experimenting“ für Sitzung 3 im Modul „Digitalisierung und Programmierung“. Die Folien sind englisch, das Skript erläutert die Inhalte auf Deutsch. Aufbauschritte zählen im Player und im Export als eigene Frames; die Verweise beziehen sich deshalb auf Frames.
+These notes accompany the stagekit deck "Measuring and Experimenting" for session 3 in the module "Digitization and Programming". They explain the contents of the slides for reading afterwards. Build-up steps count as frames of their own in the player and in the export; the references therefore refer to frames.
 
-Die Kernbotschaft lautet: Eine einzelne Ablesung ist noch kein Beleg. Wissen entsteht erst aus einer kontrollierten Messreihe: Erwartung vorher festhalten, genau eine Größe verändern, wiederholen und alle Ergebnisse dokumentieren.
+The core message is: a single reading is not yet evidence. Knowledge only comes from a controlled measurement series: write down the expectation beforehand, change exactly one quantity, repeat, and document all results.
 
 ## 1. Measuring settles it
 
-### Welche Kugel landet zuerst? (Frame 4)
+### Which ball lands first? (Frame 4)
 
-Zweitausend Jahre lang klang Aristoteles plausibel: Schwere Körper müssten schneller fallen als leichte. Der Legende nach ließ Galileo zwei unterschiedlich schwere Kugeln vom Schiefen Turm von Pisa fallen. Beide kamen zugleich an. Eine Messung entschied damit, was Nachdenken und Autorität nicht entscheiden konnten.
+For two thousand years Aristotle sounded plausible: heavy bodies should fall faster than light ones. As the legend goes, Galileo dropped two balls of different weight from the Leaning Tower of Pisa. Both arrived at the same time. A measurement decided what thinking and authority could not.
 
-Das Bild überträgt sich direkt auf das Semester. Der KI-Assistent kennt Sensoren dieser Art und kann gute Begründungen liefern. Er kennt aber nicht den konkreten Aufbau auf dem Tisch. Dieser Aufbau ist unser Turm, und eine Messreihe ist der Fallversuch.
+The picture carries straight over to the semester. The AI assistant knows sensors of this kind and can give good reasons. But it does not know the concrete setup on the table. That setup is our tower, and a measurement series is the drop test.
 
-### Drei Arten, dieselbe Frage zu beantworten (Frames 5–7)
+### Three ways to answer the same question (Frames 5 to 7)
 
-Eine plausible Erklärung sagt, warum etwas gelten könnte. Eine KI-Prognose kann die Behauptung sogar mit konkreten Zahlen oder einer Handlungsanweisung versehen. Beides bleibt eine Behauptung. Erst die Messreihe am eigenen Aufbau liefert Evidenz darüber, ob und wie stark der Effekt tatsächlich auftritt.
+A plausible explanation says why something might hold. An AI prediction can even attach concrete numbers or an instruction to the claim. Both remain a claim. Only the measurement series on your own setup provides evidence of whether, and how strongly, the effect actually occurs.
 
-Das Beispiel ist die Integrationszeit. „Längere Messungen sammeln mehr Licht“ klingt vernünftig. „Verdoppelt die Integrationszeit, dann verbessert sich die Erkennung“ ist eine klare Prognose. Ob die Erkennungsrate bei diesem Aufbau wirklich von 41 auf 47 richtige Erkennungen steigt, entscheidet nur der Versuch.
+The example is the integration time. "Longer measurements collect more light" sounds reasonable. "Double the integration time, and recognition improves" is a clear prediction. Whether the recognition rate on this setup really rises from 41 to 47 correct recognitions is decided only by the trial.
 
-### Aus einer Behauptung wird ein Test (Frames 8–11)
+### A claim becomes a test (Frames 8 to 11)
 
-Ein Experiment beginnt mit einer Frage. Daraus folgt eine Vorhersage, die vor der Messung notiert wird. Dann wird unter kontrollierten Bedingungen gemessen. Zum Schluss wird das Ergebnis mit der Vorhersage verglichen: Die Behauptung wird unterstützt oder widerlegt.
+An experiment begins with a question. From it follows a prediction, which you write down before measuring. Then you measure under controlled conditions. Finally you compare the result with the prediction: the claim is supported or refuted.
 
-Die Reihenfolge ist entscheidend. Wer erst misst und danach festlegt, welches Ergebnis als Erfolg gelten soll, kann fast jedes Resultat passend deuten. Eine vorher festgehaltene Erwartung schützt davor, die eigene Hoffnung nachträglich in die Daten hineinzulesen.
+The order is decisive. If you measure first and only afterwards decide which result counts as a success, you can read almost any outcome as a fit. An expectation written down beforehand protects you from reading your own hopes into the data after the fact.
 
 ## 2. Know what you measure
 
-### Heute arbeiten wir an der Eingabe (Frame 13)
+### Today we work on the input (Frame 13)
 
-Im vorherigen Input war der Empfänger ein Kasten nach dem IPO-Muster: Licht geht hinein, `classify()` verarbeitet die Eingabe, ein Farbname kommt heraus. Nun zoomen wir in die Eingabeseite. Für unsere Augen fällt rotes Licht auf den Sensor. Für das Programm kommt dort kein Begriff „Rot“ an, sondern eine Messung.
+In the previous input the receiver was a box following the IPO pattern: light goes in, `classify()` processes the input, a colour name comes out. Now we zoom into the input side. To our eyes, red light falls on the sensor. For the program, what arrives there is not the concept "red" but a measurement.
 
-### Vier Zahlen statt einer Farbe (Frames 14–16)
+### Four numbers instead of a colour (Frames 14 to 16)
 
-Der Farbsensor liefert vier Werte. Drei Kanäle messen durch rote, grüne und blaue Filter. Der vierte Kanal heißt Clear und misst ohne Farbfilter das gesamte einfallende Licht. Dadurch reagiert Clear besonders empfindlich auf Hell und Dunkel.
+The colour sensor delivers four values. Three channels measure through red, green and blue filters. The fourth channel is called clear and measures all the incoming light without a colour filter. That makes the clear channel especially sensitive to bright and dark.
 
-Die vier Zahlen `r`, `g`, `b` und `c` sind die tatsächliche Eingabe des Programms. Erst eine Verarbeitung macht daraus die Ausgabe `"red"`, `"blue"` oder einen anderen Symbolnamen. Genau diese Trennung verhindert die Fehlvorstellung, ein Sensor liefere bereits die Bedeutung des gemessenen Signals.
+The four numbers `r`, `g`, `b` and `c` are the program's actual input. Only processing turns them into the output `"red"`, `"blue"` or another symbol name. Exactly this separation prevents the misconception that a sensor already delivers the meaning of the measured signal.
 
-### Gesendet ist nicht gemessen (Frame 17)
+### Sent is not measured (Frame 17)
 
-Wer die LED auf `r=255, g=0, b=0` setzt, erwartet leicht dieselben Zahlen am Sensor. Tatsächlich kann dort etwa `r=203, g=41, b=57, c=310` ankommen. Das ist kein Defekt, sondern der Normalfall.
+If you set the LED to `r=255, g=0, b=0`, it is easy to expect the same numbers at the sensor. In fact something like `r=203, g=41, b=57, c=310` may arrive there. That is not a defect, it is the normal case.
 
-Die Farbfilter überlappen. Licht verliert sich mit Abstand und Winkel. Das Raumlicht gelangt ebenfalls zum Sensor. Eine Formel, die die Messwerte heute genau auf die LED-Werte zurückrechnet, wäre am nächsten Tisch oder am nächsten Tag bereits falsch. Wir müssen lernen, mit den Messwerten unseres Aufbaus zu arbeiten.
+The colour filters overlap. Light gets lost with distance and angle. Room light reaches the sensor as well. A formula that calculates today's readings back exactly to the LED values would already be wrong at the next table or on the next day. We have to learn to work with the readings of our own setup.
 
-### Zuerst die Dunkelheit messen (Frames 18–21)
+### Measure the dark first (Frames 18 to 21)
 
-Der Sensor zeigt auch bei ausgeschalteter eigener LED nicht Null. Raumlicht ist immer vorhanden. Deshalb beginnt jede Messreihe mit einer Kontrollmessung bei ausgeschalteter LED. Sie liefert die Grundlinie, gegen die alle späteren Werte gelesen werden.
+Even with its own LED switched off, the sensor does not show zero. Room light is always there. That is why every measurement series begins with a control reading with the LED switched off. It provides the baseline against which all later values are read.
 
-Der gemessene Wert lässt sich gedanklich in drei Beiträge zerlegen: Umgebungslicht, Licht der eigenen LED und Rauschen. Die Kontrollmessung schätzt den ersten Beitrag. Sie verrät außerdem, wenn sich während der Messreihe die Umgebung ändert, etwa durch Nachmittagssonne oder die LED eines Nachbarteams.
+You can think of the measured value as made up of three contributions: ambient light, light from your own LED, and noise. The control reading estimates the first contribution. It also tells you when the surroundings change during the measurement series, for instance through afternoon sun or the LED of a neighbouring team.
 
 ## 3. One reading is a guess
 
-### Welcher Wert ist wahr? (Frames 23–25)
+### Which value is true? (Frames 23 to 25)
 
-Fünf Ablesungen derselben roten LED unter denselben Einstellungen können 198, 205, 201, 195 und 206 ergeben. Keiner dieser Werte ist allein „der wahre Wert“, und doch ist jeder eine echte Messung. Jede reale Messung streut. Fünf vollkommen identische Werte wären bei einem echten Aufbau eher verdächtig als fünf leicht verschiedene.
+Five readings of the same red LED under the same settings can give 198, 205, 201, 195 and 206. None of these values alone is "the true value", and yet each one is a real measurement. Every real measurement scatters. Five perfectly identical values would be more suspicious in a real setup than five slightly different ones.
 
-Eine einzelne Ablesung ist eine Ziehung aus einer Verteilung. Sie verrät wenig darüber, wo die Werte normalerweise liegen und wie stark sie schwanken. Erst mehrere Ablesungen machen diese beiden Eigenschaften sichtbar.
+A single reading is a draw from a distribution. It tells you little about where the values usually lie and how strongly they fluctuate. Only several readings make these two properties visible.
 
 ### Demonstrator: The Noisy Sensor (Frame 26)
 
-Im Demonstrator schickt ein Sender abwechselnd „led off“ und „led on“. Der Empfänger liest den Sensor und entscheidet an einer Schwelle, welches der beiden Symbole angekommen ist. Dieselben Ablesungen entscheiden dabei dreimal nebeneinander: einmal einzeln, einmal gemittelt über fünf Ablesungen, einmal über zehn.
+In the demonstrator a sender alternately sends "led off" and "led on". The receiver reads the sensor and decides at a threshold which of the two symbols has arrived. The same readings decide three times side by side: once individually, once averaged over five readings, once over ten.
 
-Nach fünfundzwanzig Symbolen ist der Unterschied zu sehen. In der obersten Spur liegen einzelne Punkte auf der falschen Seite der Schwelle; sie sind rot und zählen als Fehlentscheidung. In den beiden unteren Spuren rücken die Punkte so weit zusammen, dass keiner mehr über die Schwelle rutscht. Genau das ist der Nutzen des Mittelns.
+After twenty-five symbols the difference is visible. In the top track, individual dots lie on the wrong side of the threshold; they are red and count as wrong decisions. In the two lower tracks the dots move so close together that none of them slips across the threshold any more. That is exactly the benefit of averaging.
 
-Der Preis steht daneben. Für dieselbe Zahl von Entscheidungen braucht die mittlere Spur fünfmal und die untere zehnmal so viele Ablesungen, und aus zwanzig Symbolen je Sekunde werden vier beziehungsweise zwei. Wer die Fehlerrate senken will, bezahlt mit Tempo.
+The price stands right next to it. For the same number of decisions the middle track needs five times and the bottom track ten times as many readings, and twenty symbols per second become four and two respectively. If you want to lower the error rate, you pay with speed.
 
-Wie viel Mitteln nötig ist, hängt am Aufbau. Bei „low“ trifft schon die Einzelablesung immer richtig, dort kostet Mitteln nur Zeit; bei „high“ irrt selbst das Mittel aus fünf gelegentlich. Die Zahlen sind simuliert, die Struktur ist echt: Welcher Fall der eigene ist, verrät nur die eigene Messreihe. Mit „reset“ beginnt dieselbe Folge erneut, der Live-Moment bleibt reproduzierbar.
+How much averaging you need depends on the setup. At "low", even the single reading is always right, and there averaging only costs time; at "high", even the average of five is occasionally wrong. The numbers are simulated, the structure is real: which case is yours, only your own measurement series can tell you. "reset" starts the same sequence again, so the live moment stays reproducible.
 
-### Mitte und Streuung gehören zusammen (Frames 27–29)
+### Centre and spread belong together (Frames 27 to 29)
 
-Der Mittelwert beschreibt, wo eine Messreihe ungefähr liegt. Er sagt jedoch nicht, wie zuverlässig ein einzelner Wert in der Nähe dieses Mittels liegt. Zwei Reihen können denselben Mittelwert und sehr unterschiedliche Streuungen besitzen.
+The mean describes roughly where a measurement series lies. But it does not say how reliably a single value lies near that mean. Two series can have the same mean and very different spreads.
 
-Darum gehören die Einzelwerte oder mindestens ein geeignetes Streuungsmaß ins Protokoll. Wer nur den Mittelwert notiert, verschweigt möglicherweise genau die Schwankung, die später zu falsch erkannten Symbolen führt.
+That is why the individual values, or at least a suitable measure of spread, belong in the record. If you only write down the mean, you may be hiding exactly the fluctuation that later leads to wrongly recognised symbols.
 
-### Der Drehknopf Integrationszeit (Frames 30–32)
+### The knob: integration time (Frames 30 to 32)
 
-Die Integrationszeit ist das Ablesefenster des Sensors. In einem langen Fenster sammelt der Sensor mehr Licht und mittelt kurzfristige Schwankungen. Die Werte liegen dadurch ruhiger beieinander, aber jede Messung benötigt mehr Zeit.
+The integration time is the sensor's reading window. In a long window the sensor collects more light and averages out short-term fluctuations. The values then sit more calmly together, but every measurement takes more time.
 
-In der Abbildung ist jede Ablesung ein Balken, und seine Breite ist ihr Zeitfenster. Alle drei Zeilen zeigen dieselbe Sekunde: In der obersten passen vier lange Ablesungen hinein, in der untersten zwölf kurze. Die Höhe des Balkens ist der gemessene Wert. Kürzere Fenster liefern also mehr Messungen pro Sekunde, doch die Werte streuen stärker. Bei sehr kurzen Fenstern verlassen einzelne Ablesungen den Bereich, der noch korrekt einem Symbol zugeordnet wird. Auf der Folie sind diese Ausreißer rot markiert. Die Verstärkung ist der zweite Drehknopf: Sie skaliert Signal und Störung und kann den Sensor in die Sättigung treiben.
+In the figure every reading is a bar, and its width is its time window. All three rows show the same second: four long readings fit into the top row, twelve short ones into the bottom row. The height of the bar is the measured value. Shorter windows therefore deliver more measurements per second, but the values scatter more. With very short windows, individual readings leave the range that is still assigned to the correct symbol. On the slide these outliers are marked in red. Gain is the second knob: it scales signal and noise alike and can drive the sensor into saturation.
 
-### Ruhiger oder schneller (Frame 33)
+### Calmer or faster (Frame 33)
 
-„Longer is calmer. Shorter is faster.“ Dieser Zielkonflikt prägt das gesamte Projekt. Mehr Ruhe kostet Symbolrate. Wo der beste Kompromiss liegt, hängt von Abstand, Raumlicht, Optik und Aufbau ab. Eine Tabelle oder ein KI-Assistent kann einen Startwert vorschlagen, aber die Grenze des eigenen Aufbaus muss gemessen werden.
+"Longer is calmer. Shorter is faster." This trade-off shapes the whole project. More calm costs symbol rate. Where the best compromise lies depends on distance, room light, optics and setup. A table or an AI assistant can suggest a starting value, but the limit of your own setup has to be measured.
 
-Der spätere Input „Signal und Rauschen“ erklärt, was die Streuung für Alphabetgröße und Durchsatz bedeutet. Hier steht die Methode im Vordergrund, mit der diese Grenze überhaupt belastbar gefunden wird.
+The later input "Signal and Noise" explains what the spread means for alphabet size and throughput. Here the focus is on the method by which that limit can be found reliably in the first place.
 
 ## 4. Build evidence
 
-### Zwei Teams, zwei Veränderungen (Frames 35–36)
+### Two teams, two changes (Frames 35 and 36)
 
-Team A verändert gleichzeitig den Abstand und die Integrationszeit. Team B verändert nur den Abstand. Bei beiden verbessert sich die Erkennungsrate. Nur Team B hat gelernt, wodurch die Verbesserung verursacht wurde. Bei Team A bleiben zwei mögliche Ursachen untrennbar miteinander vermischt.
+Team A changes the distance and the integration time at the same time. Team B changes only the distance. Both see their recognition rate improve. Only Team B has learned what caused the improvement. For Team A two possible causes remain inseparably mixed.
 
-Die Regel lautet daher: In einer Messreihe wird genau eine Größe gezielt verändert. Alle anderen Bedingungen bleiben möglichst konstant und werden aufgeschrieben.
+So the rule is: in a measurement series, exactly one quantity is changed on purpose. All other conditions stay as constant as possible and are written down.
 
-### Was eine Messreihe ausmacht (Frames 37–39)
+### What makes a measurement series (Frames 37 to 39)
 
-Vor der Messung werden die Bedingungen und die erwartete Wirkung notiert. Während der Messung wird genau eine Größe verändert, eine Kontrollmessung vorgenommen und oft genug wiederholt. Nach der Messung bleiben alle Werte erhalten, das Ergebnis wird mit der Erwartung verglichen und der Ausgang dokumentiert.
+Before measuring, you write down the conditions and the expected effect. While measuring, you change exactly one quantity, take a control reading and repeat often enough. After measuring, you keep all the values, compare the result with the expectation and document the outcome.
 
-Diese drei Phasen sind zugleich die Checkliste des Messprotokolls. Bedingungen machen die Reihe wiederholbar. Die Erwartung macht sie ehrlich. Eine veränderte Größe macht sie deutbar. Wiederholungen machen sie belastbar. Alle Werte verhindern, dass nur die angenehmen Ergebnisse übrig bleiben. Wiederholbarkeit ist wertvoller als ein einzelnes beeindruckendes Resultat.
+These three phases are also the checklist for the measurement record. Conditions make the series repeatable. The expectation makes it honest. One changed quantity makes it interpretable. Repetitions make it reliable. Keeping all the values stops only the pleasant results from surviving. Repeatable is worth more than a single impressive result.
 
-### Glück oder Können? (Frames 40–42)
+### Luck or skill? (Frames 40 to 42)
 
-Bei zwei möglichen Farben trifft reines Raten jede zweite Entscheidung. Fünf Treffer in Folge gelingen zufällig in etwa jedem 32. Anlauf. Im Semesterbetrieb passiert eine solche Glücksserie schnell irgendwo.
+With two possible colours, pure guessing gets every second decision right. Five hits in a row happen by chance in about one attempt in 32. Over a semester, a lucky streak like that quickly happens somewhere.
 
-Fünfzig Treffer in Folge haben beim Raten eine Wahrscheinlichkeit von ungefähr eins zu 1.125.899.906.842.624. Das ist praktisch ausgeschlossen. Darum verlangen die Abnahmen lange Serien: Erst genügend Wiederholungen trennen Können von Glück.
+Fifty hits in a row have a probability of roughly one in 1,125,899,906,842,624 when guessing. That is practically impossible. That is why the acceptance tests demand long series: only enough repetitions separate skill from luck.
 
-### Kalibrieren, dann klassifizieren (Frames 43–46)
+### Calibrate, then classify (Frames 43 to 46)
 
-Kalibrieren heißt, bekannte Sendefarben unter den Bedingungen des eigenen Aufbaus wiederholt zu messen. Im Koordinatensystem entstehen daraus Wolken von Referenzwerten. Eine neue Messung wird anschließend mit diesen Wolken verglichen und der nächstliegenden zugeordnet.
+Calibrating means measuring known transmitted colours repeatedly under the conditions of your own setup. In the coordinate system this gives clouds of reference values. A new reading is then compared with these clouds and assigned to the closest one.
 
-Im Beispiel liegen die Rotmessungen in einem Bereich mit hohem Rot- und niedrigem Blauanteil, die Blaumessungen im gegenüberliegenden Bereich. Der Grünanteil ist hier ungefähr konstant und wird deshalb in der zweidimensionalen Darstellung weggelassen. Die neue Messung `r=170, b=80` liegt näher an den roten Referenzen. „Nearest match wins.“
+In the example the red readings lie in a region with a high red share and a low blue share, the blue readings in the opposite region. The green share is roughly constant here and is therefore left out of the two-dimensional picture. The new reading `r=170, b=80` lies closer to the red references. "Nearest match wins."
 
-Damit wird nicht zurückgerechnet, was die LED angeblich gesendet haben müsse. Stattdessen wird eine Entscheidung auf der Grundlage eigener Messreihen getroffen. Genau dieses Prinzip trägt Challenge 1.
+This does not calculate backwards to what the LED supposedly must have sent. Instead, a decision is made on the basis of your own measurement series. Exactly this principle carries Challenge 1.
 
-### Wenn Assistent und Daten sich widersprechen (Frames 47–50)
+### When the assistant and the data disagree (Frames 47 to 50)
 
-Der Assistent schlägt vor, die Verstärkung zu erhöhen, weil dadurch die Erkennung besser werden solle. Die Messreihe zeigt jedoch einen Rückgang von 94 auf 82 Prozent. Bevor wir den Vorschlag als widerlegt ansehen, prüfen wir die Qualität der eigenen Reihe: Wurde nur eine Größe verändert? Gab es genügend Wiederholungen? War eine Kontrollmessung vorhanden?
+The assistant suggests increasing the gain, because that is supposed to improve recognition. The measurement series, however, shows a drop from 94 to 82 per cent. Before we treat the suggestion as refuted, we check the quality of our own series: was only one quantity changed? Were there enough repetitions? Was there a control reading?
 
-Wenn diese Bedingungen erfüllt sind, ist die Messreihe die maßgebliche Wahrheit für den eigenen Aufbau. Der Widerspruch kommt ins Irrtumsprotokoll: Vorschlag, Messung, Ergebnis. Solche dokumentierten Fälle sind kein peinlicher Fehler, sondern Lernertrag und Prüfungsstoff.
+If these conditions are met, the measurement series is the authoritative truth for your own setup. The contradiction goes into the log of mistakes: suggestion, measurement, result. Documented cases like this are not an embarrassing failure but something learned, and exam material.
 
-### Der Schlusssatz (Frame 51)
+### The closing sentence (Frame 51)
 
-„If you did not measure it, you do not know it.“ Ab heute ist jede Behauptung über den Aufbau eine Einladung zu einem Experiment. Nicht die schönste Erklärung gewinnt, sondern die sauberste Messreihe. Und eine einzelne Ablesung ist noch keine Messreihe.
+"If you did not measure it, you do not know it." From today on, every claim about the setup is an invitation to an experiment. It is not the most beautiful explanation that wins, but the cleanest measurement series. And a single reading is not yet a measurement series.
 
-## Zum Weiterlesen
+## Further reading
 
-Die Konzeptseite [Messen und Experimentieren](../../../website/concepts/measurement-and-experiments.qmd) fasst das methodische Handwerk zusammen. Die physikalischen Grenzen, die durch Streuung sichtbar werden, behandelt anschließend [Signal und Rauschen](../../../website/concepts/signal-and-noise.qmd).
+The concept page [Measuring and Experimenting](../../website/concepts/measurement-and-experiments.qmd) sums up the methodical craft. The physical limits that the spread makes visible are covered next in [Signal and Noise](../../website/concepts/signal-and-noise.qmd).

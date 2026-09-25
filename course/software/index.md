@@ -33,7 +33,7 @@ On top of these comes the module `lifi_hardware`, which is how your programs tal
 
 Keep to the order, some steps build on earlier ones. Allow an afternoon. Installations rarely go through at the first attempt, and that is not your fault.
 
-As soon as OpenCode from step 4 is running, you can ask it for help with everything that follows. Paste an error message, or take a screenshot of the window you are stuck at and hand it over: the assistant can read screenshots. It will walk you through the remaining steps, make sense of error messages and check whether something is missing. More on what it can do for you under [Working with your AI assistant](../ai/index.md).
+As soon as your assistant is running at the end of step 5, you can ask it for help with everything that follows. Paste an error message, or take a screenshot of the window you are stuck at and hand it over: the assistant can read screenshots. It will walk you through the remaining steps, make sense of error messages and check whether something is missing. More on what it can do for you under [Working with your AI assistant](../ai/index.md).
 
 If you still get stuck, keep the error message word for word. Somebody who can help will want to see exactly that.
 
@@ -124,9 +124,45 @@ Alternatively via [Homebrew](https://brew.sh): `brew install sst/tap/opencode`.
 
 To check: `opencode --version`.
 
-After that, OpenCode has to be connected to a language model. Which model you use and how you get access depends on where you are taking this course; your course will tell you. If you are working on your own, the [OpenCode documentation](https://opencode.ai/docs/) lists the providers it works with.
+Do not start it yet. OpenCode needs a language model to talk to, and the course repository in the next step sets that up for you.
 
-### 5. Brick Daemon and Brick Viewer
+### 5. The course repository and your assistant
+
+The course repository is a folder with everything your assistant needs to know about this module: the instructions it follows, the course material as plain text, and later the templates for each challenge. It is also the folder you work in for the rest of the semester.
+
+Open a terminal in VS Code (*Terminal > New Terminal*) and type
+
+```bash
+git clone https://github.com/winf-hsos/lifi-project.git
+```
+
+Git creates a folder `lifi-project` in the folder the terminal was in, usually your user folder. Open exactly that folder via *File > Open Folder*. From now on, always open this folder when you work on the project.
+
+Now give your assistant its key. At the start of the course you get a personal key for the language model, a long line of characters beginning with `sk-`. In VS Code choose *File > New File*, name the file exactly `openai.key`, paste the key into it, and save. Nothing else goes into this file.
+
+The key is yours and it costs money every time the assistant answers, so treat it like a password: do not send it to anyone, do not paste it into a chat, not even the one with your assistant. The file stays on your laptop. Git has been told to ignore it, so it cannot end up anywhere by accident.
+
+Then open a terminal in VS Code and type
+
+```bash
+opencode
+```
+
+The assistant starts with the course model already selected and knows about this course. Try it: ask it "Which installation step comes next?"
+
+If OpenCode reports that `openai.key` does not exist, the file has a different name or sits in a different folder. It has to be directly in `lifi-project`, next to the file `AGENTS.md`. If it reports that the key is incorrect, open the file and check that it contains the key and nothing else.
+
+If you are working through this course on your own, without a key from us, put a key of your own from [platform.openai.com](https://platform.openai.com/api-keys) into the file. It works the same way.
+
+When something is added to the repository during the course, you get it with
+
+```bash
+git pull
+```
+
+in a terminal in the `lifi-project` folder.
+
+### 6. Brick Daemon and Brick Viewer
 
 You get both from the [Tinkerforge download page](https://www.tinkerforge.com/en/doc/Downloads.html). Download the version for your operating system and install it.
 
@@ -134,7 +170,7 @@ On **Windows** these are two `.exe` installers, on **macOS** two `.dmg` packages
 
 The Brick Daemon starts by itself afterwards and keeps running as a background service. You do not see it, and that is normal.
 
-### 6. The module `lifi_hardware`
+### 7. The module `lifi_hardware`
 
 This is how your Python programs talk to the hardware. In the terminal:
 
@@ -151,16 +187,6 @@ When a new version of the module appears during the course, you get it with
 ```bash
 pip install --upgrade --force-reinstall git+https://github.com/winf-hsos/lifi-hardware.git
 ```
-
-### 7. Fetch the course material
-
-This gives you the knowledge base of the module and the instructions your assistant follows.
-
-```bash
-git clone <ADDRESS-OF-THE-REPOSITORY>
-```
-
-Then open the resulting folder in VS Code. When something is added during the course, you get the new version with `git pull`.
 
 ### 8. Check that everything works together
 

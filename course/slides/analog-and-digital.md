@@ -1,92 +1,92 @@
 <!-- Lecture notes for the slides on `analog-and-digital`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/analog-and-digital.html -->
 
-# Skript: drawing the line
+# Lecture notes: drawing the line (Analog and Digital)
 
-Dieser Text erläutert den Input zum Konzept „Analog und digital" zum Nachlesen. Er folgt der Reihenfolge der Folien, die Verweise zählen Frames (jeder Aufbauschritt ist ein eigener Frame), lässt sich aber auch ohne die Folien lesen.
+This text explains the input on the concept "Analog and Digital" for you to read afterwards. It follows the order of the slides, and the references count frames (every build-up step is a frame of its own), but you can also read it without the slides.
 
-Der Satz ist der erste von zwei Inputs derselben Sitzung; der zweite, [what light means](../06-symbols-and-information/skript.md), macht aus unterscheidbaren Zuständen Symbole und Information zählbar.
+The deck is the first of two inputs in the same session; the second, [what light means](../symbols-and-information/skript.md), turns distinguishable states into symbols and makes information countable.
 
-## Ist das digital? (Frame 4)
+## Is this digital? (Frame 4)
 
-Ein Bahnhof vor der Chip-Zeit. Die Fallblattanzeige klappert, Buchstabe für Buchstabe fällt an seinen Platz. Kein Computer weit und breit, und trotzdem ist das Ding lupenrein digital.
+A railway station before the age of chips. The split-flap board clatters, letter by letter falling into place. There is no computer anywhere near it, and the thing is nonetheless perfectly digital.
 
-Jedes Blatt kennt genau zwei Lagen, oben oder unten. Beim Umklappen gibt es keinen gültigen Zwischenzustand, und genau deshalb ist die Anzeige aus zwanzig Metern lesbar.
+Every flap knows exactly two positions, up or down. While it turns there is no valid state in between, and that is exactly why you can read the board from twenty metres away.
 
-## Digital ist nicht dasselbe wie elektronisch (Frame 5)
+## Digital is not the same as electronic (Frame 5)
 
-Digital sind die von Hand umgeklappte Anzeigetafel aus der Sporthalle, der Lichtschalter, der Abakus und der Würfel. Analog sind Rechenschieber, Zeigerthermometer, Dimmer und Sanduhr. Kein einziges dieser Dinge enthält einen Chip.
+The scoreboard from the sports hall that you flip by hand is digital, and so are the light switch, the abacus and the die. The slide rule, the dial thermometer, the dimmer and the hourglass are analog. Not a single one of these things contains a chip.
 
-Elektronik ist nur der heute übliche Träger, nicht das Merkmal. Andersherum gilt dasselbe: Ein Verstärker ist elektronisch und trotzdem stufenlos.
+Electronics is only today's usual carrier, not the defining feature. The reverse holds as well: an amplifier is electronic and still stepless.
 
-## Das Wort dafür (Frame 6)
+## The word for it (Frame 6)
 
-**Digital heißt: endlich viele Zustände, und nichts dazwischen zählt.** Beide Hälften tragen. Die erste ist die harmlose, die zweite ist die, an der die ganze Technik hängt: Weil zwischen den Zuständen nichts gilt, verschwindet dort auch jede Störung.
+**Digital means finitely many states, and nothing in between counts.** Both halves carry weight. The first is the harmless one; the second is where all the engineering hangs: because nothing between the states counts, every disturbance there disappears as well.
 
-## Das Stück, das kein Programm kontrolliert (Frame 7)
+## The part no program controls (Frame 7)
 
-Der Sender macht aus Zahlen Licht, der Sensor macht aus Licht wieder Zahlen: digital, analog, digital. Die Mitte ist Physik. Sie ist stufenlos und gestört von Umgebungslicht, Abstand und Rauschen, und kein Programm der Welt kontrolliert sie.
+The sender turns numbers into light, the sensor turns light back into numbers: digital, analog, digital. The middle is physics. It is stepless and disturbed by ambient light, distance and noise, and no program in the world controls it.
 
-Wer diese analoge Mitte vergisst, wundert sich später über jede Störung. Wer sie ernst nimmt, weiß, warum gemessen werden muss.
+Whoever forgets this analog middle will later be surprised by every disturbance. Whoever takes it seriously knows why you have to measure.
 
-## Stufenlos gegen Zustände (Frames 8 und 9)
+## Stepless versus states (Frames 8 and 9)
 
-Licht ist analog: Zwischen zwei Helligkeiten liegt immer noch eine dritte, es gibt keine kleinste Stufe. Euer Programm braucht das Gegenteil, nämlich endlich viele, klar voneinander getrennte Zustände.
+Light is analog: between any two brightnesses lies another, there is no smallest step. Your program needs the opposite, namely finitely many states that are clearly apart.
 
-Ein Signal zu digitalisieren heißt nichts anderes, als es durch eine endliche Folge von Zahlen darzustellen.
+Digitising a signal means nothing more than representing it by a finite sequence of numbers.
 
-## Gleiches Rauschen, mehr Bereiche (Frames 10 bis 12)
+## Same noise, more regions (Frames 10 to 12)
 
-Dreimal dieselbe Messung mit demselben Schwankungsband, und nur die Zahl der Bereiche wächst. Bei zwei Bereichen liegt das Band bequem im eigenen Bereich. Bei vier wird es knapp. Bei acht überragt dasselbe Band die Grenzen, und einzelne Messungen landen im Nachbarbereich.
+Three times the same measurement with the same wobble, and only the number of regions grows. With two regions the band sits comfortably inside its own region. With four it gets tight. With eight the same band reaches across the boundaries, and individual readings land in the neighbouring region.
 
-Nicht das Rauschen wächst, der Abstand schrumpft. Der Abstand zwischen den Bereichen ist eure Sicherheitsreserve, und mehr Bereiche verteilen dieselbe Reserve auf mehr Grenzen. Damit ist die Wettbewerbsfrage von Challenge 1 gestellt, bevor sie gestellt wird.
+The noise did not grow, the margin shrank. The distance between regions is your safety reserve, and more regions spread the same reserve over more boundaries. With that, the competition question of Challenge 1 is posed before anyone asks it.
 
-## Was die weggeworfene Genauigkeit einkauft (Frame 13)
+## What the thrown-away precision buys (Frame 13)
 
-Zwei Kopierketten. Die Kassette kopiert ihre stufenlose Welle mitsamt allem Rauschen und legt bei jeder Generation eigenes darauf; hörbar schlechter mit jeder Kopie. Die Datei wird bei jeder Kopie aus sauberen Zuständen neu geboren: ablesen, frisch setzen, fertig.
+Two copy chains. The tape copies its stepless wave along with all the noise and adds its own with every generation; audibly worse with every copy. The file is born again from clean states at every copy: read, set afresh, done.
 
-Jede Störung, die kleiner ist als der Zustandsabstand, verschwindet dabei vollständig. Deshalb ist digitale Technik zuverlässig, nicht obwohl, sondern **weil** sie Information wegwirft. Und deshalb ist die tausendste Dateikopie das Original.
+Every disturbance smaller than the distance between states disappears completely in the process. That is why digital technology is reliable, not although it throws information away but **because** it does. And that is why the thousandth copy of a file is the original.
 
-## Digitalisieren wirft Information weg (Frame 15)
+## Digitising throws information away (Frame 15)
 
-Welcher der unendlich vielen Werte innerhalb eines Bereichs es wirklich war, ist nach der Zuordnung nicht mehr feststellbar. Digitalisieren ist eine Einbahnstraße. Das ist kein Unfall, sondern der Kaufpreis für alles, was der vorige Abschnitt gezeigt hat.
+Which of the infinitely many values inside a region it really was cannot be determined after the assignment. Digitising is a one-way street. That is not an accident, it is the purchase price for everything the previous section showed.
 
-## Die zwei Schnitte (Frames 16 und 17)
+## The two cuts (Frames 16 and 17)
 
-Digitalisieren besteht immer aus zwei Schnitten, und an einem Foto sieht man beide.
+Digitising always takes two cuts, and a photo shows both of them.
 
-Der **erste Schnitt geht durch die Fläche**: Aus dem stufenlosen Bild werden Messpunkte, auf der Folie sechzehn mal sechzehn. Das ist die **Abtastung** (sampling), und wie fein sie ausfällt, ist die **Auflösung**.
+The **first cut goes through the area**: the stepless picture becomes measuring points, sixteen by sixteen on the slide. That is **sampling**, and how fine it is is the **resolution**.
 
-Der **zweite Schnitt geht durch den Wert**: Die Helligkeit jedes Punkts wird auf eine der vereinbarten Stufen gerundet, auf der Folie auf vier Graustufen. Das ist die **Quantisierung**, und die Zahl der Stufen ist die **Farbtiefe**. Die Stufen sind genau die Bereiche von vorhin, nur jetzt auf ein Bild angewendet.
+The **second cut goes through the value**: the brightness of every point is rounded to one of the agreed steps, four grey levels on the slide. That is **quantization**, and the number of steps is the **colour depth**. Those steps are exactly the regions from before, now applied to a picture.
 
-## Welcher Schnitt war zu grob? (Frame 18)
+## Which cut was too coarse? (Frame 18)
 
-Beide Schnitte werfen Detail weg, aber sie hinterlassen verschiedene Spuren, und daran erkennt man, an welchem Regler zu drehen ist.
+Both cuts throw detail away, but they leave different traces, and that is how you tell which knob to turn.
 
-**Klötzchen** heißt zu wenige Punkte, also zu grobe Abtastung. **Harte Flecken in glatten Verläufen** heißen zu wenige Stufen, also zu grobe Quantisierung. Das lohnt sich zu merken, es kommt in der Werkstatt zurück.
+**Blocks** mean too few points, so sampling that is too coarse. **Hard patches in smooth shading** mean too few levels, so quantization that is too coarse. That is worth remembering, it comes back in the workshop.
 
-## Was ein Bild kostet (Frame 19)
+## What a picture costs (Frame 19)
 
-Die eine Rechnung, die jede Dateigröße trägt: **Punkte mal Bits je Punkt.** Ein Bild mit 64 mal 64 Punkten in 24 Bit Farbe sind 98.304 Bit, also 12 KB. Dasselbe Bild mit einem Bit je Punkt sind 4.096 Bit, also 512 Byte.
+The one piece of arithmetic that carries every file size: **points × bits per point.** A picture of 64 by 64 points in 24-bit colour is 98,304 bits, so 12 KB. The same picture with one bit per point is 4,096 bits, so 512 bytes.
 
-Auf eurer Lichtstrecke wird daraus sofort Zeit. Bei 30 bit/s braucht das erste Bild knapp eine Stunde, das zweite zwei Minuten. Auflösung und Farbtiefe sind damit keine Feinheiten, sondern die beiden Hebel, an denen die Übertragungsdauer hängt: Was ihr behaltet, bezahlt ihr in Minuten.
+On your light link, that turns into time straight away. At 30 bit/s the first picture takes almost an hour, the second two minutes. Resolution and colour depth are therefore not fine details but the two levers the transmission time depends on: what you keep, you pay for in minutes.
 
-## Wie weit kann man gehen? (Frames 20 bis 23)
+## How far can you go? (Frames 20 to 23)
 
-Dasselbe Foto, immer gröber: 128, 32, 8 und schließlich 2 Punkte je Kante. Irgendwo dazwischen kippt die Erkennbarkeit, und wo genau, darüber wird der Saal uneins sein.
+The same photo, ever coarser: 128, 32, 8 and finally 2 points per edge. Somewhere in between, recognisability tips over, and where exactly, the room will disagree.
 
-Genau diese Uneinigkeit ist der Punkt. Es gibt kein richtiges Maß, es gibt nur eine Abwägung gegen die Übertragungszeit. In Challenge 4 habt ihr 2 KB, und dann steht diese Frage wirklich an.
+That disagreement is exactly the point. There is no correct amount, there is only a trade-off against the transmission time. In Challenge 4 you have 2 KB, and then this question really comes up.
 
-## Selbst ausprobieren (Frame 24)
+## Try it yourself (Frame 24)
 
-Im [Photo Digitiser](https://winf-hsos.github.io/lifi-concept-demos/photo-digitiser/) wählt ihr Auflösung und Farbtiefe selbst, seht sofort das Ergebnis und daneben die Rechnung samt Übertragungsdauer über die Lichtstrecke. Zwei Fragen lohnen sich: Bei welcher Einstellung würdet ihr das Bild noch verschicken? Und was spart mehr, die halbe Auflösung oder die halbe Farbtiefe?
+In [The Photo Digitiser](https://winf-hsos.github.io/lifi-concept-demos/photo-digitiser/) you choose resolution and colour depth yourself, see the result immediately, and next to it the arithmetic including the transmission time over the light link. Two questions are worth asking: at which setting would you still send the picture? And what saves more, half the resolution or half the colour depth?
 
-## Dieselben zwei Schnitte für Ton (Frame 25)
+## The same two cuts for sound (Frame 25)
 
-Die zwei Schnitte sind kein Bildthema, sie sind das Verfahren. Beim Ton zerlegt die **Abtastrate** die Zeit statt der Fläche, und die **Bit-Tiefe** die Lautstärke statt der Helligkeit. 44.100 Messungen je Sekunde mit 16 Bit, das ist eine CD.
+The two cuts are not a picture topic, they are the method. For sound, the **sampling rate** slices time instead of area, and the **bit depth** slices loudness instead of brightness. 44,100 samples per second at 16 bit: that is a CD.
 
-Im [Audio Digitiser](https://winf-hsos.github.io/lifi-concept-demos/audio-digitiser/) wird beides hörbar: Dreht die Abtastrate herunter, bis eine Stimme blechern wird.
+In [The Audio Digitiser](https://winf-hsos.github.io/lifi-concept-demos/audio-digitiser/) you can hear both: turn the sampling rate down until a voice sounds tinny.
 
-## Wo euer Alphabet geboren wird (Frame 27)
+## Where your alphabet is born (Frame 27)
 
 ```python
 value = sensor.get_clear()
@@ -97,14 +97,14 @@ else:
     symbol = "dark"
 ```
 
-Diese eine Grenze im Code ist die Stelle, an der aus Hunderten möglicher Messwerte zwei Symbole werden. Sie ist keine Naturkonstante, sondern eure Entscheidung, und ab hier gilt sie und nicht die Physik.
+This one threshold in the code is the place where hundreds of possible readings turn into two symbols. It is not a constant of nature, it is your decision, and from here on it is the threshold that holds, not the physics.
 
-Wo sie liegt, kommt nicht aus dem Bauch, sondern aus den Steckbriefen eurer Messreihe: erst kalibrieren, dann vergleichen.
+Where it belongs does not come from your gut but from the profiles of your measurement series: calibrate first, then compare.
 
-## Wie viele Farben sind sicher? (Frames 28 und 29)
+## How many colours are safe? (Frames 28 and 29)
 
-Zwei sind sicher, acht sind schnell, und irgendwo dazwischen liegt euer Alphabet. Wo genau, weiß nur eure eigene Messreihe: Die Bereichsbreite muss zur Schwankung passen, sonst rutschen einzelne Messungen in den Nachbarbereich.
+Two are safe, eight are fast, and somewhere in between sits your alphabet. Where exactly, only your own measurement series knows: the width of a region has to match the wobble, or individual readings slip into the neighbouring region.
 
-## Zum Schluss (Frames 30 und 31)
+## To close (Frames 30 and 31)
 
-Ihr entscheidet, wo die Grenzen liegen. Ab da gilt eure Entscheidung und nicht die Physik. Die Physik liefert einen stufenlosen Wertebereich und keine einzige Grenze dazu; jede Grenze in eurem System steht dort, weil ihr sie hingeschrieben habt. Deshalb ist sie auch euer Problem, wenn sie falsch liegt.
+You decide where the lines go. From there on your decision holds, not the physics. Physics delivers a stepless range of values and not a single line with it; every line in your system is there because you wrote it there. That is also why it is your problem when it is in the wrong place.

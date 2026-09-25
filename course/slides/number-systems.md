@@ -1,48 +1,48 @@
 <!-- Lecture notes for the slides on `number-systems`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/number-systems.html -->
 
-# Skript: why ten?
+# Lecture notes: why ten? (Number Systems)
 
-Dieser Text erläutert den Input zum Konzept „Zahlensysteme" zum Nachlesen. Er folgt der Reihenfolge der Folien, die Verweise zählen Frames (jeder Aufbauschritt ist ein eigener Frame), lässt sich aber auch ohne die Folien lesen.
+This text explains the input on the concept "Number Systems" for reading afterwards. It follows the order of the slides, and the references count frames (every build-up step is a frame of its own), but it can also be read without the slides.
 
-Der Satz ist der erste von zwei Inputs derselben Sitzung; der zweite, [Codesysteme](../08-code-systems/skript.md), beantwortet die Frage, was die Zahlen bedeuten, die hier entstehen.
+The deck is the first of two inputs in the same session; the second, [Code Systems](../code-systems/skript.md), answers the question of what the numbers that come about here mean.
 
-Ein Schema trägt den ganzen Input: oben die Ziffern, darunter die Stellenwerte, unten die Summe. Es kommt dreimal, mit Basis 10, Basis 8 und Basis 2, und danach noch zweimal, mit Basis 16 und mit euren Farben. Wer es einmal gesehen hat, liest jede Basis, ohne eine neue Regel zu lernen.
+One scheme carries the whole input: the digits at the top, the place values below them, the sum at the bottom. It comes three times, with base 10, base 8 and base 2, and after that twice more, with base 16 and with your colours. Once you have seen it, you can read any base without learning a new rule.
 
-## Warum zählen wir bis zehn? (Frame 4)
+## Why do we count to ten? (Frame 4)
 
-Fragt einmal in die Runde, warum unser Zahlensystem gerade zehn Ziffern hat. Die Antworten fallen meist ehrfürchtig aus: weil es sich gut teilen lässt, weil es mathematisch praktisch ist, weil es so gewachsen ist.
+Ask around why our number system has ten digits, of all numbers. The answers usually come out reverent: because it divides nicely, because it is mathematically practical, because that is how it grew.
 
-Die richtige Antwort ist banaler. Wir haben zehn Finger. Das ist alles. Es steckt keine Naturkonstante darin und keine besondere Eigenschaft der Zehn, nur Anatomie.
+The right answer is more banal. We have ten fingers. That is all. There is no constant of nature in it and no special property of ten, only anatomy.
 
-Das ist der Aufhänger für alles Weitere. Wenn die Zehn ein Zufall ist, dann geht es auch anders, und alles, was uns an unserer Zahlschreibweise selbstverständlich vorkommt, zerfällt in zwei Teile: den einen, der reine Vereinbarung ist, und den anderen, der Mathematik ist und in jedem System gleich funktioniert.
+That is the hook for everything that follows. If the ten is a coincidence, then it can be done differently, and everything that seems self-evident about the way we write numbers falls into two parts: one that is pure convention, and another that is mathematics and works the same way in every system.
 
-## Was bei 123 wirklich dasteht (Frames 5 und 6)
+## What 123 really says (Frames 5 and 6)
 
-Nehmt die Zahl 123. Was steht da eigentlich?
+Take the number 123. What does it actually say?
 
-Nicht „eins, zwei, drei". Da steht: einmal hundert, zweimal zehn, dreimal eins. Jede Stelle trägt eine Zehnerpotenz, und die Ziffer sagt nur, wie oft diese Potenz vorkommt.
+Not "one, two, three". It says: one hundred, two tens, three ones. Every place carries a power of ten, and the digit only says how often that power occurs.
 
     1 · 100  +  2 · 10  +  3 · 1  =  123
 
-Das weiß jeder, aber kaum jemand hat es je so hingeschrieben. Genau diese Bauanleitung heißt **Stellenwertsystem**, und sie ist der einzige Grund, warum zehn Ziffern für unendlich viele Zahlen reichen: Statt für jede Zahl ein neues Zeichen zu erfinden, gibt man der Position eine Bedeutung.
+Everybody knows that, but hardly anyone has ever written it down like this. Exactly this recipe is called a **place value system**, and it is the only reason ten digits are enough for infinitely many numbers: instead of inventing a new symbol for every number, you give the position a meaning.
 
-## Das Achtfinger-Wesen schreibt 123 (Frames 7 und 8)
+## The eight-finger creature writes 123 (Frames 7 and 8)
 
-Jetzt stellt euch ein Wesen mit acht Fingern vor. Es hat dasselbe Verfahren erfunden, nur zählt es bis acht, bevor die Stelle überläuft. Es schreibt ebenfalls `123` auf ein Blatt.
+Now picture a creature with eight fingers. It invented the same procedure, but it counts to eight before the place overflows. It also writes `123` on a sheet of paper.
 
-Welche Zahl meint es? Rechnet mit, bevor ihr weiterlest.
+Which number does it mean? Work it out before you read on.
 
-Dasselbe Schema, nur Achterpotenzen statt Zehnerpotenzen: 64, 8, 1.
+The same scheme, only powers of eight instead of powers of ten: 64, 8, 1.
 
     1 · 64  +  2 · 8  +  3 · 1  =  83
 
-Dieselben drei Ziffern, dasselbe Verfahren, eine andere Zahl. Daraus folgt etwas, das den Rest der Sitzung trägt: Eine Ziffernfolge allein bedeutet gar nichts, solange die Basis nicht dabeisteht.
+The same three digits, the same procedure, a different number. From this follows something that carries the rest of the session: a string of digits on its own means nothing at all, as long as the base is not written next to it.
 
-## Zwei Flossen: binär zählen (Frames 9 und 10)
+## Two flippers: counting in binary (Frames 9 and 10)
 
-Der Delfin auf Frame 9 hat zwei Flossen. Sein Zahlensystem kennt also genau zwei Ziffern, 0 und 1, und das ist der Trick am Anschlag.
+The dolphin in Frame 9 has two flippers. So its number system knows exactly two digits, 0 and 1, and that is the trick in the setup.
 
-| wir | der Delfin |
+| us | the dolphin |
 | --- | ---------- |
 | 0 | 0 |
 | 1 | 1 |
@@ -54,59 +54,59 @@ Der Delfin auf Frame 9 hat zwei Flossen. Sein Zahlensystem kennt also genau zwei
 | 7 | 111 |
 | 8 | 1000 |
 
-Zählt gemeinsam mit. Beim Übergang von 1 auf 10 stutzen die meisten kurz, und dann fällt der Groschen: Das ist genau dasselbe, was bei uns zwischen 9 und 10 passiert. Die Ziffern sind aufgebraucht, also wird eine neue Stelle geöffnet. Nur passiert es bei zwei Ziffern eben ständig, und die Zahlen werden schnell lang.
+Count along together. At the step from 1 to 10 most people hesitate for a moment, and then the penny drops: this is exactly the same thing that happens for us between 9 and 10. The digits are used up, so a new place is opened. It is just that with two digits it happens all the time, and the numbers get long quickly.
 
-## Der Delfin schreibt 110 (Frames 11 und 12)
+## The dolphin writes 110 (Frames 11 and 12)
 
-Das Schema zum dritten Mal, und jetzt sitzt es. Zweierpotenzen: 4, 2, 1.
+The scheme for the third time, and now it sticks. Powers of two: 4, 2, 1.
 
     1 · 4  +  1 · 2  +  0 · 1  =  6
 
-`110` ist keine hundertzehn. Wer bis hierher mitgekommen ist, kann jede Basis lesen, denn es gibt keine neue Regel mehr. Es ist immer dasselbe: Ziffer mal Stellenwert, aufsummiert.
+`110` is not one hundred and ten. If you have come along this far, you can read any base, because there is no new rule any more. It is always the same: digit times place value, added up.
 
-## Warum ausgerechnet zwei? (Frames 14 und 15)
+## Why two, of all things? (Frames 14 and 15)
 
-Ein Rechner könnte im Prinzip jede Basis benutzen. Dezimalrechner hat es wirklich gegeben, sie sind ausgestorben. Warum?
+A computer could in principle use any base. Decimal computers really did exist, and they died out. Why?
 
-Die Antwort ist keine Mathematik, sondern Technik. Stellt euch eine Leitung vor, auf der eine Spannung zwischen null und fünf Volt liegt. Wollt ihr zehn Ziffern übertragen, müsst ihr diesen Bereich in zehn Fächer schneiden, und jedes Fach ist ein halbes Volt breit. Wollt ihr zwei Ziffern übertragen, gibt es zwei Fächer von zweieinhalb Volt.
+The answer is not mathematics but engineering. Imagine a wire carrying a voltage between zero and five volts. If you want to send ten digits, you have to cut this range into ten compartments, and each compartment is half a volt wide. If you want to send two digits, there are two compartments of two and a half volts.
 
-Nun wackelt jede echte Leitung. Kabel wirken als Antennen, Bauteile werden warm, Netzteile brummen. Derselbe Wackler, der bei zwei Fächern nie etwas ausmacht, wirft bei zehn Fächern die Ziffer regelmäßig ins Nachbarfach. Das ist die Messfolie aus „Analog und digital", von der anderen Seite gelesen: Je mehr Zustände in denselben Bereich passen sollen, desto kleiner die Abstände, desto eher gewinnt das Rauschen.
+Now every real wire wobbles. Cables act as antennas, components warm up, power supplies hum. The same wobble that never matters with two compartments regularly throws the digit into the neighbouring compartment with ten. This is the measurement slide from "Analog and Digital", read from the other side: the more states have to fit into the same range, the smaller the gaps, and the sooner noise wins.
 
-Zwei Zustände sind das Billigste, was sich zuverlässig bauen lässt. An und aus, Strom und kein Strom, hell und dunkel. Der Preis dafür sind mehr Stellen, und Stellen sind billig.
+Two states are the cheapest thing you can build reliably. On and off, current and no current, bright and dark. The price for that is more places, and places are cheap.
 
-## Acht Bit sind ein Byte (Frames 16 bis 18)
+## Eight bits make a byte (Frames 16 to 18)
 
-Dasselbe Schema mit acht Stellen. Die Stellenwerte sind 128, 64, 32, 16, 8, 4, 2, 1, jede Stelle das Doppelte der rechten Nachbarin.
+The same scheme with eight places. The place values are 128, 64, 32, 16, 8, 4, 2, 1, each place double its right-hand neighbour.
 
     0 1 0 0 0 0 0 1   →   64 + 1 = 65
 
-Acht Stellen mit je zwei Möglichkeiten ergeben 2⁸ gleich 256 Werte, als Zahl gelesen 0 bis 255. Deshalb laufen die Farbkanäle eurer LED von 0 bis 255: Ein Kanal ist genau ein Byte.
+Eight places with two possibilities each give 2⁸ equals 256 values, read as a number 0 to 255. That is why the colour channels of your LED run from 0 to 255: one channel is exactly one byte.
 
-Das Wort **Bit** kennt ihr aus Sitzung 4 als Informationsmaß, und hier taucht es als Ziffer wieder auf, als *binary digit*. Das ist kein Zufall und kein Wortspiel: Eine Stelle mit zwei möglichen Werten fasst genau eine Ja/Nein-Antwort. Der Behälter ist nach seinem Inhalt benannt. Nützlich bleibt die Unterscheidung trotzdem, denn ein Behälter kann auch halb leer sein; darauf kommt die Kompression zurück.
+You know the word **bit** from session 4 as a measure of information, and here it turns up again as a digit, as binary digit. That is no coincidence and no pun: a place with two possible values holds exactly one yes/no answer. The container is named after its content. The distinction is still useful, though, because a container can also be half empty; compression comes back to that.
 
-Zum Selbstausprobieren gibt es das [Byte Switchboard](https://winf-hsos.github.io/lifi-concept-demos/byte-switchboard/): acht Schalter, die Zahl läuft mit. Drei Fragen lohnen sich dort: Welcher Schalter ändert am meisten? Wie stellt man 255 ein, wie die 1? Und was passiert, wenn man von 255 aus noch eins weiterzählen will?
+To try it yourself there is the [Byte Switchboard](https://winf-hsos.github.io/lifi-concept-demos/byte-switchboard/): eight switches, and the number follows along. Three questions are worth asking there: Which switch changes the most? How do you set 255, and how 1? And what happens if you want to count one further from 255?
 
-## Hexadezimal: vier Bit auf einmal (Frames 20 bis 23)
+## Hexadecimal: four bits at a time (Frames 20 to 23)
 
-Acht Nullen und Einsen kann kein Mensch auf einen Blick lesen. Dafür gibt es eine Abkürzung, und sie ist kein neues Zahlensystem im eigentlichen Sinn, sondern dasselbe Schema zur Basis 16.
+Nobody can read eight zeroes and ones at a glance. There is a shorthand for that, and it is not a new number system in the proper sense, but the same scheme with base 16.
 
-Der Grund für gerade sechzehn liegt im Byte. Vier Bit haben 2⁴ gleich 16 Zustände, und 16 ist genau die Zahl der Hexziffern. Also passt eine Hexziffer auf ein Viererpäckchen, und ein ganzes Byte auf zwei Ziffern:
+The reason for sixteen, of all numbers, lies in the byte. Four bits have 2⁴ equals 16 states, and 16 is exactly the number of hex digits. So one hex digit fits a packet of four, and a whole byte fits into two digits:
 
     1101 0010   →   D2
 
-Weil unsere zehn Ziffern für sechzehn Werte nicht reichen, borgt man sich sechs Buchstaben: A steht für 10, B für 11, und so weiter bis F für 15. Wer diese Tabelle einmal gesehen hat, liest jeden Hex-Dump.
+Because our ten digits are not enough for sixteen values, six letters are borrowed: A stands for 10, B for 11, and so on up to F for 15. Once you have seen this table, you can read any hex dump.
 
-Genau so ein Dump steckt im Demonstrator [Inside a File](https://winf-hsos.github.io/lifi-concept-demos/inside-a-file/): links die Bytes einer echten Datei hexadezimal, rechts dieselben Bytes als Zeichen. Zwei Dinge sind dort zu sehen. Erstens verraten schon die ersten Bytes, um welche Art Datei es sich handelt. Zweitens stehen zwischen den lesbaren Stellen genauso viele unlesbare, und beide sind derselbe Stoff. Eine Datei ist nichts anderes als eine Folge von Zahlen.
+Exactly such a dump is in the demonstrator [Inside a File](https://winf-hsos.github.io/lifi-concept-demos/inside-a-file/): on the left the bytes of a real file in hexadecimal, on the right the same bytes as characters. Two things can be seen there. First, the very first bytes give away what kind of file it is. Second, between the readable positions there are just as many unreadable ones, and both are the same stuff. A file is nothing but a sequence of numbers.
 
-Und damit wird auch die Farbschreibweise `#AC8909` nachrechenbar: drei Bytes, je zwei Hexstellen, ein Byte je Farbkanal.
+And with that the colour notation `#AC8909` also becomes something you can work out: three bytes, two hex digits each, one byte per colour channel.
 
-## Zwei Leitern von Einheiten (Frame 24)
+## Two ladders of units (Frame 24)
 
-Bevor das berühmte Festplattenrätsel kommt, zwei Leitern nebeneinander.
+Before the famous hard disk puzzle comes, two ladders side by side.
 
-Die dezimale Leiter nimmt je Sprosse den Faktor 1000: Kilobyte, Megabyte, Gigabyte, Terabyte. Die binäre Leiter nimmt 1024, denn Speicher ist in Zweierpotenzen organisiert und 2¹⁰ gleich 1024 ist die nächstgelegene runde Binärzahl zur 1000.
+The decimal ladder takes a factor of 1000 per rung: kilobyte, megabyte, gigabyte, terabyte. The binary ladder takes 1024, because storage is organised in powers of two and 2¹⁰ equals 1024 is the round binary number closest to 1000.
 
-| Stufe | dezimal | binär |
+| Step | decimal | binary |
 | ----- | ------- | ----- |
 | Byte | 1 | 1 |
 | Kilo | 1 000 | 1 024 |
@@ -114,32 +114,32 @@ Die dezimale Leiter nimmt je Sprosse den Faktor 1000: Kilobyte, Megabyte, Gigaby
 | Giga | 1 000 000 000 | 1 073 741 824 |
 | Tera | 1 000 000 000 000 | 1 099 511 627 776 |
 
-Im Alltag heißen beide Leitern gleich. Wer es genau nimmt, sagt Kibibyte, Mebibyte, Gibibyte zur binären Sprosse, aber das tut fast niemand, und daraus entsteht das Rätsel auf der nächsten Folie.
+In everyday speech both ladders have the same names. If you want to be precise, you say kibibyte, mebibyte, gibibyte for the binary rung, but almost nobody does, and that is where the puzzle on the next slide comes from.
 
-## Die fehlenden 69 Gigabyte (Frames 25 und 26)
+## The missing 69 gigabytes (Frames 25 and 26)
 
-Auf der Packung steht 1 Terabyte. Ihr baut die Platte ein, der Rechner zeigt 931 Gigabyte. Wer schummelt hier?
+The box says 1 terabyte. You install the disk, and the computer shows 931 gigabytes. Who is cheating here?
 
-Ratet erst, bevor ihr weiterlest.
+Guess first, before you read on.
 
-Niemand schummelt. Der Hersteller zählt die dezimale Leiter hinauf, ein Terabyte sind für ihn eine Billion Bytes. Das Betriebssystem nimmt genau dieselbe Billion Bytes und teilt sie die binäre Leiter hinunter, durch 1024³, und landet bei 931. Es fehlt kein einziges Byte. Über vier Sprossen summiert sich der Unterschied auf rund sieben Prozent, und beide Seiten nennen ihre Sprosse Gigabyte.
+Nobody is cheating. The manufacturer counts up the decimal ladder, and for them a terabyte is a trillion bytes. The operating system takes exactly the same trillion bytes and divides it down the binary ladder, by 1024³, and arrives at 931. Not a single byte is missing. Over four rungs the difference adds up to roughly seven percent, and both sides call their rung a gigabyte.
 
-Das ist kein Betrug, sondern ein Wortproblem.
+That is not fraud, it is a word problem.
 
-## Ihr habt längst eins gebaut (Frames 28 bis 30)
+## You built one long ago (Frames 28 to 30)
 
-Und damit zur Pointe. Euer Farbalphabet ist ein Stellenwertsystem, und die Zahl eurer Farben ist die Basis.
+And now for the punchline. Your colour alphabet is a place value system, and the number of your colours is the base.
 
-Wer vier Farben sicher unterscheidet, arbeitet zur Basis 4. Legt fest, welche Farbe welche Ziffer ist, etwa Rot gleich 0, Grün gleich 1, Blau gleich 2, Gelb gleich 3. Dann ist die Farbfolge Rot-Gelb-Grün die Zahl
+If you can reliably tell four colours apart, you are working in base 4. Decide which colour is which digit, say red for 0, green for 1, blue for 2, yellow for 3. Then the colour sequence red-yellow-green is the number
 
     0 · 16  +  3 · 4  +  1 · 1  =  13
 
-und mit drei Stellen stehen 4³ gleich 64 Kombinationen zur Verfügung, genug für ein Alphabet aus 26 Buchstaben.
+and with three places 4³ equals 64 combinations are available, enough for an alphabet of 26 letters.
 
-Zwei Dinge folgen daraus für Challenge 1. Erstens ist die Reihenfolge Teil der Nachricht: Rot-Gelb-Grün und Grün-Gelb-Rot sind verschiedene Codewörter, aus genau demselben Grund, aus dem 123 und 321 verschiedene Zahlen sind. Zweitens geht die Rechnung in beide Richtungen. Wer weiß, wie viele Zeichen er unterscheiden muss, kann ausrechnen, wie viele Stellen er dafür braucht, und wer sich für eine Zahl von Farben entscheidet, weiß sofort, wie lang seine Codewörter werden.
+Two things follow from this for Challenge 1. First, the order is part of the message: red-yellow-green and green-yellow-red are different code words, for exactly the same reason that 123 and 321 are different numbers. Second, the arithmetic works in both directions. If you know how many characters you have to distinguish, you can work out how many places you need for that, and if you decide on a number of colours, you know at once how long your code words will be.
 
-## Die Zehn war nie besonders (Frames 31 und 32)
+## Ten was never special (Frames 31 and 32)
 
-Der Schlusssatz ist der Anfangssatz von der anderen Seite. Die Zehn ist die Zahl der Finger an zwei Händen, und sonst nichts.
+The closing sentence is the opening sentence seen from the other side. Ten is the number of fingers on two hands, and nothing else.
 
-Wer das einmal gesehen hat, hält keine Basis mehr für natürlich und keine für schwierig. Binär, hexadezimal und euer Farbsystem sind dasselbe Verfahren mit anderen Ziffern.
+Once you have seen that, you will no longer think of any base as natural, or of any as difficult. Binary, hexadecimal and your colour system are the same procedure with different digits.

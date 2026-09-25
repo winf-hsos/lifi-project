@@ -1,136 +1,136 @@
 <!-- Lecture notes for the slides on `input-processing-output`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/input-processing-output.html -->
 
-# Skript: Probleme lösen mit Computern
+# Lecture notes: solving problems with computers (Problem Solving with Computers)
 
-Dieses Skript begleitet den Input „Solving problems with computers“ in Sitzung 2. Es ist als eigenständiger Text lesbar und folgt der Reihenfolge des stagekit-Decks. Eine Folie mit Aufbau erscheint im Vortrag und Export als mehrere Frames; deshalb laufen die Verweise von Frame 1 bis Frame 41.
+These notes accompany the input "Solving problems with computers" in session 2. They can be read as a text of their own and follow the order of the stagekit deck. A slide with a build-up appears as several frames in the talk and in the export; that is why the references run from Frame 1 to Frame 41.
 
-Das zugehörige Konzept auf der Website ist [Probleme lösen mit Computern](../../../website/concepts/input-processing-output.qmd).
+The matching concept on the website is [Problem Solving with Computers](../../website/concepts/input-processing-output.qmd).
 
-## Worum es geht
+## What it is about
 
-Aus dem ersten Input wissen die Studierenden, wie ein großes Problem in prüfbare Teile zerlegt wird. Jetzt folgt die Anschlussfrage: Wie muss ein solches Teil aussehen, wenn ein Computer es lösen soll?
+From the first input, students know how a big problem is cut into testable pieces. Now comes the follow-up question: what does such a piece have to look like if a computer is to solve it?
 
-Die Antwort ist das IPO-Muster: Eingabe, Verarbeitung und Ausgabe. Es gilt für ein Logikgatter ebenso wie für eine Funktion oder ein ganzes System. Sind die Eingabe und die erwartete Ausgabe klar, lässt sich der Kasten testen. Programme beantworten dabei die Frage nach der Verarbeitung; die Darstellung der Daten ist eine zweite, eigenständige Frage.
+The answer is the IPO pattern: input, processing and output. It holds for a logic gate just as it does for a function or a whole system. Once the input and the expected output are clear, the box can be tested. Programs answer the question of the processing; the representation of the data is a second question in its own right.
 
-## Teil 1: Was passiert in der Mitte?
+## Part 1: What happens in the middle?
 
-### Das unsichtbare Dazwischen (Frames 1 bis 4)
+### The invisible in-between (Frames 1 to 4)
 
-Der Einstieg zeigt ein Bestellterminal in einem Restaurant. Vorn geben wir eine Bestellung ein, hinten erscheint später ein Tablett. Die Küche dazwischen bleibt unsichtbar. Für die Bestellung genügt es trotzdem, die Eingabe und die erwartete Ausgabe zu kennen.
+The opening shows an ordering terminal in a restaurant. At the front we enter an order, and at the back a tray appears later. The kitchen in between stays invisible. For ordering, it is still enough to know the input and the expected output.
 
-Das Terminal deutet zugleich eine zweite Frage an: Wir sprechen unsere Bestellung nicht einfach in den Raum. Wir wählen Kacheln, Mengen und Optionen. Noch bevor die Küche arbeitet, ist die Bestellung in eine Form gebracht, die das System verarbeiten kann. Diese Darstellungsfrage kehrt am Ende des Inputs wieder.
+The terminal also hints at a second question: we do not simply speak our order into the room. We choose tiles, quantities and options. Even before the kitchen gets to work, the order has been brought into a form the system can process. This question of representation comes back at the end of the input.
 
-### Die Form eines lösbaren Teils (Frames 5 bis 8)
+### The shape of a solvable piece (Frames 5 to 8)
 
-Ein für den Computer lösbares Teil hat immer dieselbe Gestalt. Vorn gehen Daten hinein: die Eingabe. Hinten kommen Daten heraus: die Ausgabe. Dazwischen liegt die Verarbeitung. Auf Englisch heißen die drei Teile Input, Processing und Output, kurz IPO.
+A piece that a computer can solve always has the same shape. At the front data go in: the input. At the back data come out: the output. In between lies the processing. Together the three parts are called input, processing and output, IPO for short.
 
-Der Kasten ist kein bestimmtes Gerät. Er ist eine Denkform. Wir können damit einen Taschenrechner, eine Python-Funktion, einen Sensor, einen Sender oder ein ganzes Übertragungssystem beschreiben. Entscheidend sind zunächst nicht die technischen Einzelheiten, sondern die Grenzen des Kastens: Was geht wirklich hinein, und was soll wirklich herauskommen?
+The box is not a particular device. It is a way of thinking. We can use it to describe a pocket calculator, a Python function, a sensor, a sender or a whole transmission system. What matters first is not the technical details but the edges of the box: what really goes in, and what is really supposed to come out?
 
-### Der eingebaute Test (Frames 9 bis 12)
+### The built-in test (Frames 9 to 12)
 
-Ein kleines Beispiel macht die Verbindung zur Zerlegung aus Sitzung 1 sichtbar. Die Funktion `add()` bekommt `2, 3` und soll `5` liefern. Damit ist bereits ein Test formuliert:
+A small example makes the connection to the decomposition from session 1 visible. The function `add()` gets `2, 3` and is supposed to return `5`. With that, a test has already been written:
 
-1. Gib `2, 3` hinein.
-2. Führe die Verarbeitung aus.
-3. Vergleiche die tatsächliche Ausgabe mit der erwarteten `5`.
+1. Put `2, 3` in.
+2. Run the processing.
+3. Compare the actual output with the expected `5`.
 
-Liefert der Kasten `5`, besteht der Test. Liefert er `6`, schlägt er fehl. Um das festzustellen, müssen wir noch nicht wissen, wie `add()` im Inneren arbeitet. Klare Eingaben und erwartete Ausgaben machen einen Kasten prüfbar.
+If the box returns `5`, the test passes. If it returns `6`, the test fails. To find that out, we do not yet need to know how `add()` works inside. Clear inputs and expected outputs make a box testable.
 
-Der Merksatz lautet: Wer Eingabe und erwartete Ausgabe kennt, hat einen Test.
+The sentence to remember: if you know the input and the expected output, you have a test.
 
-## Teil 2: Die Kästen in unserem Projekt
+## Part 2: The boxes in our project
 
-### Der Sender (Frames 13 und 14)
+### The sender (Frames 13 and 14)
 
-Der Sender der Lichtstrecke ist ein IPO-Kasten. Eine Nachricht wie `"hi"` geht hinein. `encode()` verarbeitet den Text. Eine Folge von Farbsymbolen kommt heraus.
+The sender of the light link is an IPO box. A message such as `"hi"` goes in. `encode()` processes the text. A sequence of colour symbols comes out.
 
-Die Grenzen sind wichtig: Vor `encode()` liegen Zeichen, danach liegen Farbsymbole. Welche Farbe welche Bedeutung trägt, ist keine Naturtatsache. Sie ist eine Vereinbarung im Team. Erst diese Vereinbarung macht die Ausgabe des Senders für den nächsten Teil verständlich.
+The edges matter: before `encode()` there are characters, after it there are colour symbols. Which colour carries which meaning is not a fact of nature. It is an agreement within the team. Only this agreement makes the sender's output understandable for the next piece.
 
-### Was sieht der Empfänger wirklich? (Frames 15 und 16)
+### What does the receiver really see? (Frames 15 and 16)
 
-Beim Empfänger scheint zunächst rotes Licht hineinzugehen und der Text `"red"` herauszukommen. Für den Computer geht jedoch kein Begriff „Rot“ hinein. Der Sensor liefert Messwerte, zum Beispiel:
+At the receiver, it looks at first as if red light goes in and the text `"red"` comes out. For the computer, though, no concept "red" goes in. The sensor delivers readings, for example:
 
 `r = 203, g = 41, b = 57, c = 310`
 
-Die ersten drei Zahlen stehen für gemessene Rot-, Grün- und Blauanteile, die vierte für die Gesamthelligkeit. Was diese Zahlen bedeuten, entscheidet die Verarbeitung `classify()`. Unsere Augen sehen Rot. Der Kasten sieht vier Zahlen.
+The first three numbers stand for the measured red, green and blue components, the fourth for the overall brightness. What these numbers mean is decided by the processing, `classify()`. Our eyes see red. The box sees four numbers.
 
-### Der interaktive IPO-Test (Frame 17)
+### The interactive IPO test (Frame 17)
 
-Der Demonstrator zeigt den Empfänger als veränderbaren IPO-Kasten. Links lassen sich die vier Sensorwerte einstellen. In der Mitte stehen zwei Entscheidungsgrenzen:
+The demonstrator shows the receiver as an IPO box you can change. On the left you can set the four sensor values. In the middle there are two decision boundaries:
 
-- Unterhalb einer Mindesthelligkeit lautet die Ausgabe `off`.
-- Liegen die beiden stärksten Farbkanäle zu dicht beieinander, lautet sie `uncertain`.
-- Andernfalls gewinnt der stärkste Farbkanal.
+- Below a minimum brightness, the output is `off`.
+- If the two strongest colour channels are too close together, it is `uncertain`.
+- Otherwise the strongest colour channel wins.
 
-Rechts stehen tatsächliche und erwartete Ausgabe. Stimmen sie überein, besteht der Test; andernfalls schlägt er fehl.
+On the right are the actual and the expected output. If they match, the test passes; otherwise it fails.
 
-Mit dem Preset „clear red“ beginnt ein eindeutiger Erfolgsfall. Bei „weak red“ lässt sich die Helligkeit so weit absenken, dass dieselben relativen Farbanteile als `off` gelten. „Mixed light“ zeigt, dass eine veränderte Entscheidungsgrenze bei unveränderten Messwerten eine andere Ausgabe erzeugen kann. So werden Eingabe, Verarbeitung, Ausgabe und Test unmittelbar erfahrbar.
+The preset "clear red" starts with an unambiguous success. With "weak red" you can lower the brightness so far that the same relative colour components count as `off`. "Mixed light" shows that a changed decision boundary can produce a different output while the readings stay the same. That way input, processing, output and test become something you experience directly.
 
-### Kästen lassen sich stecken (Frames 18 bis 20)
+### Boxes can be plugged together (Frames 18 to 20)
 
-Die Ausgabe eines Kastens kann zur Eingabe des nächsten werden. Die gesamte Strecke lässt sich als Kette lesen:
+The output of one box can become the input of the next. The whole link can be read as a chain:
 
-`"hi" → encode() → Farbsymbole → Licht → decode() → "hi"`
+`"hi" → encode() → colour symbols → light → decode() → "hi"`
 
-An jeder Steckstelle muss die Form und Bedeutung der Daten vereinbart sein. Ein Teil kann für sich korrekt arbeiten und die Gesamtstrecke trotzdem scheitern, wenn zwei benachbarte Kästen an ihrer Grenze Unterschiedliches erwarten.
+At every connection point, the form and meaning of the data have to be agreed. A piece can work correctly on its own and the whole link can still fail, if two neighbouring boxes expect different things at their boundary.
 
-Kästen hintereinander zeigen den Datenfluss. Diese Sicht gibt auch eine Debugging-Route vor: Wenn hinten nicht `"hi"` ankommt, folgen wir den Daten von Grenze zu Grenze. Wir prüfen den erzeugten Code, die LED, die Sensorwerte und schließlich `decode()`. Die Leitfrage lautet: Bis zu welcher Grenze sind die Daten noch richtig?
+Boxes in a row show the data flow. This view also gives you a route for debugging: if `"hi"` does not arrive at the end, we follow the data from boundary to boundary. We check the code that was produced, the LED, the sensor values and finally `decode()`. The guiding question is: up to which boundary are the data still correct?
 
-Der Merksatz in Frame 21 ist deshalb: Um den Fehler zu finden, folge den Daten und teste eine Grenze nach der anderen.
+The sentence to remember in Frame 21 is therefore: to find the fault, follow the data and test one boundary after the other.
 
-## Teil 3: Kästen auf jeder Ebene
+## Part 3: Boxes at every level
 
-### Einen Kasten öffnen (Frames 22 bis 25)
+### Opening a box (Frames 22 to 25)
 
-Von außen kann der ganze Sender als ein Kasten betrachtet werden. Eine Nachricht geht hinein, Licht kommt heraus, und `send()` bezeichnet die gesamte Verarbeitung.
+From the outside, the whole sender can be seen as one box. A message goes in, light comes out, and `send()` names the whole processing.
 
-Öffnen wir diesen Kasten, wird seine Verarbeitung zu einer Kette kleinerer Kästen: Text codieren, ein Farbsymbol auswählen und die LED ansteuern. Jeder kleine Kasten besitzt wiederum eigene Eingaben und Ausgaben und kann separat geprüft werden.
+If we open this box, its processing turns into a chain of smaller boxes: encode the text, choose a colour symbol and drive the LED. Each small box again has its own inputs and outputs and can be checked separately.
 
-Wie weit wir einen Kasten öffnen, hängt von unserer Frage ab. Wer die gesamte Strecke testet, braucht andere Ein- und Ausgaben als jemand, der nur `encode()` oder die LED-Ansteuerung untersucht. Wir öffnen einen Kasten nur so weit, wie es die aktuelle Frage erfordert.
+How far we open a box depends on our question. If you test the whole link, you need different inputs and outputs than someone who only looks at `encode()` or at driving the LED. We open a box only as far as the current question requires.
 
-### Dieselbe Form auf drei Ebenen (Frames 26 bis 28)
+### The same shape at three levels (Frames 26 to 28)
 
-Das IPO-Muster bleibt über die Ebenen hinweg erhalten:
+The IPO pattern survives across the levels:
 
-- System: Nachricht hinein, Sender arbeitet, Licht heraus.
-- Funktion: Text hinein, `encode()` arbeitet, Symbole heraus.
-- Logikgatter: `1, 1` hinein, die UND-Regel wird angewendet, `1` heraus.
+- System: message in, sender works, light out.
+- Function: text in, `encode()` works, symbols out.
+- Logic gate: `1, 1` in, the AND rule is applied, `1` out.
 
-Die Auflösung ändert sich, die Form nicht. Deshalb kann IPO sehr unterschiedliche technische Gegenstände miteinander verbinden, ohne ihre Unterschiede zu verwischen.
+The resolution changes, the shape does not. That is why IPO can connect very different technical things with one another without blurring their differences.
 
-### Kette und Verschachtelung (Frame 29)
+### Chain and nesting (Frame 29)
 
-Es gibt zwei Beziehungen zwischen Kästen, die nicht verwechselt werden dürfen:
+There are two relationships between boxes that must not be confused:
 
-- Kästen hintereinander zeigen Datenfluss: Wohin gehen die Daten als Nächstes?
-- Kästen ineinander zeigen hierarchische Zerlegung: Welche kleinere Arbeit passiert im Inneren?
+- Boxes in a row show data flow: where do the data go next?
+- Boxes inside boxes show hierarchical decomposition: what smaller work happens inside?
 
-Beide Sichten sind nützlich. Die passende Sicht hängt von der Frage ab. Die passende Ebene ist diejenige, auf der sich eine klare Eingabe und erwartete Ausgabe angeben lassen. Frame 30 fasst das zusammen: Die richtige Ebene ist die, die wir testen können.
+Both views are useful. Which one fits depends on the question. The fitting level is the one at which a clear input and an expected output can be stated. Frame 30 sums this up: the right level is the one we can test.
 
-## Teil 4: Zwei Fragen in jedem Kasten
+## Part 4: Two questions in every box
 
-### Verarbeitung und Darstellung (Frames 31 bis 35)
+### Processing and representation (Frames 31 to 35)
 
-Aus jedem IPO-Kasten entstehen zwei Grundfragen.
+Every IPO box gives rise to two basic questions.
 
-Die erste lautet: Wie arbeitet der Kasten? Das ist die Frage nach der Verarbeitung. Ihre Antwort heißt Programm. Im nächsten Input wird diese Antwort genauer untersucht.
+The first is: how does the box work? That is the question of processing. Its answer is called a program. In the next input this answer is examined more closely.
 
-Die zweite lautet: Wie schreiben wir Dinge so auf, dass eine Maschine damit arbeiten kann? Das ist die Frage nach der Darstellung von Eingaben und Ausgaben. Der Sensorfall hat sie bereits gezeigt: „Rot“ musste zu vier Zahlen werden, bevor ein Programm damit arbeiten konnte.
+The second is: how do we write things down so that a machine can work with them? That is the question of how inputs and outputs are represented. The sensor case has already shown it: "red" had to become four numbers before a program could work with it.
 
-Fast alle weiteren Konzepte des Moduls lassen sich an einer dieser beiden Fragen verorten.
+Almost all further concepts of the module can be placed at one of these two questions.
 
-### Die Landkarte der nächsten Wochen (Frame 36)
+### The map of the next weeks (Frame 36)
 
-Die Verarbeitungsfrage führt direkt zu „Algorithmen und Programme“. Die Darstellungsfrage führt zunächst zu Messwerten, anschließend zu Symbolen und Information, Codesystemen und Zahlensystemen. Der IPO-Kasten bleibt dabei als Landkarte bestehen. Nur die Stelle, in die wir hineinzoomen, wechselt.
+The processing question leads directly to "Algorithms and Programs". The representation question leads first to readings, and after that to symbols and information, code systems and number systems. The IPO box stays as the map throughout. Only the place we zoom into changes.
 
-### Auch ein KI-Agent ist ein Kasten (Frames 37 bis 40)
+### An AI agent is a box, too (Frames 37 to 40)
 
-Ein KI-Agent kann ebenfalls als IPO-Kasten betrachtet werden. Eine Aufgabe geht hinein, Code kommt heraus. Das Innere dieses Kastens ist schwer einzusehen. Gerade deshalb sind klare Beispiele und erwartete Ergebnisse wichtig.
+An AI agent can also be seen as an IPO box. A task goes in, code comes out. The inside of this box is hard to look into. That is exactly why clear examples and expected results matter.
 
-Eine präzise Eingabe verbessert den Auftrag. Eine erwartete Ausgabe liefert den Maßstab. Erst der Vergleich zwischen tatsächlichem und erwartetem Ergebnis entscheidet, ob der Vorschlag verwendbar ist. Prüfbarkeit ersetzt Vertrauen nicht nur bei einfachen Funktionen, sondern gerade bei schwer durchschaubaren Systemen.
+A precise input improves the task. An expected output provides the yardstick. Only the comparison between the actual and the expected result decides whether the suggestion is usable. Testability replaces trust not only for simple functions, but above all for systems that are hard to see through.
 
-### Übergang zum nächsten Input (Frame 41)
+### Transition to the next input (Frame 41)
 
-Das Schlussbild zeigt die Küchenausgabe aus der Eröffnungsgeschichte. Am Anfang standen wir vor der geschlossenen Tür und kannten nur Bestellung und Tablett. Jetzt kennen wir die Form jedes computergestützt lösbaren Teils und wissen, wie seine Grenzen einen Test ermöglichen.
+The closing picture shows the kitchen counter from the opening story. At the beginning we stood in front of the closed door and knew only the order and the tray. Now we know the shape of every piece a computer can solve, and we know how its edges make a test possible.
 
-Als Nächstes öffnen wir den mittleren Kasten. Die Verarbeitung darin heißt Programm.
+Next, we open the box in the middle. The processing inside it is called a program.

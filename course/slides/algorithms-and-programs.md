@@ -1,67 +1,67 @@
 <!-- Lecture notes for the slides on `algorithms-and-programs`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/algorithms-and-programs.html -->
 
-# Skript: what is a program? (Input, Sitzung 2, zweiter Teil)
+# Lecture notes: what is a program? (Algorithms and Programs)
 
-Deck 02 zum Konzept „Algorithmen und Programme“. Dieses Skript erläutert die Folien zum Nachlesen. Es folgt der Folienreihenfolge und nennt die Nummern, wie sie das HTML-Deck zählt (jeder Aufbauschritt ist eine eigene Nummer, 40 Frames), ist aber als eigenständiger Text lesbar. Das zugehörige Konzept auf der Website: [Algorithmen und Programme](../../../website/concepts/algorithms-and-programs.qmd).
+Deck 02 on the concept "Algorithms and Programs", the input in session 2, second part. These notes explain the slides for reading afterwards. They follow the order of the slides and give the numbers as the HTML deck counts them (every build-up step has its own number, 40 frames), but they can be read as a text on their own. The corresponding concept on the website: [Algorithms and Programs](../../website/concepts/algorithms-and-programs.qmd).
 
-## Worum es geht
+## What this is about
 
-Der IPO-Teil davor hat eine Frage offen gelassen: Wie verrichtet der Kasten seine Arbeit? Die Antwort kommt in zwei Stufen: erst der Algorithmus, den ihr längst kennt, weil ihr einen ausgeführt habt, dann das Programm, derselbe Ablauf, aufgeschrieben für eine Maschine. Danach die vier Bausteine, aus denen jedes Programm besteht, der Umgang mit Fehlermeldungen, und wie man mit dem KI-Assistenten arbeitet, ohne Code nur entgegenzunehmen.
+The IPO part before left one question open: how does the box do its work? The answer comes in two stages: first the algorithm, which you already know because you carried one out, then the program, the same procedure written down for a machine. After that come the four building blocks every program consists of, how to deal with error messages, and how to work with the AI assistant without just receiving code.
 
-## Teil 1: last week
+## Part 1: last week
 
-**Wer spielt hier? (Folie 4).** Ein Klavier spielt, die Tasten bewegen sich, die Bank ist leer. Solche selbstspielenden Klaviere standen um 1900 in vielen Salons. Der Spieler ist die Papierrolle über der Tastatur: Jedes gestanzte Loch bedeutet „drücke jetzt diese Taste“. Das Klavier versteht nichts von Musik, es führt nur aus. Der eigentliche Pianist ist der Mensch, der die Rolle gestanzt hat, vielleicht Jahrzehnte vorher. Die Rolle ist das Programm, das Klavier die Maschine, der Stanzer der Programmierer. Und so etwas wie dieses Klavier wart ihr selbst schon.
+**Who is playing? (slide 4).** A piano is playing, the keys move, the bench is empty. Around 1900, self-playing pianos like this stood in many parlours. The player is the paper roll above the keyboard: every punched hole means "press this key now". The piano understands nothing about music, it only executes. The real pianist is the person who punched the roll, perhaps decades earlier. The roll is the program, the piano the machine, the puncher the programmer. And you have already been something like this piano yourselves.
 
-**Ihr wart schon der Empfänger (Folie 5).** In der ersten Sitzung habt ihr im Farbkarten-Experiment selbst empfangen: auf die Karte schauen, entscheiden, welche Farbe es ist, das passende Zeichen notieren, auf die nächste warten.
+**You were already the receiver (slide 5).** In the first session you did the receiving yourselves, in the colour card experiment: look at the card, decide which colour it is, write down the matching symbol, wait for the next one.
 
-**Das war ein Algorithmus, und ihr wart die Maschine (Folie 6).** Jetzt bekommt das Kind seinen Namen: Eine Schrittfolge, die so genau beschrieben ist, dass man sie ausführen kann, ohne zu verstehen, worum es geht, heißt Algorithmus. Er braucht keinen Computer, er kann auf einem Zettel stehen, und genau so habt ihr ihn abgearbeitet.
+**That was an algorithm, and you were the machine (slide 6).** Now the thing gets its name: a sequence of steps described so precisely that you can carry it out without understanding what it is about is called an algorithm. It needs no computer, it can stand on a piece of paper, and that is exactly how you worked through it.
 
-**Vier Zeilen, eine davon schwer (Folie 7).** Dieselben vier Zeilen noch einmal, diesmal ist die zweite hervorgehoben. Drei davon übernimmt ab heute Stück für Stück der Rechner. Das Entscheiden, welche Farbe da liegt, ist Challenge 1 und wird euch drei Wochen beschäftigen.
+**Four lines, one of them hard (slide 7).** The same four lines again, this time with the second one highlighted. From today, the computer takes over three of them, one piece at a time. Deciding which colour is there is Challenge 1, and it will keep you busy for three weeks.
 
-**Noch ein Algorithmus, live (Folien 8 und 9).** Sechs Freiwillige stellen sich unsortiert in eine Reihe und führen strikt fünf Regeln aus: in einer Reihe stehen, auf den rechten Nachbarn schauen, tauschen, wenn er kleiner ist, am Reihenende wieder von vorn, und ein vollständiger Durchlauf ohne Tausch heißt fertig. Kein Nachdenken, nur Ausführen. Nach zwei, drei Minuten steht die Reihe der Größe nach, und ihr habt Bubble Sort ausgeführt; so sortieren auch Computer, nur schneller. Zwei Beobachtungen nehmt ihr mit: Woran hat der Ablauf sein Ende erkannt? Am vollständigen Durchlauf ohne Tausch, das ist eine Terminierungsbedingung, sie kommt in Teil 3 wieder. Und wie viele Vergleiche waren das bei sechs Personen, was wäre es bei vierzig? Auch das kommt wieder, beim Aufwand.
+**One more algorithm, live (slides 8 and 9).** Six volunteers line up unsorted in a row and strictly follow five rules: stand in a row, look at your right neighbour, swap if they are shorter, at the end of the row start again, and a full pass without a swap means done. No thinking, only executing. After two or three minutes the row stands in order of height, and you have run bubble sort; computers sort like this too, only faster. Take two observations with you. How did the procedure recognise its end? By the full pass without a swap; that is a termination condition, and it comes back in part 3. And how many comparisons was that with six people, and what would it be with forty? That comes back too, when we get to cost.
 
-**Ein Programm ist ein Algorithmus, aufgeschrieben für eine Maschine (Folie 10).** Beim Übergang kommt eine Anforderung dazu, die der Zettel nicht hatte: Vollständigkeit. Ein Mensch ergänzt beim Lesen, was offensichtlich gemeint war. Die Maschine ergänzt nichts.
+**A program is an algorithm written down for a machine (slide 10).** In this transition a requirement comes in that the piece of paper did not have: completeness. A person reading it fills in what was obviously meant. The machine fills in nothing.
 
-## Teil 2: the instruction follower
+## Part 2: the instruction follower
 
-**Ein Programm ist eine Liste (Folie 12).** Eine Liste von Anweisungen, und etwas, das dieser Liste folgt, exakt und der Reihe nach. Mehr Magie ist nicht im Spiel.
+**A program is a list (slide 12).** A list of instructions, and something that follows this list, exactly and in order. There is no more magic involved than that.
 
-**Die Liste bei der Arbeit (Folie 13).** Drei Zeilen von oben nach unten, und rechts daneben, was man sieht: Die erste macht die LED rot, die zweite lässt sie eine Sekunde rot, die dritte macht sie blau. Jede Zeile verändert etwas Sichtbares. Und die Maschine weiß dabei nicht, was gemeint war: Sie führt aus, was dasteht, in der Reihenfolge, in der es dasteht, und nichts sonst. Aus genau diesem Unterschied entstehen fast alle Fehler dieses Semesters.
+**The list at work (slide 13).** Three lines from top to bottom, and next to them on the right, what you see: the first makes the LED red, the second keeps it red for a second, the third makes it blue. Every line changes something visible. And the machine does not know what was meant: it executes what is written, in the order it is written, and nothing else. Almost all the errors of this semester come from exactly this difference.
 
-**Anatomie einer Zeile (Folien 14 bis 17).** Die Zeile besteht aus drei Teilen. Das erste Stück sagt, welches Ding angesprochen wird, hier die LED. Das zweite sagt, was es tun soll. Das dritte sagt, mit welchen Werten, hier voller Rotanteil, kein Grün, kein Blau.
+**Anatomy of a line (slides 14 to 17).** The line consists of three parts. The first piece says which thing is being addressed, here the LED. The second says what it should do. The third says with which values, here full red, no green, no blue.
 
-**Dieselbe Anweisung, andere Werte (Folie 18).** Zweimal dieselbe Anweisung, einmal mit Rot, einmal mit Blau. Der Name sagt, was passiert; die Werte sagen, wie.
+**Same instruction, different values (slide 18).** The same instruction twice, once with red, once with blue. The name says what happens; the values say how.
 
-## Teil 3: four building blocks
+## Part 3: four building blocks
 
-Jedes Programm dieser Welt besteht aus vier Bausteinen: Anweisungen nacheinander, Werte mit Namen, Wiederholung, Bedingung. Alle vier seht ihr an der LED.
+Every program in this world consists of four building blocks: instructions one after another, values with names, repetition, condition. You see all four on the LED.
 
-**Baustein 1: eins nach dem anderen (Folien 20 bis 22).** Anweisungen laufen der Reihe nach. Folie 21 stellt zwei Programme nebeneinander, beide richtig: Mit einer Pause bleibt Rot eine Sekunde sichtbar; ohne Pause lebt Rot etwa eine Millisekunde, viel zu kurz für ein Auge, und ihr seht nur Blau. Das Programm ist nicht kaputt, es ist zu schnell. Eure Augen sind langsam, die Maschine ist es nicht. Folie 22 zeigt dasselbe für die Reihenfolge: Rückt die Pause ans Ende, wartet die Maschine mit blauer LED, und Rot ist wieder nur eine Millisekunde zu sehen. Es fehlt keine Zeile, und trotzdem ist es ein anderes Programm.
+**Building block 1: one after another (slides 20 to 22).** Instructions run in order. Slide 21 puts two programs side by side, both correct: with a pause, red stays visible for a second; without a pause, red lives for about a millisecond, far too short for an eye, and you only see blue. The program is not broken, it is too fast. Your eyes are slow, the machine is not. Slide 22 shows the same for the order: move the pause to the end, and the machine waits with a blue LED, and red is once again visible for only a millisecond. No line is missing, and still it is a different program.
 
-**Baustein 2: ein Wert mit einem Namen (Folie 23).** Ein Name für einen Wert, den man danach überall benutzt. Der Gewinn ist nicht die Kürze, sondern die eine Stelle zum Ändern statt vieler.
+**Building block 2: a value with a name (slide 23).** A name for a value that you then use everywhere. The gain is not brevity, but one place to change instead of many.
 
-**Baustein 3: Wiederholung (Folien 24 und 25).** Eine Liste von Farben und eine Schleife darüber. Eine Schleife ist keine Magie, sondern eine Schreibweise: Dieselben zwei Zeilen laufen viermal, mit jeweils dem nächsten Wert aus der Liste. Folie 25 rollt das gegen die Zeit aus: links, was ihr schreibt, rechts vier Durchläufe mit je einem Wert und je einer Sekunde, zusammen vier Sekunden.
+**Building block 3: repetition (slides 24 and 25).** A list of colours and a loop over it. A loop is not magic but a way of writing: the same two lines run four times, each time with the next value from the list. Slide 25 rolls this out against time: on the left what you write, on the right four passes with one value and one second each, four seconds in total.
 
-**Baustein 4: nur wenn (Folie 26).** Eine Bedingung führt die eingerückte Zeile nur aus, wenn sie zutrifft, und „else“ sagt, was sonst passiert. Damit kann ein Programm auf etwas reagieren, statt stur abzuspulen.
+**Building block 4: only if (slide 26).** A condition runs the indented line only if it holds, and "else" says what happens otherwise. With that, a program can react to something instead of stubbornly reeling off the same thing.
 
-**Wann endet das? (Folie 27).** Die Terminierungsbedingung kennt ihr aus der Sortierübung; hier fehlt sie. Die Bedingung ist immer wahr, und im Schleifenkörper gibt es keinen Ausweg, also endet dieses Programm nie. Fürs Dauerblinken ist das sogar richtig; eine Empfänger-Hauptschleife braucht dagegen eine Abbruchbedingung. Der Werkstatt-Klassiker „mein Programm hängt“ heißt fast immer „meine Schleife hat keinen Ausweg“.
+**When does this end? (slide 27).** You know the termination condition from the sorting exercise; here it is missing. The condition is always true, and there is no way out in the loop body, so this program never ends. For continuous blinking that is even right; a receiver's main loop, on the other hand, needs a stopping condition. The workshop classic "my program hangs" almost always means "my loop has no way out".
 
-**Was kostet das? (Folie 28).** Zwei Verfahren können beide korrekt sein und trotzdem Welten trennen. Beim Zahlenraten aus Sitzung 1 fragt das eine bis zu 99-mal, das andere höchstens siebenmal. Bei tausend Zahlen steht es 999 gegen 10. Richtigkeit ist die Mindestanforderung; danach vergleicht man Algorithmen darüber, wie ihr Aufwand mit dem Problem wächst. Für eure Übertragung wird daraus die handfeste Frage, wie viele Sekunden eine Datei unterwegs ist. Der Faden wird in Sitzung 13 wieder aufgenommen.
+**What does it cost? (slide 28).** Two procedures can both be correct and still be worlds apart. In the number guessing game from session 1, one asks up to 99 times, the other at most seven times. With a thousand numbers it is 999 against 10. Correctness is the minimum requirement; after that you compare algorithms by how their cost grows with the problem. For your transmission this becomes the concrete question of how many seconds a file is on its way. The thread is picked up again in session 13.
 
-## Teil 4: it does what is written
+## Part 4: it does what is written
 
-**Die Fehlermeldung lesen (Folien 30 bis 33).** Ein Traceback sieht bedrohlich aus, ist aber eine präzise Auskunft, und die Folie liest sie Zeile für Zeile mit euch: welche Datei und welche Zeile, was dort stand, und was genau nicht existiert, hier die Schreibung „set_colour“ mit u statt „set_color“. Die Maschine hat nicht versagt; sie hat getan, was dastand, und meldet exakt, woran sie gescheitert ist.
+**Reading the error message (slides 30 to 33).** A traceback looks threatening, but it is a precise report, and the slide reads it with you line by line: which file and which line, what stood there, and what exactly does not exist, here the spelling "set_colour" with a u instead of "set_color". The machine did not fail; it did what was written and reports exactly where it got stuck.
 
-**Auskunft, kein Urteil (Folien 34 und 35).** Eine Fehlermeldung ist Information über das Programm, keine Bewertung eurer Person. Lest sie laut vor; meistens sagt sie wortwörtlich, was falsch ist. Und ihr seht den Umgang live: Vorn am Beamer wird absichtlich Fehler für Fehler eingebaut und aufgelöst.
+**Information, not a verdict (slides 34 and 35).** An error message is information about the program, not a judgement of you as a person. Read it out loud; most of the time it says literally what is wrong. And you see how to deal with it live: at the front, on the projector, errors are built in on purpose, one after another, and resolved.
 
-## Teil 5: working with the assistant
+## Part 5: working with the assistant
 
-**Zwei Arten zu fragen (Folien 37 und 38).** Die erste Frage bringt euch Code, den ihr nicht versteht. Die zweite sagt, was herauskommen soll, und bestellt die Erklärung gleich mit: Sie bringt euch Code und Verständnis.
+**Two ways to ask (slides 37 and 38).** The first question gets you code you do not understand. The second says what should come out and orders the explanation along with it: it gets you code and understanding.
 
-**Die Regel (Folie 39).** Behaltet nie Code, den ihr nicht ändern könnt. Jede Übernahme endet mit einer kleinen Änderung durch euch selbst: eine Farbe tauschen, eine Wartezeit anpassen. Wer das nicht kann, hat den Code nicht übernommen, sondern nur kopiert.
+**The rule (slide 39).** Never keep code you cannot change. Every hand-over ends with a small change you make yourself: swap a colour, adjust a waiting time. If you cannot do that, you have not taken the code over, you have only copied it.
 
-**Der Werkstattauftrag (Folie 40).** Heute: erstens eine Farbe an, zweitens vier Farben in einer Schleife, drittens Blinken mit einstellbarer Geschwindigkeit. Nummer drei ist die eigentliche Aufgabe: Die Geschwindigkeit muss sich an genau einer Stelle ändern lassen, ohne im Code zu wühlen, also Baustein 2 benutzen.
+**The workshop task (slide 40).** Today: first, one colour on; second, four colours in a loop; third, blinking with adjustable speed. Number three is the real task: the speed must be changeable in exactly one place, without digging through the code, so use building block 2.
 
-## Zum Weiterlesen
+## Further reading
 
-Die Konzeptseite [Algorithmen und Programme](../../../website/concepts/algorithms-and-programs.qmd) fasst das Ganze mit den Abbildungen zusammen. Wie man zwei richtige Verfahren vergleicht, habt ihr in Sitzung 1 am Zahlenraten gesehen: 99 Fragen oder 7, beide korrekt, eine davon unbrauchbar langsam.
+The concept page [Algorithms and Programs](../../website/concepts/algorithms-and-programs.qmd) sums up the whole thing with the figures. How to compare two correct procedures you saw in session 1 with the number guessing game: 99 questions or 7, both correct, one of them uselessly slow.

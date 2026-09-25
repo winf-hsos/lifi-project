@@ -1,138 +1,138 @@
 <!-- Lecture notes for the slides on `abstraction-and-layers`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/abstraction-and-layers.html -->
 
-# Skript: what's under the switch?
+# Lecture notes: what's under the switch? (Abstraction and Layers)
 
-Dieser Text erläutert den Input zum Konzept „Abstraktion und Schichten" zum Nachlesen. Er folgt der Reihenfolge der Folien, die Verweise zählen Frames (jeder Aufbauschritt ist ein eigener Frame), lässt sich aber auch ohne die Folien lesen.
+This text explains the input on the concept "Abstraction and Layers" for reading afterwards. It follows the order of the slides, and the references count frames (every build-up step is a frame of its own), but it can also be read without the slides.
 
-Der Satz hat im Semesterplan keinen eigenen Termin. Teil 1 und Teil 4 gehören an das Ende von Sitzung 7, nach dem Input zu Abtastung und Synchronisation; Teil 2 und Teil 3 tragen den Rückblick in Sitzung 14. Keine Folie setzt voraus, an welcher Stelle des Semesters sie gezeigt wird, der Satz funktioniert in Woche 7 genauso wie in Woche 14. Wer ihn am Stück liest, hat das ganze Konzept.
+The deck has no slot of its own in the semester plan. Parts 1 and 4 belong at the end of session 7, after the input on sampling and synchronization; parts 2 and 3 carry the review in session 14. No slide assumes at which point in the semester it is shown, and the deck works in week 7 just as well as in week 14. If you read it in one go, you have the whole concept.
 
-## Der Schalter (Frame 4)
+## The switch (Frame 4)
 
-Heute Morgen hat jeder von euch einen Lichtschalter gedrückt. Zwischen dem Finger und der Lampe liegen ein Kraftwerk, ein Netz über das ganze Land, ein Transformator in der Straße und ein Draht in der Wand. Nichts davon wusstet ihr in dem Moment, und nichts davon hat gefehlt.
+This morning each of you pressed a light switch. Between your finger and the lamp there are a power station, a grid across the whole country, a transformer in the street and a wire in the wall. You knew none of that at the moment, and none of it was missing.
 
-Das ist keine Bildungslücke. Es ist der Grund, warum ihr überhaupt Licht anmachen könnt, ohne Elektrotechniker zu sein.
+That is not a gap in your education. It is the reason you can turn on a light at all without being an electrical engineer.
 
-## Was der Schalter verspricht (Frames 5 bis 7)
+## What the switch promises (Frames 5 to 7)
 
-Hinter dem Schalter hängt eine Kette: Draht, Transformator, Netz, Kraftwerk. Für die Benutzung des Schalters ist diese Kette vollständig unsichtbar. Der Schalter verspricht genau zwei Dinge, hoch und runter, und dieses Versprechen hält er, egal was dahinter passiert.
+Behind the switch hangs a chain: wire, transformer, grid, power station. For using the switch, this chain is completely invisible. The switch promises exactly two things, up and down, and it keeps that promise no matter what happens behind it.
 
-Genau deshalb kann sich die Stromversorgung eines ganzen Landes umbauen, von Kohle auf Wind, ohne dass irgendjemand einen neuen Schalter lernen müsste. Was hinter der Zusage liegt, darf sich ändern. Die Zusage bleibt.
+That is exactly why the power supply of a whole country can be rebuilt, from coal to wind, without anyone having to learn a new switch. What lies behind the promise may change. The promise stays.
 
-## Das Wort dafür (Frame 8)
+## The word for it (Frame 8)
 
-**Eine Abstraktion verbirgt, wie etwas funktioniert, und zeigt, was man damit tun kann.** Der zweite Halbsatz ist der wichtigere. Eine Abstraktion versteckt nicht nur, sie stellt auch etwas bereit, und dieser bereitgestellte Teil heißt **Schnittstelle**.
+**An abstraction hides how something works and shows what you can do with it.** The second half of the sentence is the more important one. An abstraction does not only hide, it also provides something, and this provided part is called the **interface**.
 
-Eine Schnittstelle ist eine Zusage: Solange du dich an sie hältst, funktioniert es. Beim Schalter besteht die ganze Zusage aus zwei Stellungen.
+An interface is a promise: as long as you keep to it, it works. With the switch, the whole promise consists of two positions.
 
-## Drei, die ihr heute schon benutzt habt (Frame 9)
+## Three you have already used today (Frame 9)
 
-Keine Zeile in diesem Projekt steht nicht auf mehreren solcher Zusagen.
+There is not a single line in this project that does not rest on several such promises.
 
-`led.set_color(255, 0, 0)` verbirgt USB, das Tinkerforge-Protokoll, Spannungen und den Treiber der Leuchtdiode. Drei Zahlen hinein, Licht heraus. `python` verbirgt Maschinencode, Speicher und Prozessor. `photo.jpg` verbirgt Bytes auf einer Platte, ein Dateisystem und einen Controller.
+`led.set_color(255, 0, 0)` hides USB, the Tinkerforge protocol, voltages and the driver of the diode. Three numbers in, light out. `python` hides machine code, memory and the processor. `photo.jpg` hides bytes on a disk, a file system and a controller.
 
-`set_color` ist der Lichtschalter dieses Kurses. Wer bei jedem Aufruf an USB-Pakete denken müsste, käme nie zu einer Challenge.
+`set_color` is the light switch of this course. If you had to think about USB packets at every call, you would never get to a challenge.
 
-## Euer eigener Stapel (Frames 11 bis 16)
+## Your own stack (Frames 11 to 16)
 
-Jetzt der Perspektivwechsel: Ihr benutzt nicht nur Abstraktionen, ihr baut selbst welche, ungefähr eine je Challenge.
+Now the change of perspective: you do not only use abstractions, you build some yourselves, roughly one per challenge.
 
-Nehmt ein Foto und schickt es über die Strecke. Von oben nach unten sieht das so aus:
+Take a photo and send it across the link. From top to bottom it looks like this:
 
-| Schicht | Was auf dieser Ebene vorliegt |
+| Layer | What lies at this level |
 | --- | --- |
-| Bedeutung | das Foto |
-| Codesystem | die Bytes der Datei, `FF D8 FF E0 …` |
-| Rahmen | Präambel, Typ, Länge, Nutzdaten, Prüfsumme, Ende |
-| Bits | `1101 0010 0110 1001` |
-| Symbole | vier unterscheidbare Farben |
-| Träger | Licht |
+| meaning | the photo |
+| code system | the bytes of the file, `FF D8 FF E0 …` |
+| frame | preamble, type, length, payload, checksum, end |
+| bits | `1101 0010 0110 1001` |
+| symbols | four distinguishable colours |
+| carrier | light |
 
-Von oben gelesen ist es ein Foto. Von unten gelesen ist es eine Leuchtdiode, die an und aus geht. Dazwischen liegt alles, worum es in diesem Kurs geht.
+Read from the top, it is a photo. Read from the bottom, it is a diode going on and off. In between lies everything this course is about.
 
-## Die eine Regel (Frame 17)
+## The one rule (Frame 17)
 
-**Jede Schicht spricht nur mit der unmittelbar darunterliegenden.** Diese eine Regel klingt harmlos und ist der Grund für alles, was danach kommt: Austauschbarkeit, Arbeitsteilung im Team und eine Fehlersuche, die nicht im Nebel stochert.
+**Each layer talks only to the one directly below it.** This one rule sounds harmless and is the reason for everything that comes after it: interchangeability, division of labour in the team, and a search for errors that does not poke around in the fog.
 
-## Was die Trennung einbringt (Frame 18)
+## What the separation buys you (Frame 18)
 
-Eure Funktion, die Text in Bits übersetzt, weiß nichts über Farben. Eure Farberkennung weiß nichts über Buchstaben. Das Einzige, was beide kennen, ist der Bitstrom dazwischen, und genau der ist ihre Schnittstelle.
+Your function that translates text into bits knows nothing about colours. Your colour recognition knows nothing about letters. The only thing both know is the bit stream between them, and exactly that is their interface.
 
-Die häufigste Fehlvorstellung ist, das sei Ordnungsliebe. Es ist eine Versicherung: Wer die Farbzuordnung ändert, kann die Textkodierung dabei nicht kaputt machen, weil er sie gar nicht anfasst.
+The most common misconception is that this is about tidiness. It is insurance: whoever changes the colour assignment cannot break the text encoding along the way, because they do not even touch it.
 
-## Wer darf die Leuchtdiode ansteuern? (Frames 19 bis 21)
+## Who may drive the LED? (Frames 19 to 21)
 
-Drei Funktionen, drei Schichten: `send_text()`, `send_frame()`, `send_symbols()`. Welche von ihnen darf `led.set_color()` aufrufen?
+Three functions, three layers: `send_text()`, `send_frame()`, `send_symbols()`. Which of them may call `led.set_color()`?
 
-Die Frage klingt nach einer Eigenschaft der Funktionen, ist aber eine Frage nach einem **Aufruf**. Deshalb steht die Antwort auf der Folie am Pfeil und nicht am Kasten.
+The question sounds like a property of the functions, but it is a question about a **call**. That is why the answer on the slide is on the arrow and not on the box.
 
-Erlaubt ist der grüne Pfeil: `send_symbols()` darf. Sie ist die unterste der drei, und nur dort ist überhaupt bekannt, welche Farbe ein Symbol trägt. Die beiden anderen wissen es nicht und sollen es nicht wissen.
+The green arrow is allowed: `send_symbols()` may. It is the lowest of the three, and only there is it known at all which colour a symbol carries. The other two do not know it and should not know it.
 
-Der rote Pfeil ist die Abkürzung von ganz oben direkt nach ganz unten, die jeder einmal nimmt, wenn es schnell gehen muss. Ihr Preis fällt später an: Wer sie nimmt, hat die Farben in `send_text` einbetoniert und kann das Alphabet nicht mehr ändern, ohne den Textcode anzufassen.
+The red arrow is the shortcut from the very top straight to the very bottom that everyone takes once when things have to be quick. Its price comes due later: whoever takes it has set the colours in concrete inside `send_text` and can no longer change the alphabet without touching the text code.
 
-## Die unterste Schicht tauschen (Frames 23 und 24)
+## Swapping the bottom layer (Frames 23 and 24)
 
-Jetzt der Test, ob die Trennung wirklich trägt. Ersetzt die Leuchtdiode durch einen Lautsprecher und den Farbsensor durch ein Mikrofon. Was muss sich ändern?
+Now the test of whether the separation really holds. Replace the LED with a loudspeaker and the colour sensor with a microphone. What has to change?
 
-Oberhalb der Symbolschicht keine Zeile. Fünf Schichten bleiben unverändert, eine wird ausgetauscht. Wir bauen das im Kurs nicht um; als Gedankenexperiment reicht es, und wer die Schichten sauber getrennt hat, könnte es an einem Nachmittag.
+Above the symbol layer, not a single line. Five layers stay unchanged, one is exchanged. We do not rebuild this in the course; as a thought experiment it is enough, and whoever has separated the layers cleanly could do it in an afternoon.
 
-**Dieselben Bits, drei Träger.** Der Gedanke hinter dem Tausch ist größer als der Tausch. Information braucht immer etwas Physikalisches, das sie trägt: eine Farbe auf der LED, eine Spannung auf einer Leitung, einen Ton aus dem Lautsprecher, die Magnetisierung auf einer Festplatte. Aber sie ist nicht dieses Physikalische, und sie hängt nicht daran. Derselbe Bitstrom, den ihr durch Licht schickt, könnte durch ein Kabel laufen oder über einen Lautsprecher, und alles über der untersten Schicht würde davon nichts merken. Genau deshalb gibt es eine eigene Disziplin für Information und nicht nur Elektrotechnik; außerhalb der Informatik heißt dieselbe Idee Substratunabhängigkeit. Was ihr sendet, sind die Bits. Licht ist nur, was sie heute trägt.
+**The same bits, three carriers.** The thought behind the swap is bigger than the swap. Information always needs something physical to carry it: a colour on the LED, a voltage on a wire, a tone from the loudspeaker, the magnetisation on a hard disk. But it is not that physical thing, and it does not depend on it. The same bit stream you send through light could run through a cable or over a loudspeaker, and everything above the lowest layer would not notice. That is exactly why there is a discipline of its own for information and not just electrical engineering; outside computer science the same idea is called substrate independence. What you send is the bits. Light is just what carries them today.
 
-Ehrlicherweise gehört dazu: Die erreichbare Symbolrate ändert sich sehr wohl. Alles läuft weiter, aber anders schnell. Eine Abstraktion macht den Tausch möglich, sie macht ihn nicht folgenlos.
+Honesty demands the other half: the achievable symbol rate does change. Everything keeps running, but at a different speed. An abstraction makes the swap possible; it does not make it free of consequences.
 
-## Das Alphabet erweitern (Frames 25 und 26)
+## Extending the alphabet (Frames 25 and 26)
 
-Ein Team geht von vier auf acht Farben. Welche Teile müssen sich ändern?
+A team goes from four colours to eight. Which parts have to change?
 
-Die Antwort steht im selben Stapel wie überall: Gelb ist nur die Symbolschicht, und daneben steht, was in ihr liegt, nämlich die Farbtabelle, die Kalibrierung und die Übersetzung zwischen Bits und Symbolen. Jede andere Schicht bleibt, wie sie ist.
+The answer is in the same stack as everywhere else: only the symbol layer is yellow, and next to it is what lies inside it, namely the colour table, the calibration and the translation between bits and symbols. Every other layer stays as it is.
 
-Die verlockende falsche Antwort lautet „alle Schichten, denn jedes Symbol trägt jetzt mehr Bits". Der Bitstrom ist aber derselbe Bitstrom; er wird nur anders auf Farben verteilt. Und der Empfänger erfährt die Farbzahl nicht aus dem Rahmen, sondern weil er zum selben Team gehört.
+The tempting wrong answer is "all layers, because each symbol now carries more bits". But the bit stream is the same bit stream; it is only spread over colours differently. And the receiver does not learn the number of colours from the frame, but because it belongs to the same team.
 
-## Warum im Rahmen nichts über Zeit steht (Frame 27)
+## Why the frame says nothing about time (Frame 27)
 
-Ein Rahmen wird **in Bits** definiert, nicht in Farben, und er sagt nichts über Zeit.
+A frame is defined **in bits**, not in colours, and it says nothing about time.
 
-Das ist kein Versehen. Takt ist eine Eigenschaft des Übertragungswegs, nicht der Nachricht. Stünde im Rahmen ein Feld „Symbole pro Sekunde", wäre der Substrattausch nicht mehr sauber, denn Ton verträgt eine andere Rate als Licht. Steht der Klassenstandard schon, ist das hier die Bestätigung; steht er noch aus, ist es die Vorgabe für die Normungssitzung.
+That is not an oversight. Timing is a property of the transmission path, not of the message. If the frame contained a field "symbols per second", swapping the substrate would no longer be clean, because sound tolerates a different rate than light. If the class standard is already in place, this is the confirmation; if it is still to come, it is the brief for the standards session.
 
-## Die Umkehrung (Frames 28 und 29)
+## The reversal (Frames 28 and 29)
 
-Alles in diesem Projekt sitzt auf Licht. Und Licht ist die eine Schicht, die man ersetzen könnte.
+Everything in this project sits on light. And light is the one layer you could replace.
 
-Der Kurs heißt nicht Lichtkommunikation. Er handelt davon, wie Information dargestellt wird, wie man ein Problem in prüfbare Teile zerlegt, wie man etwas baut, das größer ist als der eigene Kopf, und wie man mit einem Assistenten arbeitet, der alles behauptet. Licht ist der Gegenstand, an dem sich das zeigen lässt.
+The course is not called light communication. It is about how information is represented, how you break a problem into testable parts, how you build something bigger than your own head, and how you work with an assistant that will claim anything. Light is the object on which all of this can be shown.
 
-## Was Schichten kosten (Frames 31 bis 33)
+## What layers cost (Frames 31 to 33)
 
-Damit daraus keine Heilslehre wird: Schichten haben einen Preis.
+So that this does not turn into a doctrine of salvation: layers have a price.
 
-**Jede Schicht legt eigene Daten dazu.** Der Rahmen kostet Bytes, die für die Nutzdaten nicht mehr zur Verfügung stehen.
+**Every layer adds its own data.** The frame costs bytes that are no longer available for the payload.
 
-**Jede Grenze verbirgt eine Stellschraube.** Und es ist zuverlässig die, an der man gerade drehen möchte.
+**Every boundary hides a knob.** And reliably it is the one you want to turn right now.
 
-**Man muss wissen, wo die Grenzen verlaufen.** Wer sie falsch vermutet, sucht an der falschen Stelle.
+**You have to know where the boundaries run.** Guess them wrong and you search in the wrong place.
 
-Die Antwort „es gibt keinen Preis" ist falsch. Schichten kosten Durchsatz und Durchgriff. Sie sind trotzdem meistens richtig, aber das ist eine Abwägung und kein Naturgesetz.
+The answer "there is no price" is wrong. Layers cost throughput and direct access. They are still right most of the time, but that is a trade-off and not a law of nature.
 
-## Den Fehler nach Schichten eingrenzen (Frames 34 bis 36)
+## Narrowing down the fault layer by layer (Frames 34 to 36)
 
-Bei einem Team kommen falsche Buchstaben an. Ein Test zeigt: Die Farberkennung liefert die gesendeten Symbole zu hundert Prozent richtig. Wo sucht ihr zuerst?
+Wrong letters arrive at one team. A test shows that the colour recognition delivers the transmitted symbols one hundred per cent correctly. Where do you look first?
 
-Oberhalb der Symbolschicht. Der Reflex geht zum Sensor, weil dort das Geheimnisvolle sitzt, aber der Test hat die untere Schicht entlastet. Damit ist die Suche halbiert, ohne dass irgendetwas repariert wurde.
+Above the symbol layer. The reflex goes to the sensor, because that is where the mysterious part sits, but the test has cleared the lower layer. That halves the search without anything having been repaired.
 
-Das ist dasselbe Vorgehen wie in Sitzung 1, nur angewendet auf einen Defekt statt auf eine Aufgabe: zerlegen, einzeln prüfen, den geprüften Teil beiseitelegen. **Eine geprüfte Schicht ist eine Schicht, die man nicht mehr verdächtigen muss.**
+This is the same approach as in session 1, only applied to a defect instead of a task: split it up, test the parts one at a time, put the tested part aside. **A tested layer is a layer you can stop suspecting.**
 
-## Wie man eine einzelne Schicht prüft (Frame 37)
+## How to test a single layer (Frame 37)
 
-Man gibt ihr eine bekannte Eingabe, sieht sich ihre Ausgabe an und lässt alles darunter weg. Bits hinein, Bits heraus. Keine Leuchtdiode, kein Sensor, kein Raumlicht.
+You give it a known input, look at its output and leave out everything below it. Bits in, bits out. No LED, no sensor, no room light.
 
-Die Übersetzung von Text zu Bits lässt sich so am Schreibtisch prüfen, in einer Sekunde statt in einem ganzen Durchlauf. Wer das einmal gemacht hat, sucht nie wieder eine Stunde am Sensor nach einem Fehler, der in einer Schleife steckt.
+That way the translation from text to bits can be checked at your desk, in a second instead of in a whole run. Once you have done that, you will never again spend an hour at the sensor looking for a mistake that sits in a loop.
 
-## Warum unser Modul nicht alles versteckt (Frame 38)
+## Why our module does not hide everything (Frame 38)
 
-`lifi_hardware` verbirgt USB, das Tinkerforge-Protokoll, Spannungen und den Treiber. Zwei Dinge zeigt es offen: **Integrationszeit** und **Verstärkung**.
+`lifi_hardware` hides USB, the Tinkerforge protocol, voltages and the driver. Two things it shows openly: **integration time** and **gain**.
 
-Das ist Absicht. Diese beiden Regler sind der Zielkonflikt, den nur ihr entscheiden könnt, und zwar mit einer Messreihe. Eine Abstraktion, die euch die entscheidende Frage abnimmt, nimmt euch die Arbeit weg, für die ihr hier seid.
+That is intentional. These two knobs are the trade-off only you can decide, and you decide it with a measurement series. An abstraction that takes the deciding question off your hands takes away the work you are here for.
 
-**Eine gute Schnittstelle verbirgt, was ihr nicht braucht, und zeigt, was ihr entscheiden müsst.** Dazu ist sie klein und stabil: Das Innenleben darunter darf sich ändern, ohne dass oben jemand etwas merkt. Eine Schnittstelle, die für jeden Sonderfall eine eigene Funktion anbietet, ist keine gute, sondern nur eine große.
+**A good interface hides what you don't need and shows what you must decide.** On top of that it is small and stable: the machinery underneath may change without anyone above noticing. An interface that offers a separate function for every special case is not a good one, only a large one.
 
-## Zum Schluss (Frame 39)
+## To finish (Frame 39)
 
-Ihr wisst jetzt, was unter einem Schalter liegt. Und jede Schicht, die ihr selbst schreibt, ist auch einer: schmal von außen, groß von innen, und absichtlich so gebaut.
+You now know what lies under a switch. And every layer you write yourselves is one too: narrow from the outside, big on the inside, and built that way on purpose.
