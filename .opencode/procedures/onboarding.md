@@ -44,7 +44,7 @@ Go through the output from the top:
 
 - For every **FAIL**, explain in one or two sentences what it means, guide the fix, and run the check again. One fix at a time. The advice after the arrow in the output is usually right; the most common one for the device is to unplug the USB cable and plug it in again.
 - When the LED test has run, ask: **"Did you see your LED shine green?"** Then **stop and wait for the answer.** Only the student can see the LED; the program cannot. Do not congratulate or go on to step 8 before they have answered yes. If they did not see it, find out why first.
-- When the device line shows the two IDs, ask the student to write them down.
+- When the device line shows the two IDs, ask the student to write them down. During the test the device has announced itself to the course server; Nicolas uses the LED ID to assign it to the student's team, which is what makes the team cockpit work. If the course server line says SKIP, that is fine; the device announces itself later.
 - The three sensor readings will differ slightly. Point that out in one sentence: every measurement wobbles, and that will matter a lot in this course.
 
 If something cannot be fixed now, say clearly what is missing, that this is normal in the first session, and that they should show it to Nicolas.

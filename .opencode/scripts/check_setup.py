@@ -22,6 +22,7 @@ import time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 MODULE_URL = "https://github.com/winf-hsos/lifi-hardware/archive/refs/heads/main.zip"
+COURSE_SERVER = "https://lifi.uber.space"
 results = []
 
 
@@ -125,10 +126,28 @@ def check_daemon():
         return False
 
 
+def check_server():
+    """Is the course server reachable? Not having it is no error: everything works offline."""
+    import urllib.request
+    try:
+        with urllib.request.urlopen(COURSE_SERVER + "/api/health", timeout=5) as r:
+            ok = r.status == 200
+    except Exception:
+        ok = False
+    if ok:
+        report("OK", "Course server", "reachable; your device announces itself there during the test")
+    else:
+        report("SKIP", "Course server", "not reachable right now (no internet?). Everything works "
+               "without it; your device will announce itself the next time you are online")
+    return ok
+
+
 def check_device():
     from lifi_hardware import LifiDevice
     try:
-        lifi = LifiDevice.connect(log_file=None, server=None)
+        # With the upload switched on (unless LIFI_SERVER=off), so that the device
+        # announces itself to the course server and can be assigned to a team.
+        lifi = LifiDevice.connect(log_file=None)
     except Exception as error:  # the module explains what is missing
         if brickd_usb_trouble():
             advice = ("The Brick Daemon saw your device but could not take it over, a known "
@@ -141,7 +160,7 @@ def check_device():
         return
     try:
         report("OK", "Device", f"LED {lifi.led.uid}, colour sensor {lifi.sensor.uid} "
-                               "(note these two IDs, you will need them)")
+                               "(note these two IDs: Nicolas uses them to assign your device to your team)")
         lifi.led.set_color(0, 255, 0)
         print("      the LED should now shine GREEN for three seconds ...", flush=True)
         time.sleep(3)
@@ -170,6 +189,7 @@ def main():
         report("SKIP", "lifi_hardware", "needs a current Python first")
     daemon_ok = check_daemon()
     if module_ok and daemon_ok:
+        check_server()
         check_device()
     else:
         report("SKIP", "Device", "needs lifi_hardware and the Brick Daemon first")
