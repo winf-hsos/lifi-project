@@ -2,9 +2,9 @@
 description: First session: get to know the student, install the remaining software with them, and check that everything works
 ---
 
-This is the student's first conversation with you, usually in class together with the lecturer. At this point they have installed only VS Code, Git and OpenCode, cloned this folder and created `openai.key`. Your goal: at the end, the rest of the software is installed, the device works, and you know a little about the student. Be warm and brief, go one step at a time, and wait for the student after each question or instruction.
+This is the student's first conversation with you, usually in class together with the lecturer. At this point they have installed only OpenCode, downloaded this course folder (usually as a ZIP) and entered their key. Your goal: at the end, the rest of the software is installed, the device works, and you know a little about the student. Be warm and brief, go one step at a time, and wait for the student after each question or instruction.
 
-You know the operating system from your environment information. Do not ask for it. Use `course/material/software/index.md` for the installation details of each program on that system.
+You know the operating system from your environment information. Do not ask for it. For the installation details of each program on that system, use `course/material/software/index.md`; it describes every step by hand, too. Before any command that installs something, say in one sentence what it will install, and let the student approve it.
 
 ## 1. Say hello
 
@@ -22,19 +22,23 @@ Do not ask for names, student numbers or anything else personal. Then create `my
 
 ## 3. Python
 
-Check whether a usable Python is there: `python --version`, on macOS `python3 --version`, on Windows also `py --version`. Version 3.10 or newer is needed.
+Everything else needs Python, so it comes first. Check whether a usable Python is there: on Windows `py --version` and `python --version`, on macOS `python3 --version`. Version 3.10 or newer is needed.
 
-If it is missing or too old, guide the installation from python.org step by step. On Windows, insist on the tick at "Add python.exe to PATH". Afterwards the student must close the terminal and open a new one (in VS Code: the bin icon, then Terminal > New Terminal) before you check again. Do not go on until the check shows the right version.
+If it is missing or too old, guide the installation from python.org step by step as described in the course material. On Windows, insist on the tick at "Add python.exe to PATH". Afterwards OpenCode must be restarted before it can see the new Python (close the app and open the course folder again; in the terminal version, open a new terminal). Tell the student to type `/onboarding` again after the restart; you will skip what is already done. Do not go on until the check shows the right version.
 
 ## 4. Bring the course folder up to date
 
-Run `python .opencode/scripts/update_course.py` (with `python3` or `py` if that is what worked in step 3). This creates `my-code/challenge-0/` if the template has been released and installs the module `lifi_hardware`. Summarise the result in one sentence.
+Run `python .opencode/scripts/update_course.py` (with `py` or `python3` if that is what worked in step 3). This creates `my-code/challenge-0/` if the template has been released and installs the module `lifi_hardware`. Summarise the result in one sentence.
 
-## 5. Brick Daemon and Brick Viewer
+## 5. Visual Studio Code
 
-Guide the download and installation from the Tinkerforge download page for their system. You cannot see their screen: ask them to tell you or show a screenshot when something asks a question during installation. When they are done, go on; the next step checks whether the Brick Daemon runs.
+The editor they will write their programs in. Check with `code --version`. If it is missing: on Windows offer to install it with `winget install --id Microsoft.VisualStudioCode -e`; if `winget` is not available, or on macOS, guide the download from code.visualstudio.com as described in the course material. Afterwards the student opens the course folder in VS Code via File > Open Folder, so they see `my-code/` there.
 
-## 6. The test with the device
+## 6. Brick Daemon and Brick Viewer
+
+Guide the download and installation from the Tinkerforge download page for their system. You cannot see their screen: ask them to tell you or show a screenshot when an installer asks a question. The next step checks whether the Brick Daemon runs.
+
+## 7. The test with the device
 
 Ask the student to plug in their LiFi device via USB. Then run `python .opencode/scripts/check_setup.py --install` (with the same Python command as before). It checks everything together and switches the LED green for three seconds.
 
@@ -47,11 +51,11 @@ Go through the output from the top:
 
 If something cannot be fixed now, say clearly what is missing, that this is normal in the first session, and that they should show it to the lecturer.
 
-## 7. Finish
+## 8. Finish
 
 When everything is OK, congratulate them in one sentence and tell them:
 
-- Their own work goes into `my-code/`; the first task is waiting in `my-code/challenge-0/`.
+- Their own work goes into `my-code/`; the first task is waiting in `my-code/challenge-0/`. They open it in VS Code.
 - Everything outside `my-code/` belongs to the course; they do not change it.
-- When the lecturer says so, they type `/update-semester` to get new material. No Git needed.
+- When the lecturer says so, they type `/update-semester` to get new material.
 - They can ask you anything about the course, and they keep a log of mistakes whenever a measurement proves you wrong.

@@ -6,9 +6,6 @@
   "enabled_providers": ["openai", "opencode"],
   "provider": {
     "openai": {
-      "options": {
-        "apiKey": "{file:openai.key}"
-      },
       "models": {
         "gpt-6-luna": {
           "name": "GPT-6 Luna (course model)"
@@ -24,15 +21,13 @@
       "python .opencode/scripts/*": "allow",
       "python3 .opencode/scripts/*": "allow",
       "py .opencode/scripts/*": "allow",
+      "python .opencode\\scripts\\*": "allow",
+      "py .opencode\\scripts\\*": "allow",
       "python --version": "allow",
       "python3 --version": "allow",
       "py --version": "allow",
       "git --version": "allow",
       "code --version": "allow"
-    },
-    "read": {
-      "*": "allow",
-      "*openai.key": "deny"
     }
   }
 }

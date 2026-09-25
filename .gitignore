@@ -1,6 +1,3 @@
-# Your personal API key. Never commit or share it.
-openai.key
-
 # Your own work: everything in my-code/ except its README stays yours.
 # Updates never touch it.
 my-code/*

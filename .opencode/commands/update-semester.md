@@ -2,7 +2,7 @@
 description: Bring this course folder up to date (new material, templates, NOW.md, lifi_hardware)
 ---
 
-The student wants to update their course folder. They do not know Git, so you do everything and explain the result in plain words.
+The student wants to update their course folder. Most downloaded it as a ZIP and have no Git; the script handles both ZIP folders and Git clones. You do everything and explain the result in plain words.
 
 1. Run exactly this command in the course folder: `python .opencode/scripts/update_course.py`. If `python` is not found (typical on macOS), use `python3`; on Windows `py` also works. Do not run any Git or pip command yourself; the script does all of it.
 2. Read the output and explain it briefly in the student's language:

@@ -21,7 +21,7 @@ import sys
 import time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-MODULE_URL = "git+https://github.com/winf-hsos/lifi-hardware.git"
+MODULE_URL = "https://github.com/winf-hsos/lifi-hardware/archive/refs/heads/main.zip"
 results = []
 
 
@@ -69,32 +69,20 @@ def check_python():
         report("OK", "Python", text)
         return True
     report("FAIL", "Python", text + " is too old",
-           "Install a current Python from python.org (step 1 of the installation page).")
+           "Install a current Python from python.org (see the installation page, or ask your assistant).")
     return False
 
 
 def check_git():
+    """Only for folders cloned with Git; a ZIP folder does not need Git."""
+    if not os.path.isdir(os.path.join(ROOT, ".git")):
+        return
     if shutil.which("git"):
         out = subprocess.run(["git", "--version"], capture_output=True, text=True).stdout.strip()
-        report("OK", "Git", out)
+        report("OK", "Git", out + " (your course folder is a Git clone)")
     else:
-        report("FAIL", "Git", "not found",
-               "Install Git (step 2 of the installation page), then restart VS Code.")
-
-
-def check_key():
-    path = os.path.join(ROOT, "openai.key")
-    if not os.path.isfile(path):
-        report("FAIL", "Key file", "openai.key not found in the course folder",
-               "Create the file openai.key in the course folder (next to README.md) and paste your key into it.")
-        return
-    with open(path, encoding="utf-8", errors="replace") as f:
-        key = f.read().strip()
-    if key.startswith("sk-") and len(key) > 20 and "\n" not in key:
-        report("OK", "Key file", "openai.key is there and looks like a key (not shown)")
-    else:
-        report("FAIL", "Key file", "openai.key does not look like a key",
-               "Open the file: it must contain only your key, one line starting with sk-.")
+        report("FAIL", "Git", "your course folder is a Git clone, but Git is not found",
+               "Install Git again (see the installation page), then restart OpenCode.")
 
 
 def check_module(install):
@@ -103,7 +91,7 @@ def check_module(install):
     except ImportError:
         if not install:
             report("FAIL", "lifi_hardware", "not installed",
-                   "Run this check again with --install, or see step 7 of the installation page.")
+                   "Run this check again with --install, or see the installation page.")
             return False
         print("      installing lifi_hardware, this can take a minute ...", flush=True)
         result = subprocess.run([sys.executable, "-m", "pip", "install", "--quiet", MODULE_URL],
@@ -132,7 +120,7 @@ def check_daemon():
             return True
     except OSError:
         report("FAIL", "Brick Daemon", "not reachable on localhost:4223",
-               "Install the Brick Daemon (step 6), or start it again; on Windows it is "
+               "Install the Brick Daemon (see the installation page, or ask your assistant), or start it again; on Windows it is "
                "a service, on macOS restart the laptop once after installing.")
         return False
 
@@ -177,7 +165,6 @@ def main():
     check_system()
     python_ok = check_python()
     check_git()
-    check_key()
     module_ok = python_ok and check_module(install)
     if not python_ok:
         report("SKIP", "lifi_hardware", "needs a current Python first")
