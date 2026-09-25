@@ -21,7 +21,7 @@ Above the four questions sit five ways of working, in grey, because you need the
 
 At the bottom of the map is the project, and this is why it is the project: your device touches all four questions. The photo is stored as a file. Its bytes represent a picture. A checksum processes them so the receiver can tell whether they arrived intact. And the light transfers them across the gap.
 
-[Figure: Two devices facing each other. Each has a lamp and an eye on the outside of its front wall; because the second device is turned around, its eye looks at the first device's lamp. The light travels as small coloured packets, in both directions; the way back is used from Challenge 4 on.]
+[Figure: Two devices facing each other. Each has a lamp and an eye on the outside of its front wall; because the second device is turned around, its eye looks at the first device's lamp. The light travels as small coloured packets, in both directions.]
 
 ## The concepts
 
