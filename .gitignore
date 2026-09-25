@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Measurement logs of lifi_hardware stay on your laptop
+lifi_log.jsonl
+
+# Editors and operating systems
+.vscode/
+.DS_Store
+Thumbs.db
