@@ -38,6 +38,16 @@ The controls work the way you know them from video editors or map apps:
 
 As soon as you zoom or drag into the past, the view stops following. The green button **"● live"** brings you back to the present, where the right edge moves along with the clock again.
 
+## Finding your errors quickly
+
+Next to the zoom buttons you find **errors: show · hide · only**.
+
+- **show** is the normal view: errors appear as red marks among everything else.
+- **hide** removes the error marks, for when you want to look at the signal alone.
+- **only** dims everything else. Zoomed out, every period with an error becomes a tall red bar, so even a single crash in a whole afternoon stands out at once.
+
+The two arrow buttons **‹** and **›** jump to the previous and the next error, across your whole timeline. The error lands in the middle of a 40-second window, so you see what your LED sent and what your sensor measured just before your program failed. Hover over an arrow to see which error comes next. Your choice of show, hide or only is remembered in your browser.
+
 ## When nothing arrives
 
 If the status says "no data yet" for good, check these in order: Is your program running right now, and does it use `lifi_hardware`? Is the team name in the address correct? Does your laptop have internet? Without a network your program carries on completely normally, by the way; only the cockpit stays empty, and everything that matters is still in your local log file `lifi_log.jsonl`. And if your device has not been assigned to a team yet, tell us; that takes a minute.
