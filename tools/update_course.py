@@ -39,11 +39,12 @@ def say(text=""):
 
 def git(*args, check=True):
     """Run git in the course folder and return its output as text."""
-    result = subprocess.run(["git", "-C", ROOT, *args], capture_output=True,
-                            text=True, encoding="utf-8", errors="replace")
+    result = subprocess.run(["git", "-c", "core.quotePath=false", "-C", ROOT, *args],
+                            capture_output=True, text=True, encoding="utf-8",
+                            errors="replace")
     if check and result.returncode != 0:
         raise RuntimeError(f"git {' '.join(args)} failed:\n{result.stderr.strip()}")
-    return result.stdout.strip()
+    return result.stdout.rstrip()
 
 
 def stop(problem, advice):
@@ -69,15 +70,9 @@ def check_preconditions():
 
 def save_changed_course_files(stamp):
     """Copy course files the student changed, and files in the way, to my-code/_saved/."""
-    saved = []
-    changed = git("status", "--porcelain", "--untracked-files=no").splitlines()
-    for line in changed:
-        path = line[3:].strip().strip('"')
-        if " -> " in path:
-            path = path.split(" -> ")[1]
-        full = os.path.join(ROOT, path)
-        if os.path.isfile(full):
-            saved.append(path)
+    # Course files changed since the last update, staged or not
+    changed = git("diff", "--name-only", "HEAD").splitlines()
+    saved = [p for p in changed if p and os.path.isfile(os.path.join(ROOT, p))]
     # Files the student created that the new course version also contains
     incoming = set(git("ls-tree", "-r", "--name-only", f"origin/{BRANCH}").splitlines())
     own = git("ls-files", "--others", "--exclude-standard").splitlines()
@@ -95,10 +90,13 @@ def save_changed_course_files(stamp):
 def copy_new_templates(changed_paths):
     """Copy released templates into my-code/; never overwrite what is there."""
     added, updated = [], []
-    if not os.path.isdir(TEMPLATES):
+    # Only templates that are part of the course, not folders a student made
+    released = git("ls-tree", "-d", "--name-only", "HEAD", "templates/", check=False)
+    names = [line.split("/", 1)[1] for line in released.splitlines() if "/" in line]
+    if not names:
         return added, updated
     os.makedirs(MY_CODE, exist_ok=True)
-    for name in sorted(os.listdir(TEMPLATES)):
+    for name in sorted(names):
         source = os.path.join(TEMPLATES, name)
         if not os.path.isdir(source):
             continue
