@@ -1,4 +1,4 @@
-<!-- Lecture notes for the slides on `sampling-and-synchronization`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/sampling-and-synchronization.html -->
+<!-- Lecture notes for the slides on `sampling-and-synchronization`. They follow the slides in order; frame and slide numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/sampling-and-synchronization.html -->
 
 # Lecture notes: when is it your turn? (Sampling and Synchronization)
 

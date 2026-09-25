@@ -1,4 +1,4 @@
-<!-- Lecture notes for the slides on `memory-and-storage`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/memory-and-storage.html -->
+<!-- Lecture notes for the slides on `memory-and-storage`. They follow the slides in order; frame and slide numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/memory-and-storage.html -->
 
 # Lecture notes: "where the bytes live" (Memory and Storage)
 

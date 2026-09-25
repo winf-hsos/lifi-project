@@ -1,4 +1,4 @@
-<!-- Lecture notes for the slides on `logic-and-arithmetic`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/logic-and-arithmetic.html -->
+<!-- Lecture notes for the slides on `logic-and-arithmetic`. They follow the slides in order; frame and slide numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/logic-and-arithmetic.html -->
 
 # Lecture notes: what does a computer actually do? (Logic and Arithmetic)
 

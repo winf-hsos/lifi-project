@@ -31,7 +31,7 @@ Everything you need about this course is in `course/`. Look there before you ans
 | the device, sensor, LED, optics, case | `course/hardware/index.md` |
 | the project and the challenges | `course/challenges/index.md`, `course/challenges/challenge-N.md` |
 | a concept (signal and noise, protocols, ...) | `course/concepts/*.md`, overview in `course/concepts/index.md` |
-| what was said on the slides in class | `course/slides/<concept>.md`, the lecture notes to each slide deck (in German; translate when you quote) |
+| what was said on the slides in class | `course/slides/<concept>.md`, the lecture notes to each slide deck, in slide order |
 | how to work with you | `course/ai/index.md` |
 | the live team cockpit | `course/software/cockpit.md` |
 

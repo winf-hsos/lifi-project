@@ -1,4 +1,4 @@
-<!-- Lecture notes for the slides on `measurement-and-experiments`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/measurement-and-experiments.html -->
+<!-- Lecture notes for the slides on `measurement-and-experiments`. They follow the slides in order; frame and slide numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/measurement-and-experiments.html -->
 
 # Lecture notes: measuring and experimenting (Measuring and Experimenting)
 

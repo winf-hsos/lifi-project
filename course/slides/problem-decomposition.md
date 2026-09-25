@@ -1,4 +1,4 @@
-<!-- Lecture notes for the slides on `problem-decomposition`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/problem-decomposition.html -->
+<!-- Lecture notes for the slides on `problem-decomposition`. They follow the slides in order; frame and slide numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/problem-decomposition.html -->
 
 # Lecture notes: cutting problems (Cutting Problems)
 

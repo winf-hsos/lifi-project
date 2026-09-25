@@ -1,4 +1,4 @@
-<!-- Lecture notes for the slides on `signal-and-noise`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/signal-and-noise.html -->
+<!-- Lecture notes for the slides on `signal-and-noise`. They follow the slides in order; frame and slide numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/signal-and-noise.html -->
 
 # Lecture notes: why 16 and not 4? (Signal and Noise)
 

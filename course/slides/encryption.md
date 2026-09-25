@@ -1,4 +1,4 @@
-<!-- Lecture notes for the slides on `encryption`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/encryption.html -->
+<!-- Lecture notes for the slides on `encryption`. They follow the slides in order; frame and slide numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/encryption.html -->
 
 # Lecture notes: "who else is listening?" (Encryption)
 

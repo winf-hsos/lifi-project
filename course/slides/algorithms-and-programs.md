@@ -1,4 +1,4 @@
-<!-- Lecture notes for the slides on `algorithms-and-programs`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/algorithms-and-programs.html -->
+<!-- Lecture notes for the slides on `algorithms-and-programs`. They follow the slides in order; frame and slide numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/algorithms-and-programs.html -->
 
 # Lecture notes: what is a program? (Algorithms and Programs)
 

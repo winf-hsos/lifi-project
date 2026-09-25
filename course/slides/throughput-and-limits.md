@@ -1,4 +1,4 @@
-<!-- Lecture notes for the slides on `throughput-and-limits`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/throughput-and-limits.html -->
+<!-- Lecture notes for the slides on `throughput-and-limits`. They follow the slides in order; frame and slide numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/throughput-and-limits.html -->
 
 # Lecture notes: why is it still not done? (Throughput and Limits)
 

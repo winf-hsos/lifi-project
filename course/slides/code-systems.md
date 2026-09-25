@@ -1,4 +1,4 @@
-<!-- Lecture notes for the slides on `code-systems`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/code-systems.html -->
+<!-- Lecture notes for the slides on `code-systems`. They follow the slides in order; frame and slide numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/code-systems.html -->
 
 # Lecture notes: what the bits mean (Code Systems)
 

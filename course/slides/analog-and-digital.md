@@ -1,4 +1,4 @@
-<!-- Lecture notes for the slides on `analog-and-digital`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/analog-and-digital.html -->
+<!-- Lecture notes for the slides on `analog-and-digital`. They follow the slides in order; frame and slide numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/analog-and-digital.html -->
 
 # Lecture notes: drawing the line (Analog and Digital)
 

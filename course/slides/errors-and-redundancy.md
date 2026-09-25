@@ -1,4 +1,4 @@
-<!-- Lecture notes for the slides on `errors-and-redundancy`, written in German. They follow the slides in order; frame numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/errors-and-redundancy.html -->
+<!-- Lecture notes for the slides on `errors-and-redundancy`. They follow the slides in order; frame and slide numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/errors-and-redundancy.html -->
 
 # Lecture notes: "one bit went wrong" (Errors and Redundancy)
 
