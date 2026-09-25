@@ -2,8 +2,8 @@
 
 Run by the /onboarding command in OpenCode, or by hand:
 
-    python tools/check_setup.py             check everything
-    python tools/check_setup.py --install   also install lifi_hardware if missing
+    python .opencode/scripts/check_setup.py             check everything
+    python .opencode/scripts/check_setup.py --install   also install lifi_hardware if missing
 
 (on a Mac: python3)
 
@@ -13,13 +13,14 @@ for three seconds: look at the device while it runs.
 """
 
 import os
+import platform
 import shutil
 import socket
 import subprocess
 import sys
 import time
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 MODULE_URL = "git+https://github.com/winf-hsos/lifi-hardware.git"
 results = []
 
@@ -30,6 +31,35 @@ def report(status, name, detail, advice=""):
     if advice and status == "FAIL":
         line += f"\n      -> {advice}"
     print(line, flush=True)
+
+
+def check_system():
+    name = {"Windows": "Windows", "Darwin": "macOS"}.get(platform.system(), platform.system())
+    version = platform.mac_ver()[0] if name == "macOS" else platform.release()
+    report("OK", "Operating system", f"{name} {version}".strip())
+
+
+def brickd_usb_trouble():
+    """True if the Brick Daemon log shows a USB device it could not take over.
+
+    Seen on Windows: right after plugging in, the daemon cannot read the
+    device's name (LIBUSB_ERROR_PIPE) and then ignores the device until it
+    is plugged in again. The log only exists on Windows and Linux."""
+    candidates = [r"C:\ProgramData\Tinkerforge\Brickd\brickd.log",
+                  "/var/log/brickd.log"]
+    for path in candidates:
+        try:
+            with open(path, encoding="utf-8", errors="replace") as f:
+                tail = f.readlines()[-40:]
+        except OSError:
+            continue
+        last_problem = max((i for i, line in enumerate(tail)
+                            if "could not be acquired correctly" in line), default=-1)
+        last_added = max((i for i, line in enumerate(tail)
+                          if "Added USB device" in line),
+                         default=-1)
+        return last_problem > last_added
+    return False
 
 
 def check_python():
@@ -56,7 +86,7 @@ def check_key():
     path = os.path.join(ROOT, "openai.key")
     if not os.path.isfile(path):
         report("FAIL", "Key file", "openai.key not found in the course folder",
-               "Create the file openai.key next to AGENTS.md and paste your key into it.")
+               "Create the file openai.key in the course folder (next to README.md) and paste your key into it.")
         return
     with open(path, encoding="utf-8", errors="replace") as f:
         key = f.read().strip()
@@ -112,9 +142,14 @@ def check_device():
     try:
         lifi = LifiDevice.connect(log_file=None, server=None)
     except Exception as error:  # the module explains what is missing
-        report("FAIL", "Device", str(error),
-               "Plug the device in with a data cable, check it in the Brick Viewer, "
-               "then run the check again.")
+        if brickd_usb_trouble():
+            advice = ("The Brick Daemon saw your device but could not take it over, a known "
+                      "USB hiccup. Unplug the USB cable, wait five seconds, plug it in again, "
+                      "then run the check again.")
+        else:
+            advice = ("Plug the device in with a data cable (some cables only charge), check "
+                      "it in the Brick Viewer, then run the check again.")
+        report("FAIL", "Device", str(error), advice)
         return
     try:
         report("OK", "Device", f"LED {lifi.led.uid}, colour sensor {lifi.sensor.uid} "
@@ -124,7 +159,10 @@ def check_device():
         time.sleep(3)
         lifi.led.off()
         report("OK", "LED", "set to green and back off (did you see it?)")
-        readings = [lifi.sensor.read() for _ in range(3)]
+        readings = []
+        for _ in range(3):
+            readings.append(lifi.sensor.read())
+            time.sleep(0.8)   # longer than the longest integration time, so each reading is new
         text = "; ".join(f"r={r.r} g={r.g} b={r.b} c={r.c}" for r in readings)
         report("OK", "Colour sensor", f"three readings: {text}")
     except Exception as error:
@@ -136,6 +174,7 @@ def check_device():
 def main():
     install = "--install" in sys.argv
     print("Checking your setup for the LiFi Project ...\n", flush=True)
+    check_system()
     python_ok = check_python()
     check_git()
     check_key()

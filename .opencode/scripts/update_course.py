@@ -1,36 +1,38 @@
 """Bring this course folder up to date with the latest course version.
 
-Run by the /update-semester command in OpenCode, or by hand:
+Run by the /update-semester command in OpenCode:
 
-    python tools/update_course.py        (on a Mac: python3)
+    python .opencode/scripts/update_course.py        (on a Mac: python3)
 
-What it does, in this order:
+Rules of the course folder:
 
-1. Saves every course file you changed yourself into my-code/_saved/<time>/,
-   so nothing you typed is ever lost.
-2. Fetches the newest course version and makes the course files match it
-   exactly. Your own folder my-code/, your key file openai.key and your
-   measurement logs are never touched.
-3. Copies templates of newly released challenges into my-code/.
-4. Installs or updates the module lifi_hardware if the course needs a newer
-   version.
+- my-code/ belongs to the student. This script never changes or deletes
+  anything in it, and neither does it touch openai.key.
+- Everything else belongs to the course and is read-only for students.
+  The script makes it match the newest course version exactly: changed
+  course files are overwritten, extra files inside course/ and .opencode/
+  are removed, and Git commits made in this folder are removed (students
+  do not commit here).
+- Templates of newly released challenges are copied into my-code/.
+- lifi_hardware is installed or updated if the course needs a newer version.
 
-The script only prints plain text, so the assistant can explain the result.
+The output is plain text, so the assistant can explain the result.
 """
 
-import datetime
 import os
 import re
 import shutil
 import subprocess
 import sys
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 MY_CODE = os.path.join(ROOT, "my-code")
-TEMPLATES = os.path.join(ROOT, "templates")
-MODULE_SOURCE = os.path.join(ROOT, "course", "software", "lifi-hardware-source.md")
+TEMPLATES = os.path.join(ROOT, "course", "templates")
+NOW = os.path.join(ROOT, "course", "NOW.md")
+MODULE_SOURCE = os.path.join(ROOT, "course", "material", "software", "lifi-hardware-source.md")
 MODULE_URL = "git+https://github.com/winf-hsos/lifi-hardware.git"
 BRANCH = "main"
+COURSE_PATHS = ["course", ".opencode"]   # read-only areas that are cleaned completely
 
 
 def say(text=""):
@@ -57,55 +59,31 @@ def stop(problem, advice):
 def check_preconditions():
     if shutil.which("git") is None:
         stop("Git is not installed or cannot be found.",
-             "Install Git as described in step 2 of the installation page, "
-             "then close and reopen VS Code.")
+             "Install Git (see the installation page), then close and reopen VS Code.")
     if not os.path.isdir(os.path.join(ROOT, ".git")):
         stop("This folder is not a copy made with 'git clone'.",
-             "Clone the course repository again as described in step 5 of "
-             "the installation page.")
+             "Clone the course repository again as described on the installation page.")
     if "origin" not in git("remote").split():
         stop("This folder does not know where the course lives online.",
              "Ask your lecturer; the folder may have been copied instead of cloned.")
 
 
-def save_changed_course_files(stamp):
-    """Copy course files the student changed, and files in the way, to my-code/_saved/."""
-    # Course files changed since the last update, staged or not
-    changed = git("diff", "--name-only", "HEAD").splitlines()
-    saved = [p for p in changed if p and os.path.isfile(os.path.join(ROOT, p))]
-    # Files the student created that the new course version also contains
-    incoming = set(git("ls-tree", "-r", "--name-only", f"origin/{BRANCH}").splitlines())
-    own = git("ls-files", "--others", "--exclude-standard").splitlines()
-    saved += [p for p in own if p in incoming]
-    if not saved:
-        return []
-    target = os.path.join(MY_CODE, "_saved", stamp)
-    for path in saved:
-        dest = os.path.join(target, path)
-        os.makedirs(os.path.dirname(dest), exist_ok=True)
-        shutil.copy2(os.path.join(ROOT, path), dest)
-    return saved
-
-
 def copy_new_templates(changed_paths):
     """Copy released templates into my-code/; never overwrite what is there."""
     added, updated = [], []
-    # Only templates that are part of the course, not folders a student made
-    released = git("ls-tree", "-d", "--name-only", "HEAD", "templates/", check=False)
-    names = [line.split("/", 1)[1] for line in released.splitlines() if "/" in line]
-    if not names:
-        return added, updated
+    released = git("ls-tree", "-d", "--name-only", "HEAD", "course/templates/", check=False)
+    names = [line.rsplit("/", 1)[1] for line in released.splitlines() if "/" in line]
     os.makedirs(MY_CODE, exist_ok=True)
     for name in sorted(names):
         source = os.path.join(TEMPLATES, name)
+        target = os.path.join(MY_CODE, name)
         if not os.path.isdir(source):
             continue
-        target = os.path.join(MY_CODE, name)
         if not os.path.exists(target):
             shutil.copytree(source, target,
                             ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
             added.append(name)
-        elif any(p.startswith(f"templates/{name}/") for p in changed_paths):
+        elif any(p.startswith(f"course/templates/{name}/") for p in changed_paths):
             updated.append(name)
     return added, updated
 
@@ -158,48 +136,44 @@ def main():
 
     before = git("rev-parse", "HEAD")
     after = git("rev-parse", f"origin/{BRANCH}")
-    stamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-
-    saved = save_changed_course_files(stamp)
-
-    # Commits made in this folder by hand are kept on a side branch
-    own_commits = git("rev-list", f"origin/{BRANCH}..HEAD", check=False)
-    if own_commits:
-        git("branch", f"saved-{stamp}", "HEAD", check=False)
+    own_commits = git("rev-list", f"origin/{BRANCH}..HEAD", check=False).splitlines()
+    touched = [p for p in git("diff", "--name-only", "HEAD").splitlines() if p]
+    extra = [p for p in git("ls-files", "--others", "--exclude-standard", "--",
+                            *COURSE_PATHS).splitlines() if p]
 
     changed_paths = []
     if before != after:
         changed_paths = git("diff", "--name-only", before, after, check=False).splitlines()
     git("reset", "--quiet", "--hard", f"origin/{BRANCH}")
+    git("clean", "--quiet", "-f", "-d", "--", *COURSE_PATHS)
 
     added, updated = copy_new_templates(changed_paths)
     module = update_module()
 
     say()
     say("RESULT")
-    if before == after:
+    if before == after and not own_commits:
         say("- There was no new course material; your course folder is up to date.")
     else:
-        say(f"- New course material: {len(changed_paths)} course file(s) added or changed.")
-    if saved:
-        say(f"- You had changed {len(saved)} course file(s). Your versions are saved in "
-            f"my-code/_saved/{stamp}/ :")
-        for path in saved:
-            say(f"    {path}")
+        new = len([p for p in changed_paths if p])
+        say(f"- New course material: {new} course file(s) added or changed.")
     if own_commits:
-        say(f"- Your own Git commits are kept on the branch saved-{stamp}.")
+        say(f"- NOT ALLOWED: {len(own_commits)} Git commit(s) had been made in this folder. "
+            "They were removed. Students do not commit here; your work lives in my-code/.")
+    if touched or extra:
+        say(f"- {len(touched) + len(extra)} course file(s) had been changed or added outside "
+            "my-code/ and were reset. Course files are read-only; put your own files in my-code/.")
     for name in added:
         say(f"- NEW: my-code/{name}/ is ready for you to work in.")
     for name in updated:
-        say(f"- The template templates/{name}/ was improved. Your copy in my-code/{name}/ "
+        say(f"- The template course/templates/{name}/ was improved. Your copy in my-code/{name}/ "
             f"was NOT changed; compare the two if you want the improvements.")
     say(f"- {module}")
-    now = os.path.join(ROOT, "NOW.md")
-    if os.path.isfile(now):
-        with open(now, encoding="utf-8") as f:
+    if os.path.isfile(NOW):
+        with open(NOW, encoding="utf-8") as f:
             for line in f:
                 if line.startswith("Updated:"):
-                    say(f"- NOW.md: {line.strip()}")
+                    say(f"- course/NOW.md: {line.strip()}")
                     break
 
 

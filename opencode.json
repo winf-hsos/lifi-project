@@ -1,5 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "instructions": [".opencode/course-assistant.md"],
   "model": "openai/gpt-6-luna",
   "small_model": "openai/gpt-6-luna",
   "enabled_providers": ["openai", "opencode"],
@@ -20,10 +21,14 @@
     "edit": "ask",
     "bash": {
       "*": "ask",
-      "python tools/update_course.py*": "allow",
-      "python3 tools/update_course.py*": "allow",
-      "python tools/check_setup.py*": "allow",
-      "python3 tools/check_setup.py*": "allow"
+      "python .opencode/scripts/*": "allow",
+      "python3 .opencode/scripts/*": "allow",
+      "py .opencode/scripts/*": "allow",
+      "python --version": "allow",
+      "python3 --version": "allow",
+      "py --version": "allow",
+      "git --version": "allow",
+      "code --version": "allow"
     },
     "read": {
       "*": "allow",

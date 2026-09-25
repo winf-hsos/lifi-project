@@ -4,7 +4,7 @@ Updated: 2026-09-28, week 1
 
 ## Current
 
-- **Session 1 (28 September): getting set up.** Everyone installs the software, clones this repository, runs `/onboarding` and connects their device. Done means: `tools/check_setup.py` reports everything OK, and the student saw their LED shine green.
+- **Session 1 (28 September): getting set up.** Everyone installs the software, clones this repository, runs `/onboarding`, which walks them through the remaining installations, and connects their device. Done means: the setup check reports everything OK, and the student saw their LED shine green.
 - **Next: Challenge 0 ("The Spark").** First own lines of code: switch the LED on, blink, change colours, read the sensor, react to a reading. The template is released: the student works in `my-code/challenge-0/`.
 
 ## Covered so far
@@ -14,7 +14,7 @@ Updated: 2026-09-28, week 1
 
 ## Not open yet
 
-- The standardisation session has **not** taken place. There is no class standard for the frame format yet. See "What you do not give away" in `AGENTS.md`.
+- The standardisation session has **not** taken place. There is no class standard for the frame format yet. See "What you do not give away" in your instructions.
 
 ## Fixed values
 
