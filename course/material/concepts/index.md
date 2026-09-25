@@ -14,14 +14,14 @@ Each of the four questions has a colour, and the colour stays the same everywher
 
 - **Representing** (orange, making bits). To a computer your photo is a list of numbers, and the numbers are states of something physical: a voltage, a magnetised spot, a flash of light.
 - **Storing** (green, storing bits). The photo has to sit somewhere before it is sent and somewhere after it arrives.
-- **Transferring** (magenta, sending bits). The receiver does not know when a letter begins. The light it sees is never quite the light that was sent.
+- **Transferring** (magenta, transferring bits). The receiver does not know when a letter begins. The light it sees is never quite the light that was sent.
 - **Processing** (blue, processing bits). Somebody has to turn the numbers back into a picture and check whether they arrived correctly.
 
 Above the four questions sit five ways of working, in grey, because you need them everywhere and not just for one of the questions: cutting problems into pieces you can test, the model of input, processing and output, algorithms and programs, measuring and experimenting, and thinking in layers.
 
 At the bottom of the map is the project, and this is why it is the project: your device touches all four questions. The photo is stored as a file. Its bytes represent a picture. A checksum processes them so the receiver can tell whether they arrived intact. And the light transfers them across the gap.
 
-[Figure: Two devices facing each other. Each has a lamp and an eye on its front with a wall between them; because the second device is turned around, its eye looks at the first device's lamp. The way back is there from the start but is used only in the last challenge.]
+[Figure: Two devices facing each other. Each has a lamp and an eye on the outside of its front wall; because the second device is turned around, its eye looks at the first device's lamp. The light travels as small coloured packets, in both directions; the way back is used from Challenge 4 on.]
 
 ## The concepts
 
@@ -52,7 +52,7 @@ Eighteen concepts, in five families. The order inside each family is the order i
 |---|---|
 | [Memory and Storage](memory-and-storage.md) | C4 |
 
-**Transferring information** (magenta: sending bits)
+**Transferring information** (magenta: transferring bits)
 
 | Concept | Where you need it |
 |---|---|
