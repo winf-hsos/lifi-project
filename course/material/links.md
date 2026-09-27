@@ -8,7 +8,7 @@ Everything this module points to, in one place.
 
 - [This website](https://docs.lifi-project.de/): the course companion, also the knowledge base your AI assistant reads.
 - [Team cockpit](https://lifi.uber.space/cockpit): your light link live in the browser; how to use it is explained under [Software](software/cockpit.md).
-- Course repository: link follows once it exists (knowledge base and the `AGENTS.md` for your assistant).
+- [lifi-project](https://github.com/winf-hsos/lifi-project): your course folder with the AI assistant: its instructions, the knowledge base it reads, and the challenge templates. You download it as a ZIP, see [Required Software](software/index.md#course-folder).
 
 ## Code and material
 
@@ -20,11 +20,11 @@ Everything this module points to, in one place.
 ## Tools you install
 
 - [Python](https://www.python.org/downloads/): the language you program in.
-- [Git](https://git-scm.com/downloads): fetches the course material and the `lifi_hardware` module.
+- [Git](https://git-scm.com/downloads): optional; an alternative to the ZIP for fetching the course folder.
 - [Visual Studio Code](https://code.visualstudio.com/): the editor.
-- [OpenCode](https://opencode.ai/): your AI assistant, running in the terminal.
-- [Tinkerforge downloads](https://www.tinkerforge.com/de/doc/Downloads.html): Brick Daemon and Brick Viewer for the hardware.
-- [Tinkerforge documentation](https://www.tinkerforge.com/de/doc/): the raw API underneath `lifi_hardware`, for when you want to go one level deeper.
+- [OpenCode](https://opencode.ai/download): your AI assistant, as a desktop app or in the terminal.
+- [Tinkerforge downloads](https://www.tinkerforge.com/en/doc/Downloads.html): Brick Daemon and Brick Viewer for the hardware.
+- [Tinkerforge documentation](https://www.tinkerforge.com/en/doc/): the raw API underneath `lifi_hardware`, for when you want to go one level deeper.
 
 ## Demonstrators
 
@@ -38,13 +38,13 @@ Small interactive pages, one idea each. The explanation lives on the concept pag
 | [The Copier](https://winf-hsos.github.io/lifi-concept-demos/copier/) | copy an analog picture until it fades, then compare with a file | [Analog and Digital](concepts/analog-and-digital.md) |
 | [The Photo Digitiser](https://winf-hsos.github.io/lifi-concept-demos/photo-digitiser/) | choose resolution and colour depth, watch the bytes grow | [Analog and Digital](concepts/analog-and-digital.md) |
 | [The Audio Digitiser](https://winf-hsos.github.io/lifi-concept-demos/audio-digitiser/) | the same two cuts for sound, and hear the difference | [Analog and Digital](concepts/analog-and-digital.md) |
-| [Distinguishability Lab](https://winf-hsos.github.io/lifi-concept-demos/distinguishability-lab/) | send symbols over a noisy channel, trade error rate for throughput | [Signal und Rauschen](concepts/signal-and-noise.md) |
-| [Drift Simulator](https://winf-hsos.github.io/lifi-concept-demos/drift-simulator/) | two clocks drift apart until the message breaks; a marker saves it | [Abtastung und Synchronisation](concepts/sampling-and-synchronization.md) |
-| [Byte Switchboard](https://winf-hsos.github.io/lifi-concept-demos/byte-switchboard/) | flip eight bits, read the number in binary, decimal, hex and ASCII | [Zahlensysteme](concepts/number-systems.md) |
-| [Pixel Painter](https://winf-hsos.github.io/lifi-concept-demos/pixel-painter/) | paint an 8×8 picture and watch its bytes write themselves | [Codesysteme](concepts/code-systems.md) |
+| [Distinguishability Lab](https://winf-hsos.github.io/lifi-concept-demos/distinguishability-lab/) | send symbols over a noisy channel, trade error rate for throughput | [Signal and Noise](concepts/signal-and-noise.md) |
+| [Drift Simulator](https://winf-hsos.github.io/lifi-concept-demos/drift-simulator/) | two clocks drift apart until the message breaks; a marker saves it | [Sampling and Synchronization](concepts/sampling-and-synchronization.md) |
+| [Byte Switchboard](https://winf-hsos.github.io/lifi-concept-demos/byte-switchboard/) | flip eight bits, read the number in binary, decimal, hex and ASCII | [Number Systems](concepts/number-systems.md) |
+| [Pixel Painter](https://winf-hsos.github.io/lifi-concept-demos/pixel-painter/) | paint an 8×8 picture and watch its bytes write themselves | [Code Systems](concepts/code-systems.md) |
 | [Inside a File](https://winf-hsos.github.io/lifi-concept-demos/inside-a-file/) | a real bitmap in a hex editor; change a byte, watch the picture obey | [Memory and Storage](concepts/memory-and-storage.md) |
-| [The Pixel Filter](https://winf-hsos.github.io/lifi-concept-demos/pixel-filter/) | make a photo brighter, one addition per pixel; step through the bits, then run all 16,384 | [Logik und Arithmetik](concepts/logic-and-arithmetic.md) |
-| [The Gate Lab](https://winf-hsos.github.io/lifi-concept-demos/gate-lab/) | switches in, lamps out: gates, adders, a comparator, a flip-flop and a register | [Logik und Arithmetik](concepts/logic-and-arithmetic.md) |
+| [The Pixel Filter](https://winf-hsos.github.io/lifi-concept-demos/pixel-filter/) | make a photo brighter, one addition per pixel; step through the bits, then run all 16,384 | [Logic and Arithmetic](concepts/logic-and-arithmetic.md) |
+| [The Gate Lab](https://winf-hsos.github.io/lifi-concept-demos/gate-lab/) | switches in, lamps out: gates, adders, a comparator, a flip-flop and a register | [Logic and Arithmetic](concepts/logic-and-arithmetic.md) |
 
 ## Background
 
