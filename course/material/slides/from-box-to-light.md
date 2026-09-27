@@ -1,18 +1,18 @@
 <!-- Lecture notes for the slides on `from-box-to-light`. They follow the slides in order; frame and slide numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/from-box-to-light.html -->
 
-# Lecture notes: from box to light (Setup and first steps)
+# Lecture notes: first light (Setup and first steps)
 
-These notes explain the deck for the second half of the first session, for reading afterwards. It takes you from the unopened kit to a green LED: what is in the box, which tools you need and how they fit together, how to set them up, and how the workshop runs when one person looks after 24 teams. They follow the order of the slides (the numbers are frames, and build-up steps count separately) and can be read as a text of their own. The step-by-step instructions are on the website under "Required Software".
+These notes explain the deck for the second half of the first session, for reading afterwards. It takes you from your new device to a green LED: what the device is, which tools you need and how they fit together, how to set them up, and how the workshop runs when one person looks after 24 teams. They follow the order of the slides (the numbers are frames, and build-up steps count separately) and can be read as a text of their own. The step-by-step instructions are on the website under "Required Software".
 
 ## Opening (Frame 3)
 
-**What's in the box?** Every team gets two kits, and within an hour and a half, light should come out of one of them because you told it to. The way there leads through a handful of tools that form a chain. This deck shows the chain, and then you set it up.
+**Meet your device.** The title of this deck is a word from astronomy: first light is the first image a new telescope takes. Here it is the moment your LED lights up for the first time. Each of you gets a device, fully assembled, and within an hour and a half light should come out of it because you told it to. The way there leads through a handful of tools that form a chain. This deck shows the chain, and then you set it up.
 
-## Part 1: your kit (Frames 4 to 9)
+## Part 1: your device (Frames 4 to 9)
 
 **Your device (Frames 5 to 8).** This is the real device, seen from the front; with every step a yellow frame marks the part in question. On the left sits the eye, a colour sensor that reports four numbers. On the right sits the lamp, an RGB LED, three little lamps in one. Between them stands a wall, so that the device does not see its own lamp. And inside there is a third board, the Master Brick, which connects both of them to your laptop through the USB socket at the back. That is all it takes, and nothing more will be added. The names of all the parts are on the hardware page of the website.
 
-**It's yours until January (Frame 9).** Every team gets two kits, one for each of you, so you own both ends of the link and can try everything yourselves. You sign for your kit when you pick it up. Bring it every Monday and keep it in one piece: do not pull on the boards, and handle the USB cable with care, it is the most fragile part. If something breaks, say so right away; there are spare parts.
+**It's yours until January (Frame 9).** Every team gets two devices, one for each of you, so you own both ends of the link and can try everything yourselves. You sign for your kit when you pick it up. Bring it every Monday and keep it in one piece: do not pull on the boards, and handle the USB cable with care, it is the most fragile part. If something breaks, say so right away; there are spare parts.
 
 ## Part 2: your tools (Frames 10 to 18)
 

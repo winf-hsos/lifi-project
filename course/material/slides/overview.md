@@ -2,7 +2,7 @@
 
 # Lecture notes: overview (Overview)
 
-These notes explain the deck giving an overview of the module and the project, for reading afterwards. They follow the order of the slides (the numbers are frames, and build-up steps count separately) and can be read as a text of their own. The deck is shown on the first day and brought up again and again during the semester. The page that goes with it is "Overview" on the website. On the first day it is followed by a second deck, "from box to light", which sets up your device.
+These notes explain the deck giving an overview of the module and the project, for reading afterwards. They follow the order of the slides (the numbers are frames, and build-up steps count separately) and can be read as a text of their own. The deck is shown on the first day and brought up again and again during the semester. The page that goes with it is "Overview" on the website. On the first day it is followed by a second deck, "first light", which sets up your device.
 
 ## Part 1: why this module (Frames 3 to 18)
 
@@ -68,11 +68,11 @@ Three things, one after the other. **Two people, two devices:** each of you gets
 
 ## Part 7: this semester (Frames 61 to 68)
 
-**Fourteen Mondays (Frame 62).** Every session carries a concept as its title, and underneath it what happens in the project. 1 Kick-off: overview and setup (kits, setup, Challenge 0 starts). 2 Cutting problems, algorithms and programs (your first program). 3 Measuring and experimenting (Challenge 0 check). 4 Analog and digital, symbols and information (Challenge 1 starts). 5 Signal and noise (competition, Challenge 1). 6 Number systems and code systems (Challenge 2 starts). 7 Sampling and synchronization (Challenge 2 gets faster). 8 Throughput and limits (competition, Challenge 2). 9 Protocols (Challenge 3 starts). 10 Logic and arithmetic (interop test). 11 Memory and storage (competition, Challenge 3). 12 Errors and redundancy (standardisation session, Challenge 4 starts). 13 Compression (Challenge 4, faster and shorter). 14 Abstraction and layers (final, Challenge 4). The four competitions are marked with a trophy. The dates are in the schedule in the learning platform.
+**Fourteen Mondays (Frame 62).** Every session carries a concept as its title, and underneath it what happens in the project. 1 Kick-off: overview and setup (devices, setup, Challenge 0 starts). 2 Cutting problems, algorithms and programs (your first program). 3 Measuring and experimenting (Challenge 0 check). 4 Analog and digital, symbols and information (Challenge 1 starts). 5 Signal and noise (competition, Challenge 1). 6 Number systems and code systems (Challenge 2 starts). 7 Sampling and synchronization (Challenge 2 gets faster). 8 Throughput and limits (competition, Challenge 2). 9 Protocols (Challenge 3 starts). 10 Logic and arithmetic (interop test). 11 Memory and storage (competition, Challenge 3). 12 Errors and redundancy (standardisation session, Challenge 4 starts). 13 Compression (Challenge 4, faster and shorter). 14 Abstraction and layers (final, Challenge 4). The four competitions are marked with a trophy. The dates are in the schedule in the learning platform.
 
 **A typical Monday (Frame 63).** Every Monday runs the same way, from 15:00 to 18:15, so that you always know when to listen and when to build. At 15:00 a look back: where are you stuck? At 15:10 an input on one concept. At 15:35 an experiment that everybody watches together. At 16:05 the first workshop, at 16:55 a break, at 17:10 the second workshop. At 18:00 your task for the week, in writing. More than half of every Monday, you build.
 
-**Every Monday (Frame 64).** Room HD0001, Mondays from 15:00 to 18:15. Bring your laptop and your kit, every time, and charge the laptop before you come. Sign the attendance list every week; it is for statistics, not for grades.
+**Every Monday (Frame 64).** Room HD0001, Mondays from 15:00 to 18:15. Bring your laptop and your device, every time, and charge the laptop before you come. Sign the attendance list every week; it is for statistics, not for grades.
 
 **The exam (Frames 65 to 67).** 60 minutes, multiple choice, on the concepts and not on the project, everyone on their own. The project is where you meet the concepts; it does not replace understanding them. Whoever passes every challenge and still cannot say why digital transmission tolerates noise does not pass the exam. A 5 % bonus if all five of your challenges are accepted: all or nothing; what counts is the passed acceptance test with its live change, not the documentation. Practise with the questions on every concept page; they have the same format as the exam. The ranking in the competition does not count towards your grade.
 
@@ -80,4 +80,4 @@ Three things, one after the other. **Two people, two devices:** each of you gets
 
 ## Closing (Frame 69)
 
-By the end of term, a picture crosses that gap. And along the way, more than one light will go on: you will have learned how computers represent, store, transfer and process information, and how the most powerful calculator humans built so far works. If you then say that was a module about light, something has gone wrong. Next comes the second deck, "from box to light": your LED lights up today.
+By the end of term, a picture crosses that gap. And along the way, more than one light will go on: you will have learned how computers represent, store, transfer and process information, and how the most powerful calculator humans built so far works. If you then say that was a module about light, something has gone wrong. Next comes the second deck, "first light": your LED lights up today.
