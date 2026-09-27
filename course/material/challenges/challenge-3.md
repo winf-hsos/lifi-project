@@ -67,7 +67,7 @@ Documentation is optional and only for your team, with one exception: your proto
 ## Concepts you need
 
 - [Protocols](../concepts/protocols.md)
-- [Sampling and synchronisation](../concepts/sampling-and-synchronization.md)
+- [Sampling and Synchronization](../concepts/sampling-and-synchronization.md)
 - [Algorithms and programs](../concepts/algorithms-and-programs.md)
 - [Abstraction and layers](../concepts/abstraction-and-layers.md)
 

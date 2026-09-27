@@ -43,7 +43,7 @@ Documentation is optional and only for your team: nobody grades it, and the bonu
 ## Concepts you need
 
 - [Code systems](../concepts/code-systems.md)
-- [Sampling and synchronisation](../concepts/sampling-and-synchronization.md)
+- [Sampling and Synchronization](../concepts/sampling-and-synchronization.md)
 - [Algorithms and programs](../concepts/algorithms-and-programs.md)
 - [Protocols](../concepts/protocols.md), in their simplest form for now
 

@@ -65,7 +65,7 @@ Documentation is optional and only for your team: nobody grades it, and the bonu
 - [Analog and digital](../concepts/analog-and-digital.md)
 - [Symbols and information](../concepts/symbols-and-information.md)
 - [Signal and noise](../concepts/signal-and-noise.md)
-- [Measurement and experiments](../concepts/measurement-and-experiments.md)
+- [Measuring and Experimenting](../concepts/measurement-and-experiments.md)
 - [Algorithms and programs](../concepts/algorithms-and-programs.md)
 
 ## Traps we know about

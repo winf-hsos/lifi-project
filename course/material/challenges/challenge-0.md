@@ -41,7 +41,7 @@ Nothing to hand in: your running program is all that counts.
 
 ## Concepts you need
 
-- [Problem decomposition](../concepts/problem-decomposition.md)
+- [Cutting Problems](../concepts/problem-decomposition.md)
 
 ## Traps we know about
 
