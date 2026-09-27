@@ -28,6 +28,10 @@ On top of these comes the module `lifi_hardware`, which is how your programs tal
 
 **Git** you do not need. It is a tool for keeping track of versions of files, and if you already know it, you can use it to fetch the course folder instead of the ZIP. That way is described [at the end of this page](#with-git).
 
+## The slides
+
+These are the slides we go through together in the first session, "first light". They show the whole setup at a glance, from your device to the green LED. The details for every step follow below.
+
 ## Installation step by step
 
 The installation has two parts. In the first part you do three things by hand. That is the minimum your assistant needs to run. In the second part your assistant takes over: with the command `/onboarding` it installs the rest together with you and checks every step on your laptop.
