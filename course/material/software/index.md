@@ -70,15 +70,16 @@ Inside the folder you will see:
 - `course`: the course material. Your assistant reads it; you do not change it.
 - a few more files for OpenCode, which you can ignore.
 
-### 3. Open the folder and enter your key
+### 3. Open the folder and start
 
 Start OpenCode. On its start page you see a list **Projects** on the left.
 
 1. **Add your course folder.** Click the small folder icon with the plus next to *Projects* (its tooltip says *Add project*). A window opens: select your course folder, `lifi-project-main` or `lifi-project`, and click *Select Folder*. It now appears in the list of projects.
-2. **Enter your key.** At the start of the course you receive a personal key for the language model by e-mail, a long line of characters beginning with `sk-`. Click **Settings** below the list of projects, then **Providers** on the left. At **OpenAI** click **+ Connect** (if OpenAI is not in the list, click *Show more providers* first). Choose **API key**, not the two *ChatGPT Pro/Plus* options. Paste your key into the field *OpenAI API key* and click **Continue**.
-3. **Start a session.** Close the settings and click **New session**. Below the input field you should see the model *GPT-6 Luna (course model)*: your course folder has selected it for you.
+2. **Start a session.** Click **New session**. Below the input field you see the model your course folder has selected for you: one of the free models that come with OpenCode. You need no key for it.
 
-The key is yours and it costs money every time the assistant answers, so treat it like a password: do not send it to anyone and do not paste it into a chat, not even the one with your assistant. If you are working through this course on your own, without a key from us, create a key of your own at [platform.openai.com](https://platform.openai.com/api-keys). It works the same way.
+Free models come and go. If the preset one stops working, pick another free model in the model selection below the input field.
+
+**A key, if you get one.** Later in the course you may get a key for a stronger model, a long line of characters. You enter it in OpenCode: click **Settings** below the list of projects, then **Providers** on the left. At the provider the key is for, click **+ Connect** (if it is not in the list, click *Show more providers* first), choose **API key** and paste it. A key costs money every time the assistant answers, so treat it like a password: do not send it to anyone and do not paste it into a chat, not even the one with your assistant.
 
 ## Part 2: your assistant takes over
 
@@ -219,7 +220,7 @@ Alternatively via [Homebrew](https://brew.sh): `brew install sst/tap/opencode`.
 
 To check, open a new terminal and type `opencode --version`. A version number should appear.
 
-Then change into your course folder in the terminal, start OpenCode with `opencode`, and enter your key with the command `/connect`.
+Then change into your course folder in the terminal and start OpenCode with `opencode`. If you have a key, you enter it with the command `/connect`.
 
 ## When something does not work
 

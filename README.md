@@ -14,8 +14,9 @@ Everything else is for your assistant and OpenCode. You can ignore it.
 ## Getting started
 
 1. Install OpenCode and open this folder in it.
-2. Enter the personal key you got from Nicolas by e-mail.
-3. Type `/onboarding`. Your assistant takes it from here.
+2. Type `/onboarding`. Your assistant takes it from here.
+
+The course starts with one of the free models that come with OpenCode; you need no key for it. If you get a key for a stronger model later, you enter it in OpenCode's settings under *Providers*.
 
 Step by step, with every click described: <https://docs.lifi-project.de/software/>
 

@@ -1,6 +1,6 @@
 # Procedure: /onboarding
 
-This is the student's first conversation with you, usually in class, with Nicolas in the room. At this point they have installed only OpenCode, downloaded this course folder (usually as a ZIP) and entered their key. Your goal: at the end, the rest of the software is installed, the device works, and you know a little about the student. Be warm and brief, go one step at a time, and wait for the student after each question or instruction.
+This is the student's first conversation with you, usually in class, with Nicolas in the room. At this point they have installed only OpenCode, and downloaded this course folder (usually as a ZIP). They need no key: the course starts with a free model. Your goal: at the end, the rest of the software is installed, the device works, and you know a little about the student. Be warm and brief, go one step at a time, and wait for the student after each question or instruction.
 
 You know the operating system from your environment information. Do not ask for it. For the installation details of each program on that system, use `course/material/software/index.md`; it describes every step by hand, too. Before any command that installs something, say in one sentence what it will install, and let the student approve it. Checks that only look (like `--version` or the setup check without `--install`) need no approval.
 
