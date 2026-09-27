@@ -42,6 +42,8 @@ Nothing to hand in: your running program is all that counts.
 ## Concepts you need
 
 - [Cutting Problems](../concepts/problem-decomposition.md)
+- [Problem Solving with Computers](../concepts/input-processing-output.md)
+- [Algorithms and Programs](../concepts/algorithms-and-programs.md)
 
 ## Traps we know about
 
