@@ -1,4 +1,4 @@
-<!-- Lecture notes for the slides on `from-box-to-light`. They follow the slides in order; frame and slide numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/from-box-to-light.html -->
+<!-- Lecture notes for the slides on `first-light`. They follow the slides in order; frame and slide numbers refer to the deck. The slides themselves are embedded on https://docs.lifi-project.de/concepts/first-light.html -->
 
 # Lecture notes: first light (Setup and first steps)
 
