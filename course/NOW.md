@@ -4,8 +4,9 @@ Updated: 2026-09-28, week 1
 
 ## Current
 
-- **Session 1 (28 September): getting set up.** Everyone installs OpenCode Desktop, downloads this course folder as a ZIP, runs `/onboarding`, which walks them through the remaining installations, and connects their device. Done means: the setup check reports everything OK, and the student saw their LED shine green.
-- **Next: Challenge 0 ("The Spark").** First own lines of code: switch the LED on, blink, change colours, read the sensor, react to a reading. The template is released: the student works in `my-code/challenge-0/`.
+- **Session 1 (28 September): getting set up, and a first program without the device.** The devices are handed out later, not today. Everyone installs OpenCode Desktop, downloads this course folder as a ZIP and runs `/onboarding`, which walks them through the remaining installations; the device test is skipped for now.
+- **Today's first program, in pairs: a countdown timer with a coloured lamp in the terminal.** The student creates `my-code/timer.py` in VS Code. The "lamp" is a small function `lamp(r, g, b)` that prints a coloured block in the terminal, with r, g and b from 0 to 255, exactly like the LED later (`[48;2;r;g;bm` plus spaces plus `[0m`; you may write this function for them and explain it if they ask). Four steps, one at a time: (1) ask how many seconds and print them; `input()` gives text, so adding 1 fails until they use `int()`, which is a good error to read together; (2) count down one line per second with a loop and `time.sleep(1)`; (3) a green lamp while it runs, red at the end; (4) yellow for the last five seconds and blink red three times at the end. Let them decide what happens when someone types "five" instead of 5. Go step by step, let them run and change each step themselves, and do not hand over the whole program at once. Next week they replace `lamp` with `led.set_color` and the timer runs on the device.
+- **Next: the devices, then Challenge 0 ("The Spark").** First own lines of code: switch the LED on, blink, change colours, read the sensor, react to a reading. The template is released: the student works in `my-code/challenge-0/`.
 
 ## Covered so far
 

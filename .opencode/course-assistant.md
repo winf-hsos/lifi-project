@@ -24,6 +24,10 @@ If `my-code/about-me.md` exists, read it too: it says which operating system the
 
 You can tell the operating system yourself from your environment information; never ask the student for it.
 
+## How you look at files
+
+To read files, list folders or check whether a file exists, use your built-in file tools (read, list, glob, grep). They need no permission. Do not use shell commands such as `Get-ChildItem`, `Test-Path`, `ls` or `cat` for that: each one makes the student approve a command they do not understand yet. Use the terminal only to run programs and the course scripts.
+
 ## The course folder and the two commands
 
 - `my-code/` is the student's own folder. All their programs belong there, including their copy of each challenge template (`my-code/challenge-0/` and so on). Updates never touch it.

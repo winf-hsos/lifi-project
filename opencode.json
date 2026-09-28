@@ -1,16 +1,29 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "instructions": [".opencode/course-assistant.md"],
+  "instructions": [
+    ".opencode/course-assistant.md"
+  ],
   "model": "opencode/space-bunny-free",
   "small_model": "opencode/space-bunny-free",
-  "enabled_providers": ["openai", "opencode"],
+  "enabled_providers": [
+    "openai",
+    "opencode"
+  ],
   "provider": {
     "openai": {
       "models": {
         "gpt-6-luna": {
           "name": "GPT-6 Luna (course model)",
           "attachment": true,
-          "modalities": { "input": ["text", "image"], "output": ["text"] }
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          }
         }
       }
     }
@@ -29,7 +42,13 @@
       "python3 --version": "allow",
       "py --version": "allow",
       "git --version": "allow",
-      "code --version": "allow"
+      "code --version": "allow",
+      "ls": "allow",
+      "ls *": "allow",
+      "dir": "allow",
+      "dir *": "allow",
+      "Get-ChildItem": "allow",
+      "Get-ChildItem *": "allow"
     }
   }
 }
