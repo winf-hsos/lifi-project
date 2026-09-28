@@ -18,7 +18,7 @@ That is the whole idea. Everything the module wants to teach you can be seen on 
 
 ## The question behind everything
 
-This module has one big question, and every week is a piece of the answer: **how can we solve complex problems with computers?**
+This module has one big question, and every week is a piece of the answer: **how do computers solve complex problems?**
 
 To answer it you need to understand what a computer does with information, and there are four things it does. It represents information, it stores it, it transfers it, and it processes it. Those four verbs are the four parts of the [map of the module](concepts/index.md), and your device touches all of them.
 

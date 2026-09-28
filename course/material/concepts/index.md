@@ -6,7 +6,7 @@ This page is the map. It shows how the module is put together: the one question 
 
 ## One question, four questions
 
-The module has one big question: **how can we solve complex problems with computers?** To answer it you need to understand what a computer does with information, and there are four things it does. It represents information, it stores it, it transfers it, and it processes it.
+The module has one big question: **how do computers solve complex problems?** To answer it you need to understand what a computer does with information, and there are four things it does. It represents information, it stores it, it transfers it, and it processes it.
 
 [Figure: The map of the module. One big question, four questions about information, five ways of working above them, and the project at the bottom: the file is stored, its bytes represent a picture, a checksum processes them, and the light transfers them.]
 
