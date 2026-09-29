@@ -7,6 +7,7 @@ Everything this module points to, in one place.
 ## Course
 
 - [This website](https://docs.lifi-project.de/): the course companion, also the knowledge base your AI assistant reads.
+- [Anonymous feedback](https://lifi.uber.space/feedback/dup-ws2026): questions, criticism, ideas, without your name; answered there and at the start of each session.
 - [Team cockpit](https://lifi.uber.space/cockpit): your light link live in the browser; how to use it is explained under [Software](software/cockpit.md).
 - [lifi-project](https://github.com/winf-hsos/lifi-project): your course folder with the AI assistant: its instructions, the knowledge base it reads, and the challenge templates. You download it as a ZIP, see [Required Software](software/index.md#course-folder).
 

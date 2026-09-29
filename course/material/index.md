@@ -87,3 +87,4 @@ Ready? Here is where to go next:
 - [Required Software](software/index.md): what to install, step by step
 - [Hardware](hardware/index.md): the parts and the case
 - [Working with your AI assistant](ai/index.md)
+- [Anonymous feedback](https://lifi.uber.space/feedback/dup-ws2026): a question, something that was unclear, criticism; no name, no login, and I answer there and at the start of the next session

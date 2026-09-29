@@ -8,6 +8,8 @@ This website accompanies the project course in the module Digitization and Progr
 
 The module and this website are run by [Nicolas Meseth](mailto:n.meseth@hs-osnabrueck.de). Mistakes on the site, broken links or explanations that do not make sense: please send a mail. Telling us which explanation you were missing helps just as much.
 
+If you would rather not give your name, use the [anonymous feedback](https://lifi.uber.space/feedback/dup-ws2026). Every post is visible to the whole course, without a name, and others can give it a thumbs up if it matters to them too. I read everything, answer there, and go through the posts at the start of each session.
+
 ## Source code and material
 
 The website lives on GitHub: [github.com/winf-hsos/lifi-website](https://github.com/winf-hsos/lifi-website). The 3D model of the device case, including its OpenSCAD source, is on the [Hardware](hardware/index.md#the-case) page; it is released under CC0 and may be used and changed without conditions. All other links to code and tools are collected under [Links](links.md).
