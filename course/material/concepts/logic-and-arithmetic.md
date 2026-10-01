@@ -57,21 +57,21 @@ A full adder takes the carry from the right as a third input and is built from t
 
 The rest of arithmetic is built from the adder. Subtracting is adding the negative, and you get the negative of a binary number by flipping every bit and adding one. Multiplying is repeated adding, and times two is a shift by one position to the left, the way times ten appends a zero in decimal. Comparing is subtracting and looking at the sign. Everything ends up at the adder, and the adder ends up at two gates. Charles Petzold puts it in one sentence in his book "Code": when you come right down to it, addition is just about the only thing that computers do.
 
-In the demonstrator [the gate lab](https://winf-hsos.github.io/lifi-concept-demos/gate-lab/) you can switch every one of these circuits yourself: a single gate with its truth table, the half adder and the full adder, the byte adder made of eight blocks, the comparator, and the flip-flop that remembers a bit.
+In the demonstrator [the gate lab](https://demos.lifi-project.de/gate-lab/) you can switch every one of these circuits yourself: a single gate with its truth table, the half adder and the full adder, the byte adder made of eight blocks, the comparator, and the flip-flop that remembers a bit.
 
-Interactive demonstrator: <https://winf-hsos.github.io/lifi-concept-demos/gate-lab/>
+Interactive demonstrator: <https://demos.lifi-project.de/gate-lab/>
 
 ### A photo, pixel by pixel
 
-You know this from the [Photo Digitiser](https://winf-hsos.github.io/lifi-concept-demos/photo-digitiser/): a greyscale picture is a grid of numbers, one byte per pixel, 0 black, 255 white. A picture of 128 by 128 pixels is 16,384 bytes, and the computer sees nothing but those bytes. "Brighter" then means: add 40 to every byte. To the first pixel, to the second, to all 16,384. No step knows anything about the picture. It is the same addition, very often.
+You know this from the [Photo Digitiser](https://demos.lifi-project.de/photo-digitiser/): a greyscale picture is a grid of numbers, one byte per pixel, 0 black, 255 white. A picture of 128 by 128 pixels is 16,384 bytes, and the computer sees nothing but those bytes. "Brighter" then means: add 40 to every byte. To the first pixel, to the second, to all 16,384. No step knows anything about the picture. It is the same addition, very often.
 
 [Figure: Left: 8 × 8 pixels from the parrot's beak, with their values. Right: the marked pixel, 178, gets 40 brighter. It is the same binary addition as in the byte adder, carry included.]
 
 A real mistake is waiting here, one that every beginner makes once. 230 + 40 = 270, and that does not fit into eight bits. An adder that throws away the ninth carry leaves 14, almost black. A bright sky gets black speckles. This is called overflow, and the repair is a comparison (is the result greater than 255?) and a decision (then make it 255), which is called clamping. The adder itself has no idea what 255 means. You have to tell it.
 
-Other filters come out of the same box. Darker: subtract. Negative: 255 minus the value, and that is NOT on every bit, because 255 in binary is 1111 1111. Black and white: compare with a threshold, the same decision you made in Challenge 1 with your colours. Blending two photos: add and halve, and halving is a shift by one position to the right. Every filter in your photo app is of this kind, only with more arithmetic. In the demonstrator [the pixel filter](https://winf-hsos.github.io/lifi-concept-demos/pixel-filter/) you can follow it pixel by pixel and watch the counter run.
+Other filters come out of the same box. Darker: subtract. Negative: 255 minus the value, and that is NOT on every bit, because 255 in binary is 1111 1111. Black and white: compare with a threshold, the same decision you made in Challenge 1 with your colours. Blending two photos: add and halve, and halving is a shift by one position to the right. Every filter in your photo app is of this kind, only with more arithmetic. In the demonstrator [the pixel filter](https://demos.lifi-project.de/pixel-filter/) you can follow it pixel by pixel and watch the counter run.
 
-Interactive demonstrator: <https://winf-hsos.github.io/lifi-concept-demos/pixel-filter/>
+Interactive demonstrator: <https://demos.lifi-project.de/pixel-filter/>
 
 ### One gate, two jobs
 

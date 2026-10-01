@@ -46,9 +46,9 @@ Digitising is a one-way street. Which of the infinitely many values inside a reg
 
 [Figure: The tape copies its stepless wave along with all the noise and adds its own with every generation. The file is born again from clean states at every copy: read, set afresh, done.]
 
-Every disturbance smaller than the distance between states disappears completely in the process. That is why digital technology is reliable, not although it throws information away but **because** it does, and why the thousandth copy of a file is still the original. You can run that experiment yourself in [The Copier](https://winf-hsos.github.io/lifi-concept-demos/copier/): each press of "copy" hangs the next analog generation on the wall until the original has disappeared, and one button hangs the identical file copy next to it.
+Every disturbance smaller than the distance between states disappears completely in the process. That is why digital technology is reliable, not although it throws information away but **because** it does, and why the thousandth copy of a file is still the original. You can run that experiment yourself in [The Copier](https://demos.lifi-project.de/copier/): each press of "copy" hangs the next analog generation on the wall until the original has disappeared, and one button hangs the identical file copy next to it.
 
-Interactive demonstrator: <https://winf-hsos.github.io/lifi-concept-demos/copier/>
+Interactive demonstrator: <https://demos.lifi-project.de/copier/>
 
 ### Two cuts
 
@@ -72,13 +72,13 @@ On your light link, size turns into time straight away. Which is why digitising 
 
 [Figure: The same photo, ever coarser. Somewhere between the third and the fourth picture it stops being a parrot, and where exactly, people will disagree.]
 
-That disagreement is the point. There is no correct amount, there is only a trade-off, and in [Challenge 4](../challenges/challenge-4.md) you have 2 KB to make it in. You can play the whole thing through in [The Photo Digitiser](https://winf-hsos.github.io/lifi-concept-demos/photo-digitiser/), from 256 by 256 points down to a single pixel, with colour depths from today's standard through the sixteen colours of an early pc down to the four greys of the first Game Boy, and with the file size and the transmission time running along underneath.
+That disagreement is the point. There is no correct amount, there is only a trade-off, and in [Challenge 4](../challenges/challenge-4.md) you have 2 KB to make it in. You can play the whole thing through in [The Photo Digitiser](https://demos.lifi-project.de/photo-digitiser/), from 256 by 256 points down to a single pixel, with colour depths from today's standard through the sixteen colours of an early pc down to the four greys of the first Game Boy, and with the file size and the transmission time running along underneath.
 
-Interactive demonstrator: <https://winf-hsos.github.io/lifi-concept-demos/photo-digitiser/>
+Interactive demonstrator: <https://demos.lifi-project.de/photo-digitiser/>
 
-The same two cuts apply to sound. There, sampling slices time instead of area and the bit depth slices loudness instead of brightness; 44,100 samples per second at 16 bit is a CD. In [The Audio Digitiser](https://winf-hsos.github.io/lifi-concept-demos/audio-digitiser/) you can hear what each cut throws away.
+The same two cuts apply to sound. There, sampling slices time instead of area and the bit depth slices loudness instead of brightness; 44,100 samples per second at 16 bit is a CD. In [The Audio Digitiser](https://demos.lifi-project.de/audio-digitiser/) you can hear what each cut throws away.
 
-Interactive demonstrator: <https://winf-hsos.github.io/lifi-concept-demos/audio-digitiser/>
+Interactive demonstrator: <https://demos.lifi-project.de/audio-digitiser/>
 
 ### Where your own alphabet is born
 

@@ -64,7 +64,7 @@ And how does the receiver reset its clock with it? Not by merely seeing the mark
 
 The price is that markers are symbols carrying no payload. Send a marker every eight symbols and you give away an eighth of your rate. Whether that is worth it depends on how badly your clocks really drift, and that is a question for measurement, not for belief. You can get a feel for both in the simulator: set the clock error, watch the sampling points wander out of the colour slots until the received line tips against the sent one, and then switch the marker on.
 
-Interactive demonstrator: <https://winf-hsos.github.io/lifi-concept-demos/drift-simulator/>
+Interactive demonstrator: <https://demos.lifi-project.de/drift-simulator/>
 
 ### The clock-free way: change tells you
 

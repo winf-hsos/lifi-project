@@ -51,9 +51,9 @@ Hold a red LED in front of the receiver. Your eyes see red. The computer does no
 
 Those four numbers are the input. A rule such as "choose the strongest colour channel, unless the light is too weak or two channels are too close" is the processing. The word `red` is the output. Change a sensor value and the output may change. Keep the values fixed but change the rule, and the output may change again.
 
-You can try both in [the IPO test lab](https://winf-hsos.github.io/lifi-concept-demos/ipo-test-lab/). Choose a sensor case, move the values or the thresholds, and set the output you expected before looking at the result. The lab then compares expected and actual output for you.
+You can try both in [the IPO test lab](https://demos.lifi-project.de/ipo-test-lab/). Choose a sensor case, move the values or the thresholds, and set the output you expected before looking at the result. The lab then compares expected and actual output for you.
 
-Interactive demonstrator: <https://winf-hsos.github.io/lifi-concept-demos/ipo-test-lab/>
+Interactive demonstrator: <https://demos.lifi-project.de/ipo-test-lab/>
 
 The small experiment exposes an important limit. A computer cannot work directly with the red that you see. It needs a representation it can process, here four numbers. And those numbers do not carry the decision by themselves. Your program supplies the rule.
 

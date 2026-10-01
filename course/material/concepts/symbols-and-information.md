@@ -61,9 +61,9 @@ For a yes/no question that is two terms. Put the numbers in and you get the two 
 
 That is why halving wins on average: it takes the largest guaranteed gain out of every answer. The lopsided question only becomes sensible right at the end, when two possibilities are left. And it is worth noticing what the second row implies: a question whose outcome is nearly certain carries almost no information, however long its answer. Compression later rests on exactly that observation.
 
-You can play this in [The Question Game](https://winf-hsos.github.io/lifi-concept-demos/question-game/): one of sixteen faces is the secret, you ask about features like glasses, beard or hair colour, and after every answer the demo works out what it was worth, expected value included. Count the faces before you ask. Whoever splits near the half is done in four questions, since $\log_2(16) = 4$; whoever guesses early asks the most lopsided question there is and can watch the bit yield say so.
+You can play this in [The Question Game](https://demos.lifi-project.de/question-game/): one of sixteen faces is the secret, you ask about features like glasses, beard or hair colour, and after every answer the demo works out what it was worth, expected value included. Count the faces before you ask. Whoever splits near the half is done in four questions, since $\log_2(16) = 4$; whoever guesses early asks the most lopsided question there is and can watch the bit yield say so.
 
-Interactive demonstrator: <https://winf-hsos.github.io/lifi-concept-demos/question-game/>
+Interactive demonstrator: <https://demos.lifi-project.de/question-game/>
 
 ### What that means for your alphabet
 

@@ -67,9 +67,9 @@ Eight bits in a packet are a **byte**. Because every place doubles the possibili
 
 [Figure: A byte cut open: eight binary places with their place values. Here the 64 and the 1 are set, so the value is 65, and why 65 of all numbers is interesting is a question for [Code Systems](code-systems.md).]
 
-The quickest way to get a feel for it is to flip the bits yourself. In the [Byte Switchboard](https://winf-hsos.github.io/lifi-concept-demos/byte-switchboard/) you throw the eight switches one at a time and watch the number appear: the sum of the place values, in decimal, in hex, and the ASCII character behind it. More of these on the [Demonstrators](../links.md#demonstrators) page.
+The quickest way to get a feel for it is to flip the bits yourself. In the [Byte Switchboard](https://demos.lifi-project.de/byte-switchboard/) you throw the eight switches one at a time and watch the number appear: the sum of the place values, in decimal, in hex, and the ASCII character behind it. More of these on the [Demonstrators](../links.md#demonstrators) page.
 
-Interactive demonstrator: <https://winf-hsos.github.io/lifi-concept-demos/byte-switchboard/>
+Interactive demonstrator: <https://demos.lifi-project.de/byte-switchboard/>
 
 ### Hex: the shorthand for bytes
 
@@ -81,9 +81,9 @@ The reason for sixteen lies in the byte. Four bits have $2^4 = 16$ states, which
 
 `FF` is $15 \cdot 16 + 15 = 255$, the full byte, and `AC` is easier on the eye than `10101100` (both are 172). The colour notation `#AC8909` from [Code Systems](code-systems.md) is now something you can check by hand: three bytes, two digits each, one byte per colour channel.
 
-A hex dump like this is what you see in [Inside a File](https://winf-hsos.github.io/lifi-concept-demos/inside-a-file/): on the left the bytes of a real file in hex, on the right the same bytes as characters. Two things stand out there. The first few bytes give away what kind of file it is, and between the readable positions there are just as many unreadable ones. Both are the same stuff. A file is nothing but a sequence of numbers.
+A hex dump like this is what you see in [Inside a File](https://demos.lifi-project.de/inside-a-file/): on the left the bytes of a real file in hex, on the right the same bytes as characters. Two things stand out there. The first few bytes give away what kind of file it is, and between the readable positions there are just as many unreadable ones. Both are the same stuff. A file is nothing but a sequence of numbers.
 
-Interactive demonstrator: <https://winf-hsos.github.io/lifi-concept-demos/inside-a-file/>
+Interactive demonstrator: <https://demos.lifi-project.de/inside-a-file/>
 
 ### Kilo against kibi
 

@@ -33,19 +33,19 @@ Small interactive pages, one idea each. The explanation lives on the concept pag
 
 | Demonstrator | What you can do there | Concept |
 |---|---|---|
-| [The IPO Test Lab](https://winf-hsos.github.io/lifi-concept-demos/ipo-test-lab/) | change sensor values and the classification rule, then compare actual with expected output | [Problem Solving with Computers](concepts/input-processing-output.md) |
-| [The Noisy Sensor](https://winf-hsos.github.io/lifi-concept-demos/noisy-sensor/) | send a symbol over a noisy link and let the same readings decide it three times: alone, averaged over five, averaged over ten | [Measuring and Experimenting](concepts/measurement-and-experiments.md) |
-| [Question Game](https://winf-hsos.github.io/lifi-concept-demos/question-game/) | find the secret face; every answer is measured in bits | [Symbols and Information](concepts/symbols-and-information.md) |
-| [The Copier](https://winf-hsos.github.io/lifi-concept-demos/copier/) | copy an analog picture until it fades, then compare with a file | [Analog and Digital](concepts/analog-and-digital.md) |
-| [The Photo Digitiser](https://winf-hsos.github.io/lifi-concept-demos/photo-digitiser/) | choose resolution and colour depth, watch the bytes grow | [Analog and Digital](concepts/analog-and-digital.md) |
-| [The Audio Digitiser](https://winf-hsos.github.io/lifi-concept-demos/audio-digitiser/) | the same two cuts for sound, and hear the difference | [Analog and Digital](concepts/analog-and-digital.md) |
-| [Distinguishability Lab](https://winf-hsos.github.io/lifi-concept-demos/distinguishability-lab/) | send symbols over a noisy channel, trade error rate for throughput | [Signal and Noise](concepts/signal-and-noise.md) |
-| [Drift Simulator](https://winf-hsos.github.io/lifi-concept-demos/drift-simulator/) | two clocks drift apart until the message breaks; a marker saves it | [Sampling and Synchronization](concepts/sampling-and-synchronization.md) |
-| [Byte Switchboard](https://winf-hsos.github.io/lifi-concept-demos/byte-switchboard/) | flip eight bits, read the number in binary, decimal, hex and ASCII | [Number Systems](concepts/number-systems.md) |
-| [Pixel Painter](https://winf-hsos.github.io/lifi-concept-demos/pixel-painter/) | paint an 8×8 picture and watch its bytes write themselves | [Code Systems](concepts/code-systems.md) |
-| [Inside a File](https://winf-hsos.github.io/lifi-concept-demos/inside-a-file/) | a real bitmap in a hex editor; change a byte, watch the picture obey | [Memory and Storage](concepts/memory-and-storage.md) |
-| [The Pixel Filter](https://winf-hsos.github.io/lifi-concept-demos/pixel-filter/) | make a photo brighter, one addition per pixel; step through the bits, then run all 16,384 | [Logic and Arithmetic](concepts/logic-and-arithmetic.md) |
-| [The Gate Lab](https://winf-hsos.github.io/lifi-concept-demos/gate-lab/) | switches in, lamps out: gates, adders, a comparator, a flip-flop and a register | [Logic and Arithmetic](concepts/logic-and-arithmetic.md) |
+| [The IPO Test Lab](https://demos.lifi-project.de/ipo-test-lab/) | change sensor values and the classification rule, then compare actual with expected output | [Problem Solving with Computers](concepts/input-processing-output.md) |
+| [The Noisy Sensor](https://demos.lifi-project.de/noisy-sensor/) | send a symbol over a noisy link and let the same readings decide it three times: alone, averaged over five, averaged over ten | [Measuring and Experimenting](concepts/measurement-and-experiments.md) |
+| [Question Game](https://demos.lifi-project.de/question-game/) | find the secret face; every answer is measured in bits | [Symbols and Information](concepts/symbols-and-information.md) |
+| [The Copier](https://demos.lifi-project.de/copier/) | copy an analog picture until it fades, then compare with a file | [Analog and Digital](concepts/analog-and-digital.md) |
+| [The Photo Digitiser](https://demos.lifi-project.de/photo-digitiser/) | choose resolution and colour depth, watch the bytes grow | [Analog and Digital](concepts/analog-and-digital.md) |
+| [The Audio Digitiser](https://demos.lifi-project.de/audio-digitiser/) | the same two cuts for sound, and hear the difference | [Analog and Digital](concepts/analog-and-digital.md) |
+| [Distinguishability Lab](https://demos.lifi-project.de/distinguishability-lab/) | send symbols over a noisy channel, trade error rate for throughput | [Signal and Noise](concepts/signal-and-noise.md) |
+| [Drift Simulator](https://demos.lifi-project.de/drift-simulator/) | two clocks drift apart until the message breaks; a marker saves it | [Sampling and Synchronization](concepts/sampling-and-synchronization.md) |
+| [Byte Switchboard](https://demos.lifi-project.de/byte-switchboard/) | flip eight bits, read the number in binary, decimal, hex and ASCII | [Number Systems](concepts/number-systems.md) |
+| [Pixel Painter](https://demos.lifi-project.de/pixel-painter/) | paint an 8×8 picture and watch its bytes write themselves | [Code Systems](concepts/code-systems.md) |
+| [Inside a File](https://demos.lifi-project.de/inside-a-file/) | a real bitmap in a hex editor; change a byte, watch the picture obey | [Memory and Storage](concepts/memory-and-storage.md) |
+| [The Pixel Filter](https://demos.lifi-project.de/pixel-filter/) | make a photo brighter, one addition per pixel; step through the bits, then run all 16,384 | [Logic and Arithmetic](concepts/logic-and-arithmetic.md) |
+| [The Gate Lab](https://demos.lifi-project.de/gate-lab/) | switches in, lamps out: gates, adders, a comparator, a flip-flop and a register | [Logic and Arithmetic](concepts/logic-and-arithmetic.md) |
 
 ## Background
 

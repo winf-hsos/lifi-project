@@ -72,7 +72,7 @@ An example to follow along with. Your range runs from 40 to 840, so 800 units. E
 
 You can get a feel for the whole trade in the simulator, where the alphabet size, the measurement window and the speed are all knobs, and the error rate runs along with them:
 
-Interactive demonstrator: <https://winf-hsos.github.io/lifi-concept-demos/distinguishability-lab/>
+Interactive demonstrator: <https://demos.lifi-project.de/distinguishability-lab/>
 
 ### The knobs have price tags
 

@@ -38,7 +38,7 @@ From this follows a sharper version of a phrase we have used loosely up to here.
 
 An example to work through: the range runs from 40 to 840, so 800 units. Every colour scatters around its mean by plus or minus 25, so its band is 50 wide and not 25, because the cloud reaches in both directions. And 800 divided by 50 is 16. That is where an alphabet of 16 symbols comes from, and doing this calculation before trying things out saves you half a session in Challenge 2.
 
-**The demonstrator (Frame 19).** [The Distinguishability Lab](https://winf-hsos.github.io/lifi-concept-demos/distinguishability-lab/) has three sliders: number of symbols, length of the measurement window, speed. Two tasks. First: bring the error rate down to zero and watch the throughput while you do it. Second: press the interference button and see what still holds. The numbers are simulated, the structure is real; your own numbers come from your link and from nowhere else.
+**The demonstrator (Frame 19).** [The Distinguishability Lab](https://demos.lifi-project.de/distinguishability-lab/) has three sliders: number of symbols, length of the measurement window, speed. Two tasks. First: bring the error rate down to zero and watch the throughput while you do it. Second: press the interference button and see what still holds. The numbers are simulated, the structure is real; your own numbers come from your link and from nowhere else.
 
 ## Part 3: what it costs
 

@@ -78,13 +78,13 @@ That disagreement is exactly the point. There is no correct amount, there is onl
 
 ## Try it yourself (Frame 24)
 
-In [The Photo Digitiser](https://winf-hsos.github.io/lifi-concept-demos/photo-digitiser/) you choose resolution and colour depth yourself, see the result immediately, and next to it the arithmetic including the transmission time over the light link. Two questions are worth asking: at which setting would you still send the picture? And what saves more, half the resolution or half the colour depth?
+In [The Photo Digitiser](https://demos.lifi-project.de/photo-digitiser/) you choose resolution and colour depth yourself, see the result immediately, and next to it the arithmetic including the transmission time over the light link. Two questions are worth asking: at which setting would you still send the picture? And what saves more, half the resolution or half the colour depth?
 
 ## The same two cuts for sound (Frame 25)
 
 The two cuts are not a picture topic, they are the method. For sound, the **sampling rate** slices time instead of area, and the **bit depth** slices loudness instead of brightness. 44,100 samples per second at 16 bit: that is a CD.
 
-In [The Audio Digitiser](https://winf-hsos.github.io/lifi-concept-demos/audio-digitiser/) you can hear both: turn the sampling rate down until a voice sounds tinny.
+In [The Audio Digitiser](https://demos.lifi-project.de/audio-digitiser/) you can hear both: turn the sampling rate down until a voice sounds tinny.
 
 ## Where your alphabet is born (Frame 27)
 

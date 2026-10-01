@@ -98,7 +98,7 @@ The receiver sees a stream of bits with no gaps in it. It does not know whether 
 
 You can try this yourself: write your own code words, send a word, and watch how many readings the receiver would have to choose between.
 
-Interactive demonstrator: <https://winf-hsos.github.io/lifi-concept-demos/prefix-trap/>
+Interactive demonstrator: <https://demos.lifi-project.de/prefix-trap/>
 
 There are three ways out, and none of them is the official one.
 
@@ -130,7 +130,7 @@ For you this is closer than it looks. Those are the same three numbers your send
 
 The bidirectional nature of that table is easiest to feel in its simplest form, one bit per pixel:
 
-Interactive demonstrator: <https://winf-hsos.github.io/lifi-concept-demos/pixel-painter/>
+Interactive demonstrator: <https://demos.lifi-project.de/pixel-painter/>
 
 If the bytes do not say which reading is right, something else has to. Three things do, in practice: the file extension, which is the weakest because renaming a file changes nothing inside it; a header at the start of the file, which is what you will take apart in [Memory and Storage](memory-and-storage.md); and a type field in a message, which is what you will build yourselves into your frame in [Challenge 3](../challenges/challenge-3.md). That field is not bureaucracy. It is this section, in your own protocol.
 

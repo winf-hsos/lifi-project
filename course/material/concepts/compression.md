@@ -50,7 +50,7 @@ This is what it looks like in the file, the way a hex editor shows it. Every cha
 
 You can try both tricks on your own text. Paste anything and watch it get packed as you type; then try one letter four hundred times, and then random letters.
 
-Interactive demonstrator: <https://winf-hsos.github.io/lifi-concept-demos/text-squeezer/>
+Interactive demonstrator: <https://demos.lifi-project.de/text-squeezer/>
 
 The simplest form of the same idea works on pictures. Walk along a row, count how many equal points come in a row, and write one byte per run: one bit for the colour, seven for the length.
 

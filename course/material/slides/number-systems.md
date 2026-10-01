@@ -84,7 +84,7 @@ Eight places with two possibilities each give 2⁸ equals 256 values, read as a 
 
 You know the word **bit** from session 4 as a measure of information, and here it turns up again as a digit, as binary digit. That is no coincidence and no pun: a place with two possible values holds exactly one yes/no answer. The container is named after its content. The distinction is still useful, though, because a container can also be half empty; compression comes back to that.
 
-To try it yourself there is the [Byte Switchboard](https://winf-hsos.github.io/lifi-concept-demos/byte-switchboard/): eight switches, and the number follows along. Three questions are worth asking there: Which switch changes the most? How do you set 255, and how 1? And what happens if you want to count one further from 255?
+To try it yourself there is the [Byte Switchboard](https://demos.lifi-project.de/byte-switchboard/): eight switches, and the number follows along. Three questions are worth asking there: Which switch changes the most? How do you set 255, and how 1? And what happens if you want to count one further from 255?
 
 ## Hexadecimal: four bits at a time (Frames 20 to 23)
 
@@ -96,7 +96,7 @@ The reason for sixteen, of all numbers, lies in the byte. Four bits have 2⁴ eq
 
 Because our ten digits are not enough for sixteen values, six letters are borrowed: A stands for 10, B for 11, and so on up to F for 15. Once you have seen this table, you can read any hex dump.
 
-Exactly such a dump is in the demonstrator [Inside a File](https://winf-hsos.github.io/lifi-concept-demos/inside-a-file/): on the left the bytes of a real file in hexadecimal, on the right the same bytes as characters. Two things can be seen there. First, the very first bytes give away what kind of file it is. Second, between the readable positions there are just as many unreadable ones, and both are the same stuff. A file is nothing but a sequence of numbers.
+Exactly such a dump is in the demonstrator [Inside a File](https://demos.lifi-project.de/inside-a-file/): on the left the bytes of a real file in hexadecimal, on the right the same bytes as characters. Two things can be seen there. First, the very first bytes give away what kind of file it is. Second, between the readable positions there are just as many unreadable ones, and both are the same stuff. A file is nothing but a sequence of numbers.
 
 And with that the colour notation `#AC8909` also becomes something you can work out: three bytes, two hex digits each, one byte per colour channel.
 

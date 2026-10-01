@@ -88,7 +88,7 @@ The 32 cards are **not** the uncertainty, they are the space of possibilities. T
 
 ## Try it yourself (Frame 21)
 
-In [The Question Game](https://winf-hsos.github.io/lifi-concept-demos/question-game/) you are looking for one of sixteen faces. After every question the demo works out what it was worth, and beforehand it shows what the question brings in expected value.
+In [The Question Game](https://demos.lifi-project.de/question-game/) you are looking for one of sixteen faces. After every question the demo works out what it was worth, and beforehand it shows what the question brings in expected value.
 
 Two rounds are worth playing: once guessing on purpose, once halving. Afterwards the difference is on the screen in bits.
 
