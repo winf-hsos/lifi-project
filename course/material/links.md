@@ -11,6 +11,33 @@ Everything this module points to, in one place.
 - [Team cockpit](https://lifi.uber.space/cockpit): your light link live in the browser; how to use it is explained under [Software](software/cockpit.md).
 - [lifi-project](https://github.com/winf-hsos/lifi-project): your course folder with the AI assistant: its instructions, the knowledge base it reads, and the challenge templates. You download it as a ZIP, see [Required Software](software/index.md#course-folder).
 
+## Slides
+
+Every slide deck of the module, in the order of the semester. “open” shows the slides in a new tab (arrow keys to move on, F for full screen), “PDF” downloads them. Each deck also sits on its concept page, linked in the first column.
+
+| Slides | Open | PDF |
+|---|---|---|
+| [Overview of the Module](concepts/index.md) | [open](https://docs.lifi-project.de/assets/decks/overview/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/overview.pdf){download="overview.pdf"} |
+| [First Light](software/index.md) | [open](https://docs.lifi-project.de/assets/decks/first-light/first-light.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/first-light.pdf){download="first-light.pdf"} |
+| [Cutting Problems](concepts/problem-decomposition.md) | [open](https://docs.lifi-project.de/assets/decks/problem-decomposition/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/problem-decomposition.pdf){download="problem-decomposition.pdf"} |
+| [Algorithms and Programs](concepts/algorithms-and-programs.md) | [open](https://docs.lifi-project.de/assets/decks/algorithms-and-programs/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/algorithms-and-programs.pdf){download="algorithms-and-programs.pdf"} |
+| [Problem Solving with Computers](concepts/input-processing-output.md) | [open](https://docs.lifi-project.de/assets/decks/input-processing-output/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/input-processing-output.pdf){download="input-processing-output.pdf"} |
+| [Measuring and Experimenting](concepts/measurement-and-experiments.md) | [open](https://docs.lifi-project.de/assets/decks/measurement-and-experiments/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/measurement-and-experiments.pdf){download="measurement-and-experiments.pdf"} |
+| [Analog and Digital](concepts/analog-and-digital.md) | [open](https://docs.lifi-project.de/assets/decks/analog-and-digital/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/analog-and-digital.pdf){download="analog-and-digital.pdf"} |
+| [Symbols and Information](concepts/symbols-and-information.md) | [open](https://docs.lifi-project.de/assets/decks/symbols-and-information/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/symbols-and-information.pdf){download="symbols-and-information.pdf"} |
+| [Signal and Noise](concepts/signal-and-noise.md) | [open](https://docs.lifi-project.de/assets/decks/signal-and-noise/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/signal-and-noise.pdf){download="signal-and-noise.pdf"} |
+| [Number Systems](concepts/number-systems.md) | [open](https://docs.lifi-project.de/assets/decks/number-systems/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/number-systems.pdf){download="number-systems.pdf"} |
+| [Code Systems](concepts/code-systems.md) | [open](https://docs.lifi-project.de/assets/decks/code-systems/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/code-systems.pdf){download="code-systems.pdf"} |
+| [Sampling and Synchronization](concepts/sampling-and-synchronization.md) | [open](https://docs.lifi-project.de/assets/decks/sampling-and-synchronization/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/sampling-and-synchronization.pdf){download="sampling-and-synchronization.pdf"} |
+| [Throughput and Limits](concepts/throughput-and-limits.md) | [open](https://docs.lifi-project.de/assets/decks/throughput-and-limits/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/throughput-and-limits.pdf){download="throughput-and-limits.pdf"} |
+| [Protocols](concepts/protocols.md) | [open](https://docs.lifi-project.de/assets/decks/protocols/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/protocols.pdf){download="protocols.pdf"} |
+| [Logic and Arithmetic](concepts/logic-and-arithmetic.md) | [open](https://docs.lifi-project.de/assets/decks/logic-and-arithmetic/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/logic-and-arithmetic.pdf){download="logic-and-arithmetic.pdf"} |
+| [Memory and Storage](concepts/memory-and-storage.md) | [open](https://docs.lifi-project.de/assets/decks/memory-and-storage/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/memory-and-storage.pdf){download="memory-and-storage.pdf"} |
+| [Errors and Redundancy](concepts/errors-and-redundancy.md) | [open](https://docs.lifi-project.de/assets/decks/errors-and-redundancy/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/errors-and-redundancy.pdf){download="errors-and-redundancy.pdf"} |
+| [Compression](concepts/compression.md) | [open](https://docs.lifi-project.de/assets/decks/compression/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/compression.pdf){download="compression.pdf"} |
+| [Encryption](concepts/encryption.md) | [open](https://docs.lifi-project.de/assets/decks/encryption/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/encryption.pdf){download="encryption.pdf"} |
+| [Abstraction and Layers](concepts/abstraction-and-layers.md) | [open](https://docs.lifi-project.de/assets/decks/abstraction-and-layers/index.html){target="_blank"} | [PDF](https://docs.lifi-project.de/assets/decks/abstraction-and-layers.pdf){download="abstraction-and-layers.pdf"} |
+
 ## Code and material
 
 - [lifi-hardware](https://github.com/winf-hsos/lifi-hardware): the Python module `lifi_hardware` that talks to your device, with source code and readme.
