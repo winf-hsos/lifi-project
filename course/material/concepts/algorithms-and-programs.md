@@ -82,7 +82,7 @@ The slides for this concept, right here. Page through them with the buttons in t
 
 ## Practice questions
 
-Try questions in the exam format here, with the answer and its reasoning shown right away.
+The practice questions have the same format as the exam, so they are also a good way to prepare for it.
 
 ## Further reading
 
