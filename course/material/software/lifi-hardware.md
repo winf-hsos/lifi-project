@@ -131,6 +131,19 @@ with LifiDevice.connect() as lifi:
 
 `connect()` also knows a few options, for example `log_file=None` (no measurement log) and `server=None` (no upload, more on that in a moment).
 
+### Two devices on one laptop
+
+Your team has two devices, and sometimes it is handy to plug both into the same laptop, one as the sender and one as the receiver. Then the module cannot know which one you mean, so each script tells it, by the UID of the master brick. That is the short code of the main board, shown in the Brick Viewer next to "Master Brick". Call `use_device()` before you use `led` or `sensor` for the first time; after that everything works as usual:
+
+```python
+from lifi_hardware import led, sensor, use_device
+
+use_device("64SK5w")     # the UID of the master brick of this device
+led.set_color(255, 0, 0)
+```
+
+Your second script names the other UID. If two devices are plugged in and a script does not choose, you get an error message that lists both UIDs, so you can copy the right one. The same choice works without changing the code through the environment variable `LIFI_MASTER`, and with `LifiDevice.connect(master="64SK5w")`. You need version 0.4.0 of the module or newer; `/update-semester` installs it.
+
 ## The measurement log and the cockpit
 
 Everything your device does, the module writes to a file called `lifi_log.jsonl` in the folder your program runs in: every colour you set, every reading, every change of a setting, one plain-text line per event. This is the memory of your measurement series. It belongs to you, and it always works, even without any internet.
