@@ -22,7 +22,7 @@ Big problems are not solved in one piece. They are cut, again and again, until t
 
 **One question, four questions (slide 12).** Behind the decomposition into four challenges sits the map of the whole module. The big question is: how do computers solve complex problems? Beneath it lie four questions about information: how do computers represent it, how do they store it, how do they transfer it, how do they process it. Under each question stand its most important concepts, for transferring for instance signal and noise, timing and protocols. All four questions concern you, if not all equally: the light link is the transferring, but you represent colours as symbols, you store a file, and a checksum processes it. Every concept works on one of the four questions; on the website the same map hangs above all the concepts.
 
-## Part 3: three ways to cut
+## Part 3: different ways to cut
 
 There are many ways to cut. You will need three of them all the time.
 
@@ -46,7 +46,7 @@ There are many ways to cut. You will need three of them all the time.
 
 **Dividing the work with the AI assistant (slides 34 and 35).** Two ways to give the assistant a job. "build me the file transfer" is one big wish. The agent cannot fulfil it well, and you could not even check the result. Against it, the small job that brings its test along: "read the sensor ten times and return the average. test: covered, it stays under 10. red led on, it goes over 100." The job says what should come out and how you check it: cover the sensor, average under 10; red LED on, average over 100. That takes ten seconds, and afterwards you know instead of believing. Cutting is the skill that takes you from "I hope the AI is right" to "I have checked it". That is why it is among the four goals of this module: you cut. The assistant solves pieces. You check.
 
-**One bite at a time (slide 36).** The elephant from the start, one more time at the end. You can already do this, you have gained three cutting patterns, and you now know how to recognise a good cut: by the test built into it.
+**One bite at a time (slide 36).** The elephant from the start, one more time at the end. You can already do this, you have gained different cutting patterns, and you now know how to recognise a good cut: by the test built into it.
 
 ## Further reading
 
