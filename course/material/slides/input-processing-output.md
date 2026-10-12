@@ -2,13 +2,13 @@
 
 # Lecture notes: solving problems with computers (Problem Solving with Computers)
 
-These notes accompany the input "Solving problems with computers" in session 2. They can be read as a text of their own and follow the order of the stagekit deck. A slide with a build-up appears as several frames in the talk and in the export; that is why the references run from Frame 1 to Frame 41.
+These notes accompany the input "Solving problems with computers". They can be read as a text of their own and follow the order of the stagekit deck. A slide with a build-up appears as several frames in the talk and in the export; that is why the references run from Frame 1 to Frame 41.
 
 The matching concept on the website is [Problem Solving with Computers](../../website/concepts/input-processing-output.qmd).
 
 ## What it is about
 
-From the first input, students know how a big problem is cut into testable pieces. Now comes the follow-up question: what does such a piece have to look like if a computer is to solve it?
+From cutting problems, you know how a big problem is cut into testable pieces. Now comes the follow-up question: what does such a piece have to look like if a computer is to solve it?
 
 The answer is the IPO pattern: input, processing and output. It holds for a logic gate just as it does for a function or a whole system. Once the input and the expected output are clear, the box can be tested. Programs answer the question of the processing; the representation of the data is a second question in its own right.
 
@@ -28,7 +28,7 @@ The box is not a particular device. It is a way of thinking. We can use it to de
 
 ### The built-in test (Frames 9 to 12)
 
-A small example makes the connection to the decomposition from session 1 visible. The function `add()` gets `2, 3` and is supposed to return `5`. With that, a test has already been written:
+A small example makes the connection to cutting problems visible. The function `add()` gets `2, 3` and is supposed to return `5`. With that, a test has already been written:
 
 1. Put `2, 3` in.
 2. Run the processing.
@@ -119,7 +119,7 @@ The second is: how do we write things down so that a machine can work with them?
 
 Almost all further concepts of the module can be placed at one of these two questions.
 
-### The map of the next weeks (Frame 36)
+### The map of the module (Frame 36)
 
 The processing question leads directly to "Algorithms and Programs". The representation question leads first to readings, and after that to symbols and information, code systems and number systems. The IPO box stays as the map throughout. Only the place we zoom into changes.
 
