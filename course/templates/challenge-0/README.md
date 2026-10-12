@@ -11,7 +11,7 @@ Can you bring your device to life?
 | 1 | Light on | calling a function and handing it values |
 | 2 | Blink | a loop, which means doing something several times |
 | 3 | Colour cycle | a list and how to go through it |
-| 4 | Measure | a function that gives values back |
+| 4 | Measure | a function that gives values back, and measuring one situation at a time |
 | 5 | React | a condition, which means doing something different depending on the situation |
 | 6 | The human as receiver | what a receiver actually has to manage |
 
@@ -39,7 +39,7 @@ Task 5 keeps running until you stop it with Ctrl+C. When you run all tasks in on
 
 This is where your program makes a decision for the first time: it measures, compares and does something different depending on the result. In small, that is already what the whole semester is about.
 
-You have to find the threshold yourself. Run task 4, hold your hand between the devices and watch how the value `C` changes. That number is the brightness.
+You have to find the threshold yourself. In task 4 you take one reading per Enter: room light, the sensor covered with your hand, your phone torch from far away and close up. The clear value `c` is the brightness, and your threshold goes between "covered" and "torch". If `c` sticks at 65535, the sensor is overloaded; hold the torch further away.
 
 ## Task 6 teaches you the most
 

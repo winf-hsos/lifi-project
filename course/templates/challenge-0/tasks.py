@@ -82,14 +82,25 @@ def task_3_color_cycle():
 # You learn: a function that gives something back, and how to take several
 #            returned values apart.
 #
-# Measure twenty times and print the values. Hold your hand between the
-# devices while it runs and watch how the numbers change.
+# Every time you press Enter, the program takes one reading; q and Enter
+# stops it. Measure in at least four situations and change only one thing
+# between two readings: room light, the sensor covered with your hand, the
+# torch of your phone from far away, the torch close up. Write down the
+# clear value c for each situation; you need these numbers in task 5.
+#
+# If a value sticks at 65535, the sensor is overloaded: hold the torch
+# further away.
 # ---------------------------------------------------------------------------
 def task_4_read_sensor():
-    for i in range(20):
-        r, g, b, c = sensor.read()
-        print(f"Reading {i}:  R={r}  G={g}  B={b}  C={c}")
-        time.sleep(0.5)
+    print("Enter = take a reading, q and Enter = stop")
+    while True:
+        answer = input()
+        if answer == "q":
+            break
+        # TODO: read the sensor, take the result apart into r, g, b, c
+        #       and print the four values
+        #       Hint: sensor.read() gives back four numbers at once
+        pass
 
 
 # ---------------------------------------------------------------------------
@@ -99,13 +110,14 @@ def task_4_read_sensor():
 #            the situation.
 #
 # The program measures all the time. When it is bright, the LED shines green.
-# When it is dark, it shines red. Find the right threshold yourself by looking
-# at the numbers from task 4.
+# When it is dark, it shines red. Find the right threshold yourself: put it
+# between the clear value with the sensor covered and the one with the torch
+# from your notes of task 4.
 #
 # This is your first program that makes a decision.
 # ---------------------------------------------------------------------------
 def task_5_react_to_light():
-    threshold = 0   # TODO: enter a sensible value, read off from task 4
+    threshold = 0   # TODO: a value between "covered" and "torch" from task 4
 
     print("Stop with Ctrl+C")
     while True:
