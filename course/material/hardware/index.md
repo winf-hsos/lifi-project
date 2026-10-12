@@ -68,7 +68,7 @@ Between the two devices you may build things yourself, and you should: tubes, ap
 
 **Not allowed** are additional sensors, additional light sources, lasers, or swapping out the LED or the colour sensor.
 
-**Budget:** at most 10 euros worth of material, built by you, documented with a photo and a short explanation of why you built it that way.
+**Budget:** building is optional, and if your team builds, the material may be worth at most 10 euros, which you pay yourselves because there is no reimbursement. Document what you built with a photo and a short explanation of why you built it that way.
 
 ### The fixed distance
 
