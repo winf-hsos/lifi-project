@@ -13,7 +13,8 @@ Works for both ways of getting the course folder:
 
 Rules of the course folder, the same for both ways:
 
-- my-code/ belongs to the student. Nothing in it is ever changed or deleted.
+- my-code/ belongs to the student. Nothing in it is ever changed or deleted;
+  only files that a template gains later are added next to the student's own.
 - Everything else belongs to the course and is read-only for students.
   Changed course files are overwritten, extra files inside course/ are
   removed, and in a Git clone commits made by the student are removed.
@@ -191,8 +192,13 @@ def update_from_git():
 # --- after either way ----------------------------------------------------------
 
 def copy_new_templates(changed_paths):
-    """Copy released templates into my-code/; never overwrite what is there."""
-    added, updated = [], []
+    """Copy released templates into my-code/; never overwrite what is there.
+
+    A template folder the student does not have yet is copied whole. If they
+    have it, files the template gained later are added; files they already
+    have stay exactly as they are.
+    """
+    added, updated, completed = [], [], []
     os.makedirs(MY_CODE, exist_ok=True)
     names = sorted(os.listdir(TEMPLATES)) if os.path.isdir(TEMPLATES) else []
     for name in names:
@@ -204,9 +210,24 @@ def copy_new_templates(changed_paths):
             shutil.copytree(source, target,
                             ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
             added.append(name)
-        elif any(p.startswith(f"course/templates/{name}/") for p in changed_paths):
+            continue
+        new_files = []
+        for folder, subfolders, files in os.walk(source):
+            subfolders[:] = [d for d in subfolders if d != "__pycache__"]
+            for file in files:
+                if file.endswith(".pyc"):
+                    continue
+                src = os.path.join(folder, file)
+                dst = os.path.join(target, os.path.relpath(src, source))
+                if not os.path.exists(dst):
+                    os.makedirs(os.path.dirname(dst), exist_ok=True)
+                    shutil.copy2(src, dst)
+                    new_files.append(os.path.relpath(dst, target).replace(os.sep, "/"))
+        if new_files:
+            completed.append((name, sorted(new_files)))
+        if any(p.startswith(f"course/templates/{name}/") for p in changed_paths):
             updated.append(name)
-    return added, updated
+    return added, updated, completed
 
 
 def version_tuple(text):
@@ -256,7 +277,7 @@ def main():
         changed, removed, stray = update_from_zip()
         reset_note = removed
 
-    added, updated = copy_new_templates(changed)
+    added, updated, completed = copy_new_templates(changed)
     module = update_module()
 
     say()
@@ -276,6 +297,9 @@ def main():
             "They were left alone, but please move them into my-code/.")
     for name in added:
         say(f"- NEW: my-code/{name}/ is ready for you to work in.")
+    for name, files in completed:
+        say(f"- NEW FILES in my-code/{name}/: {', '.join(files)}. "
+            f"Your own files there were not changed.")
     for name in updated:
         say(f"- The template course/templates/{name}/ was improved. Your copy in my-code/{name}/ "
             f"was NOT changed; your assistant can bring the improvement into your copy if you agree.")

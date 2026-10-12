@@ -4,36 +4,28 @@ Can you bring your device to life?
 
 ## What you do
 
-`tasks.py` holds six tasks. Wherever it says `TODO`, your code is missing. Work through them in order, each one builds on the one before.
+Six tasks, one Python file each. Wherever it says `TODO`, your code is missing. Work through them in order, each one builds on the one before.
 
-| | Task | What you learn |
+| | File | What you learn |
 |---|---|---|
-| 1 | Light on | calling a function and handing it values |
-| 2 | Blink | a loop, which means doing something several times |
-| 3 | Colour cycle | a list and how to go through it |
-| 4 | Measure | a function that gives values back, and measuring one situation at a time |
-| 5 | React | a condition, which means doing something different depending on the situation |
-| 6 | The human as receiver | what a receiver actually has to manage |
+| 1 | `task_1_light_on.py` | calling a function and handing it values |
+| 2 | `task_2_blink.py` | a loop, which means doing something several times |
+| 3 | `task_3_color_cycle.py` | a list and how to go through it |
+| 4 | `task_4_measure.py` | a function that gives values back, and measuring one situation at a time |
+| 5 | `task_5_react.py` | a condition, which means doing something different depending on the situation |
+| 6 | `task_6_human_receiver.py` | what a receiver actually has to manage |
 
 There are no more building blocks than these. Everything you program for the rest of the semester is made of exactly three things: one after the other, repeated, and under a condition.
 
 ## Trying it out
 
-One single task, here task 3:
+Run one task at a time, here task 3:
 
 ```bash
-python tasks.py 3
+python task_3_color_cycle.py
 ```
 
-All of them one after the other:
-
-```bash
-python tasks.py
-```
-
-On a Mac use `python3` instead of `python` if needed.
-
-Task 5 keeps running until you stop it with Ctrl+C. When you run all tasks in one go, task 6 only starts after that.
+On a Mac use `python3` instead of `python` if needed. Task 5 keeps running until you stop it with Ctrl+C.
 
 ## Task 5 is the most interesting
 

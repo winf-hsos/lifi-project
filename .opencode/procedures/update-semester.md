@@ -16,16 +16,20 @@ The student wants to update their course folder. Most downloaded it as a ZIP and
 
 When a template changes after students have copied it, the change is described here. For each change: check the student's copy in `my-code/`, and only if it still has the old version, explain in two sentences what is new and ask whether you may bring it in. Change their file only after they agree, and only the part named here; their own code in all other places stays exactly as it is. Afterwards show what you changed and let them run it. Never fill in a `TODO` for them while doing this: the task is theirs.
 
-### challenge-0, 12 October 2026: task 4 "Measure"
+### challenge-0, 12 October 2026: one file per task, and a new task 4
 
-What is new: task 4 used to take twenty readings by itself and left nothing to write. Now it takes one reading per Enter (q and Enter stops), the student writes the reading themselves (`r, g, b, c = sensor.read()` and printing the four values), and measures in at least four situations: room light, sensor covered with the hand, phone torch from far away, phone torch close up. Task 5 picks its threshold between "covered" and "torch".
+What is new: the six tasks of Challenge 0 used to be functions in one file, `tasks.py`. Now every task is a script of its own (`task_1_light_on.py` to `task_6_human_receiver.py`), run with `python task_3_color_cycle.py` and so on. Comments are written with `#` only. Task 4 changed as well: it takes one reading per Enter (q and Enter stops), the student writes the reading themselves (`r, g, b, c = sensor.read()` and printing the four values), and measures in at least four situations: room light, sensor covered with the hand, phone torch from far away, phone torch close up. Task 5 picks its threshold between "covered" and "torch".
 
-How to recognise the old version: in `my-code/challenge-0/tasks.py`, the function `task_4_read_sensor` contains `for i in range(20):` and no `input()`.
+How to recognise the old version: `my-code/challenge-0/tasks.py` exists.
 
-What to change, after the student agrees:
+What happens by itself: the update script adds the six new files to `my-code/challenge-0/` next to `tasks.py` and changes nothing that is already there. If the new files are missing after `/update-semester`, run `python .opencode/scripts/update_course.py` once more: the first run still used the previous version of the script, which did not add files to an existing folder.
 
-1. In `my-code/challenge-0/tasks.py`, replace the block from the comment line `# Task 4: Measure` down to the end of the function `task_4_read_sensor` with the same block from `course/templates/challenge-0/tasks.py`, including its `TODO`.
-2. In task 5 of their file, replace only the comment sentence about finding the threshold and the comment after `threshold = ` with the ones from the template. Keep the student's threshold value and all of their code.
-3. Replace `my-code/challenge-0/README.md` with `course/templates/challenge-0/README.md`, unless the student has written something of their own into it; then show them the two changed passages instead.
+What to offer, and do only after the student agrees:
 
-If the student has already rewritten task 4 in their own way, show them the new version and let them decide; do not overwrite it.
+1. For every task they have already solved in `tasks.py`, carry their own lines over into the matching new file, in place of its `TODO` lines. Their code moves as it is; do not improve it on the way, and do not fill in a task they have not solved yet.
+2. Task 4 has nothing to carry over, because the old task 4 had nothing to write; the new file stays as it is, with its `TODO`.
+3. In task 5, carry over their threshold value and their condition.
+4. Run each file they have solved once, so they see it still works.
+5. `tasks.py` can stay as a record of their work. Tell them they may delete it themselves once the new files run.
+
+If the student does not want any of this, leave everything as it is: the new files are there to work in whenever they like.
