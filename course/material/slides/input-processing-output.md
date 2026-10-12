@@ -129,8 +129,8 @@ An AI agent can also be seen as an IPO box. A task goes in, code comes out. The 
 
 A precise input improves the task. An expected output provides the yardstick. Only the comparison between the actual and the expected result decides whether the suggestion is usable. Testability replaces trust not only for simple functions, but above all for systems that are hard to see through.
 
-### Transition to the next input (Frame 41)
+### Behind the counter (Frame 41)
 
-The closing picture shows the kitchen counter from the opening story. At the beginning we stood in front of the closed door and knew only the order and the tray. Now we know the shape of every piece a computer can solve, and we know how its edges make a test possible.
+The closing picture goes back to the restaurant of the opening and looks behind the counter: order tickets in a row, the fryer, the station where the burger is put together, and in front the tray that was ordered at the terminal. At the beginning we knew only the order and the tray. Now we know the shape of every piece a computer can solve, and we know how its edges make a test possible.
 
-Next, we open the box in the middle. The processing inside it is called a program.
+Behind the counter the order is worked through step by step, ticket by ticket. The processing inside the box in the middle is called a program, and that is the subject of the concept [Algorithms and Programs](../../website/concepts/algorithms-and-programs.qmd).
