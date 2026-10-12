@@ -2,7 +2,7 @@
 
 # Lecture notes: measuring and experimenting (Measuring and Experimenting)
 
-These notes accompany the stagekit deck "Measuring and Experimenting" for session 3 in the module "Digitization and Programming". They explain the contents of the slides for reading afterwards. Build-up steps count as frames of their own in the player and in the export; the references therefore refer to frames.
+These notes accompany the stagekit deck "Measuring and Experimenting" in the module "Digitization and Programming". They explain the contents of the slides for reading afterwards. Build-up steps count as frames of their own in the player and in the export; the references therefore refer to frames.
 
 The core message is: a single reading is not yet evidence. Knowledge only comes from a controlled measurement series: write down the expectation beforehand, change exactly one quantity, repeat, and document all results.
 
@@ -28,7 +28,7 @@ The order is decisive. If you measure first and only afterwards decide which res
 
 ## 2. Know what you measure
 
-### Today we work on the input (Frame 13)
+### This concept lives at the input (Frame 13)
 
 In the previous input the receiver was a box following the IPO pattern: light goes in, `classify()` processes the input, a colour name comes out. Now we zoom into the input side. To our eyes, red light falls on the sensor. For the program, what arrives there is not the concept "red" but a measurement.
 
@@ -122,7 +122,7 @@ If these conditions are met, the measurement series is the authoritative truth f
 
 ### The closing sentence (Frame 51)
 
-"If you did not measure it, you do not know it." From today on, every claim about the setup is an invitation to an experiment. It is not the most beautiful explanation that wins, but the cleanest measurement series. And a single reading is not yet a measurement series.
+"If you did not measure it, you do not know it." From now on, every claim about the setup is an invitation to an experiment. It is not the most beautiful explanation that wins, but the cleanest measurement series. And a single reading is not yet a measurement series.
 
 ## Further reading
 
