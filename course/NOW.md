@@ -50,9 +50,9 @@ Each session carries a concept as its title; what happens in the project follows
 9. 30.11. Throughput and Limits: competition, Challenge 2 (The Word)
 10. 07.12. Protocols: Challenge 3 starts
 11. 14.12. Logic and Arithmetic: interop test
-12. 21.12. Memory and Storage: competition, Challenge 3 (The Listener)
+12. 21.12. Memory and Storage: competition, Challenge 3 (The Listener), then the standardisation session; Challenge 4 starts
     (28.12. Christmas break, no session)
-13. 04.01. Errors and Redundancy: standardisation session, Challenge 4 starts
+13. 04.01. Errors and Redundancy: Challenge 4, the class standard runs
 14. 11.01. Compression: final, Challenge 4 (The Packet)
 
 The schedule in ILIAS is the binding version; changes are announced there.
