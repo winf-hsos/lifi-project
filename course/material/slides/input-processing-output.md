@@ -105,7 +105,7 @@ There are two relationships between boxes that must not be confused:
 - Boxes in a row show data flow: where do the data go next?
 - Boxes inside boxes show hierarchical decomposition: what smaller work happens inside?
 
-Both views are useful. Which one fits depends on the question. The fitting level is the one at which a clear input and an expected output can be stated. Frame 30 sums this up: the right level is the one we can test.
+Both relationships are ways of cutting a problem, as in [Cutting Problems](../../website/concepts/problem-decomposition.qmd): into steps that follow each other, or into smaller work inside a box. Both views are useful. Which one fits depends on the question. The fitting level is the one at which a clear input and an expected output can be stated. Frame 30 sums this up: the right level is the one we can test.
 
 ## Part 4: Two questions in every box
 
