@@ -10,6 +10,7 @@ Updated: 2026-10-12, week 3
 - **Session 4 is online: Wednesday 21 October, 13:15 to 16:30, in Teams.** Monday 19 October is cancelled. The link is in ILIAS. Topic: Measuring and Experimenting. Everyone measures with their own device at home, so students need: the device on the laptop with the Brick Daemon running, a white sheet of paper (it reflects the LED back into the sensor), the torch of their phone, a room where the light can be switched off, and a headset.
 - **Until the online session:** finish the sensor tasks of Challenge 0 (print the sensor values continuously, LED and sensor in one program) and read the concept page Measuring and Experimenting.
 - **26 October: excursion week, no session.** Session 5 follows on 2 November.
+- **New: `lifi_hardware` 0.4.0 lets one laptop drive both devices of a team.** With two devices plugged into the same laptop, each script says which one it means by the UID of its master brick (shown in the Brick Viewer): `from lifi_hardware import led, sensor, use_device`, then `use_device("64SK5w")` before the first use of `led` or `sensor`; after that everything works as before. Without a choice, two plugged-in devices now give an error message that names both UIDs. To get the new version, the student runs `/update-semester`. With one device nothing changes.
 - **Practice questions** are on the practice platform, one page per concept, switchable to German. The concept pages link to them.
 
 ## Covered so far
