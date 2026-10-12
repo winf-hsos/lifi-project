@@ -31,5 +31,6 @@ What to offer, and do only after the student agrees:
 3. In task 5, carry over their threshold value and their condition.
 4. Run each file they have solved once, so they see it still works.
 5. `tasks.py` can stay as a record of their work. Tell them they may delete it themselves once the new files run.
+6. `my-code/challenge-0/README.md` still describes `tasks.py`. Replace it with `course/templates/challenge-0/README.md`, unless the student has written something of their own into it; then only point them to the new one.
 
 If the student does not want any of this, leave everything as it is: the new files are there to work in whenever they like.
