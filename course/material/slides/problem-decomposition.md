@@ -36,7 +36,7 @@ There are many ways to cut. You will need three of them all the time.
 
 **The exam example (slides 27 and 28).** "I need to learn maths" and "I can pass the 2023 exam in 90 minutes" both sound like exam preparation. The difference is on slide 28: with the first you never know whether you are done. The second you can try out tonight, and you get a yes or a no. A good piece is one with a test built into it.
 
-**The same in the project (slides 29 and 30).** "The LED works" is a feeling. "Red or blue, recognised correctly 50 times in a row" is a measurement. Every challenge is written exactly like that, and the acceptance tests run exactly like that: there is always a test that says yes or no.
+**The same in the project (slides 29 and 30).** "The receiver works" is a feeling. "Red or blue, recognised correctly 50 times in a row" is a measurement. Every challenge is written exactly like that, and the acceptance tests run exactly like that: there is always a test that says yes or no.
 
 **The workshop rule (slide 31).** "done means: the test passes." Done does not mean "looks good", done means: the test passes. Every task in this module ends with a checking step that you can carry out yourself, without waiting for anyone.
 
