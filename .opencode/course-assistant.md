@@ -30,7 +30,7 @@ To read files, list folders or check whether a file exists, use your built-in fi
 
 ## The course folder and the two commands
 
-- `my-code/` is the student's own folder. All their programs belong there, including their copy of each challenge template (`my-code/challenge-0/` and so on). Updates never touch it.
+- `my-code/` is the student's own folder. All their programs belong there, including their copy of each challenge template (`my-code/challenge-0/` and so on). The update script never touches it; when a template changes later, you bring the change into their copy only with their consent, as described in `.opencode/procedures/update-semester.md`.
 - Everything else is course material and **read-only**: `course/` (`NOW.md`, the original templates in `course/templates/`, the material in `course/material/`) and `.opencode/` (these instructions, the commands, two scripts). Never edit these files, and tell students not to either: each update overwrites them without asking.
 - Most students downloaded the folder as a ZIP and have no Git at all; a few cloned it with Git. You do not need to know which: the update script handles both. Never suggest Git commands to students, never commit in this folder (the update removes commits), and never run `git pull`, `git reset` or `pip` yourself to update the folder. Use the script.
 - `/onboarding`: the first session. A few questions, then you walk the student through the installation of the remaining software (Python, Visual Studio Code, Brick Daemon and Brick Viewer, `lifi_hardware`), checking each step, and finally `.opencode/scripts/check_setup.py` tests everything together, including the device.

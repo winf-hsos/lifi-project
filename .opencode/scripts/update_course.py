@@ -278,7 +278,7 @@ def main():
         say(f"- NEW: my-code/{name}/ is ready for you to work in.")
     for name in updated:
         say(f"- The template course/templates/{name}/ was improved. Your copy in my-code/{name}/ "
-            f"was NOT changed; compare the two if you want the improvements.")
+            f"was NOT changed; your assistant can bring the improvement into your copy if you agree.")
     say(f"- {module}")
     if os.path.isfile(NOW):
         with open(NOW, encoding="utf-8") as f:
