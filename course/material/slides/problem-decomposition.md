@@ -8,9 +8,9 @@ Notes on the concept "Cutting Problems". These notes explain the slides for you 
 
 Big problems are not solved in one piece. They are cut, again and again, until the pieces can be solved and checked. This input shows that you can already do this, hands you three tried and tested cutting patterns, and explains how to recognise a good cut. At the end it says why exactly this skill makes the difference when you work with AI assistants.
 
-## Part 1: you can already do this
+**How do you eat an elephant? (slide 3).** One bite at a time. The saying is old, but it holds: nobody eats an elephant in one piece, and nobody solves a big problem in one piece. Big problems are not solved, they are cut.
 
-**How do you eat an elephant? (slide 4).** One bite at a time. The saying is old, but it holds: nobody eats an elephant in one piece, and nobody solves a big problem in one piece. Big problems are not solved, they are cut.
+## Part 1: you can already do this
 
 **The party (slides 5 and 6).** Your flatmate turns 25, party on Saturday, 30 guests. Slide 5 shows this one thing, and nobody plans it as one thing. Slide 6 shows what you do straight away: cut. Drinks, food, music, invitations, cleaning up, and then hand the pieces out. That is decomposition. You have been able to do it for a long time, you have just never called it that. Along the way, the pieces are cut so that you can ask about each one separately whether it is done. We will come back to that.
 
