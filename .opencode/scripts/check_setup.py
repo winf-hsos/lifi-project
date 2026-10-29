@@ -22,7 +22,7 @@ import time
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 MODULE_URL = "https://github.com/winf-hsos/lifi-hardware/archive/refs/heads/main.zip"
-COURSE_SERVER = "https://lifi.uber.space"
+COURSE_SERVER = "https://lifi.hsos.uber.space"
 results = []
 
 

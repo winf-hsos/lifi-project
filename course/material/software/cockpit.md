@@ -6,7 +6,7 @@ The team cockpit shows your light link live in the browser: at the top what your
 
 ## Opening it
 
-Interactive demonstrator: <https://lifi.uber.space/cockpit>
+Interactive demonstrator: <https://lifi.hsos.uber.space/cockpit>
 
 The first time you open it, it asks for your team name. After that the name is part of the address (something like `.../cockpit?team=team-07`), so you can bookmark the page or share the link within your team. "switch team" at the top right changes the team.
 

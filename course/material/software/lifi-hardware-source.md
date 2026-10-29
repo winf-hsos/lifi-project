@@ -1,4 +1,4 @@
-# Source of `lifi_hardware` 0.4.2
+# Source of `lifi_hardware` 0.4.3
 
 This is the complete public part of the module, copied from <https://github.com/winf-hsos/lifi-hardware>. It is the only authority on which functions exist. Do not use methods that are not defined here; the raw Tinkerforge objects are reachable as `lifi.led.raw` and `lifi.sensor.raw`, but beginners should not need them.
 
@@ -65,7 +65,7 @@ from tinkerforge.bricklet_rgb_led_v2 import BrickletRGBLEDV2
 
 from ._telemetry import DEFAULT_SERVER, Telemetry, install_error_hook
 
-__version__ = "0.4.2"
+__version__ = "0.4.3"
 
 # Device identifiers used by Tinkerforge (device_identifier)
 _ID_RGB_LED = 2127               # RGB LED Bricklet 2.0

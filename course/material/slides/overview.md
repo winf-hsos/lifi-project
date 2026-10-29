@@ -6,7 +6,7 @@ These notes explain the deck giving an overview of the module and the project, f
 
 ## Before we start: quick polls (Frames 3 to 24)
 
-On the first day, before anything else, a few questions answered on your phone: scan the QR code on the slide, or open lifi.uber.space/q and type the six-digit code shown under the QR code. It is anonymous: no name, no login. Keep the page open; the next questions appear there by themselves, and the screen shows the results as soon as a question closes. The answers stay saved, and during the semester we come back to them.
+On the first day, before anything else, a few questions answered on your phone: scan the QR code on the slide, or open live.hsos.uber.space/q and type the six-digit code shown under the QR code. It is anonymous: no name, no login. Keep the page open; the next questions appear there by themselves, and the screen shows the results as soon as a question closes. The answers stay saved, and during the semester we come back to them.
 
 **Who is here? (Frames 3 to 10).** Four questions about you: have you ever written a program, how often do you use AI chats like ChatGPT, have you ever worked with an AI agent like Claude Code, Codex or OpenCode, and how well do you think you know what happens inside a computer. Whatever the answers are, this module assumes nothing.
 
@@ -90,7 +90,7 @@ Three things, one after the other. **Two students, two devices:** each of you ge
 
 **The exam (Frames 94 to 96).** 60 minutes, multiple choice, on the concepts and not on the project, everyone on their own. The project is where you meet the concepts; it does not replace understanding them. Whoever passes every challenge and still cannot say why digital transmission tolerates noise does not pass the exam. A 5 % bonus if all five of your challenges are accepted: all or nothing; what counts is the passed acceptance test with its live change, not the documentation. Practise with the questions on every concept page; they have the same format as the exam. The ranking in the competition does not count towards your grade.
 
-**Where to find what (Frame 97).** docs.lifi-project.de is the textbook: concepts, challenges, setup. lms.hs-osnabrueck.de is the notice board: announcements, changes, the schedule. Your course folder holds your assistant and your code. lifi.uber.space/cockpit shows your link, live. And demos.lifi-project.de has all the demonstrators. If you get stuck, ask your assistant first, then your partner, then the team next to you, then Nicolas.
+**Where to find what (Frame 97).** docs.lifi-project.de is the textbook: concepts, challenges, setup. lms.hs-osnabrueck.de is the notice board: announcements, changes, the schedule. Your course folder holds your assistant and your code. lifi.hsos.uber.space/cockpit shows your link, live. And demos.lifi-project.de has all the demonstrators. If you get stuck, ask your assistant first, then your partner, then the team next to you, then Nicolas.
 
 **Quick poll: how do you feel about this module? (Frames 98 and 99).** Looking forward to it, curious, a bit worried, worried: all of these are normal in the first semester. The workshop, your assistant and the order of the challenges are there for exactly that. At the end of the semester we ask again.
 
