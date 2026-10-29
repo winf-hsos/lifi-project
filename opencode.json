@@ -3,8 +3,8 @@
   "instructions": [
     ".opencode/course-assistant.md"
   ],
-  "model": "opencode/space-bunny-free",
-  "small_model": "opencode/space-bunny-free",
+  "model": "openai/gpt-6-luna",
+  "small_model": "openai/gpt-6-luna",
   "enabled_providers": [
     "openai",
     "opencode"

@@ -75,11 +75,9 @@ Inside the folder you will see:
 Start OpenCode. On its start page you see a list **Projects** on the left.
 
 1. **Add your course folder.** Click the small folder icon with the plus next to *Projects* (its tooltip says *Add project*). A window opens: select your course folder, `lifi-project-main` or `lifi-project`, and click *Select Folder*. It now appears in the list of projects.
-2. **Start a session.** Click **New session**. Below the input field you see the model your course folder has selected for you: one of the free models that come with OpenCode. You need no key for it.
+2. **Start a session.** Click **New session**. Below the input field you see the model your course folder has selected for you: the course model from OpenAI. It needs the course key, which comes next.
 
-Free models come and go. If the preset one stops working, pick another free model in the model selection below the input field.
-
-**A key, if you get one.** Later in the course you may get a key for a stronger model, a long line of characters. You enter it in OpenCode: click **Settings** below the list of projects, then **Providers** on the left. At the provider the key is for, click **+ Connect** (if it is not in the list, click *Show more providers* first), choose **API key** and paste it. A key costs money every time the assistant answers, so treat it like a password: do not send it to anyone and do not paste it into a chat, not even the one with your assistant.
+**The course key.** You find it in ILIAS, a long line of characters. You enter it in OpenCode: click **Settings** below the list of projects, then **Providers** on the left. At the provider the key is for, click **+ Connect** (if it is not in the list, click *Show more providers* first), choose **API key** and paste it. A key costs money every time the assistant answers, so treat it like a password: do not send it to anyone and do not paste it into a chat, not even the one with your assistant.
 
 ## Part 2: your assistant takes over
 

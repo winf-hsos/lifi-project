@@ -16,7 +16,7 @@ Everything else is for your assistant and OpenCode. You can ignore it.
 1. Install OpenCode and open this folder in it.
 2. Type `/onboarding`. Your assistant takes it from here.
 
-The course starts with one of the free models that come with OpenCode; you need no key for it. If you get a key for a stronger model later, you enter it in OpenCode's settings under *Providers*.
+The course folder selects the course model (OpenAI). It needs the course key, which you find in ILIAS; you enter it in OpenCode's settings under *Providers*, *OpenAI*. Until then, OpenCode's free models work without a key.
 
 Step by step, with every click described: <https://docs.lifi-project.de/software/>
 

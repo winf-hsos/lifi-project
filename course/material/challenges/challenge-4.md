@@ -76,19 +76,7 @@ You do not have to use the way back. But whoever transmits one-way has to send m
 
 ## What is measured
 
-**The precision run.** If the hash does not match, the run does not count. If it matches, the duration counts.
-
-**The robustness round.** The same run under harder conditions, see below.
-
-## The robustness round
-
-A well-built light channel makes the test "ceiling light on" boring, and that is the right lesson: solving a problem in the hardware instead of the software is a legitimate engineering decision. So the test runs along the axes a tube does not solve.
-
-**Misalignment.** Your setup is slightly turned or shifted sideways before the run. A narrow aperture brings signal but makes you sensitive to misalignment. That trade-off is yours to balance.
-
-**Stray light from the side.** A desk lamp is aimed at the receiver.
-
-**Transport.** The run happens at the test table, not at your desk. Your setup has to be carried and work afterwards.
+**The run.** If the hash does not match, the run does not count. If it matches, the duration counts.
 
 ## Showing it works
 

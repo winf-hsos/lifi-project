@@ -12,7 +12,7 @@ The assistant you start in your course folder is not a general chatbot. It has r
 
 A few things it will not do, on purpose. It writes code with you in small steps and explains each one, but it will not hand you a whole challenge in one go: at every acceptance test you have to change your own program on the spot. It will not give you a number that depends on your setup, such as how many colours you can tell apart; it suggests the experiment instead. And before the class has agreed on its standard, it will not hand you a ready-made design for how a message starts or how sender and receiver stay in step. Finding that out is part of Challenge 3.
 
-The course starts with one of the free models that come with OpenCode; you need no key for it. Free models are free for a limited time only, and some of them use conversations to improve the model: do not paste anything personal there. If you get a key for a stronger model later, it has a limited budget: short questions cost a fraction of a cent, long sessions more, so do not waste it on chatting.
+The course uses an OpenAI model, and the course folder selects it for you. It needs the course key, which you find in ILIAS. The key has a limited budget: short questions cost a fraction of a cent, long sessions more, so do not waste it on chatting. As a fallback, OpenCode's free models work without a key; they are free for a limited time only, and some of them use conversations to improve the model, so do not paste anything personal there.
 
 ## What you can use it for
 
