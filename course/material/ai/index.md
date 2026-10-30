@@ -60,7 +60,7 @@ No language model knows how *your* setup behaves in *your* room. It can help you
 
 The difference between a useful answer and a useless one is usually in the question. A few patterns that work.
 
-**Give it the facts it cannot know.** "My two boxes are 25 cm apart, the room has daylight from the left, integration time is 154 ms, gain is 16. Here are ten readings for red and ten for orange. Are these two reliably distinguishable?" is a question it can help with. "Which colours should I use?" is not, because it has no idea what your sensor sees.
+**Give it the facts it cannot know.** "My two boxes stand at the fixed class distance, the room has daylight from the left, integration time is 154 ms, gain is 16. Here are ten readings for red and ten for orange. Are these two reliably distinguishable?" is a question it can help with. "Which colours should I use?" is not, because it has no idea what your sensor sees.
 
 **Ask for options, not for the answer.** "Give me three ways the receiver could detect the start of a message, with the drawback of each" leaves the decision with you, which is where it belongs.
 

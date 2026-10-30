@@ -91,9 +91,9 @@ The box says 1 terabyte, the computer says 931 gigabytes, and not a single byte 
 
 The decimal ladder multiplies by 1000 per step: kilobyte, megabyte, gigabyte, terabyte. The binary ladder multiplies by 1024, because storage is organised in powers of two and $2^{10} = 1024$ is the round binary number closest to 1000.
 
-[Figure: Two ladders side by side. The steps have the same names in everyday speech, and their values drift apart by about seven percent per step.]
+[Figure: Two ladders side by side. The steps have the same names in everyday speech, and their values drift further apart with every step: 2.4 percent at kilo, about 7 percent at giga, 10 percent at tera.]
 
-The manufacturer counts the decimal ladder up, so a terabyte is a trillion bytes. The operating system takes that same trillion and divides it down the binary ladder, by $1024^3$, and arrives at 931. Over four steps the difference adds up to roughly seven percent.
+The manufacturer counts the decimal ladder up, so a terabyte is a trillion bytes. The operating system takes that same trillion and divides it down the binary ladder, by $1024^3$, and arrives at 931. Each of those three divisions loses 2.4 percent against the decimal step, and together they add up to roughly seven percent.
 
 [Figure: The same bytes, counted on two different ladders. Nobody cheated; both sides call their step a gigabyte.]
 
@@ -121,5 +121,5 @@ The practice questions have the same format as the exam, so they are also a good
 
 ## Further reading
 
-- Charles Petzold: Code. The Hidden Language of Computer Hardware and Software. Microsoft Press, 2nd edition 2022. Chapters 7 to 10 walk from our ten fingers through base eight and base two to the byte, one small step at a time, and they are the friendliest treatment of this material anywhere.
+- Charles Petzold: Code. The Hidden Language of Computer Hardware and Software. Microsoft Press, 2nd edition 2022. Chapters 9 to 12 walk from our ten fingers through base eight and base two to the byte, one small step at a time, and they are the friendliest treatment of this material anywhere.
 - Georges Ifrah: The Universal History of Numbers. Wiley, 2000. Where the digits came from, why the zero took so long to arrive, and how many other bases people have actually used. Read it for the story, not for the arithmetic.

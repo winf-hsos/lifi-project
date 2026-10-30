@@ -122,7 +122,7 @@ The box says 1 terabyte. You install the disk, and the computer shows 931 gigaby
 
 Guess first, before you read on.
 
-Nobody is cheating. The manufacturer counts up the decimal ladder, and for them a terabyte is a trillion bytes. The operating system takes exactly the same trillion bytes and divides it down the binary ladder, by 1024³, and arrives at 931. Not a single byte is missing. Over four rungs the difference adds up to roughly seven percent, and both sides call their rung a gigabyte.
+Nobody is cheating. The manufacturer counts up the decimal ladder, and for them a terabyte is a trillion bytes. The operating system takes exactly the same trillion bytes and divides it down the binary ladder, by 1024³, and arrives at 931. Not a single byte is missing. Each of those three rungs loses 2.4 percent against the decimal one, and together they add up to roughly seven percent, and both sides call their rung a gigabyte.
 
 That is not fraud, it is a word problem.
 

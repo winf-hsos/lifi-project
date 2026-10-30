@@ -33,7 +33,7 @@ The building blocks of processing are called gates, and there are only a few. Ea
 
 Why so few? You could even make do with one. NAND is AND followed by NOT, and from NAND alone all the others appear: NOT, by feeding the same bit into both inputs; AND, by flipping a NAND once more; OR, by flipping both inputs first. NAND is also what a pair of transistors does on its own, so the chip in your laptop is, in practice, made of NAND gates, and the four from the toolbox are built out of them. NOR, which is OR followed by NOT, can do the same, and we need it in a moment.
 
-You know the shape of a gate from [Problem solving with computers](input-processing-output.md): input, fixed rule, output. It is the IPO model at its smallest. And here is a sentence worth keeping: no gate understands anything. It does not know whether it is processing a number, a letter or a pixel. Meaning exists only for us, exactly as with the type field in Challenge 4.
+You know the shape of a gate from [Problem Solving with Computers](input-processing-output.md): input, fixed rule, output. It is the IPO model at its smallest. And here is a sentence worth keeping: no gate understands anything. It does not know whether it is processing a number, a letter or a pixel. Meaning exists only for us, exactly as with the type field in Challenge 4.
 
 ### Storing: a bit that remembers
 

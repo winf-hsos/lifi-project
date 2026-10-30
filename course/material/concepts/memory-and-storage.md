@@ -57,7 +57,7 @@ From byte 54 come the pixels, three bytes each. The first pixel is `00 00 00`, b
 
 Anyone who now says "cyan", because red is off and green and blue are on, is wrong, because this format stores the three parts in the order blue, green, red. `00 ff ff` is blue off, green on, red on: yellow. And the first stored row is not the top one but the bottom one; bitmaps stand upside down in the file. The top row of the image only begins at byte 66 with `00 00 ff`, a pure red.
 
-Both are arbitrary decisions by people who fixed this format forty years ago. They are binding anyway, because every program that reads bitmaps knows them and follows them. That is exactly what a file format is: not a law of nature but a written agreement that nobody gets to choose any more. You wrote an agreement like that yourselves in Challenge 3.
+Both are arbitrary decisions by people who fixed this format in 1990. They are binding anyway, because every program that reads bitmaps knows them and follows them. That is exactly what a file format is: not a law of nature but a written agreement that nobody gets to choose any more. You wrote an agreement like that yourselves in Challenge 3.
 
 In the demonstrator [Inside a File](https://demos.lifi-project.de/inside-a-file/) you can do all of this yourself: one of the three familiar photos as a small bitmap in a hex editor, a click on a pixel shows its three bytes, and every byte can be changed. Change a single byte in the pixel part and one colour component of one pixel changes; the picture is still displayed, only wrong in one spot. Change a byte in the header, the width for instance, and the viewer shows stripes or refuses the file altogether. That is the difference between payload and header: a broken byte in the data is a small injury, a broken byte in the header is a large one. It is also why the hash over everything decides in the final, see [Errors and Redundancy](errors-and-redundancy.md).
 
@@ -117,7 +117,7 @@ Three things follow for Challenge 4. Read the file as bytes and not as text, or 
 
 ## Slides
 
-The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys.
+The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
 ## Practice questions
 

@@ -123,7 +123,7 @@ The original's lowest bits look like noise with traces of the picture. With the 
 
 ## Slides
 
-The slides for this concept, right here. They are the third deck of session 13, after [Throughput and Limits](throughput-and-limits.md) and [Compression](compression.md), and they belong to the extra part of Challenge 4.
+The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
 ## Practice questions
 
@@ -134,4 +134,4 @@ The practice questions have the same format as the exam, so they are also a good
 - Simon Singh: The Code Book. The Science of Secrecy from Ancient Egypt to Quantum Cryptography. Fourth Estate, 1999. The history of the field as a story, from Caesar to public keys, without a single formula you need to follow. The chapter on the one-time pad and the chapter on Diffie and Hellman are this page at book length.
 - Auguste Kerckhoffs: La cryptographie militaire. Journal des sciences militaires 9, 1883. <https://www.petitcolas.net/kerckhoffs/>. The six rules, the second of which is the one on this page: the system must not require secrecy, and it must be able to fall into the enemy's hands without harm.
 - Claude E. Shannon: Communication Theory of Secrecy Systems. Bell System Technical Journal 28 (4), 1949. <https://doi.org/10.1002/j.1538-7305.1949.tb00928.x>. The proof that the one-time pad is unbreakable, by the same author as the information measure from [Symbols and Information](symbols-and-information.md). Hard; read the first pages for the setting.
-- Whitfield Diffie and Martin E. Hellman: New Directions in Cryptography. IEEE Transactions on Information Theory 22 (6), 1976. <https://doi.org/10.1109/TIT.1976.1055638>. The paper that invented the open padlock. The introduction is readable by anyone; the mathematics comes later.
+- Whitfield Diffie and Martin E. Hellman: New Directions in Cryptography. IEEE Transactions on Information Theory 22 (6), 1976. <https://doi.org/10.1109/TIT.1976.1055638>. The paper that introduced public keys. The open padlock on this page is the idea in its simplest form, a lock anyone can close and only one person can open; Diffie and Hellman's own method goes one step further and lets both sides agree on a key without ever sending it. The introduction is readable by anyone; the mathematics comes later.

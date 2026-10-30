@@ -77,7 +77,7 @@ There is no single correct level for every situation. The right level is the one
 
 Once the edges are clear, every box leaves you with two questions. The first asks: how does the box do its work? The answer is a program, an algorithm written so the machine can carry it out. That is where we go next in [Algorithms and Programs](algorithms-and-programs.md).
 
-The second asks: how are the things at the edges written so a machine can work with them? The sensor example turned visible light into four numbers. Other answers use bits for symbols, numbers, pictures, and files. We will build them in [Measurement and Experiments](measurement-and-experiments.md), [Symbols and Information](symbols-and-information.md), [Number Systems](number-systems.md), and [Code Systems](code-systems.md).
+The second asks: how are the things at the edges written so a machine can work with them? The sensor example turned visible light into four numbers. Other answers use bits for symbols, numbers, pictures, and files. We will build them in [Measuring and Experimenting](measurement-and-experiments.md), [Symbols and Information](symbols-and-information.md), [Number Systems](number-systems.md), and [Code Systems](code-systems.md).
 
 [Figure: One box, two questions. The processing leads to programs; the input and output lead to representation.]
 

@@ -71,7 +71,7 @@ The same tool, now applied to your own link:
 
 [Figure: Each symbol from an alphabet of N equally likely possibilities carries log₂(N) bits. The same file at the same symbol rate is through in a third of the time with eight colours instead of two.]
 
-So why not use 256 colours? Because physics has a say: more symbols means smaller distances between the colours, and past some point the noise eats the gain again. That is the bridge to [Signal und Rauschen](signal-and-noise.md), and it makes the size of your alphabet a measurement rather than a matter of taste.
+So why not use 256 colours? Because physics has a say: more symbols means smaller distances between the colours, and past some point the noise eats the gain again. That is the bridge to [Signal and Noise](signal-and-noise.md), and it makes the size of your alphabet a measurement rather than a matter of taste.
 
 At the other end the opposite holds. Two symbols are enough for any message at all, you just need more of them:
 

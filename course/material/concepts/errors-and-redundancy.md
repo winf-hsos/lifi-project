@@ -126,7 +126,7 @@ So: whoever can ask back, checks and asks. Whoever cannot ask back has to pay in
 
 ## Slides
 
-The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys.
+The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
 ## Practice questions
 
@@ -137,4 +137,4 @@ The practice questions have the same format as the exam, so they are also a good
 - Richard W. Hamming: Error Detecting and Error Correcting Codes. Bell System Technical Journal 29 (2), 1950. <https://doi.org/10.1002/j.1538-7305.1950.tb00463.x>. The paper that started error correction, written because Hamming's weekend computer runs kept dying on a single bad bit and nobody was there on Monday to restart them. The first two pages are readable without any mathematics.
 - Claude E. Shannon: A Mathematical Theory of Communication. Bell System Technical Journal 27 (3), 1948. <https://doi.org/10.1002/j.1538-7305.1948.tb01338.x>. The same paper that gave us the measure of information also proves the surprising part: on a noisy channel you can get the error rate as close to zero as you like, as long as you send slower than the channel's capacity.
 - Ross N. Williams: A Painless Guide to CRC Error Detection Algorithms, 1993. <https://www.zlib.net/crc_v3.txt>. How a real checksum works, written for people who kept finding CRC code they could not understand. Long, informal, and the only text on the subject that reads like a conversation.
-- Andrew S. Tanenbaum and David J. Wetherall: Computer Networks. Pearson, 5th edition 2011, chapter 3. The textbook treatment of detection against correction and of the retransmission protocols this page sketches, including what happens when the acknowledgement itself gets lost.
+- Andrew S. Tanenbaum, Nick Feamster, David Wetherall: Computer Networks. Pearson, 6th edition 2021, chapter 3. The textbook treatment of detection against correction and of the retransmission protocols this page sketches, including what happens when the acknowledgement itself gets lost.

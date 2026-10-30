@@ -156,6 +156,6 @@ The practice questions have the same format as the exam, so they are also a good
 
 ## Further reading
 
-- Charles Petzold: Code. The Hidden Language of Computer Hardware and Software. Microsoft Press, 2nd edition 2022. Chapters 2 to 6 build a code from scratch, starting with a torch signalling through a window, and arrive at Braille and Morse before a single byte appears.
+- Charles Petzold: Code. The Hidden Language of Computer Hardware and Software. Microsoft Press, 2nd edition 2022. Chapters 1 to 3 build a code from scratch, starting with a torch signalling through a window, and arrive at Morse and Braille before a single byte appears.
 - Simon Singh: The Code Book. Fourth Estate, 1999. The chapter on Linear B and the decipherment of ancient scripts is the Rosetta story at length, and it shows what recovering a lost table actually takes.
 - Joel Spolsky: The Absolute Minimum Every Software Developer Must Know About Unicode. <https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/>. Twenty years old and still the clearest short explanation of why text arrives broken.

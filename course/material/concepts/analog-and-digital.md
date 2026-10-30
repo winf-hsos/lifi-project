@@ -38,7 +38,7 @@ How many states can you afford? That question has a picture, and it is the one t
 
 [Figure: Three times the same measurement with the same wobble, and only the number of regions grows. With two regions the band sits comfortably inside its own region, with four it gets tight, with eight the same band crosses the boundary.]
 
-The noise did not grow. The margin shrank. The distance between regions is your safety reserve, and more regions spread the same reserve over more boundaries. The other half of that problem is on [Signal und Rauschen](signal-and-noise.md): there the number of symbols stays put and the measuring gets faster instead. Both roads end at the same wall.
+The noise did not grow. The margin shrank. The distance between regions is your safety reserve, and more regions spread the same reserve over more boundaries. The other half of that problem is on [Signal and Noise](signal-and-noise.md): there the number of symbols stays put and the measuring gets faster instead. Both roads end at the same wall.
 
 ### What the thrown-away precision buys
 

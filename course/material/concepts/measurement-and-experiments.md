@@ -4,7 +4,7 @@ Online: <https://docs.lifi-project.de/concepts/measurement-and-experiments.html>
 
 ## Summary
 
-Whether a real setup behaves the way you expect can only be decided by measuring it. An experiment that tells you something changes conditions on purpose, repeats readings, and records what was done and what came out. This concept is the craft of the module: it applies to every claim about your setup, not only to light. What those measurements then say about the limits of your link, how many colours you can safely tell apart, is the subject of [Signal und Rauschen](signal-and-noise.md).
+Whether a real setup behaves the way you expect can only be decided by measuring it. An experiment that tells you something changes conditions on purpose, repeats readings, and records what was done and what came out. This concept is the craft of the module: it applies to every claim about your setup, not only to light. What those measurements then say about the limits of your link, how many colours you can safely tell apart, is the subject of [Signal and Noise](signal-and-noise.md).
 
 In this chapter, we address the following questions:
 
@@ -52,7 +52,7 @@ The **integration time** is the sensor's reading window: it decides over how muc
 
 [Figure: The same second, read three times over. Every bar is one reading and its width is the window it averages over: four long ones fit into the second, or twelve short ones. The shorter the window, the more readings you get, and the more they scatter, until single ones land outside the band that still reads correctly.]
 
-Longer is calmer, shorter is faster. That is the central trade-off of the whole project, because the symbol rate of your transmission hangs on it. Where the limit of your setup lies is answered by no table and no assistant, only by your own measurement series. Here you meet the knob; what its setting means for your alphabet and your throughput is worked out in [Signal und Rauschen](signal-and-noise.md) after the first challenge.
+Longer is calmer, shorter is faster. That is the central trade-off of the whole project, because the symbol rate of your transmission hangs on it. Where the limit of your setup lies is answered by no table and no assistant, only by your own measurement series. Here you meet the knob; what its setting means for your alphabet and your throughput is worked out in [Signal and Noise](signal-and-noise.md) after the first challenge.
 
 ### Measuring on purpose
 

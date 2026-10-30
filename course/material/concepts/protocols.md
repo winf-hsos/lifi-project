@@ -104,6 +104,6 @@ The practice questions have the same format as the exam, so they are also a good
 
 ## Further reading
 
-- Charles Petzold: Code. The Hidden Language of Computer Hardware and Software. Microsoft Press, 2nd edition 2022. Chapter 20 builds a message out of an agreement and shows how much of a "code" is convention rather than technology.
+- Charles Petzold: Code. The Hidden Language of Computer Hardware and Software. Microsoft Press, 2nd edition 2022. Chapter 13 tells how ASCII and Unicode came about and shows how much of a "code" is convention rather than technology.
 - Marc Levinson: The Box. How the Shipping Container Made the World Smaller and the World Economy Bigger. Princeton University Press, 2nd edition 2016. The story of a standard that changed the world, and of the decades of arguing it took to agree on a set of dimensions that nobody thought were the best ones.
 - RFC 793, Transmission Control Protocol, 1981. <https://www.rfc-editor.org/rfc/rfc793>. The document that runs most of the internet. You are not meant to read it through; look at section 3.1, the header diagram, and find the fields you have just invented yourselves.

@@ -71,9 +71,14 @@ Small interactive pages, one idea each. The explanation lives on the concept pag
 | [Drift Simulator](https://demos.lifi-project.de/drift-simulator/) | two clocks drift apart until the message breaks; a marker saves it | [Sampling and Synchronization](concepts/sampling-and-synchronization.md) |
 | [Byte Switchboard](https://demos.lifi-project.de/byte-switchboard/) | flip eight bits, read the number in binary, decimal, hex and ASCII | [Number Systems](concepts/number-systems.md) |
 | [Pixel Painter](https://demos.lifi-project.de/pixel-painter/) | paint an 8×8 picture and watch its bytes write themselves | [Code Systems](concepts/code-systems.md) |
+| [The Prefix Trap](https://demos.lifi-project.de/prefix-trap/) | choose your own code words and watch the receiver hesitate between readings until only one is left | [Code Systems](concepts/code-systems.md) |
 | [Inside a File](https://demos.lifi-project.de/inside-a-file/) | a real bitmap in a hex editor; change a byte, watch the picture obey | [Memory and Storage](concepts/memory-and-storage.md) |
 | [The Pixel Filter](https://demos.lifi-project.de/pixel-filter/) | make a photo brighter, one addition per pixel; step through the bits, then run all 16,384 | [Logic and Arithmetic](concepts/logic-and-arithmetic.md) |
 | [The Gate Lab](https://demos.lifi-project.de/gate-lab/) | switches in, lamps out: gates, adders, a comparator, a flip-flop and a register | [Logic and Arithmetic](concepts/logic-and-arithmetic.md) |
+| [Frame Builder](https://demos.lifi-project.de/frame-builder/) | pick a preamble and an end marker, then watch a receiver look for your message in a noisy room | [Protocols](concepts/protocols.md) |
+| [Where Did the Bits Go?](https://demos.lifi-project.de/where-did-the-bits-go/) | send a photo over a framed link and see headers, checks and retries eat time | [Throughput and Limits](concepts/throughput-and-limits.md) |
+| [The Text Squeezer](https://demos.lifi-project.de/text-squeezer/) | type a text and watch it get packed: pointers back to repeats, short codes for frequent letters | [Compression](concepts/compression.md) |
+| [The Scrambler](https://demos.lifi-project.de/scrambler/) | scramble text or a picture with xor, then try all 256 one-byte keys | [Encryption](concepts/encryption.md) |
 
 ## Background
 

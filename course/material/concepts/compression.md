@@ -148,7 +148,7 @@ If your partner team's receiver produces garbage although the transmission was c
 
 ## Slides
 
-The slides for this concept, right here. They are the second deck of session 13; the first, on [Throughput and Limits](throughput-and-limits.md), places compression as the third of three levers.
+The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
 ## Practice questions
 
@@ -158,6 +158,6 @@ The practice questions have the same format as the exam, so they are also a good
 
 - David A. Huffman: A Method for the Construction of Minimum-Redundancy Codes. Proceedings of the IRE 40 (9), 1952. <https://doi.org/10.1109/JRPROC.1952.273898>. Four pages, and the tree on this page is in them. Readable once you have built one yourself.
 - P. Deutsch: DEFLATE Compressed Data Format Specification version 1.3. RFC 1951, 1996. <https://www.rfc-editor.org/rfc/rfc1951>. The exact format inside every ZIP and PNG: pointers back, then Huffman codes. Section 1.1 says in one paragraph what this page says in two.
-- Charles Petzold: Code. The Hidden Language of Computer Hardware and Software. Microsoft Press, 2nd edition 2022. Chapter 8 builds Morse code from letter frequencies, which is the same idea as a packer's: what occurs often gets a short code.
+- Charles Petzold: Code. The Hidden Language of Computer Hardware and Software. Microsoft Press, 2nd edition 2022. Chapter 2 takes Morse code apart, and the frequent letters there have the short codes, which is the same idea as a packer's: what occurs often gets a short code.
 - David Salomon: Data Compression. The Complete Reference. Springer, 4th edition 2007. <https://link.springer.com/book/10.1007/978-3-642-86092-8>. Far more than you need, but chapter 1 states the counting argument properly and chapter 2 walks through run-length encoding and its relatives.
 - The `zlib` FAQ, <https://www.zlib.net/zlib_faq.html>, question 15: "Can zlib compress already compressed data?" A short, dry answer from the people who wrote the thing, and it says the same as this page.

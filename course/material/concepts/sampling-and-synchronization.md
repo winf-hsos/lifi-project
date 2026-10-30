@@ -104,6 +104,6 @@ The practice questions have the same format as the exam, so they are also a good
 
 ## Further reading
 
-- Charles Petzold: Code. The Hidden Language of Computer Hardware and Software. Microsoft Press, 2nd edition 2022. Chapter 19 builds a clock out of an oscillator and then spends the rest of the book living with the consequences; it is the friendliest place to see why everything digital is really a question of timing.
+- Charles Petzold: Code. The Hidden Language of Computer Hardware and Software. Microsoft Press, 2nd edition 2022. Chapters 17 and 18 build an oscillator and then a clock out of it, and the rest of the book lives with the consequences; it is the friendliest place to see why everything digital is really a question of timing.
 - Christiaan Huygens' letter to his father, 26 February 1665, on two pendulum clocks hanging from the same beam that pull each other into step. The first written account of synchronization, and still the clearest picture of why a shared start is not enough. Summarized with the original passages in Matthew Bennett et al.: Huygens's clocks. Proceedings of the Royal Society A 458, 2002. <https://doi.org/10.1098/rspa.2001.0888>
 - The Manchester code, used by the earliest Ethernet networks, puts a transition in the middle of every bit for exactly the reason described above. The Wikipedia article <https://en.wikipedia.org/wiki/Manchester_code> shows the waveform, and it is worth working out for yourself what that costs in bits per second.
