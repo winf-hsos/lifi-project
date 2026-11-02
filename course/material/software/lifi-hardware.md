@@ -2,6 +2,8 @@
 
 Online: <https://docs.lifi-project.de/software/lifi-hardware.html>
 
+The course module lifi_hardware is now maintained on Hands-on Computer Science (The course module lifi_hardware: English <https://hands-on-computer-science.de/cs/en/items/lifi-hardware/>, German <https://hands-on-computer-science.de/cs/de/items/lifi-hardware/>). The text below is the last version from the course website; where it disagrees with Hands-on Computer Science, Hands-on Computer Science is right.
+
 In Python, a module is a piece of finished program code that you pull into your own program with a single `import` line and then use. Practically every Python program works this way: for maths, random numbers or timing nobody writes the code themselves, they import the module that does it. The word has nothing to do with the "module" in your study programme, by the way. It is unfortunately used for both.
 
 `lifi_hardware` is such a Python module. I wrote it for this course. It holds the code that talks to your LiFi device, and you work with it for the whole project.
