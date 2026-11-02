@@ -2,6 +2,8 @@
 
 Online: <https://docs.lifi-project.de/concepts/problem-decomposition.html>
 
+Cutting problems is now maintained on Hands-on Computer Science (Cutting problems: English <https://hands-on-computer-science.de/cs/en/items/problem-decomposition/>, German <https://hands-on-computer-science.de/cs/de/items/problem-decomposition/>; Cutting the LiFi project: English <https://hands-on-computer-science.de/cs/en/items/cutting-the-lifi-project/>, German <https://hands-on-computer-science.de/cs/de/items/cutting-the-lifi-project/>). The text below is the last version from the course website; where it disagrees with Hands-on Computer Science, Hands-on Computer Science is right.
+
 ## Summary
 
 A big problem becomes solvable when you cut it into small pieces you can check one by one. There are cutting patterns that come back again and again. A good cut also settles two things at once: how you will know that a piece is done, and what has to be agreed at its borders.
@@ -55,8 +57,6 @@ The same holds in your team: one person at each end of the link, and whatever cr
 And with an AI assistant, cutting is the key skill of all. "Build me the file transfer" is one big wish: the assistant cannot do it well, and you could not check the result if it did. A small piece with its test is a different thing: "read the sensor ten times and return the average. test: covered, it stays under 10; red LED on, it goes over 100." You cut, the assistant solves pieces, you check.
 
 ## Slides
-
-The slides for this concept have moved to Hands-on Computer Science, where they are kept up to date: Cutting problems (English: <https://hands-on-computer-science.de/cs/en/items/problem-decomposition/>, German: <https://hands-on-computer-science.de/cs/de/items/problem-decomposition/>); Cutting the LiFi project (English: <https://hands-on-computer-science.de/cs/en/items/cutting-the-lifi-project/>, German: <https://hands-on-computer-science.de/cs/de/items/cutting-the-lifi-project/>)
 
 The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 

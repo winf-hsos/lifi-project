@@ -2,7 +2,7 @@
 
 Online: <https://docs.lifi-project.de/hardware/index.html>
 
-The LiFi device is now maintained on Hands-on Computer Science (English: <https://hands-on-computer-science.de/cs/en/items/lifi-device/>, German: <https://hands-on-computer-science.de/cs/de/items/lifi-device/>). The text below is the last version from the course website; where it disagrees with Hands-on Computer Science, Hands-on Computer Science is right.
+The LiFi device is now maintained on Hands-on Computer Science (The LiFi device: English <https://hands-on-computer-science.de/cs/en/items/lifi-device/>, German <https://hands-on-computer-science.de/cs/de/items/lifi-device/>). The text below is the last version from the course website; where it disagrees with Hands-on Computer Science, Hands-on Computer Science is right.
 
 Your device is three parts in a 3D-printed case:
 

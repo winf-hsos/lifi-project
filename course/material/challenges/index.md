@@ -2,7 +2,7 @@
 
 Online: <https://docs.lifi-project.de/challenges/index.html>
 
-The LiFi project is now maintained on Hands-on Computer Science (English: <https://hands-on-computer-science.de/cs/en/projects/lifi/>, German: <https://hands-on-computer-science.de/cs/de/projects/lifi/>). The text below is the last version from the course website; where it disagrees with Hands-on Computer Science, Hands-on Computer Science is right.
+The LiFi project is now maintained on Hands-on Computer Science (The LiFi project: English <https://hands-on-computer-science.de/cs/en/projects/lifi/>, German <https://hands-on-computer-science.de/cs/de/projects/lifi/>). The text below is the last version from the course website; where it disagrees with Hands-on Computer Science, Hands-on Computer Science is right.
 
 Here is the whole project on one page. If you read only one page before you start, make it this one.
 

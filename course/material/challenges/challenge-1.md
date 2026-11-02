@@ -2,7 +2,7 @@
 
 Online: <https://docs.lifi-project.de/challenges/challenge-1.html>
 
-Challenge 1 is now maintained on Hands-on Computer Science (English: <https://hands-on-computer-science.de/cs/en/items/lifi-challenge-1/>, German: <https://hands-on-computer-science.de/cs/de/items/lifi-challenge-1/>). The text below is the last version from the course website; where it disagrees with Hands-on Computer Science, Hands-on Computer Science is right.
+Challenge 1 is now maintained on Hands-on Computer Science (Challenge 1: English <https://hands-on-computer-science.de/cs/en/items/lifi-challenge-1/>, German <https://hands-on-computer-science.de/cs/de/items/lifi-challenge-1/>). The text below is the last version from the course website; where it disagrees with Hands-on Computer Science, Hands-on Computer Science is right.
 
 This challenge looks harmless, and it decides your whole project anyway. It asks a single question:
 

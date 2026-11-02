@@ -2,7 +2,7 @@
 
 Online: <https://docs.lifi-project.de/challenges/challenge-0.html>
 
-Challenge 0 is now maintained on Hands-on Computer Science (English: <https://hands-on-computer-science.de/cs/en/items/lifi-challenge-0/>, German: <https://hands-on-computer-science.de/cs/de/items/lifi-challenge-0/>). The text below is the last version from the course website; where it disagrees with Hands-on Computer Science, Hands-on Computer Science is right.
+Challenge 0 is now maintained on Hands-on Computer Science (Challenge 0: English <https://hands-on-computer-science.de/cs/en/items/lifi-challenge-0/>, German <https://hands-on-computer-science.de/cs/de/items/lifi-challenge-0/>). The text below is the last version from the course website; where it disagrees with Hands-on Computer Science, Hands-on Computer Science is right.
 
 Before anything can travel through the air, your laptop and your box have to talk to each other at all. So this first challenge asks only one question, and it is a modest one on purpose:
 
