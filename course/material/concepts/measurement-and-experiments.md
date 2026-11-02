@@ -66,7 +66,7 @@ And when a clean measurement series contradicts a suggestion from the assistant,
 
 ## Slides
 
-The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
+The slides for this concept have moved to Hands-on Computer Science, where they are kept up to date: Measuring and experimenting (English: <https://hands-on-computer-science.de/cs/en/items/measuring-and-experimenting/>, German: <https://hands-on-computer-science.de/cs/de/items/measuring-and-experimenting/>)
 
 ## Practice questions
 
