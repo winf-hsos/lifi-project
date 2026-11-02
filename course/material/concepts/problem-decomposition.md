@@ -58,6 +58,8 @@ And with an AI assistant, cutting is the key skill of all. "Build me the file tr
 
 The slides for this concept have moved to Hands-on Computer Science, where they are kept up to date: Cutting problems (English: <https://hands-on-computer-science.de/cs/en/items/problem-decomposition/>, German: <https://hands-on-computer-science.de/cs/de/items/problem-decomposition/>); Cutting the LiFi project (English: <https://hands-on-computer-science.de/cs/en/items/cutting-the-lifi-project/>, German: <https://hands-on-computer-science.de/cs/de/items/cutting-the-lifi-project/>)
 
+The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
+
 ## Practice questions
 
 The practice questions have the same format as the exam, so they are also a good way to prepare for it.

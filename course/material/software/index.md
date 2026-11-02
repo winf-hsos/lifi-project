@@ -2,6 +2,8 @@
 
 Online: <https://docs.lifi-project.de/software/index.html>
 
+Required Software is now maintained on Hands-on Computer Science (English: <https://hands-on-computer-science.de/cs/en/items/lifi-software/>, German: <https://hands-on-computer-science.de/cs/de/items/lifi-software/>). The text below is the last version from the course website; where it disagrees with Hands-on Computer Science, Hands-on Computer Science is right.
+
 Five programs have to be on your laptop before your first line of code. All of them are free, and all of them run on Windows and on macOS. You install only the first one by hand. Your assistant helps you with the other four.
 
 | Program | What you need it for | Where to get it |
