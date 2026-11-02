@@ -19,32 +19,28 @@ from lifi_hardware import led, sensor
 
 
 # ---------------------------------------------------------------------------
-# 1. How big is your alphabet?
+# 1. Your alphabet: one colour per line
 #
-# In other words: how many different symbols do you use? The symbols are
-# numbered from 0 to ALPHABET_SIZE - 1.
+# Each line is one symbol. The first line is symbol 0, the next one symbol 1,
+# and so on. A colour is three numbers from 0 to 255: red, green, blue.
 #
-# Start small. Two symbols to get it running, then go up.
-# ---------------------------------------------------------------------------
-ALPHABET_SIZE = 2
-
-
-# ---------------------------------------------------------------------------
-# Here you can write down which colour belongs to which symbol.
-# The list must have exactly as many entries as ALPHABET_SIZE says.
+# Start small, with just off and white. For more symbols, remove the # in
+# front of the next line, or write a colour of your own.
 # ---------------------------------------------------------------------------
 SYMBOL_COLORS = [
-    (0, 0, 0),          # symbol 0: off
-    (255, 255, 255),    # symbol 1: white
-    *[
-        (255, 0, 0),
-        (0, 255, 0),
-        (0, 0, 255),
-        (0, 255, 255),
-        (255, 0, 255),
-        (255, 255, 0),
-    ][:max(0, ALPHABET_SIZE - 2)],
+    (0, 0, 0),          # off
+    (255, 255, 255),    # white
+    # (255, 0, 0),      # red
+    # (0, 255, 0),      # green
+    # (0, 0, 255),      # blue
+    # (255, 255, 0),    # yellow
+    # (0, 255, 255),    # cyan
+    # (255, 0, 255),    # magenta
 ]
+
+# How many symbols you have. This counts the lines above by itself, so you
+# never change it by hand.
+ALPHABET_SIZE = len(SYMBOL_COLORS)
 
 
 # This is where the receiver stores what it measured during calibration.

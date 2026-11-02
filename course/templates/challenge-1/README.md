@@ -8,7 +8,7 @@ Everything goes into `device.py`. Five things, and the test script asks for noth
 
 | | What |
 |---|---|
-| `ALPHABET_SIZE` | how many symbols you use |
+| `SYMBOL_COLORS` | your alphabet, one colour per line (`ALPHABET_SIZE` counts them by itself) |
 | `calibrate_sender()` | play through your alphabet once |
 | `calibrate_receiver()` | measure along and remember reference values |
 | `send_symbol(index)` | show one symbol |
@@ -49,7 +49,7 @@ This script is exactly what runs at the acceptance test. So you can rehearse the
 
 ## An approach that works
 
-Start with `ALPHABET_SIZE = 2`, so just off and white. When that gets through 50 runs without a mistake, go up to 4, then to 8. At some point mistakes appear, and the last size without mistakes is your result.
+Start with the two colours already in `SYMBOL_COLORS`, so just off and white. When that gets through 50 runs without a mistake, go up to 4 by removing the `#` in front of the next two colours, then to 8. At some point mistakes appear, and the last size without mistakes is your result.
 
 It does not pay to gamble high: eight symbols recognised reliably are worth more than sixteen with an occasional mix-up.
 
