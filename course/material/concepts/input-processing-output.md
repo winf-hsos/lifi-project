@@ -2,6 +2,8 @@
 
 Online: <https://docs.lifi-project.de/concepts/input-processing-output.html>
 
+Input, processing, output: The IPO model is now maintained on Hands-on Computer Science (Input, processing, output: The IPO model: English <https://hands-on-computer-science.de/cs/en/items/input-processing-output/>, German <https://hands-on-computer-science.de/cs/de/items/input-processing-output/>; Slides: Solving problems with computers: English <https://hands-on-computer-science.de/cs/en/items/input-processing-output-slides/>, German <https://hands-on-computer-science.de/cs/de/items/input-processing-output-slides/>). The text below is the last version from the course website; where it disagrees with Hands-on Computer Science, Hands-on Computer Science is right.
+
 ## Summary
 
 A computer can work on a piece of a problem when that piece has clear edges: something goes in, a fixed rule acts on it, and something comes out. The same shape appears at every level, from a logic gate to a function to a complete system. Once you know the input and the expected output, the piece comes with its own test. A program answers how the work happens. Data representation answers what the machine can work on in the first place.
