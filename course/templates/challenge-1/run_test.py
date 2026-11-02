@@ -3,9 +3,10 @@ Test script for Challenge 1.
 
 You do not change this script. At the acceptance test the original version runs.
 
-How it works: start it on both computers, one as sender, one as receiver.
-Both sides write a log. Afterwards `compare.py` compares the two logs and
-prints the result.
+How it works: start it twice, once as sender and once as receiver, on two
+computers or in two terminals on the same one. The sender runs your
+sender.py, the receiver your receiver.py. Both sides write a log. Afterwards
+`compare.py` compares the two logs and prints the result.
 
     python run_test.py sender
     python run_test.py receiver
@@ -19,7 +20,7 @@ import argparse
 import random
 import time
 
-import device
+import agreement
 
 SEED = 20260817          # fixed random sequence so that both sides expect the same
 DEFAULT_RUNS = 50
@@ -36,29 +37,31 @@ def parse_arguments():
 def build_sequence(runs):
     """Creates the sequence of symbols to send. The same on both sides."""
     generator = random.Random(SEED)
-    return [generator.randrange(device.ALPHABET_SIZE) for _ in range(runs)]
+    return [generator.randrange(agreement.ALPHABET_SIZE) for _ in range(runs)]
 
 
 def wait_for_start(role):
     print()
     print(f"Role: {role}")
-    print(f"Alphabet size according to your code: {device.ALPHABET_SIZE}")
+    print(f"Alphabet size according to agreement.py: {agreement.ALPHABET_SIZE}")
     print()
-    input("Both sides ready? Then press Enter on both computers at the same time. ")
+    input("Both sides ready? Then press Enter on both sides at the same time. ")
 
 
 def run_sender(arguments):
+    import sender      # only the sending side, so the receiver's device stays untouched
+
     sequence = build_sequence(arguments.runs)
 
     wait_for_start("sender")
 
     print("Calibrating ...")
-    device.calibrate_sender()
+    sender.calibrate()
 
     print(f"Transmitting {arguments.runs} symbols ...")
     started = time.time()
     for position, symbol in enumerate(sequence):
-        device.send_symbol(symbol)
+        sender.send_symbol(symbol)
         print(f"  {position + 1}/{arguments.runs}  sent: {symbol}")
     duration = time.time() - started
 
@@ -66,16 +69,18 @@ def run_sender(arguments):
 
 
 def run_receiver(arguments):
+    import receiver    # only the receiving side
+
     wait_for_start("receiver")
 
     print("Calibrating ...")
-    device.calibrate_receiver()
+    receiver.calibrate()
 
     print(f"Receiving {arguments.runs} symbols ...")
     received = []
     started = time.time()
     for position in range(arguments.runs):
-        symbol = device.receive_symbol()
+        symbol = receiver.receive_symbol()
         received.append(symbol)
         print(f"  {position + 1}/{arguments.runs}  recognised: {symbol}")
     duration = time.time() - started
@@ -86,7 +91,7 @@ def run_receiver(arguments):
 def write_log(filename, arguments, symbols, duration):
     with open(filename, "w", encoding="utf-8") as file:
         file.write(f"team={arguments.team}\n")
-        file.write(f"alphabet_size={device.ALPHABET_SIZE}\n")
+        file.write(f"alphabet_size={agreement.ALPHABET_SIZE}\n")
         file.write(f"runs={arguments.runs}\n")
         file.write(f"duration={duration:.2f}\n")
         for symbol in symbols:

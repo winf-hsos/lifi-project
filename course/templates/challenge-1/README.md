@@ -4,17 +4,17 @@ How many different states can you tell apart, without a single mistake, over 50 
 
 ## What you implement
 
-Everything goes into `device.py`. Five things, and the test script asks for nothing more:
+In this challenge one device only sends and the other only receives, so each side has its own file. A third file holds what both sides have to agree on:
 
-| | What |
+| File | What goes in |
 |---|---|
-| `SYMBOL_COLORS` | your alphabet, one colour per line (`ALPHABET_SIZE` counts them by itself) |
-| `calibrate_sender()` | play through your alphabet once |
-| `calibrate_receiver()` | measure along and remember reference values |
-| `send_symbol(index)` | show one symbol |
-| `receive_symbol()` | measure and say which symbol it was |
+| `agreement.py` | `SYMBOL_COLORS`, your alphabet, one colour per line (`ALPHABET_SIZE` counts them by itself) |
+| `sender.py` | `calibrate()` plays through your alphabet once, `send_symbol(index)` shows one symbol |
+| `receiver.py` | `calibrate()` measures along and remembers reference values, `receive_symbol()` measures and says which symbol it was |
 
-How you build them on the inside is up to you. Add as many functions of your own as you like.
+The test script calls these four functions and asks for nothing more. How you build them on the inside is up to you. Add as many functions of your own as you like.
+
+Anything that has to be the same on both sides belongs in `agreement.py`, not twice in the two other files. That way sender and receiver can never disagree about it.
 
 ## Why you need a calibration
 
@@ -26,7 +26,7 @@ Two consequences of this are easy to overlook. First, both sides have to run in 
 
 ## Testing
 
-On both computers, each in its own role:
+Start the test twice, each in its own role:
 
 ```bash
 python run_test.py sender
@@ -46,6 +46,14 @@ python run_test.py sender --runs 10
 ```
 
 This script is exactly what runs at the acceptance test. So you can rehearse the scored run as often as you like beforehand.
+
+## Both devices on one laptop
+
+You can also plug both devices of your team into the same laptop and start sender and receiver in two terminals next to each other. Then both logs end up in the same folder, and `compare.py` runs straight away.
+
+The module then has to know which device is which. At the top of `sender.py` and `receiver.py` there is a line `# use_device("put the UID here")`. Remove the `#` in both files and write in the UID of the master brick of that device: the sending one in `sender.py`, the receiving one in `receiver.py`. If you do not know the UIDs, start without them first; the error message lists both, and the Brick Viewer shows which one belongs to which box. With only one device plugged in, leave the line as it is.
+
+One thing gets harder: you cannot press Enter in both terminals at the same moment. Between the first and the second there is easily a second. Your calibration has to cope with that.
 
 ## An approach that works
 
