@@ -13,8 +13,11 @@ Works for both ways of getting the course folder:
 
 Rules of the course folder, the same for both ways:
 
-- my-code/ belongs to the student. Nothing in it is ever changed or deleted;
-  only files that a template gains later are added next to the student's own.
+- my-code/ belongs to the student. Nothing in it is ever deleted, and the
+  student's own files are never changed; files that a template gains later
+  are added next to them. The one exception are the test files run_test.py
+  and compare.py of a challenge: they belong to the course, so a newer
+  version replaces the student's copy.
 - Everything else belongs to the course and is read-only for students.
   Changed course files are overwritten, extra files inside course/ are
   removed, and in a Git clone commits made by the student are removed.
@@ -191,14 +194,21 @@ def update_from_git():
 
 # --- after either way ----------------------------------------------------------
 
+# Files in a template that belong to the course, not to the team: the test
+# script and the comparison run unchanged at the acceptance test, so the
+# student's copy is always brought up to date with the template.
+COURSE_OWNED_FILES = {"run_test.py", "compare.py"}
+
+
 def copy_new_templates(changed_paths):
-    """Copy released templates into my-code/; never overwrite what is there.
+    """Copy released templates into my-code/; never overwrite the student's work.
 
     A template folder the student does not have yet is copied whole. If they
-    have it, files the template gained later are added; files they already
-    have stay exactly as they are.
+    have it, files the template gained later are added, and the course-owned
+    test files (COURSE_OWNED_FILES) are replaced when the template has a newer
+    version. Every other file they already have stays exactly as it is.
     """
-    added, updated, completed = [], [], []
+    added, updated, completed, refreshed = [], [], [], []
     os.makedirs(MY_CODE, exist_ok=True)
     names = sorted(os.listdir(TEMPLATES)) if os.path.isdir(TEMPLATES) else []
     for name in names:
@@ -223,11 +233,20 @@ def copy_new_templates(changed_paths):
                     os.makedirs(os.path.dirname(dst), exist_ok=True)
                     shutil.copy2(src, dst)
                     new_files.append(os.path.relpath(dst, target).replace(os.sep, "/"))
+                elif (file in COURSE_OWNED_FILES and folder == source
+                      and not same_content(src, dst)):
+                    shutil.copy2(src, dst)
+                    refreshed.append(f"{name}/{file}")
         if new_files:
             completed.append((name, sorted(new_files)))
         if any(p.startswith(f"course/templates/{name}/") for p in changed_paths):
             updated.append(name)
-    return added, updated, completed
+    return added, updated, completed, refreshed
+
+
+def same_content(a, b):
+    with open(a, "rb") as fa, open(b, "rb") as fb:
+        return fa.read() == fb.read()
 
 
 def version_tuple(text):
@@ -277,7 +296,7 @@ def main():
         changed, removed, stray = update_from_zip()
         reset_note = removed
 
-    added, updated, completed = copy_new_templates(changed)
+    added, updated, completed, refreshed = copy_new_templates(changed)
     module = update_module()
 
     say()
@@ -300,9 +319,12 @@ def main():
     for name, files in completed:
         say(f"- NEW FILES in my-code/{name}/: {', '.join(files)}. "
             f"Your own files there were not changed.")
+    if refreshed:
+        say(f"- UPDATED test files: my-code/{', my-code/'.join(refreshed)}. These belong to the "
+            "course and run unchanged at the acceptance test, so they always follow the template.")
     for name in updated:
-        say(f"- The template course/templates/{name}/ was improved. Your copy in my-code/{name}/ "
-            f"was NOT changed; your assistant can bring the improvement into your copy if you agree.")
+        say(f"- The template course/templates/{name}/ was improved. Your own files in my-code/{name}/ "
+            f"were NOT changed; your assistant can bring the improvement into your copy if you agree.")
     say(f"- {module}")
     if os.path.isfile(NOW):
         with open(NOW, encoding="utf-8") as f:
