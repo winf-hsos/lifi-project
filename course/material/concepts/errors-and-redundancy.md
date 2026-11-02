@@ -34,7 +34,7 @@ That is redundancy, and it is what this chapter is about. A photo that loads hal
 
 Take a good link: of a thousand bits one goes wrong, so 99.9 percent arrive correctly. That sounds excellent until you send more than a thousand bits.
 
-[Figure: The chance that everything arrives untouched, at an error rate of 0.1 percent per bit: 92.3 percent for ten characters, 0.03 percent for the same ten characters a hundred times, 0.0000076 percent for the 2 KB payload of the final.]
+[Figure: The chance that everything arrives untouched, at an error rate of 0.1 percent per bit: 92.3 percent for ten characters, 0.03 percent for the same ten characters a hundred times, 0.0000076 percent for the 2 KiB payload of the final.]
 
 Ten characters are 80 bits and arrive completely clean with a probability of 92.3 percent. Do the same a hundred times and the probability that all hundred runs were clean is 0.03 percent. Send the 16,384 bits of the final's payload in one go and it drops to 0.0000076 percent. Nothing is broken here. Every single bit has to make it, and the probabilities multiply, so the chance falls off a cliff as the message grows. That is why the question is not how to avoid errors. It is how to notice them.
 
@@ -104,7 +104,7 @@ The packed file does not open at all. In a PNG no point stands on its own, becau
 
 Every check is paid for in sending time, so the only real question is how much.
 
-[Figure: Four ways to send 2 KB at 10 bit/s: nothing added takes 27.3 minutes, a checksum per frame 27.7, a parity bit per byte 30.7, every bit three times 81.9.]
+[Figure: Four ways to send 2 KiB at 10 bit/s: nothing added takes 27.3 minutes, a checksum per frame 27.7, a parity bit per byte 30.7, every bit three times 81.9.]
 
 The two kilobytes of the final at ten bits per second take 27.3 minutes with nothing added. A 32-bit checksum on every 256-byte frame costs 1.6 percent, half a minute, and in exchange you know of every frame whether it arrived intact. A parity bit per byte costs an eighth of your sending time and still does not catch everything. And sending every bit three times, so that errors can be repaired without asking, costs three times the link: 81.9 minutes instead of 27.3.
 

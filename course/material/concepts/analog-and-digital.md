@@ -14,7 +14,7 @@ In this chapter, we address the following questions:
 - What are sampling and quantization, and what does each kept detail cost?
 - Where on your own link does analog end and digital begin?
 
-You need this concept for [Challenge 1](../challenges/challenge-1.md), and it comes back in [Challenge 4](../challenges/challenge-4.md), when a file has to fit into 2 KB.
+You need this concept for [Challenge 1](../challenges/challenge-1.md), and it comes back in [Challenge 4](../challenges/challenge-4.md), when a file has to fit into 2 KiB.
 
 ## Explanation
 
@@ -72,7 +72,7 @@ On your light link, size turns into time straight away. Which is why digitising 
 
 [Figure: The same photo, ever coarser. Somewhere between the third and the fourth picture it stops being a parrot, and where exactly, people will disagree.]
 
-That disagreement is the point. There is no correct amount, there is only a trade-off, and in [Challenge 4](../challenges/challenge-4.md) you have 2 KB to make it in. You can play the whole thing through in [The Photo Digitiser](https://demos.lifi-project.de/photo-digitiser/), from 256 by 256 points down to a single pixel, with colour depths from today's standard through the sixteen colours of an early pc down to the four greys of the first Game Boy, and with the file size and the transmission time running along underneath.
+That disagreement is the point. There is no correct amount, there is only a trade-off, and in [Challenge 4](../challenges/challenge-4.md) you have 2 KiB to make it in. You can play the whole thing through in [The Photo Digitiser](https://demos.lifi-project.de/photo-digitiser/), from 256 by 256 points down to a single pixel, with colour depths from today's standard through the sixteen colours of an early pc down to the four greys of the first Game Boy, and with the file size and the transmission time running along underneath.
 
 Interactive demonstrator: <https://demos.lifi-project.de/photo-digitiser/>
 

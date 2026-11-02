@@ -4,14 +4,14 @@ Online: <https://docs.lifi-project.de/concepts/compression.html>
 
 ## Summary
 
-Compression represents the same information with fewer bits. The usual way of writing data gives space away: things repeat, and some symbols turn up far more often than others. The word for both is redundancy, and it is the flip side of [information](symbols-and-information.md): information measures surprise, and the less a character surprises you, the fewer bits it deserves. A fixed code pays every character as if it were a full surprise; the difference is what a packer removes. Every packer you have ever used, ZIP included, does exactly two things about that: it says a repeated stretch once and then only points back to it, and it gives the frequent symbols the short codes. Unpack, and the same bits come back, one for one. That kind of compression has a hard limit, though, and a photo sits close to it. To get a photo into the 2 KB payload of the final you have to drop detail, and what you drop does not come back. Which of the two you may use is a question about the task, not about the tool.
+Compression represents the same information with fewer bits. The usual way of writing data gives space away: things repeat, and some symbols turn up far more often than others. The word for both is redundancy, and it is the flip side of [information](symbols-and-information.md): information measures surprise, and the less a character surprises you, the fewer bits it deserves. A fixed code pays every character as if it were a full surprise; the difference is what a packer removes. Every packer you have ever used, ZIP included, does exactly two things about that: it says a repeated stretch once and then only points back to it, and it gives the frequent symbols the short codes. Unpack, and the same bits come back, one for one. That kind of compression has a hard limit, though, and a photo sits close to it. To get a photo into the 2 KiB payload of the final you have to drop detail, and what you drop does not come back. Which of the two you may use is a question about the task, not about the tool.
 
 In this chapter, we address the following questions:
 
 - Why can data be made smaller without anything going missing?
 - What are the two tricks inside a ZIP file, and how does each of them work?
 - Why do some files barely shrink, and why does no method shrink everything?
-- How does a photo get from 192 KB to 2 KB, and what is the price?
+- How does a photo get from 192 KiB to 2 KiB, and what is the price?
 - What does the receiver have to know in order to unpack what you sent?
 
 You need this concept for [Challenge 4](../challenges/challenge-4.md). It is the third of the three levers on [throughput](throughput-and-limits.md), and the one that costs the least.

@@ -10,7 +10,7 @@ For the first time you transmit something whose content you do not know in advan
 
 ## The task
 
-You get a file of at most 2 KB. You do not know what is in it, and you do not know what kind of file it is. It may be a small picture, a text, or something else from the set of types your class has agreed on.
+You get a file of at most 2 KiB, that is 2048 bytes. You do not know what is in it, and you do not know what kind of file it is. It may be a small picture, a text, or something else from the set of types your class has agreed on.
 
 So your program has to recognise the type from the file, send it along in the header of the transmission, and the receiver has to open the file accordingly at the end.
 
@@ -18,9 +18,9 @@ The file has to arrive **byte for byte**, exactly as it was sent, without a sing
 
 That you do not know the content is deliberate. It forces you to transmit truly arbitrary data instead of relying on letters.
 
-## Why only 2 KB
+## Why only 2 KiB
 
-Your channel manages roughly between 10 and 50 bits per second. A kilobyte therefore takes a few minutes, and a real photo would take hours. The limit keeps a run short enough to sit through.
+Your channel manages roughly between 10 and 50 bits per second. A kilobyte therefore takes a few minutes, and a real photo would take hours. The limit keeps a run short enough to sit through. It says 2 KiB and not 2 KB on purpose: a kibibyte is 1024 bytes, so the file has at most 2048 bytes or 16,384 bits. Why there are two kinds of kilobyte is explained under [Number Systems](../concepts/number-systems.md).
 
 ## The shared frame, and what is yours
 
@@ -36,7 +36,7 @@ That is the whole point of the separation: you can swap out the lower layer comp
 
 ## The type field: data alone means nothing
 
-The same 2000 bytes can be a picture, a text, or noise. What they are is not written in the data itself. It has to be said alongside.
+The same 2048 bytes can be a picture, a text, or noise. What they are is not written in the data itself. It has to be said alongside.
 
 That is what the type field in the header is for. The sender writes there what kind of file it is, and the receiver knows from it what to do with the bytes. Which types exist is decided together at the standards meeting, like the rest of the frame.
 
@@ -58,7 +58,7 @@ So the preamble in the frame is only a bit pattern by which you recognise the be
 
 That leaves the whole question of time with you. How fast you send, how the receiver learns that, and how you prevent the two sides from drifting apart over a long transmission.
 
-The last part is the unpleasant one. Two computers run neither at exactly the same speed nor evenly: wait commands are imprecise, USB sometimes takes longer, the operating system does something else in between. With ten characters you do not notice. With a 2 KB file that is under way for many minutes, it is the most common reason a run fails.
+The last part is the unpleasant one. Two computers run neither at exactly the same speed nor evenly: wait commands are imprecise, USB sometimes takes longer, the operating system does something else in between. With ten characters you do not notice. With a 2 KiB file that is under way for many minutes, it is the most common reason a run fails.
 
 How you deal with it we do **not** prescribe. There are several defensible solutions, they differ in effort and reliability, and which one works best for you depends on your hardware. This is one of the most important design decisions of the whole project, and it is yours.
 

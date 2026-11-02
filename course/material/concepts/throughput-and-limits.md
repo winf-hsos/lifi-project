@@ -18,7 +18,7 @@ You need this concept for [Challenge 4](../challenges/challenge-4.md). The third
 
 ## Explanation
 
-Two kilobytes. Twenty-seven minutes. That is not an invented number, it is yours: 2 KB are 16,000 bits, and with four colours at five symbols per second you get 10 bits in a second. The calculation was already on a slide back in session 7, but you only really understand it once you are sitting next to it, waiting. And that calculation does not yet contain a single symbol of framing or a single repeat.
+Two kilobytes. Twenty-seven minutes. That is not an invented number, it is yours: 2 KiB are 2048 bytes, so 16,384 bits, and with four colours at five symbols per second you get 10 bits in a second. The calculation already came up under [Sampling and Synchronization](sampling-and-synchronization.md), but you only really understand it once you are sitting next to it, waiting. And that calculation does not yet contain a single symbol of framing or a single repeat.
 
 [Figure: The download screen everyone knows: the rate is measured, the minutes left are a guess made from it, and they jump when the rate does.]
 

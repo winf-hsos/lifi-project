@@ -60,6 +60,6 @@ Input for session 13, deck 15, the second of the session's two decks. These note
 
 **The receiver has to know (Frame 36).** Not a single bit wrong, and still garbled characters: the receiver did not know the method. Packed data is a notation, and whoever does not know the notation reads nonsense. Method and settings belong in your specification, right next to the preamble and the character code. The same lesson as in session 6: the same bits, two tables, two meanings.
 
-**The workshop task (Frame 37).** First, zip three files of your own and explain the three ratios; what matters is the explanation, not the number. Second, bring the parrot under two kilobytes and write down what you gave up for it: fewer points or coarser ones, and why. Third, write method and settings into the specification; that is mandatory for Challenge 4.
+**The workshop task (Frame 37).** First, zip three files of your own and explain the three ratios; what matters is the explanation, not the number. Second, bring the parrot under 2 KiB and write down what you gave up for it: fewer points or coarser ones, and why. Third, write method and settings into the specification; that is mandatory for Challenge 4.
 
 **To close (Frame 38).** Two kilobytes, shown point for point, without smoothing: 128 points across the height of the screen. It is still a parrot. What is missing, you decided, and that is the difference between a packer and you.

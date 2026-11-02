@@ -90,7 +90,7 @@ In the end the same arithmetic counts for both ways:
 
 $$t = \frac{n}{r \cdot b}$$
 
-with $n$ the number of bits to send, $r$ the symbol rate and $b$ the bits per symbol. Only $b$ separates the two ways: clocked $b = \log_2(k)$, clock-free $b = \log_2(k-1)$. A worked example: 16,000 bits are 2 KB, the payload of Challenge 4. With four colours, clocked, that is 2 bits per symbol; at five symbols per second you get 10 bit/s, so about 27 minutes. Clock-free, the same four colours carry only 1.58 bits per transition, so about 34 minutes. That is the price of synchronization freedom, measured in minutes.
+with $n$ the number of bits to send, $r$ the symbol rate and $b$ the bits per symbol. Only $b$ separates the two ways: clocked $b = \log_2(k)$, clock-free $b = \log_2(k-1)$. A worked example: 16,384 bits are 2 KiB, the payload of Challenge 4. With four colours, clocked, that is 2 bits per symbol; at five symbols per second you get 10 bit/s, so about 27 minutes. Clock-free, the same four colours carry only 1.58 bits per transition, so about 34 minutes. That is the price of synchronization freedom, measured in minutes.
 
 This calculation is the currency Challenge 4 is paid in, and it has exactly two levers: bits per symbol, and symbols per second. How far those levers can be pushed at all is the subject of [Throughput and Limits](throughput-and-limits.md).
 

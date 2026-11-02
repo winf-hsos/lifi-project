@@ -74,7 +74,7 @@ On your light link, that turns into time straight away. At 30 bit/s the first pi
 
 The same photo, ever coarser: 128, 32, 8 and finally 2 points per edge. Somewhere in between, recognisability tips over, and where exactly, the room will disagree.
 
-That disagreement is exactly the point. There is no correct amount, there is only a trade-off against the transmission time. In Challenge 4 you have 2 KB, and then this question really comes up.
+That disagreement is exactly the point. There is no correct amount, there is only a trade-off against the transmission time. In Challenge 4 you have 2 KiB, and then this question really comes up.
 
 ## Try it yourself (Frame 24)
 
