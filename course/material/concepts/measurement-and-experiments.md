@@ -2,6 +2,8 @@
 
 Online: <https://docs.lifi-project.de/concepts/measurement-and-experiments.html>
 
+Measuring and experimenting is now maintained on Hands-on Computer Science (Measuring and experimenting: English <https://hands-on-computer-science.de/cs/en/items/measurement-and-experiments/>, German <https://hands-on-computer-science.de/cs/de/items/measurement-and-experiments/>; Quiz: Measuring and experimenting: English <https://hands-on-computer-science.de/cs/en/items/measurement-and-experiments-quiz/>, German <https://hands-on-computer-science.de/cs/de/items/measurement-and-experiments-quiz/>). The text below is the last version from the course website; where it disagrees with Hands-on Computer Science, Hands-on Computer Science is right.
+
 ## Summary
 
 Whether a real setup behaves the way you expect can only be decided by measuring it. An experiment that tells you something changes conditions on purpose, repeats readings, and records what was done and what came out. This concept is the craft of the module: it applies to every claim about your setup, not only to light. What those measurements then say about the limits of your link, how many colours you can safely tell apart, is the subject of [Signal and Noise](signal-and-noise.md).
@@ -66,7 +68,7 @@ And when a clean measurement series contradicts a suggestion from the assistant,
 
 ## Slides
 
-The slides for this concept have moved to Hands-on Computer Science, where they are kept up to date: Measuring and experimenting (English: <https://hands-on-computer-science.de/cs/en/items/measuring-and-experimenting/>, German: <https://hands-on-computer-science.de/cs/de/items/measuring-and-experimenting/>)
+The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
 ## Practice questions
 
