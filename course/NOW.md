@@ -34,7 +34,7 @@ Updated: 2026-11-03, after session 4
 ## The exam
 
 - A one-hour multiple-choice exam on the concepts, everybody on their own. Nicolas announced Friday 5 February 2027; the date is not confirmed yet and will be announced in ILIAS.
-- If Challenges 1 to 4 are all accepted, the student gets a 5 % bonus on the exam: all or nothing. Challenge 0 is practice and has no acceptance test. What counts is the passed acceptance test with its live change. Documentation is optional and only for the team; the one exception is the protocol specification in Challenge 3, which another team needs in the interop test.
+- If Challenges 1 to 4 are all accepted, the student gets a 5 % bonus on the exam: all or nothing. Challenge 0 is practice and has no acceptance test. What counts is the passed acceptance test, in Challenges 2 to 4 with its live change; Challenge 1 has no live change, there the run with `run_test` (20 random symbols without a mistake) is the whole acceptance. Documentation is optional and only for the team; the one exception is the protocol specification in Challenge 3, which another team needs in the interop test.
 - The ranking in the competitions does not count towards the grade.
 
 ## The fourteen sessions (winter term 2026/27, Mondays 15:00 to 18:15, room HD0001)

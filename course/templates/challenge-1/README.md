@@ -59,4 +59,4 @@ Optional and only for your team: nobody grades it, and the bonus depends only on
 
 ## At the acceptance test
 
-You run the test at your own place, with the two boxes of sender and receiver touching wall to wall. Nicolas comes round, looks at your setup and checks your result. After that may come a live change, for example: "Go up to twelve colours and run it again." For that you have to find the places in your code that depend on the size of the alphabet.
+You run the test at your own place, with the two boxes of sender and receiver touching wall to wall. Nicolas comes round, looks at your setup and checks your result. There is no live change in Challenge 1: the run with 20 random colours is the whole acceptance, and the largest alphabet that runs without a mistake counts.
