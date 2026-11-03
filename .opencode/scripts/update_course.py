@@ -17,7 +17,8 @@ Rules of the course folder, the same for both ways:
   student's own files are never changed; files that a template gains later
   are added next to them. The one exception are the test files run_test.py
   and compare.py of a challenge: they belong to the course, so a newer
-  version replaces the student's copy.
+  version replaces the student's copy, and where the course no longer
+  uses them (Challenge 1 since lifi_hardware 0.5.0), they are removed.
 - Everything else belongs to the course and is read-only for students.
   Changed course files are overwritten, extra files inside course/ are
   removed, and in a Git clone commits made by the student are removed.
@@ -29,6 +30,7 @@ The output is plain text, so the assistant can explain the result.
 
 import hashlib
 import io
+import json
 import os
 import re
 import shutil
@@ -199,6 +201,11 @@ def update_from_git():
 # student's copy is always brought up to date with the template.
 COURSE_OWNED_FILES = {"run_test.py", "compare.py"}
 
+# Course-owned test files the course no longer uses. Since lifi_hardware
+# 0.5.0 the test of Challenge 1 is run_test() inside the module, so the old
+# scripts would only run an outdated test. The team's own files stay.
+RETIRED_FILES = {"challenge-1": ["run_test.py", "compare.py"]}
+
 
 def copy_new_templates(changed_paths):
     """Copy released templates into my-code/; never overwrite the student's work.
@@ -208,7 +215,7 @@ def copy_new_templates(changed_paths):
     test files (COURSE_OWNED_FILES) are replaced when the template has a newer
     version. Every other file they already have stays exactly as it is.
     """
-    added, updated, completed, refreshed = [], [], [], []
+    added, updated, completed, refreshed, retired = [], [], [], [], []
     os.makedirs(MY_CODE, exist_ok=True)
     names = sorted(os.listdir(TEMPLATES)) if os.path.isdir(TEMPLATES) else []
     for name in names:
@@ -237,11 +244,16 @@ def copy_new_templates(changed_paths):
                       and not same_content(src, dst)):
                     shutil.copy2(src, dst)
                     refreshed.append(f"{name}/{file}")
+        for file in RETIRED_FILES.get(name, []):
+            old = os.path.join(target, file)
+            if os.path.isfile(old) and not os.path.exists(os.path.join(source, file)):
+                os.remove(old)
+                retired.append(f"{name}/{file}")
         if new_files:
             completed.append((name, sorted(new_files)))
         if any(p.startswith(f"course/templates/{name}/") for p in changed_paths):
             updated.append(name)
-    return added, updated, completed, refreshed
+    return added, updated, completed, refreshed, retired
 
 
 def same_content(a, b):
@@ -284,19 +296,36 @@ def update_module():
     return f"lifi_hardware {needed or ''} installed.".replace("  ", " ")
 
 
-def main():
-    say("Updating your course folder ...")
-    own_commits = []
-    if os.path.isdir(os.path.join(ROOT, ".git")):
-        way = "Git"
-        changed, reset, stray, own_commits = update_from_git()
-        reset_note = reset
-    else:
-        way = "ZIP"
-        changed, removed, stray = update_from_zip()
-        reset_note = removed
+RERUN = "LIFI_UPDATE_RERUN"
 
-    added, updated, completed, refreshed = copy_new_templates(changed)
+
+def main():
+    script = os.path.abspath(__file__)
+    if os.environ.get(RERUN):
+        # Second pass with the new version of this script: the folder is
+        # already updated, only the steps below still have to run.
+        way, changed, reset_note, stray, own_commits = json.loads(os.environ[RERUN])
+    else:
+        say("Updating your course folder ...")
+        before = digest(script)
+        own_commits = []
+        if os.path.isdir(os.path.join(ROOT, ".git")):
+            way = "Git"
+            changed, reset, stray, own_commits = update_from_git()
+            reset_note = reset
+        else:
+            way = "ZIP"
+            changed, removed, stray = update_from_zip()
+            reset_note = removed
+        if digest(script) != before:
+            # The update brought a new version of this very script. Python
+            # still runs the old one, so hand over to the new one once; it
+            # knows what the course needs now (removed test files, say).
+            env = dict(os.environ)
+            env[RERUN] = json.dumps([way, changed, reset_note, stray, own_commits])
+            sys.exit(subprocess.run([sys.executable, script], env=env).returncode)
+
+    added, updated, completed, refreshed, retired = copy_new_templates(changed)
     module = update_module()
 
     say()
@@ -322,6 +351,9 @@ def main():
     if refreshed:
         say(f"- UPDATED test files: my-code/{', my-code/'.join(refreshed)}. These belong to the "
             "course and run unchanged at the acceptance test, so they always follow the template.")
+    if retired:
+        say(f"- REMOVED old test files: my-code/{', my-code/'.join(retired)}. The test now runs "
+            "with run_test() from lifi_hardware; your own files there were not changed.")
     for name in updated:
         say(f"- The template course/templates/{name}/ was improved. Your own files in my-code/{name}/ "
             f"were NOT changed; your assistant can bring the improvement into your copy if you agree.")

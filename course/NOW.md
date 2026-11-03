@@ -1,17 +1,17 @@
 # Where the semester stands
 
-Updated: 2026-11-02, session 4
+Updated: 2026-11-03, after session 4
 
 ## Current
 
-- **Challenge 1 ("The Alphabet") is released.** `/update-semester` brings the template into `my-code/challenge-1/`: The team works in three files: `agreement.py` holds what both sides agree on (the alphabet as a list of colours, one per line), `sender.py` the sending side (`calibrate()`, `send_symbol(index)`), `receiver.py` the receiving side (`calibrate()`, `receive_symbol()`). In Challenge 1 to 3 each device either sends or receives, so each side has its own file. `run_test.py` and `compare.py` are the acceptance test and are not changed. The team uses both of its devices, one as sender and one as receiver, normally each on its own laptop; `run_test.py sender` runs on one, `run_test.py receiver` on the other, and `compare.py` compares the two logs on one computer. Both devices on one laptop also works, with sender and receiver in two terminals: then the line `# use_device("put the UID here")` at the top of `sender.py` and `receiver.py` gets the `#` removed and the UID of that device (the README of the challenge explains it); starting both sides at the same moment is harder that way, so the calibration has to cope with a second of offset. Students who have not finished Challenge 0 finish tasks 4 to 6 (the sensor) first, because Challenge 1 builds on reading the sensor. The competition for Challenge 1 is in session 6 on 9 November. Do not hand out a finished calibration or a finished `receive_symbol()`: how many symbols a link can tell apart is what the team has to find out by measuring.
+- **Challenge 1 ("The Alphabet") now has ONE file, `alphabet.py`** (changed on 3 November, after session 4). `/update-semester` brings it into `my-code/challenge-1/` together with `lifi_hardware` 0.5.0, which every student needs before the competition on 9 November. This one time, run `/update-semester` twice: the first run still uses the old update script, the second one removes the old test files (from now on the script does that by itself). The file holds `COLORS` (the alphabet, one colour per line), `calibrate(readings)`, `send_symbol(index)` (already done) and `receive_symbol()`, and ends with `run_test(send_symbol, receive_symbol, calibrate, symbols=len(COLORS))`, which the team does not change. `sender.led` is the LED of the sending device, `receiver.sensor` the sensor of the receiving one. Before every run, `run_test` shows the whole alphabet once and hands the readings to `calibrate`: `readings[i]` is a list of `Reading(r, g, b, c)` taken while colour i was showing. The same file works with both devices on one laptop (the module lights one LED and asks whether it sends or receives, then runs everything itself) and with one device on each of two laptops (start the file on both, each asks whether it sends or receives, and the course server brings the two together and says when the next colour comes; both need WLAN). The random sequence comes fresh from the server for every run; every run shows its result and its mistakes on both screens and appears in the team cockpit. Without the server, one laptop with both devices still runs a practice run that does not count. Only runs with 20 attempts count; `runs=5` in the last line is fine for quick tests. The old files `agreement.py`, `sender.py` and `receiver.py` from 2 November stay in `my-code/challenge-1/` if the student had them, and `/update-semester` removes the old `run_test.py` and `compare.py`; if a student already wrote code there, help them move it into the three functions of `alphabet.py`, with their consent. The worked example from session 4 (baseline, largest channel) is on Hands-on Computer Science with an explanation of why it is not a good solution; it is not a solution, and you do not give one out either: do not hand out a finished calibration or a finished `receive_symbol()`, because how many colours a link can tell apart is what the team has to find out by measuring. Students who have not finished Challenge 0 finish tasks 4 to 6 (the sensor) first.
 - **If not done yet, run `/update-semester`.** The course server has moved to a new address, `lifi.hsos.uber.space`; the old address no longer exists. `lifi_hardware` 0.4.3 sends the measurement log to the new server, and `/update-semester` installs it. Older versions keep working on the device, but the live view in the team cockpit and the challenge tests then see nothing. If a student's cockpit stays empty, ask which version they have (`python -c "import lifi_hardware; print(lifi_hardware.__version__)"`) and run `/update-semester`.
 - **New addresses:** team cockpit https://lifi.hsos.uber.space/cockpit, practice questions https://live.hsos.uber.space/practice/dup-ws2026, anonymous feedback https://live.hsos.uber.space/feedback/dup-ws2026, live polls in the sessions https://live.hsos.uber.space/q. The old `lifi.uber.space` links no longer work.
 - **No sessions on 19 and 26 October.** 19 October was cancelled, 26 October is the excursion week. Session 4 is on Monday 2 November in HD0001, session 5 is the replacement for 19 October: **Wednesday 4 November, 09:45 to 13:00, online in Teams** (link in ILIAS).
 - **Challenge 0 has no acceptance test** (Nicolas, 12 October). It is practice: tasks 1 to 3 were done in session 3, tasks 4 to 6 (the sensor) were homework. Help students who are still on them.
 - **Language model:** since session 3 everyone has a shared OpenAI key from ILIAS, because the free models failed during the session. The student enters it in OpenCode (Settings, Providers, OpenAI) and chooses the course model in the model selection below the input field. Never ask for the key and never print it.
 - **Challenge 0 has one file per task:** `task_1_light_on.py` to `task_6_human_receiver.py` in `my-code/challenge-0/`, each run on its own (`python task_4_measure.py`). Task 4 takes one reading per Enter (q stops); the student writes the reading themselves (`r, g, b, c = sensor.read()` and print the four values) and measures in at least four situations: room light, sensor covered with the hand, phone torch from far away, phone torch close up; the threshold of task 5 goes between "covered" and "torch". A value stuck at 65535 means the sensor is overloaded: torch further away. Students who started before 12 October may still have `my-code/challenge-0/tasks.py`; then follow the section "Template changes" of `.opencode/procedures/update-semester.md`, only with their consent.
-- **Two devices on one laptop:** with `lifi_hardware` 0.4.0 or newer each script says which device it means: `from lifi_hardware import led, sensor, use_device`, then `use_device("<UID of the master brick>")` before the first use of `led` or `sensor`. The UID is shown in the Brick Viewer.
+- **The competition for Challenge 1 on 9 November runs at each team's own place**, not at a test table: the team runs `python alphabet.py`, the two boxes of sender and receiver touch wall to wall, Nicolas comes round, checks the setup and then only the result. Outside Challenge 1, two devices on one laptop still work as before: `use_device("<UID of the master brick>")` before the first use of `led` or `sensor`.
 - **Practice questions** are on the practice platform, one page per concept, switchable to German. The concept pages link to them.
 
 ## Covered so far
@@ -19,6 +19,7 @@ Updated: 2026-11-02, session 4
 - Session 1: what the module is about, the device, the five challenges, and the experiment "you are the receiver". Setup with OpenCode Desktop and `/onboarding`.
 - Session 2: checking the setup, the first program `hello.py`, input, variables and data types, the countdown timer with a `for` loop and `sleep`. The devices were handed out; Challenge 0 started.
 - Session 3: Cutting Problems and Solving Problems with Computers (the IPO model), Challenge 0 tasks 1 to 3 with discussion. What is a program? (Algorithms and Programs) did not fit and follows in session 4.
+- Session 4: What is a program? (Algorithms and Programs), Challenge 1 introduced, and a receiver written live (baseline, largest channel); its clean version and sample solutions for Challenge 0 are on Hands-on Computer Science. Measuring and Experimenting is dropped this term.
 
 ## Not open yet
 
@@ -28,7 +29,7 @@ Updated: 2026-11-02, session 4
 
 - Language model: the shared OpenAI key from ILIAS with the course model; OpenCode's free models remain a fallback.
 
-- Distance between the two devices: **not yet fixed**, will be measured and announced.
+- Distance between the two devices in Challenge 1: the two boxes touch wall to wall.
 
 ## The exam
 
@@ -44,8 +45,8 @@ Each session carries a concept as its title; what happens in the project follows
 2. 05.10. Setup and first programs: devices handed out, Challenge 0
 3. 12.10. Cutting Problems, Solving Problems with Computers: Challenge 0
    (19.10. cancelled, 26.10. excursion week, no sessions)
-4. 02.11. Algorithms and Programs, Analog and Digital, Symbols and Information: Challenge 1 starts
-5. **Wednesday 04.11., 09:45 to 13:00, online in Teams.** Measuring and Experimenting
+4. 02.11. Algorithms and Programs: Challenge 1 starts
+5. **Wednesday 04.11., 09:45 to 13:00, online in Teams.** Analog and Digital, Symbols and Information: Challenge 1
 6. 09.11. Signal and Noise: competition, Challenge 1 (The Alphabet)
 7. 16.11. Number Systems and Code Systems: Challenge 2 starts
 8. 23.11. Sampling and Synchronization: Challenge 2, faster
