@@ -38,18 +38,18 @@ On a Mac use `python3` instead of `python` if needed.
 
 Every run gets a fresh random sequence from the course server, so nobody knows it in advance. At the end both sides show the result and every mistake, and the run appears in your [team cockpit](https://lifi.hsos.uber.space/cockpit). Without the server, a run with both devices on one laptop still works as a practice run that does not count.
 
-To practise on purpose even though the server is reachable, switch the server off for this one terminal before you start. With two laptops this does not work, because there the server keeps the two in step.
+To practise on purpose even though the server is reachable, switch the server off before you start. With two laptops this does not work, because there the server keeps the two in step.
 
 ```bash
-# Windows (PowerShell)
+# Windows (PowerShell): holds until you close this terminal
 $env:LIFI_SERVER="off"
 python alphabet.py
 
-# macOS (Terminal)
+# macOS (Terminal): holds for this one call only
 LIFI_SERVER=off python3 alphabet.py
 ```
 
-The setting holds until you close that terminal, so a run you want to count needs a new terminal.
+On Windows, a run you want to count therefore needs a new terminal. On macOS, the next plain `python3 alphabet.py` counts again.
 
 For quick tests in between, fewer runs are enough: change the last line to `run_test(send_symbol, receive_symbol, calibrate, symbols=len(COLORS), runs=5)`. Only runs with 20 attempts count.
 
