@@ -2,6 +2,8 @@
 
 Online: <https://docs.lifi-project.de/concepts/algorithms-and-programs.html>
 
+Algorithms and programs is now maintained on Hands-on Computer Science (Algorithms and programs: English <https://hands-on-computer-science.de/cs/en/items/algorithms-and-programs/>, German <https://hands-on-computer-science.de/cs/de/items/algorithms-and-programs/>; Quiz: Algorithms and programs: English <https://hands-on-computer-science.de/cs/en/items/algorithms-and-programs-quiz/>, German <https://hands-on-computer-science.de/cs/de/items/algorithms-and-programs-quiz/>). The text below is the last version from the course website; where it disagrees with Hands-on Computer Science, Hands-on Computer Science is right.
+
 ## Summary
 
 An algorithm is a sequence of steps described so precisely that someone can carry it out without understanding what it is for. A program is that same sequence, written down completely enough for a machine to run it. The machine adds nothing and works in exactly the order you wrote.
@@ -78,7 +80,7 @@ One rule holds this together: never keep code you cannot change. Every hand-over
 
 ## Slides
 
-The slides for this concept have moved to Hands-on Computer Science, where they are kept up to date: Algorithms and programs (English: <https://hands-on-computer-science.de/cs/en/items/algorithms-and-programs-slides/>, German: <https://hands-on-computer-science.de/cs/de/items/algorithms-and-programs-slides/>)
+The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
 ## Practice questions
 
