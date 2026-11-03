@@ -2,6 +2,8 @@
 
 Online: <https://docs.lifi-project.de/concepts/analog-and-digital.html>
 
+{{< moved title="Analog and digital" title_de="Analog und digital" en="https://hands-on-computer-science.de/cs/en/items/analog-and-digital/" de="https://hands-on-computer-science.de/cs/de/items/analog-and-digital/" title2="Quiz: Analog and digital" title_de2="Quiz: Analog und digital" en2="https://hands-on-computer-science.de/cs/en/items/analog-and-digital-quiz/" de2="https://hands-on-computer-science.de/cs/de/items/analog-and-digital-quiz/" >}
+
 ## Summary
 
 Analog quantities take on any value at all: between any two of them lies another. Digital systems assign those values to finitely many, clearly separated states. That throws precision away on purpose, and what you get in return is a decision that survives small disturbances. Turning something analog into something digital takes two cuts, and both of them have a price you can measure in bytes and, on your own link, in minutes.
