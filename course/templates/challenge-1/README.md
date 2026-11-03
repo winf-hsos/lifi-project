@@ -8,10 +8,10 @@ Everything is in one file, `alphabet.py`, no matter whether you work with one la
 
 | Part | What goes in |
 |---|---|
-| `COLORS` | your alphabet, one colour per line; colour number 0 is the first line |
-| `calibrate(readings)` | learns what each colour looks like at the receiver, from the readings the test hands over |
-| `send_symbol(index)` | shows colour number `index` on the sending LED; this one is already done |
-| `receive_symbol()` | measures and returns the number of the colour it recognised |
+| `COLORS` | your alphabet, one colour per line, each with a name such as `"white"` |
+| `calibrate(readings)` | learns what each colour looks like at the receiver, from the readings the test hands over, by name |
+| `send_symbol(name)` | shows the colour with this name on the sending LED; this one is already done |
+| `receive_symbol()` | measures and returns the name of the colour it recognised |
 | `run_test(...)` | the last line; it runs the test and you do not change it |
 
 How you build the functions on the inside is up to you. Add as many functions of your own as you like. `sender.led` is the LED of the sending device, `receiver.sensor` the sensor of the receiving one.
@@ -20,7 +20,7 @@ How you build the functions on the inside is up to you. Add as many functions of
 
 The receiver cannot calculate which symbol has arrived. Its readings depend on distance, room light and the particular part, and the same colour never gives exactly the same numbers twice.
 
-So it first has to **learn** what your symbols look like in this setup. Before every run, `run_test` shows your whole alphabet once and takes a few readings of each colour. Then it calls your `calibrate(readings)`: `readings[0]` is the list of readings taken while colour 0 was showing, `readings[1]` those of colour 1, and so on. What you keep from them, an average, a range or a rule, is your decision. During the test, `receive_symbol()` compares every new reading with what you kept and picks the most similar colour.
+So it first has to **learn** what your symbols look like in this setup. Before every run, `run_test` shows your whole alphabet once and takes a few readings of each colour. Then it calls your `calibrate(readings)`: `readings["off"]` is the list of readings taken while off was showing, `readings["white"]` those of white, and so on for every name in `COLORS`. What you keep from them, an average, a range or a rule, is your decision. During the test, `receive_symbol()` compares every new reading with what you kept and returns the name of the most similar colour.
 
 Calibration happens again before every run, at the acceptance test too. After being carried around and under different light, old values would no longer fit.
 
@@ -51,7 +51,7 @@ LIFI_SERVER=off python3 alphabet.py
 
 On Windows, a run you want to count therefore needs a new terminal. On macOS, the next plain `python3 alphabet.py` counts again.
 
-For quick tests in between, fewer runs are enough: change the last line to `run_test(send_symbol, receive_symbol, calibrate, symbols=len(COLORS), runs=5)`. Only runs with 20 attempts count.
+For quick tests in between, fewer runs are enough: change the last line to `run_test(send_symbol, receive_symbol, calibrate, symbols=COLORS, runs=5)`. Only runs with 20 attempts count.
 
 ## An approach that works
 
