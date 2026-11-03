@@ -2,7 +2,7 @@
 
 Online: <https://docs.lifi-project.de/concepts/analog-and-digital.html>
 
-{{< moved title="Analog and digital" title_de="Analog und digital" en="https://hands-on-computer-science.de/cs/en/items/analog-and-digital/" de="https://hands-on-computer-science.de/cs/de/items/analog-and-digital/" title2="Quiz: Analog and digital" title_de2="Quiz: Analog und digital" en2="https://hands-on-computer-science.de/cs/en/items/analog-and-digital-quiz/" de2="https://hands-on-computer-science.de/cs/de/items/analog-and-digital-quiz/" >}
+Analog and digital is now maintained on Hands-on Computer Science (Analog and digital: English <https://hands-on-computer-science.de/cs/en/items/analog-and-digital/>, German <https://hands-on-computer-science.de/cs/de/items/analog-and-digital/>; Quiz: Analog and digital: English <https://hands-on-computer-science.de/cs/en/items/analog-and-digital-quiz/>, German <https://hands-on-computer-science.de/cs/de/items/analog-and-digital-quiz/>). The text below is the last version from the course website; where it disagrees with Hands-on Computer Science, Hands-on Computer Science is right.
 
 ## Summary
 
