@@ -15,10 +15,12 @@ Rules of the course folder, the same for both ways:
 
 - my-code/ belongs to the student. Nothing in it is ever deleted, and the
   student's own files are never changed; files that a template gains later
-  are added next to them. The one exception are the test files run_test.py
-  and compare.py of a challenge: they belong to the course, so a newer
-  version replaces the student's copy, and where the course no longer
-  uses them (Challenge 1 since lifi_hardware 0.5.0), they are removed.
+  are added next to them. Two exceptions: the test files run_test.py and
+  compare.py of a challenge belong to the course, so a newer version
+  replaces the student's copy; and when a template is rebuilt from scratch
+  (Challenge 1 on 3 November 2026), the folder is reset once (RESETS):
+  files with the names of the old template are removed, README.md is
+  replaced, and files with other names stay.
 - Everything else belongs to the course and is read-only for students.
   Changed course files are overwritten, extra files inside course/ are
   removed, and in a Git clone commits made by the student are removed.
@@ -201,10 +203,22 @@ def update_from_git():
 # student's copy is always brought up to date with the template.
 COURSE_OWNED_FILES = {"run_test.py", "compare.py"}
 
-# Course-owned test files the course no longer uses. Since lifi_hardware
-# 0.5.0 the test of Challenge 1 is run_test() inside the module, so the old
-# scripts would only run an outdated test. The team's own files stay.
-RETIRED_FILES = {"challenge-1": ["run_test.py", "compare.py"]}
+# One-time resets of a challenge folder, when its template changed so much
+# that the old files only get in the way. Since lifi_hardware 0.5.0,
+# Challenge 1 is the single file alphabet.py. The reset removes every file
+# that carries the name of an earlier template file, replaces README.md with
+# the new one, and leaves every other file alone (the team's own files, the
+# measurement log). A marker file records that the reset happened, so a file
+# the team later names sender.py itself is never touched again.
+RESETS = {
+    "challenge-1": {
+        "id": "2026-11-03 alphabet",
+        "remove": ["agreement.py", "sender.py", "receiver.py", "device.py",
+                   "run_test.py", "compare.py"],
+        "replace": ["README.md"],
+    },
+}
+RESET_MARKER = ".course-reset"
 
 
 def copy_new_templates(changed_paths):
@@ -244,16 +258,41 @@ def copy_new_templates(changed_paths):
                       and not same_content(src, dst)):
                     shutil.copy2(src, dst)
                     refreshed.append(f"{name}/{file}")
-        for file in RETIRED_FILES.get(name, []):
-            old = os.path.join(target, file)
-            if os.path.isfile(old) and not os.path.exists(os.path.join(source, file)):
-                os.remove(old)
-                retired.append(f"{name}/{file}")
+        was_reset = reset_folder(name, source, target)
+        retired += was_reset
         if new_files:
             completed.append((name, sorted(new_files)))
-        if any(p.startswith(f"course/templates/{name}/") for p in changed_paths):
+        if not was_reset and any(p.startswith(f"course/templates/{name}/") for p in changed_paths):
             updated.append(name)
     return added, updated, completed, refreshed, retired
+
+
+def reset_folder(name, source, target):
+    """Carry out the one-time reset of RESETS for this folder, if it is due."""
+    reset = RESETS.get(name)
+    marker = os.path.join(target, RESET_MARKER)
+    if not reset:
+        return []
+    done = []
+    if os.path.isfile(marker):
+        with open(marker, encoding="utf-8") as f:
+            done = [line.strip() for line in f]
+    if reset["id"] in done:
+        return []
+    changed = []
+    for file in reset["remove"]:
+        old = os.path.join(target, file)
+        if os.path.isfile(old) and not os.path.exists(os.path.join(source, file)):
+            os.remove(old)
+            changed.append(f"{name}/{file}")
+    for file in reset["replace"]:
+        src, dst = os.path.join(source, file), os.path.join(target, file)
+        if os.path.isfile(src) and not (os.path.isfile(dst) and same_content(src, dst)):
+            shutil.copy2(src, dst)
+            changed.append(f"{name}/{file} (new version)")
+    with open(marker, "a", encoding="utf-8") as f:
+        f.write(reset["id"] + "\n")
+    return changed
 
 
 def same_content(a, b):
@@ -352,8 +391,9 @@ def main():
         say(f"- UPDATED test files: my-code/{', my-code/'.join(refreshed)}. These belong to the "
             "course and run unchanged at the acceptance test, so they always follow the template.")
     if retired:
-        say(f"- REMOVED old test files: my-code/{', my-code/'.join(retired)}. The test now runs "
-            "with run_test() from lifi_hardware; your own files there were not changed.")
+        say(f"- RESET to the new template: my-code/{', my-code/'.join(retired)}. These old template "
+            "files were removed or replaced once, because the challenge now works differently "
+            "(Challenge 1: everything in alphabet.py). Files with other names, your own, were kept.")
     for name in updated:
         say(f"- The template course/templates/{name}/ was improved. Your own files in my-code/{name}/ "
             f"were NOT changed; your assistant can bring the improvement into your copy if you agree.")
