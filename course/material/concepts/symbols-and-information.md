@@ -2,7 +2,7 @@
 
 Online: <https://docs.lifi-project.de/concepts/symbols-and-information.html>
 
-Symbols and information is now maintained on Hands-on Computer Science (Symbols and information: English <https://hands-on-computer-science.de/cs/en/items/symbols-and-information/>, German <https://hands-on-computer-science.de/cs/de/items/symbols-and-information/>; Quiz: Symbols and information: English <https://hands-on-computer-science.de/cs/en/items/symbols-and-information-quiz/>, German <https://hands-on-computer-science.de/cs/de/items/symbols-and-information-quiz/>). The text below is the last version from the course website; where it disagrees with Hands-on Computer Science, Hands-on Computer Science is right.
+Symbols and information is now maintained on Hands-on Computer Science (Symbols and information: English <https://hands-on-computer-science.de/cs/en/items/symbols-and-information/>, German <https://hands-on-computer-science.de/cs/de/items/symbols-and-information/>). The text below is the last version from the course website; where it disagrees with Hands-on Computer Science, Hands-on Computer Science is right.
 
 ## Summary
 
