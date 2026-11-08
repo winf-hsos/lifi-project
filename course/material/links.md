@@ -7,7 +7,7 @@ Everything this module points to, in one place.
 ## Course
 
 - [This website](https://docs.lifi-project.de/): the course companion, also the knowledge base your AI assistant reads.
-- [Practice questions](https://live.hsos.uber.space/practice/dup-ws2026): the multiple-choice questions of this module in the format of the exam, with an explanation for every answer; a topic opens once it has been covered in class. No login, your progress stays in your browser.
+- [Hands-on Computer Science](https://hands-on-computer-science.de/cs/en/): the lessons of this module, and where you practise for the exam: every lesson there has its quiz with multiple-choice questions in the format of the exam and an explanation for every answer.
 - [Anonymous feedback](https://live.hsos.uber.space/feedback/dup-ws2026): questions, criticism, ideas, without your name; answered there and at the start of each session.
 - [Team cockpit](https://lifi.hsos.uber.space/cockpit): your light link live in the browser; how to use it is explained under [Software](software/cockpit.md).
 - [lifi-project](https://github.com/winf-hsos/lifi-project): your course folder with the AI assistant: its instructions, the knowledge base it reads, and the challenge templates. You download it as a ZIP, see [Required Software](software/index.md#course-folder).

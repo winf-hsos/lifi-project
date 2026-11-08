@@ -106,10 +106,6 @@ One last thing, and it is the reason this module is not a programming course. Ev
 
 The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
-## Practice questions
-
-The practice questions have the same format as the exam, so they are also a good way to prepare for it.
-
 ## Further reading
 
 - Charles Petzold: Code. The Hidden Language of Computer Hardware and Software. Microsoft Press, 2nd edition 2022. Chapter 5 makes this chapter's argument from the other side: two states are the cheapest thing to build reliably, precisely because the gap between them is so wide that no amount of scatter closes it.

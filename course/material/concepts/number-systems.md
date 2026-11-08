@@ -115,10 +115,6 @@ Ten was never special. It is the number of fingers on two hands, and nothing els
 
 The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
-## Practice questions
-
-The practice questions have the same format as the exam, so they are also a good way to prepare for it.
-
 ## Further reading
 
 - Charles Petzold: Code. The Hidden Language of Computer Hardware and Software. Microsoft Press, 2nd edition 2022. Chapters 9 to 12 walk from our ten fingers through base eight and base two to the byte, one small step at a time, and they are the friendliest treatment of this material anywhere.

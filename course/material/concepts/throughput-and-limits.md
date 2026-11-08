@@ -86,10 +86,6 @@ One last distinction, and it is the one most often confused outside this course 
 
 The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
-## Practice questions
-
-The practice questions have the same format as the exam, so they are also a good way to prepare for it.
-
 ## Further reading
 
 - Claude E. Shannon: A Mathematical Theory of Communication. Bell System Technical Journal 27, 1948. <https://doi.org/10.1002/j.1538-7305.1948.tb01338.x>. The paper that put an upper bound on all of this. Section 1 is readable; the rest is there for when you want to know how far the idea goes.

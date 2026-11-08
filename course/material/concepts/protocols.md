@@ -98,10 +98,6 @@ At the end of Challenge 3 the class agrees on one common frame, built from your 
 
 The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
-## Practice questions
-
-The practice questions have the same format as the exam, so they are also a good way to prepare for it.
-
 ## Further reading
 
 - Charles Petzold: Code. The Hidden Language of Computer Hardware and Software. Microsoft Press, 2nd edition 2022. Chapter 13 tells how ASCII and Unicode came about and shows how much of a "code" is convention rather than technology.

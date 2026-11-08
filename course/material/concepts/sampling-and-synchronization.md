@@ -98,10 +98,6 @@ This calculation is the currency Challenge 4 is paid in, and it has exactly two 
 
 The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
-## Practice questions
-
-The practice questions have the same format as the exam, so they are also a good way to prepare for it.
-
 ## Further reading
 
 - Charles Petzold: Code. The Hidden Language of Computer Hardware and Software. Microsoft Press, 2nd edition 2022. Chapters 17 and 18 build an oscillator and then a clock out of it, and the rest of the book lives with the consequences; it is the friendliest place to see why everything digital is really a question of timing.

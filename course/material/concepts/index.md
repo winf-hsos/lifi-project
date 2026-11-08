@@ -25,7 +25,7 @@ At the bottom of the map is the project, and this is why it is the project: your
 
 ## The concepts
 
-Eighteen concepts, in five families. The order inside each family is the order in which you meet them during the semester; the last column says where in the project you need them. Every concept has its own page with a summary, the explanation, the slides, practice questions in the exam format, and further reading.
+Eighteen concepts, in five families. The order inside each family is the order in which you meet them during the semester; the last column says where in the project you need them. Every concept has its own page with a summary, the explanation, the slides and further reading.
 
 **Solving problems** (grey: how you think and work, needed everywhere)
 

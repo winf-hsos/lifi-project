@@ -108,10 +108,6 @@ Beyond that, a good interface is **small and stable**: what lives underneath may
 
 The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
-## Practice questions
-
-The practice questions have the same format as the exam, so they are also a good way to prepare for it.
-
 ## Further reading
 
 - David Parnas: On the Criteria To Be Used in Decomposing Systems into Modules. Communications of the ACM, 1972, freely available online. Five pages from the year the idea got its name, and still the clearest statement of it: split a system by what each part has to hide, not by the order in which the work happens.

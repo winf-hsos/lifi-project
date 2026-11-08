@@ -128,10 +128,6 @@ So: whoever can ask back, checks and asks. Whoever cannot ask back has to pay in
 
 The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
-## Practice questions
-
-The practice questions have the same format as the exam, so they are also a good way to prepare for it.
-
 ## Further reading
 
 - Richard W. Hamming: Error Detecting and Error Correcting Codes. Bell System Technical Journal 29 (2), 1950. <https://doi.org/10.1002/j.1538-7305.1950.tb00463.x>. The paper that started error correction, written because Hamming's weekend computer runs kept dying on a single bad bit and nobody was there on Monday to restart them. The first two pages are readable without any mathematics.

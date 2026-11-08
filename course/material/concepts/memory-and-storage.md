@@ -119,10 +119,6 @@ Three things follow for Challenge 4. Read the file as bytes and not as text, or 
 
 The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
-## Practice questions
-
-The practice questions have the same format as the exam, so they are also a good way to prepare for it.
-
 ## Further reading
 
 - David Macaulay: The Way Things Work Now. Houghton Mifflin Harcourt 2016, part 5 "The Digital Domain", chapter "Storing Bits". Memory chips, flash, hard disks, CDs and barcodes, all in drawings.

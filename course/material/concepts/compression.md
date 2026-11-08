@@ -150,10 +150,6 @@ If your partner team's receiver produces garbage although the transmission was c
 
 The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
-## Practice questions
-
-The practice questions have the same format as the exam, so they are also a good way to prepare for it.
-
 ## Further reading
 
 - David A. Huffman: A Method for the Construction of Minimum-Redundancy Codes. Proceedings of the IRE 40 (9), 1952. <https://doi.org/10.1109/JRPROC.1952.273898>. Four pages, and the tree on this page is in them. Readable once you have built one yourself.

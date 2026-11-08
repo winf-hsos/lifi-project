@@ -125,10 +125,6 @@ The original's lowest bits look like noise with traces of the picture. With the 
 
 The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
-## Practice questions
-
-The practice questions have the same format as the exam, so they are also a good way to prepare for it.
-
 ## Further reading
 
 - Simon Singh: The Code Book. The Science of Secrecy from Ancient Egypt to Quantum Cryptography. Fourth Estate, 1999. The history of the field as a story, from Caesar to public keys, without a single formula you need to follow. The chapter on the one-time pad and the chapter on Diffie and Hellman are this page at book length.

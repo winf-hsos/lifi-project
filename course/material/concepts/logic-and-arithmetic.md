@@ -89,10 +89,6 @@ What makes a computer powerful is not the cleverness of its parts, but their num
 
 The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
-## Practice questions
-
-The practice questions have the same format as the exam, so they are also a good way to prepare for it.
-
 ## Further reading
 
 - Charles Petzold: Code. The Hidden Language of Computer Hardware and Software. 2nd edition, Microsoft Press 2022. Builds gates from relays, an adder from gates, and a whole computer from there, step by step and without assuming anything. The chapters on relays, gates and addition are the long version of this page.
