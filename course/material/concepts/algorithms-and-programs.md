@@ -82,10 +82,6 @@ One rule holds this together: never keep code you cannot change. Every hand-over
 
 The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
-## Practice questions
-
-The practice questions have the same format as the exam, so they are also a good way to prepare for it.
-
 ## Further reading
 
 - Donald Knuth: The Art of Computer Programming, Volume 1. 3rd edition, Addison-Wesley 1997. The opening chapter defines what an algorithm is, and the five properties it names (finiteness, definiteness, input, output, effectiveness) are exactly the demands this page makes on your first programs.

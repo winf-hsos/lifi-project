@@ -93,10 +93,6 @@ The unequal treatment pays because it shortens the average message: what occurs 
 
 The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
-## Practice questions
-
-The practice questions have the same format as the exam, so they are also a good way to prepare for it.
-
 ## Further reading
 
 - Claude Shannon: A Mathematical Theory of Communication. Bell System Technical Journal, 1948, freely available online. The paper that founded all of this. The first six pages need no mathematics and contain the diagram of sender, channel, noise and receiver that your own link is built from.

@@ -70,10 +70,6 @@ And when a clean measurement series contradicts a suggestion from the assistant,
 
 The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
-## Practice questions
-
-The practice questions have the same format as the exam, so they are also a good way to prepare for it.
-
 ## Further reading
 
 - Richard Feynman: Cargo Cult Science. Caltech commencement address, 1974, freely available [online](https://calteches.library.caltech.edu/51/2/CargoCult.pdf). Six pages on the one habit that makes an experiment worth anything: reporting everything that could make your own result wrong. "The first principle is that you must not fool yourself, and you are the easiest person to fool."

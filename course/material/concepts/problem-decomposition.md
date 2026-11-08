@@ -60,10 +60,6 @@ And with an AI assistant, cutting is the key skill of all. "Build me the file tr
 
 The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
-## Practice questions
-
-The practice questions have the same format as the exam, so they are also a good way to prepare for it.
-
 ## Further reading
 
 - George Pólya: How to Solve It. Princeton University Press, 1945. The classic on cutting problems, written for mathematics and readable far beyond it: understand the problem, make a plan, carry it out, look back. His questions ("Do you know a related problem?", "Can you solve a part of it?") are the long version of this page.

@@ -103,10 +103,6 @@ Two colours are safe, eight are fast, and somewhere in between sits your alphabe
 
 The slides for this concept, right here. Page through them with the buttons in the top right corner, or click into the slides and use the arrow keys. The other buttons give you full screen, the slides in a new tab, and the deck as a PDF.
 
-## Practice questions
-
-The practice questions have the same format as the exam, so they are also a good way to prepare for it.
-
 ## Further reading
 
 - Claude Shannon: Communication in the Presence of Noise. Proceedings of the IRE, 1949. The paper that put the sampling cut on a firm footing: how often you have to measure a signal to be able to reconstruct it. The first two pages are readable without the mathematics behind them.
