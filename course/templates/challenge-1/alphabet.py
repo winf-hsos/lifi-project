@@ -29,6 +29,13 @@ COLORS = {
     # "magenta": (255, 0, 255),
 }
 
+# The two settings of the receiving sensor. These are the values it starts
+# with; run_test sets them before the calibration, so change them here and
+# not inside your functions. Gain: 1, 4, 16 or 60. Integration time in
+# milliseconds: 2.4, 24, 101, 154 or 700.
+GAIN = 16
+INTEGRATION_TIME = 154
+
 # What the receiver learns during calibration, one entry per colour name
 REFERENCES = {}
 
@@ -59,4 +66,5 @@ def receive_symbol():
     return "off"
 
 
-run_test(send_symbol, receive_symbol, calibrate, symbols=COLORS)
+run_test(send_symbol, receive_symbol, calibrate, symbols=COLORS,
+         gain=GAIN, integration_time=INTEGRATION_TIME)

@@ -1,4 +1,4 @@
-# Source of `lifi_hardware` 0.6.0
+# Source of `lifi_hardware` 0.7.0
 
 This is the complete public part of the module, copied from <https://github.com/winf-hsos/lifi-hardware>. It is the only authority on which functions exist. Do not use methods that are not defined here; the raw Tinkerforge objects are reachable as `lifi.led.raw` and `lifi.sensor.raw`, but beginners should not need them.
 
@@ -70,7 +70,7 @@ from tinkerforge.bricklet_rgb_led_v2 import BrickletRGBLEDV2
 
 from ._telemetry import DEFAULT_SERVER, Telemetry, install_error_hook
 
-__version__ = "0.6.0"
+__version__ = "0.7.0"
 
 # Device identifiers used by Tinkerforge (device_identifier)
 _ID_RGB_LED = 2127               # RGB LED Bricklet 2.0
@@ -485,6 +485,20 @@ writes one file with three functions and hands them to ``run_test``:
 
     run_test(send_symbol, receive_symbol, calibrate, symbols=COLORS)
 
+The sensor of the receiving device measures with gain 16x and an
+integration time of 154 ms unless you say otherwise. To try other
+settings, hand them to run_test (since 0.7.0):
+
+    run_test(send_symbol, receive_symbol, calibrate, symbols=COLORS,
+             gain=4, integration_time=101)
+
+run_test sets them on the receiving device before the calibration, so the
+calibration and the test measure the same way; on a laptop that only sends,
+they are ignored. Every run reports them to the server, and the team cockpit
+shows them next to the result. Setting them inside calibrate or
+receive_symbol would be too late: the calibration readings are taken before
+calibrate is called.
+
 The symbols are the names in COLORS: ``send_symbol`` gets a name,
 ``calibrate`` gets the readings by name, ``receive_symbol`` returns a name,
 and the result names them too. On the way to the server they travel as
@@ -523,7 +537,7 @@ import urllib.error
 import urllib.request
 from typing import cast
 
-from . import LifiDevice, find_devices
+from . import _GAINS, _INTEGRATION_TIMES, LifiDevice, find_devices
 from ._telemetry import DEFAULT_SERVER
 
 _READINGS_PER_SYMBOL = 5     # readings per symbol during calibration
@@ -855,7 +869,7 @@ def _wait(run, until, what):
 
 
 def run_test(send_symbol, receive_symbol, calibrate=None, symbols=None,
-             runs=20, team=None):
+             runs=20, team=None, gain=None, integration_time=None):
     """The test for Challenge 1: how many symbols get through without a mistake?
 
     ``symbols`` is your alphabet, usually ``COLORS``: its names are the
@@ -873,19 +887,44 @@ def run_test(send_symbol, receive_symbol, calibrate=None, symbols=None,
     yet: then both laptops find each other by this name, and the run does
     not count.
 
-    Returns a dictionary with the number of hits and the two sequences,
-    by name.
+    ``gain`` (1, 4, 16 or 60) and ``integration_time`` (2.4, 24, 101, 154 or
+    700 milliseconds) set the sensor of the receiving device before the
+    calibration. Without them it measures with 16x and 154 ms, as after
+    every start. A laptop that only sends ignores them.
+
+    Returns a dictionary with the number of hits, the two sequences by name
+    and the sensor settings of the receiver.
     """
     if symbols is None:
         raise TypeError("run_test needs your alphabet, for example "
                         "run_test(..., symbols=COLORS)")
+    # Check the settings first, so that a typo stops BOTH laptops before
+    # anything happens, not only the receiving one halfway through
+    if gain is not None and gain not in _GAINS:
+        raise ValueError(f"There is no gain of {gain}x. "
+                         f"Allowed: {sorted(_GAINS)}")
+    if integration_time is not None and integration_time not in _INTEGRATION_TIMES:
+        raise ValueError(f"There is no integration time of {integration_time} ms. "
+                         f"Allowed: {sorted(_INTEGRATION_TIMES)}")
     labels = _labels(symbols)
     roles = _choose_roles()
     role = ("both" if roles["sender"] and roles["receiver"]
             else "sender" if roles["sender"] else "receiver")
     some_device = roles["sender"] or roles["receiver"]
 
-    run = _start(role, labels, runs, team, some_device)
+    settings = {}
+    if roles["receiver"] is not None:
+        sensor = roles["receiver"].sensor
+        if gain is not None:
+            sensor.set_gain(gain)
+        if integration_time is not None:
+            sensor.set_integration_time(integration_time)
+        settings = {"gain": sensor.gain, "integration_time": sensor.integration_time}
+
+    run = _start(role, labels, runs, team, some_device, settings)
+    if settings:
+        print(f"Sensor of the receiver: gain {settings['gain']}x, "
+              f"integration time {settings['integration_time']} ms.")
     try:
         if role == "both":
             _run_both(run, send_symbol, receive_symbol, calibrate)
@@ -896,10 +935,10 @@ def run_test(send_symbol, receive_symbol, calibrate=None, symbols=None,
     finally:
         if roles["sender"] is not None:
             roles["sender"].led.off()
-    return _report(run)
+    return {**_report(run), **settings}
 
 
-def _start(role, labels, runs, team, device):
+def _start(role, labels, runs, team, device, settings=None):
     """Asks the server for a new run, or falls back to a practice run."""
     symbols = len(labels)
     if _server() is not None:
@@ -908,7 +947,7 @@ def _start(role, labels, runs, team, device):
                 "role": role, "led_uid": device.led.uid,
                 "sensor_uid": device.sensor.uid,
                 "master_uid": device.master_uid, "team": team,
-                "symbols": symbols, "runs": runs})
+                "symbols": symbols, "runs": runs, **(settings or {})})
             run = _Run(role, labels, runs, practice=False, run_id=state["run_id"])
             note = (_paint("counts", "green") if state["counted"] else
                     _paint("does NOT count (devices not registered)", "yellow"))

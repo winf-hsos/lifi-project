@@ -9,6 +9,7 @@ Everything is in one file, `alphabet.py`, no matter whether you work with one la
 | Part | What goes in |
 |---|---|
 | `COLORS` | your alphabet, one colour per line, each with a name such as `"white"` |
+| `GAIN`, `INTEGRATION_TIME` | the two settings of the receiving sensor, see below |
 | `calibrate(readings)` | learns what each colour looks like at the receiver, from the readings the test hands over, by name |
 | `send_symbol(name)` | shows the colour with this name on the sending LED; this one is already done |
 | `receive_symbol()` | measures and returns the name of the colour it recognised |
@@ -23,6 +24,14 @@ The receiver cannot calculate which symbol has arrived. Its readings depend on d
 So it first has to **learn** what your symbols look like in this setup. Before every run, `run_test` shows your whole alphabet once and takes a few readings of each colour. Then it calls your `calibrate(readings)`: `readings["off"]` is the list of readings taken while off was showing, `readings["white"]` those of white, and so on for every name in `COLORS`. What you keep from them, an average, a range or a rule, is your decision. During the test, `receive_symbol()` compares every new reading with what you kept and returns the name of the most similar colour.
 
 Calibration happens again before every run, at the acceptance test too. After being carried around and under different light, old values would no longer fit.
+
+## The settings of the sensor
+
+The sensor has two settings, and both change what your readings look like. The **gain** (1, 4, 16 or 60) amplifies the light the sensor catches, so weak light becomes visible, but so does the noise, and at a high gain bright colours can hit the top of the scale, where they all look the same. The **integration time** (2.4, 24, 101, 154 or 700 milliseconds) is how long the sensor collects light for one reading: a longer time gives calmer values, but fewer readings per second.
+
+The template starts with 16 and 154, the values the sensor gets every time a program starts. Which settings suit your link, only your own measurements can tell, so change `GAIN` and `INTEGRATION_TIME` at the top of the file and compare the results. `run_test` sets them on the receiving device before the calibration, so that the calibration and the test measure the same way. Setting them inside `calibrate` or `receive_symbol` would be too late, because the calibration readings are taken before `calibrate` is called. Every run shows the settings at the start, and the team cockpit lists them next to the result. With two laptops, the values in the file of the receiving laptop count.
+
+Settings you change in the Brick Viewer do not carry over: every program sets the sensor afresh when it starts.
 
 ## Running the test
 
@@ -51,7 +60,7 @@ LIFI_SERVER=off python3 alphabet.py
 
 On Windows, a run you want to count therefore needs a new terminal. On macOS, the next plain `python3 alphabet.py` counts again.
 
-For quick tests in between, fewer runs are enough: change the last line to `run_test(send_symbol, receive_symbol, calibrate, symbols=COLORS, runs=5)`. Only runs with 20 attempts count.
+For quick tests in between, fewer runs are enough: add `runs=5` to the last line, as in `run_test(send_symbol, receive_symbol, calibrate, symbols=COLORS, gain=GAIN, integration_time=INTEGRATION_TIME, runs=5)`. Only runs with 20 attempts count.
 
 ## An approach that works
 
