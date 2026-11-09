@@ -81,4 +81,4 @@ Optional and only for your team: nobody grades it, and the bonus depends only on
 
 ## At the acceptance test
 
-You run the test at your own place, with the two boxes of sender and receiver touching wall to wall. Nicolas comes round, looks at your setup and checks your result. There is no live change in Challenge 1: the run with 20 random colours is the whole acceptance, and the largest alphabet that runs without a mistake counts.
+You run the test at your own place, with the two boxes of sender and receiver touching wall to wall, and Nicolas shows your run live on the projector. There is no live change in Challenge 1: the run with 20 random colours is the whole acceptance. **To pass, your alphabet needs at least 4 colours** and the run has to get through without a single mistake; Nicolas then confirms the acceptance. More colours are better, and you may also try more attempts than 20, for example `runs=30`, which makes a perfect run harder.
