@@ -11,12 +11,14 @@ Everything is in one file, `word.py`, as in Challenge 1. It is your `alphabet.py
 | `COLORS`, `GAIN`, `INTEGRATION_TIME` | your alphabet and the sensor settings, copied over from `alphabet.py` |
 | `calibrate(readings)`, `send_symbol(name)`, `receive_symbol()` | your functions from Challenge 1, copied over |
 | `SYMBOL_RATE` | how many colours you send per second |
-| `CODEBOOK` | which colours stand for which character: every letter from A to Z and the space |
-| `send_text(text)` | the encoding: looks up every character in `CODEBOOK` and shows its colours, one every `1 / SYMBOL_RATE` seconds; yours to write |
-| `receive_text(n_chars)` | the decoding: reads the colours in the same rhythm, turns them back into characters and returns them as one text; yours to write |
+| `CODEBOOK`, `LENGTH` | which colours stand for which character (every letter from A to Z and the space), and how many colours one character has |
+| `encode_letter(letter)` | the encoding of one letter: returns its colours from `CODEBOOK` and sends nothing; yours to write |
+| `send_text(text)` | goes through the text letter by letter, encodes each one with `encode_letter` and shows its colours with `send_symbol`, one every `1 / SYMBOL_RATE` seconds; yours to write |
+| `decode_letter(colors)` | the decoding of one letter: returns the letter whose colours are exactly `colors`, or `"?"`; yours to write |
+| `receive_text(n_chars)` | reads the colours in the same rhythm with `receive_symbol`, decodes every `LENGTH` of them with `decode_letter` and returns the letters as one text; yours to write |
 | `run_test(...)` | the last line; it runs the test and you do not change it |
 
-The contract has moved up one level. The test hands you text and expects text back. Your functions `send_symbol` and `receive_symbol` are now your own tools inside `send_text` and `receive_text` and are no longer called from outside. That is exactly what an abstraction layer is: from above you see text, from inside you see colours. Both functions use the same codebook, `send_text` from character to colours and `receive_text` from colours back to character.
+The contract has moved up one level. The test hands you text and expects text back. Your functions `send_symbol` and `receive_symbol` are now your own tools inside `send_text` and `receive_text` and are no longer called from outside. That is exactly what an abstraction layer is: from above you see text, from inside you see colours. In between sits the codebook, and two small functions translate with it: `encode_letter` from letter to colours, `decode_letter` from colours back to letter. That way the loop over a long text stays apart from the question of how one single letter is coded, and you can test each letter function on its own, without any device: `print(encode_letter("E"))` and `print(decode_letter(encode_letter("E")))` have to give back what you expect.
 
 ## What is new
 
