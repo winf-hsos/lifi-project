@@ -38,7 +38,7 @@ With two laptops, the course server gives both the moment of the start, and each
 
 At the end both sides show each sentence as sent and as received, with every wrong character in red, and the speed of the run. The run appears in your [team cockpit](https://lifi.hsos.uber.space/cockpit).
 
-For quick tests in between, one sentence is enough: add `sentences=1` to the last line. Only runs with three sentences count.
+For quick tests in between, one sentence is enough: add `sentences=1` to the last line. Only runs with three sentences count. For an even simpler test, send your own text: add `text="HI"` or `text="HELLO WORLD"` to the last line (or a list of texts, sent one after the other). That is a practice run with both devices on one laptop; it does not ask the course server and never counts. Your texts may only hold characters that are in your `CODEBOOK`.
 
 ## How the speed is measured
 

@@ -17,6 +17,9 @@ From the start on, the timing is yours: run_test starts both functions at
 the same moment and then does not help any more.
 
 Run it with:  python word.py   (on a Mac: python3)
+
+For a quick test with your own text and both devices on one laptop, add
+text="HELLO WORLD" to the last line; such a run never counts.
 """
 
 import time
