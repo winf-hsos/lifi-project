@@ -12,11 +12,11 @@ Everything is in one file, `word.py`, as in Challenge 1. It is your `alphabet.py
 | `calibrate(readings)`, `send_symbol(name)`, `receive_symbol()` | your functions from Challenge 1, copied over |
 | `SYMBOL_RATE` | how many colours you send per second |
 | `CODEBOOK` | which colours stand for which character: every letter from A to Z and the space |
-| `send_text(text)` | sends a whole text; the template already does it, one colour every `1 / SYMBOL_RATE` seconds |
-| `receive_text(n_chars)` | receives that many characters and returns them as one text; this is yours to write |
+| `send_text(text)` | the encoding: looks up every character in `CODEBOOK` and shows its colours, one every `1 / SYMBOL_RATE` seconds; yours to write |
+| `receive_text(n_chars)` | the decoding: reads the colours in the same rhythm, turns them back into characters and returns them as one text; yours to write |
 | `run_test(...)` | the last line; it runs the test and you do not change it |
 
-The contract has moved up one level. The test hands you text and expects text back. Your functions `send_symbol` and `receive_symbol` are now your own tools inside `send_text` and `receive_text` and are no longer called from outside. That is exactly what an abstraction layer is: from above you see text, from inside you see colours.
+The contract has moved up one level. The test hands you text and expects text back. Your functions `send_symbol` and `receive_symbol` are now your own tools inside `send_text` and `receive_text` and are no longer called from outside. That is exactly what an abstraction layer is: from above you see text, from inside you see colours. Both functions use the same codebook, `send_text` from character to colours and `receive_text` from colours back to character.
 
 ## What is new
 

@@ -7,9 +7,11 @@ How fast can you get three sentences across without a single mistake?
 This is your file from Challenge 1, one level up. COLORS, the sensor
 settings, calibrate, send_symbol and receive_symbol stay as they were (copy
 yours over from alphabet.py). New are the CODEBOOK, which says which colours
-stand for which character, SYMBOL_RATE, and the two functions send_text and
-receive_text. run_test at the bottom hands a sentence to send_text and only
-the number of characters to receive_text, and compares what arrives.
+stand for which character, SYMBOL_RATE, and the two functions you write:
+send_text turns a text into colours (encoding), receive_text turns colours
+back into text (decoding). run_test at the bottom hands a sentence to
+send_text and only the number of characters to receive_text, and compares
+what arrives.
 
 From the start on, the timing is yours: run_test starts both functions at
 the same moment and then does not help any more.
@@ -97,15 +99,19 @@ def receive_symbol():
 
 
 def send_text(text):
-    """Sends the text, character by character, in the rhythm of SYMBOL_RATE."""
-    for char in text:
-        for name in CODEBOOK[char]:
-            send_symbol(name)
-            time.sleep(1 / SYMBOL_RATE)
+    """Sends the text, character by character: this is the encoding.
+
+    For every character, look up its colours in CODEBOOK and show them one
+    after the other, each one for 1 / SYMBOL_RATE seconds. As soon as this
+    function returns, run_test turns the LED off and stops the clock.
+    """
+    # TODO: send every character of text as its colours from CODEBOOK
+    pass
 
 
 def receive_text(n_chars):
-    """Receives n_chars characters and returns them as one text.
+    """Receives n_chars characters and returns them as one text: this is the
+    decoding.
 
     It starts at the same moment as send_text. The sender shows a new colour
     every 1 / SYMBOL_RATE seconds, so the receiver has to read each colour
