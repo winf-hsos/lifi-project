@@ -45,6 +45,9 @@ SYMBOL_RATE = 2
 # space need an entry. With two colours, five of them make 32 combinations,
 # enough for 27 characters. With more colours, fewer per character will do;
 # that is the point of Challenge 2.
+# TODO: make the CODEBOOK fit your own alphabet: use only the colour names
+# from your COLORS, give every character its own sequence, and let more
+# colours make the sequences shorter.
 CODEBOOK = {
     " ": ["off",   "off",   "off",   "off",   "off"],
     "A": ["off",   "off",   "off",   "off",   "white"],
