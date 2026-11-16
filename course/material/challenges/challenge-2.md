@@ -2,6 +2,8 @@
 
 Online: <https://docs.lifi-project.de/challenges/challenge-2.html>
 
+Challenge 2 is now maintained on Hands-on Computer Science (Challenge 2: English <https://hands-on-computer-science.de/cs/en/items/lifi-challenge-2/>, German <https://hands-on-computer-science.de/cs/de/items/lifi-challenge-2/>). The text below is the last version from the course website; where it disagrees with Hands-on Computer Science, Hands-on Computer Science is right.
+
 In Challenge 1 you sent single states. Now they become a message.
 
 > **How fast can you get ten characters across without an error?**
